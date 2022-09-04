@@ -1,5 +1,5 @@
 .line-1 {
-  width: 125px;
+  width: 300px;
 
   font-size: 180%;
   white-space: nowrap;
@@ -10,9 +10,7 @@
 
 /* Animation */
 .anim-typewriter {
-  animation: typewriter 750ms steps(4) 1s,
-    blinkTextCursor 500ms steps(4) infinite,
-    /* animation-duration: 500ms; */ ff 1500ms steps(40) 1s;
+  animation: typewriter 1500ms steps(12) 2s, ff 1500ms steps(40) 2s;
 }
 
 @keyframes typewriter {
@@ -20,7 +18,7 @@
     width: 0;
   }
   to {
-    width: 125px;
+    width: 300px;
   }
 }
 @keyframes ff {
@@ -29,13 +27,5 @@
   }
   to {
     border-right: 2px solid rgba(255, 255, 255, 0);
-  }
-}
-@keyframes blinkTextCursor {
-  from {
-    border-right-color: rgba(255, 255, 255, 0.75);
-  }
-  to {
-    border-right-color: transparent;
   }
 }
