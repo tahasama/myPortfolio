@@ -1,0 +1,41 @@
+.line-1 {
+  width: 125px;
+
+  font-size: 180%;
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: 12px;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 750ms steps(4) 1s,
+    blinkTextCursor 500ms steps(4) infinite,
+    /* animation-duration: 500ms; */ ff 1500ms steps(40) 1s;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 125px;
+  }
+}
+@keyframes ff {
+  from {
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right: 2px solid rgba(255, 255, 255, 0);
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}

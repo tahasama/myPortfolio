@@ -1,7 +1,8 @@
 import React from "react";
+import "./hero.css";
 
 const Hero = () => {
-  return <div>Hero</div>;
+  return <div className="line-1 anim-typewriter">Hero</div>;
 };
 
 export default Hero;
