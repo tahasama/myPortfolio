@@ -6,7 +6,7 @@
 
 /* Animation */
 .anim-typewriter {
-  animation: word 1500ms steps(12) 2s, blinks 1500ms steps(12) 2s;
+  animation: word 1500ms steps(12), blink 1500ms steps(12);
 }
 
 @keyframes word {
@@ -14,10 +14,10 @@
     width: 0;
   }
   to {
-    width: 360px;
+    width: 350px;
   }
 }
-@keyframes blinks {
+@keyframes blink {
   from {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
   }
