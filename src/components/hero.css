@@ -1,27 +1,23 @@
 .line-1 {
-  width: 300px;
-
-  font-size: 180%;
+  font-size: 46px;
   white-space: nowrap;
-  overflow: hidden;
   letter-spacing: 12px;
-  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 /* Animation */
 .anim-typewriter {
-  animation: typewriter 1500ms steps(12) 2s, ff 1500ms steps(40) 2s;
+  animation: word 1500ms steps(12) 2s, blinks 1500ms steps(12) 2s;
 }
 
-@keyframes typewriter {
+@keyframes word {
   from {
     width: 0;
   }
   to {
-    width: 300px;
+    width: 360px;
   }
 }
-@keyframes ff {
+@keyframes blinks {
   from {
     border-right: 2px solid rgba(255, 255, 255, 0.75);
   }
