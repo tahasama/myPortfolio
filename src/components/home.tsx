@@ -50,7 +50,7 @@ const Home = () => {
           position={"relative"}
           mx={5}
           mt={[0, 50]}
-          top={[-10, 0]}
+          top={["-16", 0]}
           zIndex={99}
           src={devNight}
           alt="devNight"
@@ -61,7 +61,7 @@ const Home = () => {
         <Img
           // position={"absolute"}
           mx={[3, 5]}
-          mt={[0, 50]}
+          mt={[50]}
           zIndex={99}
           src={devDay}
           alt="devDay"
