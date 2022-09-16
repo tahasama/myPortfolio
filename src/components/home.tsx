@@ -21,6 +21,7 @@ const Home = () => {
     <Flex
       alignItems={"center"}
       //   justifyContent={"center"}
+      flexDirection={["column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
       _before={{
@@ -46,24 +47,25 @@ const Home = () => {
       {/* ))} */}
       {colorMode !== "light" ? (
         <Img
-          // position={"absolute"}
+          position={"relative"}
           mx={5}
-          mt={50}
+          mt={[0, 50]}
+          top={[-10, 0]}
           zIndex={99}
           src={devNight}
           alt="devNight"
-          h={["0%", "38%", "40%", "55%", "50%"]}
+          h={["38%", "38%", "40%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       ) : (
         <Img
           // position={"absolute"}
           mx={[3, 5]}
-          mt={50}
+          mt={[0, 50]}
           zIndex={99}
           src={devDay}
           alt="devDay"
-          h={["0%", "40%", "50%", "55%", "50%"]}
+          h={["10%", "40%", "50%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       )}
@@ -72,10 +74,13 @@ const Home = () => {
         zIndex={2}
         flexDirection="column"
         // float={"right"}
-        // position="absolute"
-        left={[2, 3, 12, 24]}
-        mx={[-3, 0, -2, 5]}
+        position="relative"
+        // left={[2, 3, 12, 24]}
+        // mx={[-400, 0, -2, 5]}
         lineHeight={"taller"}
+        top={[-32, 0]}
+        w={[300, 500]}
+        // bg={"red"}
       >
         {/* {cloud} */}
         {/* <Cloud /> */}
