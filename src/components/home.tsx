@@ -60,9 +60,10 @@ const Home = () => {
       ) : (
         <Img
           // position={"absolute"}
+          position={"relative"}
           mx={[3, 5]}
           mt={[50]}
-          top={["-36", 0]}
+          top={["-32", 0]}
           zIndex={99}
           src={devDay}
           alt="devDay"
