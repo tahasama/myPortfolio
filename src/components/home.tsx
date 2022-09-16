@@ -61,12 +61,12 @@ const Home = () => {
         <Img
           // position={"absolute"}
           position={"relative"}
-          mx={[3, 5]}
-          mt={[50]}
-          top={["-32", 0]}
+          mx={5}
+          mt={[0, 50]}
+          top={["-28", 0]}
           zIndex={99}
-          src={devDay}
-          alt="devDay"
+          src={devNight}
+          alt="devNight"
           h={["38%", "38%", "40%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
