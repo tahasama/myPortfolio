@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Box, keyframes } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import { Typewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
 
 // const typing = keyframes`
 // from {

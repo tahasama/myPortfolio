@@ -1,5 +1,4 @@
 import {
-  AbsoluteCenter,
   Box,
   calc,
   Divider,
@@ -8,12 +7,8 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { randomInt } from "crypto";
-import { motion } from "framer-motion";
-import React from "react";
-import Cloud from "./cloud";
+
 import Hero from "./hero";
-import Star from "./star";
 import devNight from "../images/devNight2.png";
 import devDay from "../images/devDay.jpg";
 import CloudNstars from "./cloudNstars";
@@ -21,7 +16,7 @@ import CloudNstars from "./cloudNstars";
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <Flex

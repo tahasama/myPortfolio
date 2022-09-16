@@ -1,10 +1,10 @@
-import { Box, Flex, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import React from "react";
 
 const Cloud = ({ delay }: any) => {
   const colorOn = useColorModeValue("gray.50 ", "gray.500");
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <motion.div

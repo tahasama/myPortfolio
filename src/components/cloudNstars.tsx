@@ -4,7 +4,7 @@ import Cloud from "./cloud";
 import Star from "./star";
 
 const CloudNstars = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <>
