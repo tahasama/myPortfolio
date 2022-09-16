@@ -65,8 +65,8 @@ const Home = () => {
           mt={[0, 50]}
           top={["-28", 0]}
           zIndex={99}
-          src={devNight}
-          alt="devNight"
+          src={devDay}
+          alt="devDay"
           h={["38%", "38%", "40%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
