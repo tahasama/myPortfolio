@@ -80,30 +80,36 @@ const Home = () => {
       >
         {/* {cloud} */}
         {/* <Cloud /> */}
-
+        {/* <Flex
+          alignItems={"center"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+          //   w={["100vw", "auto"]}
+          bg={"red"}
+        > */}
         <Box
           fontSize={["lg", "xl", "2xl", "3xl", "4xl", "5xl"]}
           letterSpacing={3}
           fontWeight={[500, 400]}
-          mt={[-20, 0, 0, 0]}
-          ml={[`${calc(100 % -110)}`, 0]}
+          // mt={[-20, 0, 0, 0]}
           flexWrap="wrap"
         >
           Hey! My name is Taha
         </Box>
-        <Box ml={[`${calc(100 % -300)}`, 0]}>
+        <Box>
           <Divider />
         </Box>
         {/* <Box fontSize="4xl"> My name is Taha</Box> */}
         <Flex
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 500]}
-          flexWrap="wrap"
-          ml={[`${calc(100 % -300)}`, 0]}
+          // flexWrap="wrap"
         >
           I'm a &nbsp;
-          <Hero /> developper
+          <Hero />
+          developper
         </Flex>
+        {/* </Flex> */}
       </Flex>
     </Flex>
   );
