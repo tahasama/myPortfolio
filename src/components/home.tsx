@@ -12,7 +12,7 @@ import Hero from "./hero";
 import devNight from "../images/devNight2.png";
 import devDay from "../images/devDay.jpg";
 import CloudNstars from "./cloudNstars";
-import { ArrowForwardIcon } from "@chakra-ui/icons";
+// import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
