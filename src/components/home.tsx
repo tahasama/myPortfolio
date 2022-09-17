@@ -65,7 +65,7 @@ const Home = () => {
           position={"relative"}
           mx={5}
           mt={[0, 50]}
-          top={["-24", 0]}
+          top={["-28", 0]}
           zIndex={99}
           src={devDay}
           alt="devDay"
