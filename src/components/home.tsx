@@ -110,7 +110,7 @@ const Home = () => {
             position={"relative"}
             alignContent="center"
             top={["10", "8"]}
-            m={"auto"}
+            m={["auto", 5]}
             variant="solid"
             p={0}
             w={["38vw", "34vw", "28vw"]}
