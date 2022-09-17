@@ -36,11 +36,12 @@ const Navbar = () => {
       </Box>
       <Flex w={600} h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
-          w={"full"}
-          mx={5}
+          w={["0.5", "full"]}
+          // mx={5}
+          visibility={["hidden", "visible"]}
           alignItems="center"
           justifyContent="space-between"
-          opacity={[0, 1]}
+          // opacity={[0, 1]}
         >
           <Box>Home</Box>
           <Box>About</Box>
