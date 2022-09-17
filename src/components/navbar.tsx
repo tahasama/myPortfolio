@@ -8,7 +8,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React from "react";
 
 const Navbar = () => {
   const colorOn = useColorModeValue("#282c34", "gray.50 ");
@@ -36,10 +35,18 @@ const Navbar = () => {
         Taha
       </Box>
       <Flex w={600} h={"16"} alignItems="center" justifyContent="space-between">
-        <div>Home</div>
-        <div>About</div>
-        <div>Projects</div>
-        <div>Contact</div>
+        <Flex
+          w={"full"}
+          mx={5}
+          alignItems="center"
+          justifyContent="space-between"
+          opacity={[0, 1]}
+        >
+          <Box>Home</Box>
+          <Box>About</Box>
+          <Box>Projects</Box>
+          <Box>Contact</Box>
+        </Flex>
         <motion.div
           whileHover={{ x: [0, -10], scale: 1.6, transition: { duration: 1 } }}
         >
@@ -67,7 +74,6 @@ const Navbar = () => {
                   bgColor={textColorOn}
                   color={colorOn}
                   mt={4}
-                  // shadow={" 0px 3px 8px white"}
                   boxShadow={" 0px 2px 12px white"}
                   borderRadius={5}
                 >
@@ -87,7 +93,6 @@ const Navbar = () => {
                   bgColor={textColorOn}
                   color={colorOn}
                   mt={2}
-                  // shadow={" 0px 3px 8px white"}
                   boxShadow={" 0px 2px 12px gray"}
                   borderRadius={5}
                 >
