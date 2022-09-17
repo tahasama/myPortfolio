@@ -18,7 +18,8 @@ import { motion } from "framer-motion";
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("yellow.400", "purple.400");
+  const buttonLight = useColorModeValue("cyan.400", "teal.500");
+  const buttonLightHover = useColorModeValue("cyan.600", "teal.600");
   const { colorMode } = useColorMode();
 
   return (
@@ -51,7 +52,7 @@ const Home = () => {
           mx={5}
           mt={[0, 50]}
           top={["-28", 0]}
-          zIndex={99}
+          zIndex={2}
           src={devNight}
           alt="devNight"
           h={["32%", "38%", "40%", "55%", "50%"]}
@@ -63,7 +64,7 @@ const Home = () => {
           mx={5}
           mt={[0, 50]}
           top={["-28", 0]}
-          zIndex={99}
+          zIndex={2}
           src={devDay}
           alt="devDay"
           h={["32%", "38%", "40%", "55%", "50%"]}
@@ -115,6 +116,7 @@ const Home = () => {
             w={["38vw", "28vw"]}
             h={["7vh", "9vh"]}
             bg={buttonLight}
+            _hover={{ bg: buttonLightHover }}
           >
             PROJECTS
           </Button>
