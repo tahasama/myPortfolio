@@ -2,18 +2,14 @@ import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
-  color,
   Flex,
-  Img,
   List,
-  ListIcon,
   ListItem,
   Tooltip,
-  transition,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { animate, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Navbar = () => {
