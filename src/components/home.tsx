@@ -113,7 +113,7 @@ const Home = () => {
             variant="solid"
             p={0}
             w={["38vw", "28vw"]}
-            h={"9vh"}
+            h={("7vh", "9vh")}
             bg={buttonLight}
           >
             PROJECTS
