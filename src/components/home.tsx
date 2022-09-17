@@ -113,7 +113,7 @@ const Home = () => {
             m={"auto"}
             variant="solid"
             p={0}
-            w={["38vw", "28vw"]}
+            w={["38vw", "34vw", "28vw"]}
             h={["7vh", "9vh"]}
             bg={buttonLight}
             _hover={{ bg: buttonLightHover }}
