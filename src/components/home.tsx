@@ -13,10 +13,12 @@ import devNight from "../images/devNight2.png";
 import devDay from "../images/devDay.jpg";
 import CloudNstars from "./cloudNstars";
 // import { ArrowForwardIcon } from "@chakra-ui/icons";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
+  const buttonLight = useColorModeValue("yellow.400", "purple.400");
   const { colorMode } = useColorMode();
 
   return (
@@ -39,14 +41,10 @@ const Home = () => {
         mt: "65px",
         transform: " rotate(180deg)",
         zIndex: 1,
-        // shadow: "2xl",
       }}
     >
-      {/* {s.map((v: any) => ( */}
-      {/* <Box position={"absolute"} top={`${v}px`} left={`${v * 30}px`}> */}
       <CloudNstars />
 
-      {/* ))} */}
       {colorMode !== "light" ? (
         <Img
           position={"relative"}
@@ -61,7 +59,6 @@ const Home = () => {
         ></Img>
       ) : (
         <Img
-          // position={"absolute"}
           position={"relative"}
           mx={5}
           mt={[0, 50]}
@@ -74,66 +71,54 @@ const Home = () => {
         ></Img>
       )}
       <Flex
-        // bg={"white"}
         zIndex={2}
         flexDirection="column"
-        // float={"right"}
         position="relative"
-        // left={[2, 3, 12, 24]}
-        // mx={[-400, 0, -2, 5]}
         lineHeight={"taller"}
         top={["-40", 0]}
-        w={[300, 500]}
-        // bg={"red"}
-        // mt={"16"}
+        w={[300, 330, 450]}
+        // alignItems={["center", "baseline"]}
       >
-        {/* {cloud} */}
-        {/* <Cloud /> */}
-        {/* <Flex
-          alignItems={"center"}
-          justifyContent={"center"}
-          flexDirection={"column"}
-          //   w={["100vw", "auto"]}
-          bg={"red"}
-        > */}
         <Box
           fontSize={["lg", "xl", "2xl", "3xl", "4xl", "5xl"]}
           letterSpacing={3}
           fontWeight={[500, 400]}
-          // mt={[-20, 0, 0, 0]}
           flexWrap="wrap"
         >
           Hey! My name is Taha
         </Box>
         <Box>
-          <Divider />
+          <Divider w={[300, 280, 320, 380, 400]} />
         </Box>
-        {/* <Box fontSize="4xl"> My name is Taha</Box> */}
         <Flex
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 500]}
-          // flexWrap="wrap"
         >
           I'm a &nbsp;
           <Hero />
           developper
         </Flex>
-        {/* </Flex> */}
-        {/* <Button
-          rightIcon={<ArrowForwardIcon />}
-          colorScheme="teal"
-          variant="outline"
-          p={0}
-          // mt={"16"}
-          w={"28vw"}
-          h={"10vh"}
-          top={"12"}
+        <motion.div
+          style={{ margin: "auto" }}
+          whileHover={{
+            y: [-1, 4, -1],
+            transition: { duration: 1, repeat: Infinity },
+          }}
         >
-          Potfolio
-        </Button> */}
-        <Button top={["10", "8"]} mb={2}>
-          ffff
-        </Button>
+          <Button
+            position={"relative"}
+            alignContent="center"
+            top={["10", "8"]}
+            m={"auto"}
+            variant="solid"
+            p={0}
+            w={["38vw", "28vw"]}
+            h={"9vh"}
+            bg={buttonLight}
+          >
+            PROJECTS
+          </Button>
+        </motion.div>
       </Flex>
     </Flex>
   );
