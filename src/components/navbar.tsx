@@ -84,9 +84,12 @@ const Navbar = () => {
                 <Tooltip
                   label="Light Mode"
                   aria-label="A tooltip"
-                  color={colorOn}
                   bgColor={textColorOn}
+                  color={colorOn}
                   mt={2}
+                  // shadow={" 0px 3px 8px white"}
+                  boxShadow={" 0px 2px 12px gray"}
+                  borderRadius={5}
                 >
                   <SunIcon color={"gold"} w={7} h={7} />
                 </Tooltip>

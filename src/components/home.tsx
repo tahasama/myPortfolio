@@ -1,5 +1,6 @@
 import {
   Box,
+  Button,
   Divider,
   Flex,
   Img,
@@ -11,6 +12,7 @@ import Hero from "./hero";
 import devNight from "../images/devNight2.png";
 import devDay from "../images/devDay.jpg";
 import CloudNstars from "./cloudNstars";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
@@ -83,6 +85,7 @@ const Home = () => {
         top={["-40", 0]}
         w={[300, 500]}
         // bg={"red"}
+        // mt={"16"}
       >
         {/* {cloud} */}
         {/* <Cloud /> */}
@@ -116,6 +119,21 @@ const Home = () => {
           developper
         </Flex>
         {/* </Flex> */}
+        {/* <Button
+          rightIcon={<ArrowForwardIcon />}
+          colorScheme="teal"
+          variant="outline"
+          p={0}
+          // mt={"16"}
+          w={"28vw"}
+          h={"10vh"}
+          top={"12"}
+        >
+          Potfolio
+        </Button> */}
+        <Button top={["12", "8"]} mb={2}>
+          ffff
+        </Button>
       </Flex>
     </Flex>
   );
