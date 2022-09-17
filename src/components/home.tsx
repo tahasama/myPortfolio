@@ -131,7 +131,7 @@ const Home = () => {
         >
           Potfolio
         </Button> */}
-        <Button top={["12", "8"]} mb={2}>
+        <Button top={["10", "8"]} mb={2}>
           ffff
         </Button>
       </Flex>
