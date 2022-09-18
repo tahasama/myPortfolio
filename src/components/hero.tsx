@@ -39,13 +39,13 @@ const Hero = () => {
     >
       <Typewriter
         words={[
-          "Frontend-Focused",
-          "FullStack-Able",
-          "Curious",
-          "Passionate",
-          "Devoted",
-          "Creative",
-          "Problem-Solving",
+          // "Frontend-Focused",
+          // "FullStack-Able",
+          // "Curious",
+          // "Passionate",
+          // "Devoted",
+          // "Creative",
+          // "Problem-Solving",
           "Solution-Creating",
         ]}
         loop={Infinity}
