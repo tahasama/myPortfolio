@@ -31,7 +31,7 @@ import { Typewriter } from "react-simple-typewriter";
 const Hero = () => {
   return (
     <Box
-      // w={"100%"}
+      w={"auto"}
       // overflow={"hidden"}
       // whiteSpace={"nowrap"}
       letterSpacing={2}

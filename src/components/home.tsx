@@ -92,6 +92,7 @@ const Home = () => {
           <Divider w={[300, 280, 320, 380, 400]} />
         </Box>
         <Flex
+          w={"auto"}
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 500]}
         >
