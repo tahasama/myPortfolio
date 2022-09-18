@@ -18,8 +18,8 @@ import { motion } from "framer-motion";
 const Home = () => {
   const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("cyan.400", "teal.500");
-  const buttonLightHover = useColorModeValue("cyan.600", "teal.600");
+  const buttonLight = useColorModeValue("cyan.600", "teal.500");
+  const buttonLightHover = useColorModeValue("cyan.700", "teal.600");
   const { colorMode } = useColorMode();
 
   return (
@@ -29,27 +29,30 @@ const Home = () => {
       flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
-      _before={{
-        content: "''",
-        position: "absolute",
-        display: "block",
-        top: 0,
-        left: 0,
-        h: [0, 0, "100vh"],
-        w: "full",
-        bg: colorOnLight,
-        borderRadius: "0% 0% 0% 100%",
-        mt: "65px",
-        transform: " rotate(180deg)",
-        zIndex: 1,
-      }}
+
+      // _before={{
+      //   content: "''",
+      //   position: "absolute",
+      //   display: "block",
+      //   top: "65px",
+      //   left: 0,
+      //   h: [0, 0, "full"],
+      //   // h: [0, 0, "full"],
+
+      //   w: "full",
+      //   bg: colorOnLight,
+      //   borderRadius: "0% 0% 0% 100%",
+      //   // mt: "65px",
+      //   transform: " rotate(180deg)",
+      //   zIndex: 1,
+      // }}
     >
       <CloudNstars />
 
       {colorMode !== "light" ? (
         <Img
           position={"relative"}
-          mx={5}
+          mx={16}
           mt={[0, 50]}
           top={["-28", 0]}
           zIndex={2}
@@ -61,7 +64,7 @@ const Home = () => {
       ) : (
         <Img
           position={"relative"}
-          mx={5}
+          mx={16}
           mt={[0, 50]}
           top={["-28", 0]}
           zIndex={2}
@@ -101,28 +104,29 @@ const Home = () => {
           developper
         </Flex>
 
-        <Button
-          position={"relative"}
-          // alignContent="center"
-          top={["10", "8"]}
-          m={["auto", "auto", 0]}
-          variant="solid"
-          p={0}
-          w={["38vw", "34vw", "28vw"]}
-          h={["7vh", "9vh"]}
-          bg={buttonLight}
-          _hover={{ bg: buttonLightHover }}
+        <motion.div
+          style={{ margin: "auto" }}
+          whileHover={{
+            y: [-1, 4, -1],
+            transition: { duration: 1, repeat: Infinity },
+          }}
         >
-          <motion.div
-            // style={{ margin: "auto" }}
-            whileHover={{
-              y: [-1, 4, -1],
-              transition: { duration: 1, repeat: Infinity },
-            }}
+          <Button
+            position={"relative"}
+            // alignContent="center"
+            top={["10", "8"]}
+            m={["auto", "auto", 0]}
+            variant="solid"
+            p={0}
+            w={["38vw", "34vw", "28vw"]}
+            h={["7vh", "9vh"]}
+            bg={buttonLight}
+            _hover={{ bg: buttonLightHover }}
+            _active={{ bg: buttonLightHover }}
           >
             PROJECTS
-          </motion.div>
-        </Button>
+          </Button>
+        </motion.div>
       </Flex>
     </Flex>
   );

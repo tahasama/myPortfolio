@@ -97,7 +97,8 @@ const Navbar = () => {
         letterSpacing={3}
         fontSize="5xl"
         color={colorOn}
-        fontFamily={"tangerine"}
+        fontFamily={colorMode === "light" ? "ms madi" : "tangerine"}
+        fontWeight={"500"}
         w={["8xl", "8xl", "full"]}
       >
         Maatof Taha
@@ -143,7 +144,7 @@ const Navbar = () => {
           </List>
         </Flex>
         <motion.div
-          whileHover={{ x: [0, -10], scale: 1.6, transition: { duration: 1 } }}
+          whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
         >
           <Button
             marginLeft={5}
@@ -172,7 +173,7 @@ const Navbar = () => {
                   boxShadow={" 0px 2px 12px white"}
                   borderRadius={5}
                 >
-                  <MoonIcon w={7} h={7} ml={"6"} />
+                  <MoonIcon w={7} h={7} ml={"8"} />
                 </Tooltip>
               </motion.p>
             ) : (
