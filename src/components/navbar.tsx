@@ -95,7 +95,7 @@ const Navbar = () => {
         left={[4, 4, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize="5xl"
+        fontSize={["4xl", "5xl"]}
         color={colorOn}
         fontFamily={colorMode === "light" ? "dancing script" : "tangerine"}
         fontWeight={"700"}

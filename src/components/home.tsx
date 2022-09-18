@@ -121,7 +121,7 @@ const Home = () => {
           <Button
             position={"relative"}
             // alignContent="center"
-            top={["10", "8"]}
+            top={["8"]}
             m={["auto", "auto", 0]}
             variant="solid"
             p={0}
