@@ -19,7 +19,7 @@ const Navbar = () => {
   const navTextColorOn = useColorModeValue("gray.200", "gray.400");
   const navNav = useColorModeValue(
     "linear(to-b, blue.300, blue.500)",
-    "linear(to-b, purple.800, teal.500)"
+    "linear(to-b, gray.900, teal.500)"
   );
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -52,7 +52,7 @@ const Navbar = () => {
         <Box
           position={"absolute"}
           // p="40px"
-          color="white"
+          color={colorOn}
           bgGradient={navNav}
           roundedRight="md"
           shadow="md"
