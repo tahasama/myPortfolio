@@ -28,7 +28,7 @@ const Navbar = () => {
 
   return (
     <Flex
-      w={"100vw"}
+      w={"full"}
       h={"16"}
       zIndex={99}
       alignItems="center"
@@ -92,19 +92,23 @@ const Navbar = () => {
 
       <Box
         position={"relative"}
-        left={[2, 2, 0]}
+        left={[4, 4, 0]}
         alignItems="center"
         letterSpacing={3}
         fontSize="5xl"
         color={colorOn}
-        fontFamily={colorMode === "light" ? "ms madi" : "tangerine"}
-        fontWeight={"500"}
+        fontFamily={colorMode === "light" ? "dancing script" : "tangerine"}
+        fontWeight={"700"}
         w={["full"]}
-        bg="red"
       >
         Maatof Taha
       </Box>
-      <Flex w={600} h={"16"} alignItems="center" justifyContent="space-between">
+      <Flex
+        w={"auto"}
+        h={"16"}
+        alignItems="center"
+        justifyContent="space-between"
+      >
         <Flex
           w={["0", "0", "full"]}
           visibility={["hidden", "hidden", "visible"]}
@@ -121,7 +125,7 @@ const Navbar = () => {
                 }}
               >
                 <ListItem
-                  m={5}
+                  m={4}
                   p={1}
                   cursor={"pointer"}
                   fontWeight={600}
@@ -148,7 +152,7 @@ const Navbar = () => {
           whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
         >
           <Button
-            marginLeft={5}
+            ml={4}
             bg={colorMode !== "light" ? "teal.900" : "blue.400"}
             _hover={{
               bg: colorMode !== "light" ? "gray.900" : "blue.300",

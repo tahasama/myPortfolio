@@ -84,18 +84,25 @@ const Home = () => {
         // alignItems={["center", "baseline"]}
       >
         <Box
+          color={colorMode === "light" ? "green.600" : "green.300"}
+          fontFamily={"VT323"}
+          fontSize={"2xl"}
+        >
+          Hello World !
+        </Box>
+        <Box
           fontSize={["lg", "xl", "2xl", "3xl", "4xl", "5xl"]}
           letterSpacing={3}
           fontWeight={[700, 600]}
           flexWrap="wrap"
         >
-          Hey! My name is Taha
+          My name is Taha
         </Box>
         <Box>
           <Divider w={[300, 280, 320, 380, 400]} />
         </Box>
         <Flex
-          w={"auto"}
+          w={["full", "47vw"]}
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 500]}
         >
