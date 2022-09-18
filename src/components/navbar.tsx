@@ -18,8 +18,8 @@ const Navbar = () => {
   const textColorOn = useColorModeValue("blue.300", "gray.900");
   const navTextColorOn = useColorModeValue("gray.200", "gray.400");
   const navNav = useColorModeValue(
-    "linear(to-b, blue.300, blue.500)",
-    "linear(to-b, gray.900, teal.500)"
+    "linear(to-b, blue.300,blue.400, blue.500)",
+    "linear(to-b, gray.900, gray.800, teal.500)"
   );
 
   const { colorMode, toggleColorMode } = useColorMode();

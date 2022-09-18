@@ -35,7 +35,7 @@ const Home = () => {
         display: "block",
         top: 0,
         left: 0,
-        h: [0, "100vh"],
+        h: [0, 0, "100vh"],
         w: "full",
         bg: colorOnLight,
         borderRadius: "0% 0% 0% 100%",
