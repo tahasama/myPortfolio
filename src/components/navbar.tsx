@@ -99,7 +99,8 @@ const Navbar = () => {
         color={colorOn}
         fontFamily={colorMode === "light" ? "ms madi" : "tangerine"}
         fontWeight={"500"}
-        w={["8xl", "8xl", "full"]}
+        w={["full"]}
+        bg="red"
       >
         Maatof Taha
       </Box>
