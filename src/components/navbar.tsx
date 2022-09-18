@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   Flex,
-  Link,
   List,
   ListItem,
   Slide,
