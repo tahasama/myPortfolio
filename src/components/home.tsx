@@ -16,7 +16,7 @@ import CloudNstars from "./cloudNstars";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  const colorOnLight = useColorModeValue("blue.100", "purple.900");
+  // const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const buttonLight = useColorModeValue("cyan.600", "teal.500");
   const buttonLightHover = useColorModeValue("cyan.700", "teal.600");
