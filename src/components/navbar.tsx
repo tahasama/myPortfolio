@@ -5,19 +5,25 @@ import {
   Flex,
   List,
   ListItem,
+  Slide,
   Tooltip,
   useColorMode,
   useColorModeValue,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const Navbar = () => {
   const colorOn = useColorModeValue("#282c34", "gray.50 ");
   const textColorOn = useColorModeValue("blue.300", "gray.900");
   const navTextColorOn = useColorModeValue("gray.200", "gray.400");
+  const navNav = useColorModeValue(
+    "linear(to-b, blue.300, blue.500)",
+    "linear(to-b, purple.800, teal.500)"
+  );
+
   const { colorMode, toggleColorMode } = useColorMode();
-  const [nav, setNav] = useState(false);
+  const { isOpen, onToggle } = useDisclosure();
   const navi = ["Home", "About", "Projects", "Contact"];
 
   return (
@@ -31,69 +37,66 @@ const Navbar = () => {
       bg={textColorOn}
       position="fixed"
     >
-      <Box
-        position={"absolute"}
-        left={0}
-        right={0}
-        m={2}
-        visibility={["visible", "hidden"]}
-        cursor={"pointer"}
-        onClick={() => setNav(!nav)}
-        zIndex={99}
-        w={"fit-content"}
-        bg="red"
+      <Button
+        onClick={onToggle}
+        ml={3}
+        visibility={["visible", "visible", "hidden"]}
       >
-        {nav ? <HamburgerIcon boxSize={8} /> : <CloseIcon boxSize={5} mx={1} />}
-      </Box>
-      {!nav && (
-        <Flex
-          visibility={["visible", "hidden"]}
-          position="absolute"
-          top={0}
-          left={0}
-          w={"full"}
-          h={"100vh"}
-          bg={textColorOn}
-          justifyContent={"center"}
-          alignItems={"center"}
-          flexDirection={"column"}
+        {!isOpen ? (
+          <HamburgerIcon boxSize={8} />
+        ) : (
+          <CloseIcon boxSize={5} mx={1} />
+        )}
+      </Button>
+      <Slide direction="left" in={isOpen} style={{ top: "20%" }}>
+        <Box
+          position={"absolute"}
+          // p="40px"
+          color="white"
+          bgGradient={navNav}
+          roundedRight="md"
+          shadow="md"
+          visibility={["visible", "visible", "hidden"]}
         >
-          <List fontSize={"3xl"} spacing={3} fontWeight={600}>
+          <List fontSize={"xl"} spacing={3} fontWeight={600}>
             {navi.map((n: any) => (
-              <ListItem
-                m={5}
-                cursor={"pointer"}
-                _hover={{ color: navTextColorOn }}
-                p={1}
-                boxShadow={" -1px 1px 0px 0px gray"}
+              <motion.div
+                whileHover={{ scale: 1.03, y: [-1, 1, -1], opacity: 0.7 }}
               >
-                {n}
-              </ListItem>
+                <ListItem
+                  m={3}
+                  cursor={"pointer"}
+                  p={1}
+                  fontFamily="ubuntu"
+                  boxShadow={" 0px 2px 0px 0px white"}
+                  rounded={5}
+                >
+                  {n}
+                </ListItem>
+              </motion.div>
             ))}
           </List>
-        </Flex>
-      )}
+        </Box>
+      </Slide>
 
       <Box
+        position={"relative"}
+        left={[2, 2, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize={"5xl"}
-        m={[12, 6]}
+        fontSize={["3xl", "4xl", "5xl"]}
         color={colorOn}
         fontFamily={"tangerine"}
-        w={"5xl"}
+        w={["8xl", "8xl", "full"]}
       >
-        {/* <Img src={} /> */}
         Maatof Taha
       </Box>
       <Flex w={600} h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
-          w={["0.5", "full"]}
-          // mx={5}
-          visibility={["hidden", "visible"]}
+          w={["0", "0", "full"]}
+          visibility={["hidden", "hidden", "visible"]}
           alignItems="center"
           justifyContent="space-between"
-          // opacity={[0, 1]}
         >
           <List display={"flex"} flexDirection={"row"}>
             {navi.map((n: any) => (

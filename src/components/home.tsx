@@ -26,7 +26,7 @@ const Home = () => {
     <Flex
       alignItems={"center"}
       //   justifyContent={"center"}
-      flexDirection={["column-reverse", "row"]}
+      flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
       _before={{
@@ -83,7 +83,7 @@ const Home = () => {
         <Box
           fontSize={["lg", "xl", "2xl", "3xl", "4xl", "5xl"]}
           letterSpacing={3}
-          fontWeight={[500, 400]}
+          fontWeight={[700, 600]}
           flexWrap="wrap"
         >
           Hey! My name is Taha
@@ -99,28 +99,29 @@ const Home = () => {
           <Hero />
           developper
         </Flex>
-        <motion.div
-          style={{ margin: "auto" }}
-          whileHover={{
-            y: [-1, 4, -1],
-            transition: { duration: 1, repeat: Infinity },
-          }}
+
+        <Button
+          position={"relative"}
+          // alignContent="center"
+          top={["10", "8"]}
+          m={["auto", "auto", 0]}
+          variant="solid"
+          p={0}
+          w={["38vw", "34vw", "28vw"]}
+          h={["7vh", "9vh"]}
+          bg={buttonLight}
+          _hover={{ bg: buttonLightHover }}
         >
-          <Button
-            position={"relative"}
-            alignContent="center"
-            top={["10", "8"]}
-            m={["auto", 5]}
-            variant="solid"
-            p={0}
-            w={["38vw", "34vw", "28vw"]}
-            h={["7vh", "9vh"]}
-            bg={buttonLight}
-            _hover={{ bg: buttonLightHover }}
+          <motion.div
+            // style={{ margin: "auto" }}
+            whileHover={{
+              y: [-1, 4, -1],
+              transition: { duration: 1, repeat: Infinity },
+            }}
           >
             PROJECTS
-          </Button>
-        </motion.div>
+          </motion.div>
+        </Button>
       </Flex>
     </Flex>
   );
