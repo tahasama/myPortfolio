@@ -88,6 +88,7 @@ const Navbar = () => {
         color={colorOn}
         fontFamily={"tangerine"}
         w={["8xl", "8xl", "full"]}
+        fontWeight={["semibold", "medium", "normal"]}
       >
         Maatof Taha
       </Box>
