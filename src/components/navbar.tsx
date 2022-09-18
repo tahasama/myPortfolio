@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Flex,
+  Link,
   List,
   ListItem,
   Slide,
@@ -48,21 +49,31 @@ const Navbar = () => {
           <CloseIcon boxSize={5} mx={1} />
         )}
       </Button>
-      <Slide direction="left" in={isOpen} style={{ top: "20%" }}>
+      <Slide direction="left" in={isOpen} style={{ top: "10%" }}>
         <Box
           position={"absolute"}
           // p="40px"
+          w={"full"}
+          h={"full"}
           color={colorOn}
           bgGradient={navNav}
-          roundedRight="md"
-          shadow="md"
+          // roundedRight="md"
+          // shadow="md"
           visibility={["visible", "visible", "hidden"]}
         >
-          <List fontSize={"xl"} spacing={3} fontWeight={600}>
+          <List
+            fontSize={"xl"}
+            spacing={"8"}
+            mt={10}
+            fontWeight={600}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            w={"90%"}
+          >
             {navi.map((n: any) => (
-              <motion.div
-                whileHover={{ scale: 1.03, y: [-1, 1, -1], opacity: 0.7 }}
-              >
+              <motion.div whileHover={{ scale: 1.03, y: [-1, 1, -1] }}>
                 <ListItem
                   m={3}
                   cursor={"pointer"}
@@ -70,6 +81,7 @@ const Navbar = () => {
                   fontFamily="ubuntu"
                   boxShadow={" 0px 2px 0px 0px white"}
                   rounded={5}
+                  w={"70vw"}
                 >
                   {n}
                 </ListItem>
@@ -100,12 +112,30 @@ const Navbar = () => {
         >
           <List display={"flex"} flexDirection={"row"}>
             {navi.map((n: any) => (
-              <motion.div whileHover={{ scale: 1.03 }}>
+              <motion.div
+                whileHover={{
+                  scale: 1.05,
+                  opacity: 0.9,
+                  x: 2,
+                }}
+              >
                 <ListItem
                   m={5}
+                  p={1}
                   cursor={"pointer"}
-                  _hover={{ color: navTextColorOn }}
                   fontWeight={600}
+                  borderBottom={"4px"}
+                  borderRightRadius={5}
+                  borderColor={"transparent"}
+                  transitionDuration="800ms"
+                  sx={{ translateX: 0 }}
+                  _hover={{
+                    borderBottom: "4px",
+                    borderColor: navTextColorOn,
+                    sx: { translateX: 0 },
+                  }}
+
+                  // boxShadow={" 0px 3px 0px white"}
                 >
                   {n}
                 </ListItem>
