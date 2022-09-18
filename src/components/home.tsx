@@ -77,7 +77,7 @@ const Home = () => {
         position="relative"
         lineHeight={"taller"}
         top={["-40", 0]}
-        w={[300, 330, 450]}
+        w={[300, 330, 460]}
         // alignItems={["center", "baseline"]}
       >
         <Box
