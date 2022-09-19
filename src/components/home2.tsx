@@ -45,14 +45,14 @@ const Home2 = () => {
             <Img
               src={devNight}
               alt="devNight"
-              h={["90%", "56%", "76%"]}
+              h={["100%", "56%", "76%"]}
               borderRadius={"5%"}
             ></Img>
           ) : (
             <Img
               src={devDay}
               alt="devDay"
-              h={["72%", "56%", "66%"]}
+              h={["100%", "56%", "66%"]}
               borderRadius={"5%"}
             ></Img>
           )}
