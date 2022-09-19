@@ -26,7 +26,7 @@ const Home2 = () => {
         h="60%"
         templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(9, 1fr)"]}
         templateRows={["repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(1, 1fr)"]}
-        gap={colorMode === "light" ? 0 : 1}
+        gap={colorMode === "light" ? 0 : [0, 0, 6, 1]}
         mt={"44"}
         w={"83%"}
         zIndex={2}
