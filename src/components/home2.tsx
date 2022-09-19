@@ -38,7 +38,7 @@ const Home2 = () => {
           position={"relative"}
           alignContent={"center"}
           justifyContent={"center"}
-          mt={["12", "12", 0]}
+          mt={["10", "10", "-12"]}
           ml={["8"]}
         >
           {colorMode !== "light" ? (
