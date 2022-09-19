@@ -10,7 +10,10 @@ import {
 
 import Hero from "./hero";
 import devNight from "../images/devNight2.png";
-import devDay from "../images/devDay.jpg";
+// import dev from "../images/dev3.jpg";
+import dev from "../images/dev4.jpg";
+import devNight2 from "../images/dev.webp";
+import devDay from "../images/devDay2.jpg";
 import CloudNstars from "./cloudNstars";
 // import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
@@ -49,16 +52,16 @@ const Home = () => {
     >
       <CloudNstars />
 
-      {/* {colorMode !== "light" ? (
+      {colorMode !== "light" ? (
         <Img
           position={"relative"}
           mx={16}
           mt={[0, 50]}
-          top={["-28", 0]}
+          top={["-10", 0]}
           zIndex={2}
           src={devNight}
           alt="devNight"
-          h={["32%", "38%", "40%", "55%", "50%"]}
+          h={["45%", "45%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       ) : (
@@ -66,20 +69,22 @@ const Home = () => {
           position={"relative"}
           mx={16}
           mt={[0, 50]}
-          top={["-28", 0]}
+          top={["-10", 0]}
           zIndex={2}
-          src={devDay}
-          alt="devDay"
-          h={["32%", "38%", "40%", "55%", "50%"]}
+          src={dev}
+          alt="devDay2"
+          h={["45%", "45%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
+          border="4px"
+          borderColor={"teal.300"}
         ></Img>
-      )} */}
+      )}
       <Flex
         zIndex={2}
         flexDirection="column"
         position="relative"
         lineHeight={"taller"}
-        top={["-40", 0]}
+        top={["-20", 0]}
         w="auto"
         // alignItems={["center", "baseline"]}
       >

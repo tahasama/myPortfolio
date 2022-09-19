@@ -1,7 +1,7 @@
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
-// import Home from "./components/home";
-import Home2 from "./components/home2";
+import Home from "./components/home";
+// import Home2 from "./components/home2";
 
 function App() {
   const colorOnLight = useColorModeValue("#282c34", "gray.100");
@@ -10,8 +10,8 @@ function App() {
   return (
     <Box bg={bglOnLights} h="140vh" color={colorOnLight}>
       <Navbar />
-      {/* <Home /> */}
-      <Home2 />
+      <Home />
+      {/* <Home2 /> */}
     </Box>
   );
 }

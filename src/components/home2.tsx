@@ -61,9 +61,10 @@ const Home2 = () => {
           position="relative"
           colSpan={[8, 4]}
           order={["1", "1", "2"]}
-          mt={["0", "-10", "6"]}
+          mt={["10", "-10", "6"]}
           ml={["8", "8", "0"]}
           left={colorMode === "light" ? ["0px", "2px", "10px", "2px"] : "0"}
+          w={["full", "auto"]}
         >
           <Box
             color={colorMode === "light" ? "green.600" : "green.300"}
@@ -81,7 +82,7 @@ const Home2 = () => {
             My name is Taha
           </Box>
           <Box>
-            <Divider w={[300, 280, 320, 380, 400]} />
+            <Divider w={[200, 280, 320, 380, 400]} />
           </Box>
           <Flex
             w={["full", "full", "47vw"]}
@@ -93,7 +94,7 @@ const Home2 = () => {
             developper
           </Flex>
           <motion.div
-            style={{ display: "flex" }}
+            // style={{ display: "flex" }}
             whileHover={{
               y: [-1, 4, -1],
               transition: { duration: 1, repeat: Infinity },
