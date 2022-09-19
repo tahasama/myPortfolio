@@ -125,6 +125,7 @@ const Home = () => {
             position={"relative"}
             // alignContent="center"
             top={["5"]}
+            left={["auto", "auto", "-20", "-24"]}
             m={["auto", "auto", 0]}
             variant="solid"
             p={0}
