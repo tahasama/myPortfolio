@@ -8,7 +8,7 @@ function App() {
   const bglOnLights = useColorModeValue("blue.300", "gray.900");
 
   return (
-    <Box bg={bglOnLights} h="full" color={colorOnLight}>
+    <Box bg={bglOnLights} h="140vh" color={colorOnLight}>
       <Navbar />
       {/* <Home /> */}
       <Home2 />
