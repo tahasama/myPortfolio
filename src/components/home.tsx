@@ -11,8 +11,8 @@ import {
 import Hero from "./hero";
 import devNight from "../images/devNight2.png";
 // import dev from "../images/dev3.jpg";
-import dev from "../images/dev4.jpg";
-// import devNight2 from "../images/dev.webp";
+// import dev from "../images/dev4.jpg";
+import dev from "../images/dev5.webp";
 // import devDay from "../images/devDay2.jpg";
 import CloudNstars from "./cloudNstars";
 // import { ArrowForwardIcon } from "@chakra-ui/icons";
@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 const Home = () => {
   // const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("cyan.600", "teal.500");
+  const buttonLight = useColorModeValue("teal.300", "teal.500");
   const buttonLightHover = useColorModeValue("cyan.700", "teal.600");
   const { colorMode } = useColorMode();
 
@@ -75,8 +75,6 @@ const Home = () => {
           alt="devDay2"
           h={["45%", "45%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          border="4px"
-          borderColor={"teal.300"}
         ></Img>
       )}
       <Flex
