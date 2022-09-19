@@ -57,11 +57,11 @@ const Home = () => {
           position={"relative"}
           mx={[16]}
           mt={[0, 50]}
-          top={["-10", 0]}
+          top={["-20", 0]}
           zIndex={2}
           src={devNight}
           alt="devNight"
-          h={["32%", "46%", "45%", "55%", "50%"]}
+          h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       ) : (
@@ -69,11 +69,11 @@ const Home = () => {
           position={"relative"}
           mx={16}
           mt={[0, 50]}
-          top={["-10", 0]}
+          top={["-20", 0]}
           zIndex={2}
           src={dev}
           alt="devDay2"
-          h={["32%", "46%", "45%", "55%", "50%"]}
+          h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       )}
@@ -82,7 +82,7 @@ const Home = () => {
         flexDirection="column"
         position="relative"
         lineHeight={"taller"}
-        top={["-12", 0]}
+        top={["-6", 0]}
         w="auto"
         // alignItems={["center", "baseline"]}
       >
