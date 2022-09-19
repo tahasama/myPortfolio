@@ -55,13 +55,13 @@ const Home = () => {
       {colorMode !== "light" ? (
         <Img
           position={"relative"}
-          mx={16}
+          mx={[16]}
           mt={[0, 50]}
           top={["-10", 0]}
           zIndex={2}
           src={devNight}
           alt="devNight"
-          h={["35%", "50%", "45%", "55%", "50%"]}
+          h={["35%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       ) : (
@@ -73,7 +73,7 @@ const Home = () => {
           zIndex={2}
           src={dev}
           alt="devDay2"
-          h={["35%", "50%", "45%", "55%", "50%"]}
+          h={["35%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       )}
