@@ -82,7 +82,7 @@ const Home = () => {
         flexDirection="column"
         position="relative"
         lineHeight={"taller"}
-        top={["-6", 0]}
+        top={["-24", 0]}
         w="auto"
         // alignItems={["center", "baseline"]}
       >
