@@ -1,19 +1,17 @@
-import React from "react";
 import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
-import Hero from "./components/hero";
-import Home from "./components/home";
+// import Home from "./components/home";
+import Home2 from "./components/home2";
 
 function App() {
-  // const bglOnLight = useColorModeValue("gray.100", "#282c34");
   const colorOnLight = useColorModeValue("#282c34", "gray.100");
   const bglOnLights = useColorModeValue("blue.300", "gray.900");
 
   return (
     <Box bg={bglOnLights} h="full" color={colorOnLight}>
       <Navbar />
-      <Hero />
-      <Home />
+      {/* <Home /> */}
+      <Home2 />
     </Box>
   );
 }

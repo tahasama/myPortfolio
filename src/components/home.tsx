@@ -49,7 +49,7 @@ const Home = () => {
     >
       <CloudNstars />
 
-      {colorMode !== "light" ? (
+      {/* {colorMode !== "light" ? (
         <Img
           position={"relative"}
           mx={16}
@@ -73,7 +73,7 @@ const Home = () => {
           h={["32%", "38%", "40%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
-      )}
+      )} */}
       <Flex
         zIndex={2}
         flexDirection="column"

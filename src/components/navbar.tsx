@@ -51,13 +51,10 @@ const Navbar = () => {
       <Slide direction="left" in={isOpen} style={{ top: "10%" }}>
         <Box
           position={"absolute"}
-          // p="40px"
           w={"full"}
           h={"full"}
           color={colorOn}
           bgGradient={navNav}
-          // roundedRight="md"
-          // shadow="md"
           visibility={["visible", "visible", "hidden"]}
         >
           <List
@@ -139,8 +136,6 @@ const Navbar = () => {
                     borderColor: navTextColorOn,
                     sx: { translateX: 0 },
                   }}
-
-                  // boxShadow={" 0px 3px 0px white"}
                 >
                   {n}
                 </ListItem>
