@@ -61,7 +61,7 @@ const Home2 = () => {
           position="relative"
           colSpan={[8, 4]}
           order={["1", "1", "2"]}
-          mt={["-14", "-10", "6"]}
+          mt={["0", "-10", "6"]}
           ml={["8", "8", "0"]}
           left={colorMode === "light" ? ["0px", "2px", "10px", "2px"] : "0"}
         >
