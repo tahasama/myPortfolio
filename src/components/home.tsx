@@ -61,7 +61,7 @@ const Home = () => {
           zIndex={2}
           src={devNight}
           alt="devNight"
-          h={["30%", "46%", "45%", "55%", "50%"]}
+          h={["32%", "46%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       ) : (
@@ -73,7 +73,7 @@ const Home = () => {
           zIndex={2}
           src={dev}
           alt="devDay2"
-          h={["30%", "46%", "45%", "55%", "50%"]}
+          h={["32%", "46%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
         ></Img>
       )}
