@@ -41,7 +41,7 @@ const Home = () => {
           alt="devNight"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          boxShadow={"0px 0px 70px #2C5282"}
+          boxShadow={"0px 0px 60px #2C5282"}
         ></Img>
       ) : (
         <Img
@@ -55,7 +55,7 @@ const Home = () => {
           alt="devDay2"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          boxShadow={"0px 0px 80px #00A3C4"}
+          boxShadow={"0px 0px 60px #00A3C4"}
           filter="grayscale(65%)"
         ></Img>
       )}
