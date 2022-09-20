@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Flex,
+  Img,
   List,
   ListItem,
   Slide,
@@ -12,6 +13,8 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import logoNight from "../images/logoNight.png";
+import logoDay from "../images/logoDay.png";
 
 const Navbar = () => {
   const colorOn = useColorModeValue("#282c34", "gray.50 ");
@@ -87,7 +90,7 @@ const Navbar = () => {
         </Box>
       </Slide>
 
-      <Box
+      {/* <Box
         position={"relative"}
         // display={"block"}
         left={[3, 4, 0]}
@@ -101,7 +104,14 @@ const Navbar = () => {
         cursor={"pointer"}
       >
         Maatof Taha
-      </Box>
+      </Box> */}
+      <Img
+        src={colorMode !== "light" ? logoNight : logoDay}
+        alt="devDay2"
+        position={"relative"}
+        left={["0", "0", "-60px", "-140px", "-200px", "-100px"]}
+        w={["53%", "auto"]}
+      />
       <Flex
         w={"auto"}
         h={"16"}
