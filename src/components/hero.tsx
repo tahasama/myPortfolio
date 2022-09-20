@@ -34,18 +34,16 @@ const Hero = () => {
       w={"auto"}
       // overflow={"hidden"}
       // whiteSpace={"nowrap"}
-      letterSpacing={2}
+      letterSpacing={1}
       // animation={`${typing} 1.5s steps(10) infinite, ${blink} 1.5s steps(10) infinite, ${slide} 3s steps(4) infinite `}
     >
       <Typewriter
         words={[
           "Frontend-Focused",
-          "Self-thaught",
-          "MERN Stack",
+          " Self - thaught ",
+          " MERN - Stack ",
           "Problem-solving",
-          "Curious",
-          "Passionate",
-          "Creative",
+          // "Curious & Creative",
         ]}
         loop={Infinity}
         cursor

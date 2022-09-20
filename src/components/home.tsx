@@ -41,7 +41,7 @@ const Home = () => {
           alt="devNight"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          boxShadow={"0px 0px 60px #2C5282"}
+          boxShadow={"0px 0px 54px #2C5282"}
         ></Img>
       ) : (
         <Img
@@ -55,7 +55,7 @@ const Home = () => {
           alt="devDay2"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          boxShadow={"0px 0px 60px #00A3C4"}
+          boxShadow={"0px 0px 7px 7px #00B5D8"}
           filter="grayscale(65%)"
         ></Img>
       )}
@@ -63,9 +63,10 @@ const Home = () => {
         zIndex={2}
         flexDirection="column"
         position="relative"
+        alignItems={["center", "start"]}
         lineHeight={"taller"}
         top={["-16", 0]}
-        w="auto"
+        w={["full", "auto"]}
         left={["0", "0", "-16", "-7", "10"]}
       >
         <Box
@@ -88,12 +89,16 @@ const Home = () => {
         </Box>
         <Divider w={[240, 280, 280, 380, 400]} />
         <Flex
-          w={["full", "60vw", "46vw"]}
+          position={"relative"}
+          // alignItems="start"
+          w={["288px", "60vw", "46vw"]}
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 400]}
           fontFamily={"tajawal"}
+          left={["4", "0"]}
         >
-          I'm a &nbsp; <Hero />
+          I'm a &nbsp;
+          <Hero />
           developper
         </Flex>
 
@@ -111,7 +116,7 @@ const Home = () => {
             fontWeight={["400", "500"]}
             position={"relative"}
             top={["2", "5"]}
-            left={["auto", "auto", "-6", "-58px", "-135px"]}
+            left={["0", "auto", "-6", "-58px", "-135px"]}
             my={["4", "auto", 0]}
             variant="solid"
             // p={["2", "4"]}

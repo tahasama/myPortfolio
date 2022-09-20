@@ -89,11 +89,11 @@ const Navbar = () => {
 
       <Box
         position={"relative"}
-        display={"block"}
-        left={[4, 4, 0]}
+        // display={"block"}
+        left={[3, 4, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize={["3xl", "3xl", "4xl", "5xl"]}
+        fontSize={["26px", "3xl", "4xl", "5xl"]}
         color={colorOn}
         fontFamily={colorMode === "light" ? "alex brush" : "tangerine"}
         fontWeight={"200"}
@@ -112,6 +112,7 @@ const Navbar = () => {
           visibility={["hidden", "hidden", "visible"]}
           alignItems="center"
           justifyContent="space-between"
+          m={"4"}
         >
           <List display={"flex"} flexDirection={"row"}>
             {navi.map((n: any) => (
@@ -149,16 +150,17 @@ const Navbar = () => {
           whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
         >
           <Button
-            ml={4}
             bg={colorMode !== "light" ? "teal.900" : "blue.400"}
             _hover={{
               bg: colorMode !== "light" ? "gray.900" : "blue.300",
             }}
             onClick={toggleColorMode}
             borderRadius="0 0 0 100%"
-            h={"16"}
-            w={"16"}
-            p={12}
+            h={["6", "10"]}
+            w={["6", "10"]}
+            py={["8", "12"]}
+            px={["8", "12"]}
+            mt={["-4", "0"]}
           >
             {colorMode !== "light" ? (
               <motion.p
