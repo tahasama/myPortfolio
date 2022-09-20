@@ -93,7 +93,8 @@ const Home = () => {
           fontWeight={[600, 400]}
           fontFamily={"tajawal"}
         >
-          I'm a &nbsp; Problem-solving developper
+          I'm a &nbsp; <Hero />
+          developper
         </Flex>
 
         <motion.div
