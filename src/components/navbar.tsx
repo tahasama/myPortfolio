@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <Flex
       w={"full"}
-      h={"16"}
+      h={"20"}
       zIndex={99}
       alignItems="center"
       justifyContent="space-between"
@@ -58,7 +58,7 @@ const Navbar = () => {
           visibility={["visible", "visible", "hidden"]}
         >
           <List
-            fontSize={"xl"}
+            fontSize={"2xl"}
             spacing={"8"}
             mt={10}
             fontWeight={600}
@@ -93,11 +93,12 @@ const Navbar = () => {
         left={[4, 4, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize={["2xl", "4xl", "4xl"]}
+        fontSize={["2xl", "3xl", "4xl", "5xl"]}
         color={colorOn}
-        fontFamily={colorMode === "light" ? "dancing script" : "tangerine"}
-        fontWeight={"700"}
+        fontFamily={colorMode === "light" ? "alex brush" : "tangerine"}
+        fontWeight={"200"}
         w={["full"]}
+        my={"5"}
       >
         Maatof Taha
       </Box>
@@ -123,8 +124,9 @@ const Navbar = () => {
                 }}
               >
                 <ListItem
-                  m={4}
+                  mx={[2, 2, 2, 4]}
                   p={1}
+                  fontSize={["sm", "sm", "md", "20px"]}
                   cursor={"pointer"}
                   fontWeight={600}
                   borderBottom={"4px"}
@@ -174,7 +176,7 @@ const Navbar = () => {
                   boxShadow={"0px 2px 12px white"}
                   borderRadius={5}
                 >
-                  <MoonIcon w={7} h={7} ml={["8"]} />
+                  <MoonIcon w={8} h={8} ml={["8"]} />
                 </Tooltip>
               </motion.p>
             ) : (
@@ -193,7 +195,7 @@ const Navbar = () => {
                   boxShadow={" 0px 2px 12px gray"}
                   borderRadius={5}
                 >
-                  <SunIcon color={"gold"} w={7} h={7} />
+                  <SunIcon color={"gold"} w={8} h={8} />
                 </Tooltip>
               </motion.div>
             )}
