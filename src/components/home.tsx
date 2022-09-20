@@ -10,71 +10,53 @@ import {
 
 import Hero from "./hero";
 import devNight from "../images/devNight2.png";
-// import dev from "../images/dev3.jpg";
-// import dev from "../images/dev4.jpg";
-import dev from "../images/dev5.webp";
-// import devDay from "../images/devDay2.jpg";
+import dev from "../images/dev.png";
 import CloudNstars from "./cloudNstars";
-// import { ArrowForwardIcon } from "@chakra-ui/icons";
 import { motion } from "framer-motion";
 
 const Home = () => {
-  // const colorOnLight = useColorModeValue("blue.100", "purple.900");
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("teal.300", "teal.500");
-  const buttonLightHover = useColorModeValue("cyan.700", "teal.600");
+  const buttonLight = useColorModeValue("cyan.700", "teal.500");
+  const buttonLightHover = useColorModeValue("cyan.800", "teal.600");
   const { colorMode } = useColorMode();
 
   return (
     <Flex
       alignItems={"center"}
-      //   justifyContent={"center"}
       flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
-
-      // _before={{
-      //   content: "''",
-      //   position: "absolute",
-      //   display: "block",
-      //   top: "65px",
-      //   left: 0,
-      //   h: [0, 0, "full"],
-      //   // h: [0, 0, "full"],
-
-      //   w: "full",
-      //   bg: colorOnLight,
-      //   borderRadius: "0% 0% 0% 100%",
-      //   // mt: "65px",
-      //   transform: " rotate(180deg)",
-      //   zIndex: 1,
-      // }}
     >
       <CloudNstars />
 
       {colorMode !== "light" ? (
         <Img
           position={"relative"}
-          mx={[16]}
+          left={["0", "0", "-5", "-6", "9"]}
+          mx={16}
           mt={[0, 50]}
-          top={["-20", 0]}
+          top={["-12", 0]}
           zIndex={2}
           src={devNight}
           alt="devNight"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
+          boxShadow={"0px 0px 100px #2C5282"}
         ></Img>
       ) : (
         <Img
           position={"relative"}
+          left={["0", "0", "-5", "-6", "9"]}
           mx={16}
           mt={[0, 50]}
-          top={["-20", 0]}
+          top={["-12", 0]}
           zIndex={2}
           src={dev}
           alt="devDay2"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
+          boxShadow={"0px 0px 100px #00A3C4"}
+          filter="grayscale(65%)"
         ></Img>
       )}
       <Flex
@@ -82,36 +64,36 @@ const Home = () => {
         flexDirection="column"
         position="relative"
         lineHeight={"taller"}
-        top={["-36", 0]}
+        top={["-16", 0]}
         w="auto"
-        // alignItems={["center", "baseline"]}
+        left={["0", "0", "-16", "-7", "10"]}
       >
         <Box
           color={colorMode === "light" ? "green.600" : "green.300"}
           fontFamily={"VT323"}
-          fontSize={"2xl"}
+          fontSize={"3xl"}
+          lineHeight={"1.5"}
+          // pt={"10"}
         >
           Hello World !
         </Box>
         <Box
-          fontSize={["lg", "xl", "2xl", "3xl", "4xl", "5xl"]}
+          fontSize={["lg", "xl", "2xl", "3xl", "4xl"]}
           letterSpacing={3}
-          fontWeight={[700, 600]}
+          fontWeight={[700, 500]}
           flexWrap="wrap"
+          fontFamily={"open sans"}
         >
           My name is Taha
         </Box>
-        <Box>
-          <Divider w={[300, 280, 320, 380, 400]} />
-        </Box>
+        <Divider w={[240, 280, 280, 380, 400]} />
         <Flex
-          w={["full", "47vw"]}
+          w={["full", "60vw", "46vw"]}
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
-          fontWeight={[600, 500]}
+          fontWeight={[600, 400]}
+          fontFamily={"tajawal"}
         >
-          I'm a &nbsp;
-          <Hero />
-          developper
+          I'm a &nbsp; Problem-solving developper
         </Flex>
 
         <motion.div
@@ -122,15 +104,20 @@ const Home = () => {
           }}
         >
           <Button
+            color="white"
+            letterSpacing={1}
+            fontSize={"20"}
+            fontWeight={["400", "500"]}
             position={"relative"}
-            // alignContent="center"
-            top={["5"]}
-            left={["auto", "auto", "-20", "-24"]}
-            m={["auto", "auto", 0]}
+            top={["2", "5"]}
+            left={["auto", "auto", "-6", "-58px", "-135px"]}
+            my={["4", "auto", 0]}
             variant="solid"
-            p={0}
-            w={["38vw", "34vw", "28vw"]}
-            h={["7vh", "9vh"]}
+            // p={["2", "4"]}
+            // w={["38vw", "34vw", "28vw"]}
+            // h={["7vh", "9vh"]}
+            px={["74px", "74px", "100px", "32"]}
+            py={["5", "5", "6", "8"]}
             bg={buttonLight}
             _hover={{ bg: buttonLightHover }}
             _active={{ bg: buttonLightHover }}

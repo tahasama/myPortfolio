@@ -89,10 +89,11 @@ const Navbar = () => {
 
       <Box
         position={"relative"}
+        display={"block"}
         left={[4, 4, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize={["4xl", "5xl"]}
+        fontSize={["2xl", "4xl", "4xl"]}
         color={colorOn}
         fontFamily={colorMode === "light" ? "dancing script" : "tangerine"}
         fontWeight={"700"}
@@ -170,10 +171,10 @@ const Navbar = () => {
                   bgColor={textColorOn}
                   color={colorOn}
                   mt={4}
-                  boxShadow={" 0px 2px 12px white"}
+                  boxShadow={"0px 2px 12px white"}
                   borderRadius={5}
                 >
-                  <MoonIcon w={7} h={7} ml={"8"} />
+                  <MoonIcon w={7} h={7} ml={["8"]} />
                 </Tooltip>
               </motion.p>
             ) : (
