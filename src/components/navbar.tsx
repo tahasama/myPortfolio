@@ -93,12 +93,11 @@ const Navbar = () => {
         left={[4, 4, 0]}
         alignItems="center"
         letterSpacing={3}
-        fontSize={["2xl", "3xl", "4xl", "5xl"]}
+        fontSize={["3xl", "3xl", "4xl", "5xl"]}
         color={colorOn}
         fontFamily={colorMode === "light" ? "alex brush" : "tangerine"}
         fontWeight={"200"}
         w={["full"]}
-        my={"5"}
       >
         Maatof Taha
       </Box>
