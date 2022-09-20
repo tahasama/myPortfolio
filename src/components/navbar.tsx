@@ -120,6 +120,7 @@ const Navbar = () => {
         // left={["0", "0", "-60px", "-140px", "-200px"]}
         // mx={["20", "20", "6"]}
         w={["53%", "auto"]}
+        cursor={"pointer"}
       />
       <Flex
         w={"auto"}
