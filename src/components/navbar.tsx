@@ -40,20 +40,22 @@ const Navbar = () => {
       bg={textColorOn}
       position="fixed"
     >
-      <Flex position={"absolute"} left={"2"} top={"2"}>
-        <Button
-          onClick={onToggle}
-          // ml={3}
-          visibility={["visible", "visible", "hidden"]}
-          py={"6"}
-        >
-          {!isOpen ? (
-            <HamburgerIcon boxSize={8} />
-          ) : (
-            <CloseIcon boxSize={5} mx={1} />
-          )}
-        </Button>
-      </Flex>
+      {/* <Flex position={"absolute"} left={"2"} top={"2"}> */}
+      <Button
+        onClick={onToggle}
+        mt={"-14px"}
+        ml={"14px"}
+        visibility={["visible", "visible", "hidden"]}
+        // p={["4", "6"]}
+        h={"12"}
+      >
+        {!isOpen ? (
+          <HamburgerIcon boxSize={8} mx={-1} />
+        ) : (
+          <CloseIcon boxSize={5} mx={0} />
+        )}
+      </Button>
+      {/* </Flex> */}
       <Slide direction="left" in={isOpen} style={{ top: "10%" }}>
         <Box
           position={"absolute"}
@@ -109,12 +111,14 @@ const Navbar = () => {
         Maatof Taha
       </Box> */}
       <Img
-        visibility={["hidden", "hidden", "visible"]}
+        visibility={["visible"]}
         src={colorMode !== "light" ? logoNight : logoDay}
         alt="devDay2"
-        position={"relative"}
+        position={"absolute"}
+        left={["25vw", "22vw", "5"]}
+        top={["10px", "2px", "0px"]}
         // left={["0", "0", "-60px", "-140px", "-200px"]}
-        mx={"6"}
+        // mx={["20", "20", "6"]}
         w={["53%", "auto"]}
       />
       <Flex
