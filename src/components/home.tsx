@@ -35,13 +35,13 @@ const Home = () => {
           left={["0", "0", "-5", "-6", "9"]}
           mx={16}
           mt={[0, 50]}
-          top={["-12", 0]}
+          top={["-16", 0]}
           zIndex={2}
           src={devNight}
           alt="devNight"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
-          boxShadow={"0px 0px 54px #2C5282"}
+          boxShadow={"0px 0px 50px #2C5282"}
         ></Img>
       ) : (
         <Img
@@ -49,14 +49,14 @@ const Home = () => {
           left={["0", "0", "-5", "-6", "9"]}
           mx={16}
           mt={[0, 50]}
-          top={["-12", 0]}
+          top={["-16", 0]}
           zIndex={2}
           src={dev}
           alt="devDay2"
           h={["32%", "40%", "45%", "55%", "50%"]}
-          borderRadius={"5%"}
-          boxShadow={"0px 0px 7px 7px #00B5D8"}
-          filter="grayscale(65%)"
+          borderRadius={"3xl"}
+          boxShadow={"0px 0px 20px #2B6CB0"}
+          filter="grayscale(30%)"
         ></Img>
       )}
       <Flex
@@ -65,7 +65,7 @@ const Home = () => {
         position="relative"
         alignItems={["center", "start"]}
         lineHeight={"taller"}
-        top={["-16", 0]}
+        top={["-20", 0]}
         w={["full", "auto"]}
         left={["0", "0", "-16", "-7", "10"]}
       >

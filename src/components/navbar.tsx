@@ -98,6 +98,7 @@ const Navbar = () => {
         fontFamily={colorMode === "light" ? "alex brush" : "tangerine"}
         fontWeight={"200"}
         w={["full"]}
+        cursor={"pointer"}
       >
         Maatof Taha
       </Box>
