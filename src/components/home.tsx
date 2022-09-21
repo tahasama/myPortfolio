@@ -4,7 +4,6 @@ import {
   Divider,
   Flex,
   Img,
-  keyframes,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -17,15 +16,6 @@ import dev1 from "../images/devdev.png";
 import CloudNstars from "./cloudNstars";
 import { motion } from "framer-motion";
 import { useState } from "react";
-
-const slide = keyframes`
-from {
-  top: -100px;
-}
-to {
-  top: 0;
-}
-`;
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
