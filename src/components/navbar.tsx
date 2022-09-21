@@ -171,7 +171,7 @@ const Navbar = () => {
           whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
         >
           <Button
-            bg={colorMode !== "light" ? "teal.900" : "blue.400"}
+            bg={colorMode !== "light" ? "teal.900" : "blue.500"}
             _hover={{
               bg: colorMode !== "light" ? "gray.900" : "blue.300",
             }}
