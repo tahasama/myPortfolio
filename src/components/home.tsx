@@ -4,6 +4,7 @@ import {
   Divider,
   Flex,
   Img,
+  keyframes,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -16,6 +17,17 @@ import dev1 from "../images/devdev.png";
 import CloudNstars from "./cloudNstars";
 import { motion } from "framer-motion";
 import { useState } from "react";
+
+const flip = keyframes`
+from {
+  transform:scaleX(-1);
+}
+to {
+
+  transform:scaleX(1);
+
+}
+`;
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
@@ -44,21 +56,22 @@ const Home = () => {
           left={["0", "0", "-5", "-6", "9"]}
           mx={16}
           mt={[0, 50]}
-          top={["-16", 0]}
+          // top={["-16", 0]}
           zIndex={2}
-          // onMouseEnter={() => enterF()}
-          onMouseOver={() => enterF()}
+          onMouseEnter={() => enterF()}
+          // onMouseLeave={() => enterF()}
+          // onMouseOver={() => enterF()}
           src={pic ? devNight2 : devNight}
           alt="devNight"
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"5%"}
           // boxShadow={"0px 0px 50px #2C5282"}
           boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
-          _hover={{ transform: "translateX(10px) rotateZ(2deg)" }}
-          transition="transform 1s ease-in-out"
+          _hover={{ animation: `${flip} 3s` }}
+          transition="animation 1s ease-in-out"
           cursor={"pointer"}
           onClick={toggleColorMode}
-        ></Img>
+        />
       ) : (
         <Img
           position={"relative"}
@@ -74,14 +87,12 @@ const Home = () => {
           h={["32%", "40%", "45%", "55%", "50%"]}
           borderRadius={"3xl"}
           boxShadow={pic ? "-3px 3px 3px 3px #2B6CB0" : "none"}
-          _hover={{
-            transform: "translateX(10px) rotateZ(2deg)",
-          }}
-          transition="transform 1s ease-in-out"
+          _hover={{ animation: `${flip} 2s` }}
+          transition="animation 1s ease-in-out"
           // filter="grayscale(30%)"
           cursor={"pointer"}
           onClick={toggleColorMode}
-        ></Img>
+        />
       )}
       <Flex
         zIndex={2}
