@@ -21,10 +21,12 @@ import { useState } from "react";
 const flip = keyframes`
 from,to
 0%   {transform: scaleX(1);}
-25% { opacity(.8);}
-50% {opacity(.4);}
+25%  {opacity(.4);} 
+
+50% {transform: scaleX(-1);}
 75% { opacity(.8);}
-100% {transform: scaleX(-1);}
+95% { opacity(.8);}
+100% {transform: scaleX(1);}
 `;
 
 const Home = () => {
@@ -36,35 +38,37 @@ const Home = () => {
   const [pic, setPic] = useState(true);
 
   const enterF = () => {
-    setPic(!pic);
+    setTimeout(() => {
+      setPic(!pic);
+    }, 50);
   };
 
   return (
     <Flex
+      position={"relative"}
       alignItems={"center"}
       flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
     >
-      <CloudNstars />
+      <Box>
+        <CloudNstars />
+      </Box>
       <Flex
         position={"relative"}
+        alignItems={"center"}
         left={["0", "0", "-5", "-6", "9"]}
         mx={16}
         mt={[0, 50]}
-        // top={["-16", 0]}
+        top={["-16", 0]}
         zIndex={99}
         onMouseOver={() => enterF()}
-        h={["32%", "40%", "45%", "55%", "50%"]}
-        // boxShadow={"0px 0px 50px #2C5282"}
+        w={["77%", "50%", "45%", "50%", "30%"]}
         cursor={"pointer"}
-        transition="animation 5s ease-in-out "
         onClick={toggleColorMode}
         borderRadius={"3xl"}
         border={"white"}
-        _hover={{ animation: `${flip} .5s ease-in-out` }}
-        // w={"400px"}
-        w={"auto"}
+        _hover={{ animation: `${flip} .6s ease-in-out` }}
       >
         {colorMode !== "light" ? (
           <Img
@@ -97,7 +101,6 @@ const Home = () => {
           fontFamily={"VT323"}
           fontSize={"3xl"}
           lineHeight={"1.5"}
-          // pt={"10"}
         >
           Hello World !
         </Box>
@@ -113,7 +116,6 @@ const Home = () => {
         <Divider w={[240, 280, 280, 380, 400]} />
         <Flex
           position={"relative"}
-          // alignItems="start"
           w={["288px", "60vw", "46vw"]}
           fontSize={["md", "lg", "xl", "2xl", "3xl"]}
           fontWeight={[600, 400]}
@@ -142,9 +144,6 @@ const Home = () => {
             left={["0", "auto", "-6", "-58px", "-135px"]}
             my={["4", "auto", 0]}
             variant="solid"
-            // p={["2", "4"]}
-            // w={["38vw", "34vw", "28vw"]}
-            // h={["7vh", "9vh"]}
             px={["74px", "74px", "100px", "32"]}
             py={["5", "5", "6", "8"]}
             bg={buttonLight}
