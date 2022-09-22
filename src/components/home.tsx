@@ -19,14 +19,12 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const flip = keyframes`
-from {
-  transform:scaleX(-1);
-}
-to {
-
-  transform:scaleX(1);
-
-}
+from,to
+0%   {transform: scaleX(1);}
+25% { opacity(.8);}
+50% {opacity(.4);}
+75% { opacity(.8);}
+100% {transform: scaleX(-1);}
 `;
 
 const Home = () => {
@@ -49,51 +47,41 @@ const Home = () => {
       bg={bglOnLight}
     >
       <CloudNstars />
-
-      {colorMode !== "light" ? (
-        <Img
-          position={"relative"}
-          left={["0", "0", "-5", "-6", "9"]}
-          mx={16}
-          mt={[0, 50]}
-          // top={["-16", 0]}
-          zIndex={2}
-          onMouseEnter={() => enterF()}
-          // onMouseLeave={() => enterF()}
-          // onMouseOver={() => enterF()}
-          src={pic ? devNight2 : devNight}
-          alt="devNight"
-          h={["32%", "40%", "45%", "55%", "50%"]}
-          borderRadius={"5%"}
-          // boxShadow={"0px 0px 50px #2C5282"}
-          boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
-          _hover={{ animation: `${flip} 3s` }}
-          transition="animation 1s ease-in-out"
-          cursor={"pointer"}
-          onClick={toggleColorMode}
-        />
-      ) : (
-        <Img
-          position={"relative"}
-          left={["0", "0", "-5", "-6", "9"]}
-          mx={16}
-          mt={[0, 50]}
-          top={["-16", 0]}
-          zIndex={2}
-          onMouseOver={() => enterF()}
-          src={pic ? dev : dev1}
-          filter={pic ? "brightness(1)" : "brightness(1.3)"}
-          alt="devDay2"
-          h={["32%", "40%", "45%", "55%", "50%"]}
-          borderRadius={"3xl"}
-          boxShadow={pic ? "-3px 3px 3px 3px #2B6CB0" : "none"}
-          _hover={{ animation: `${flip} 2s` }}
-          transition="animation 1s ease-in-out"
-          // filter="grayscale(30%)"
-          cursor={"pointer"}
-          onClick={toggleColorMode}
-        />
-      )}
+      <Flex
+        position={"relative"}
+        left={["0", "0", "-5", "-6", "9"]}
+        mx={16}
+        mt={[0, 50]}
+        // top={["-16", 0]}
+        zIndex={99}
+        onMouseOver={() => enterF()}
+        h={["32%", "40%", "45%", "55%", "50%"]}
+        // boxShadow={"0px 0px 50px #2C5282"}
+        cursor={"pointer"}
+        transition="animation 5s ease-in-out "
+        onClick={toggleColorMode}
+        borderRadius={"3xl"}
+        border={"white"}
+        _hover={{ animation: `${flip} .5s ease-in-out` }}
+        // w={"400px"}
+        w={"auto"}
+      >
+        {colorMode !== "light" ? (
+          <Img
+            src={pic ? devNight2 : devNight}
+            alt="devNight"
+            borderRadius={"3xl"}
+            boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
+          />
+        ) : (
+          <Img
+            src={pic ? dev : dev1}
+            filter={pic ? "brightness(1)" : "brightness(1.3)"}
+            alt="devDay2"
+            borderRadius={"3xl"}
+          />
+        )}
+      </Flex>
       <Flex
         zIndex={2}
         flexDirection="column"
