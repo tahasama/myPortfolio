@@ -65,7 +65,7 @@ const Home = () => {
         top={["-16", 0]}
         zIndex={99}
         onMouseOver={() => enterF()}
-        w={["70%", "44%", "45%", "50%", "30%"]}
+        w={["70%", "30%", "45%", "50%", "30%"]}
         cursor={"pointer"}
         onClick={toggleColorMode}
         borderRadius={"3xl"}
