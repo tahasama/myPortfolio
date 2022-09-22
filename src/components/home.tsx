@@ -80,7 +80,7 @@ const Home = () => {
         ) : (
           <Img
             src={pic ? dev : dev1}
-            filter={pic ? "brightness(1)" : "brightness(1.3)"}
+            filter={pic ? "brightness(1)" : "brightness(1.7)"}
             alt="devDay2"
             borderRadius={"3xl"}
           />
