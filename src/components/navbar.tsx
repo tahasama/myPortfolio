@@ -15,6 +15,7 @@ import {
 import { motion } from "framer-motion";
 import logoNight from "../images/logoNight.png";
 import logoDay from "../images/logoDay.png";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const colorOn = useColorModeValue("#282c34", "gray.50 ");
@@ -87,7 +88,7 @@ const Navbar = () => {
                   rounded={5}
                   w={"70vw"}
                 >
-                  {n}
+                  <Link to={n}> {n}</Link>
                 </ListItem>
               </motion.div>
             ))}
@@ -161,7 +162,7 @@ const Navbar = () => {
                     sx: { translateX: 0 },
                   }}
                 >
-                  {n}
+                  <Link to={n}> {n}</Link>
                 </ListItem>
               </motion.div>
             ))}
