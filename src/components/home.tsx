@@ -50,6 +50,7 @@ const Home = () => {
       flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
+      top={[0, -1, -1]}
     >
       <Box>
         <CloudNstars />
