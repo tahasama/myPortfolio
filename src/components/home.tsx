@@ -50,12 +50,13 @@ const Home = () => {
       flexDirection={["column-reverse", "column-reverse", "row"]}
       h={"100vh"}
       bg={bglOnLight}
-      // top={[0, -1, -1]}
+      top={"3"}
     >
       <Box>
         <CloudNstars />
       </Box>
       <Flex
+        // top={[1, -1, -1]}
         position={"relative"}
         alignItems={"center"}
         left={["0", "0", "-5", "-6", "9"]}
@@ -64,7 +65,7 @@ const Home = () => {
         top={["-16", 0]}
         zIndex={99}
         onMouseOver={() => enterF()}
-        w={["77%", "44%", "45%", "50%", "30%"]}
+        w={["74%", "44%", "45%", "50%", "30%"]}
         cursor={"pointer"}
         onClick={toggleColorMode}
         borderRadius={"3xl"}
