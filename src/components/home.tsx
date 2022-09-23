@@ -86,8 +86,8 @@ const Home = () => {
               src={pic ? dev : dev1}
               filter={
                 pic
-                  ? "brightness(1) grayscale(30%)"
-                  : "brightness(1.7) grayscale(30%)"
+                  ? "brightness(.95) grayscale(0%)"
+                  : "brightness(1.05) grayscale(0%)"
               }
               alt="devDay2"
               borderRadius={"3xl"}

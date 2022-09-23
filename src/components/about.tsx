@@ -70,6 +70,8 @@ const About = () => {
             position={"relative"}
             justifyContent={"space-around"}
             top={"10px"}
+            fontWeight={"500"}
+            fontFamily={"ms madi"}
           >
             <Flex
               flexDirection={["column"]}
@@ -190,8 +192,8 @@ const About = () => {
           <Box m={"3"}>Longer</Box>
         </Flex>
         <Box
-          fontSize={"28"}
-          fontWeight={"300"}
+          fontSize={"26px"}
+          fontWeight={"400"}
           fontFamily="roboto slab"
           color={colorMode === "light" ? "gray.900" : "gray.100"}
           position={"relative"}
@@ -201,8 +203,8 @@ const About = () => {
           I'm a self thaught Frontend focused Web Developer
         </Box>
         <Box
-          fontSize={"24"}
-          fontWeight={"200"}
+          fontSize={"23px"}
+          fontWeight={"300"}
           color={colorMode === "light" ? "gray.800" : "gray.200"}
           position={"relative"}
           h={slideValue * 5}
