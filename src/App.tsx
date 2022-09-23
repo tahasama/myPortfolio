@@ -6,7 +6,7 @@ import About from "./components/about";
 
 function App() {
   const colorOnLight = useColorModeValue("gray.800", "gray.200");
-  const bglOnLights = useColorModeValue("blue.300", "gray.900");
+  // const bglOnLights = useColorModeValue("blue.300", "gray.900");
 
   return (
     <Box
