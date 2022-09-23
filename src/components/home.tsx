@@ -12,8 +12,10 @@ import {
 import Hero from "./hero";
 import devNight from "../images/devNight2.png";
 import devNight2 from "../images/devNight.png";
-import dev from "../images/dev.png";
-import dev1 from "../images/devdev.png";
+import dev from "../images/dev11.jpg";
+// import dev1 from "../images/dev2.jpg";
+import dev1 from "../images/dev40.jpg";
+// import dev1 from "../images/developping.webp";
 import CloudNstars from "./cloudNstars";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -32,8 +34,8 @@ from,to
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("orange.500", "teal.500");
-  const buttonLightHover = useColorModeValue("orange.600", "teal.600");
+  const buttonLight = useColorModeValue("#dd6358", "teal.500");
+  const buttonLightHover = useColorModeValue("#f55c56", "teal.600");
   const { colorMode, toggleColorMode } = useColorMode();
 
   const [pic, setPic] = useState(true);
@@ -86,8 +88,8 @@ const Home = () => {
               src={pic ? dev : dev1}
               filter={
                 pic
-                  ? "brightness(.95) grayscale(0%)"
-                  : "brightness(1.2) grayscale(0%)"
+                  ? "brightness(.96) grayscale(0%)"
+                  : "brightness(1) grayscale(25%)"
               }
               alt="devDay2"
               borderRadius={"3xl"}
