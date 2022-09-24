@@ -11,7 +11,7 @@ function App() {
   return (
     <Box
       // bg={bglOnLights}
-      h="full"
+      // h="full"
       color={colorOnLight}
     >
       <Navbar />

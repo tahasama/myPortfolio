@@ -14,11 +14,11 @@ import React, { useState } from "react";
 import { Element } from "react-scroll";
 
 const About = () => {
-  //   const bgOnLight = useColorModeValue("blue.300", "gray.900");
-  const bgGradieantOnLight = useColorModeValue(
-    "linear(to-b, blue.300, blue.100, blue.50)",
-    "linear(to-b, gray.900, #0f2027, #0f2027)"
-  );
+  const bgOnLight = useColorModeValue("green.300", "gray.900");
+  //   const bgGradieantOnLight = useColorModeValue(
+  //     "linear(to-b, blue.300, blue.100, blue.50)",
+  //     "linear(to-b, gray.900, #0f2027, #0f2027)"
+  //   );
   const [slideValue, setSlideValue] = useState(40);
   const [hoverx, setHoverx] = useState(false);
 
@@ -42,20 +42,26 @@ const About = () => {
       alignItems={"center"}
       //   justifyContent={"center"}
       flexDirection={["column"]}
-      h={"100vh"}
-      bgGradient={bgGradieantOnLight}
+      h={"130vh"}
+      //   w="100vw"
+      //   bgGradient={bgGradieantOnLight}
+      bg={bgOnLight}
       fontFamily={"roboto"}
+      top={"-25vh"}
     >
       <Element name="About"></Element>
+
       <Flex
         flexDirection={["column"]}
-        w={"800px"}
+        // w={"100%"}
         position={"relative"}
         alignItems={"center"}
         justifyContent={"center"}
-        mt={"14vh"}
+        mt={["0vh", "22vh"]}
+        zIndex={"1"}
       >
         <motion.div
+          style={{ width: "70%" }}
           whileHover={{
             y: [-1, 4, -1],
             transition: { duration: 1, repeat: Infinity },
@@ -63,21 +69,25 @@ const About = () => {
           animate={{
             y: hoverx ? [-1, 4, -1] : [0, 0, 0],
           }}
-          transition={{ duration: 1, repeat: Infinity }}
+          transition={{ duration: 1, repeat: 3 }}
         >
           <Flex
-            w={"70vw"}
             position={"relative"}
             justifyContent={"space-around"}
-            top={"10px"}
+            top={["15px", "10px"]}
             fontWeight={"500"}
             fontFamily={"ms madi"}
+            zIndex={"1"}
+            textAlign="center"
+            w={["90%", "100%"]}
+            ml={["6", "5", "0"]}
           >
             <Flex
               flexDirection={["column"]}
               position={"relative"}
               alignItems={"center"}
-              left={"-10.5%"}
+              left={["-14%", "-10.5%"]}
+              w={["12", "auto"]}
             >
               <Box>who I am</Box>
               <TriangleDownIcon />
@@ -87,7 +97,8 @@ const About = () => {
               flexDirection={["column"]}
               position={"relative"}
               alignItems={"center"}
-              left={"-8.5%"}
+              left={["-13%", "-7.5%"]}
+              w={["12", "auto"]}
             >
               <Box> What i can do</Box>
               <TriangleDownIcon />
@@ -96,7 +107,8 @@ const About = () => {
               flexDirection={["column"]}
               position={"relative"}
               alignItems={"center"}
-              left={"-1.5%"}
+              left={["-7.5%", "-1%"]}
+              w={["12", "auto"]}
             >
               <Box> how i did it</Box>
               <TriangleDownIcon />
@@ -106,9 +118,10 @@ const About = () => {
               flexDirection={["column"]}
               position={"relative"}
               alignItems={"center"}
-              left={"-2%"}
+              left={["1%", "-1.5%"]}
+              w={["12", "auto"]}
             >
-              <Box> what i want to do </Box>
+              <Box> what i &nbsp; want </Box>
               <TriangleDownIcon />
             </Flex>
           </Flex>
@@ -119,7 +132,7 @@ const About = () => {
             h={"14px"}
             w={"14px"}
             bgColor={colorMode === "light" ? "blue.500" : "blue.200"}
-            left={"0%"}
+            left={["5.5%", "0%"]}
             top={"31px"}
             borderRadius={"100%"}
             fontSize={"30"}
@@ -135,7 +148,7 @@ const About = () => {
                   : "blue.200"
                 : "gray.200"
             }
-            left={"-6.5%"}
+            left={["-3%", "-5%"]}
             top={"31px"}
             borderRadius={"100%"}
             fontSize={"40"}
@@ -152,7 +165,7 @@ const About = () => {
                   : "blue.200"
                 : "gray.200"
             }
-            left={"-8%"}
+            left={["-6.5%", "-5.5%"]}
             top={"31px"}
             borderRadius={"100%"}
           ></Box>
@@ -167,15 +180,17 @@ const About = () => {
                   : "blue.200"
                 : "gray.200"
             }
-            left={"-15%"}
+            left={["-7%", "-13%"]}
             top={"31px"}
             borderRadius={"100%"}
           ></Box>
         </Flex>
         <Flex flexDirection={["row"]}>
-          <Box m={"3"}>Shorter</Box>
+          <Box my={["3"]} mx={["3"]} fontSize={["sm", "md"]}>
+            Shorter
+          </Box>
           <Slider
-            w={"70vw"}
+            w={["58vw", "70vw"]}
             aria-label="slider-ex-1"
             value={slideValue}
             position={"relative"}
@@ -189,30 +204,37 @@ const About = () => {
             </SliderTrack>
             <SliderThumb />
           </Slider>
-          <Box m={"3"}>Longer</Box>
+          <Box my={["3"]} mx={["3"]} fontSize={["sm", "md"]}>
+            Longer
+          </Box>
         </Flex>
         <Box
-          fontSize={"26px"}
-          fontWeight={"400"}
+          //   w={"100%"}
+          //   display="inline"
+          fontSize={["20px", "20px", "26px"]}
+          fontWeight={["500", "400"]}
           fontFamily="roboto slab"
-          color={colorMode === "light" ? "gray.900" : "gray.100"}
-          position={"relative"}
-          mb={"3"}
+          //   color={colorMode === "light" ? "gray.900" : "gray.100"}
+          //   position={"relative"}
+          textAlign="center"
+          my={"3"}
+          mx={"2"}
           letterSpacing="wider"
         >
           I'm a self thaught Frontend focused Web Developer
         </Box>
         <Box
-          fontSize={"23px"}
-          fontWeight={"300"}
+          fontSize={["17px", "23px"]}
+          fontWeight={["400", "300"]}
           color={colorMode === "light" ? "gray.800" : "gray.200"}
           position={"relative"}
           h={slideValue * 5}
           transition={"all .2s ease-out"}
           overflow={"hidden"}
-          lineHeight="9"
+          lineHeight={["6", "9"]}
           letterSpacing={"wide"}
           fontFamily="roboto slab"
+          mx={["2", "5"]}
         >
           <Box m={3} style={{ textIndent: 40 }}>
             who can build creative user friendly interfaces (but also full
