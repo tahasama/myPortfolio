@@ -2,6 +2,7 @@ import { Box, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import About from "./components/about";
+import Skills from "./components/skills";
 // import Home2 from "./components/home2";
 
 function App() {

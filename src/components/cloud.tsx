@@ -21,6 +21,7 @@ const Cloud = ({ delay }: any) => {
         bg={colorOn}
         w={"150px"}
         h={"50px"}
+        zIndex={"99"}
         borderRadius={150}
         boxShadow={
           colorMode === "light"

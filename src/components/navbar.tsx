@@ -88,7 +88,10 @@ const Navbar = () => {
                   rounded={5}
                   w={"70vw"}
                 >
-                  <Link to={n}> {n}</Link>
+                  <Link to={n} onClick={onToggle}>
+                    {" "}
+                    {n}
+                  </Link>
                 </ListItem>
               </motion.div>
             ))}

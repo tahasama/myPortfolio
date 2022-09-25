@@ -61,7 +61,7 @@ const Home = () => {
           "polygon(0 0, 100% 0, 100% 80%, 0 100%)",
         ]}
         zIndex={"1"}
-        h={["125vh"]}
+        h={["125vh", "125vh"]}
       >
         <Flex
           position={"relative"}
@@ -69,7 +69,7 @@ const Home = () => {
           flexDirection={["column-reverse", "column-reverse", "row"]}
           bg={bglOnLight}
           // top={"-20"}
-          mt={["0", "20"]}
+          // mt={["40", "20"]}
         >
           <Box position={"absolute"} top={"0"} right={"5"}>
             <CloudNstars />
@@ -81,7 +81,7 @@ const Home = () => {
             alignItems={"center"}
             left={["0", "0", "-5", "-6", "16"]}
             mx={16}
-            top={["-24", "-5"]}
+            top={["-24", "-10"]}
             onMouseOver={() => enterF()}
             w={["70%", "44%", "45%", "50%", "30%"]}
             cursor={"pointer"}
@@ -116,7 +116,7 @@ const Home = () => {
             position="relative"
             alignItems={["center", "start"]}
             lineHeight={"taller"}
-            top={["-26vh", "-10"]}
+            top={["-26vh", "-16"]}
             w={["full", "auto"]}
             left={["0", "0", "-16", "-7", "24"]}
           >

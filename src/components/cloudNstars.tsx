@@ -7,7 +7,7 @@ const CloudNstars = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <>
+    <Box>
       <Box position={"absolute"} right={"90px"} top={"160px"}>
         <Cloud delay={0.5} />
       </Box>
@@ -48,7 +48,7 @@ const CloudNstars = () => {
           </Box>
         </>
       )}
-    </>
+    </Box>
   );
 };
 
