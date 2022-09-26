@@ -1,4 +1,12 @@
-import { Box, Flex, Grid, GridItem, Img, useColorMode } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  Grid,
+  GridItem,
+  Img,
+  useColorMode,
+} from "@chakra-ui/react";
 import React from "react";
 import reactD from "../svg/reactD.png";
 import reactN from "../svg/reactD1.png";
@@ -10,90 +18,188 @@ import reduxL from "../svg/redux.png";
 import gitL from "../svg/git.png";
 import githubD from "../svg/githubD.png";
 import githubN from "../svg/githubN.png";
-import html from "../svg/html2.png";
+import html from "../svg/html.png";
 import css from "../svg/css.png";
 import js from "../svg/js.png";
 import firebase from "../svg/firebase.png";
 import docker from "../svg/docker.png";
 import ts from "../svg/ts.png";
+import resD from "../svg/resD.png";
+import resN from "../svg/resN.png";
 
 const Skills = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Grid
-      templateColumns="repeat(5, 1fr)"
+      templateColumns={["repeat(3, 1fr)", "repeat(8, 1fr)"]}
       gap={0}
       position={"relative"}
-      //   justifyContent={"end"}
+      justifyContent={"center"}
       alignItems={"center"}
-      h={"100%"}
-      m={"2"}
+      //   h={"10vh"}
+      fontFamily={"Quicksand"}
+      fontSize={"18"}
+      m={"5"}
     >
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={expressL} w="30%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        {colorMode === "light" ? (
-          <Img src={mongoD} w="68%" mb={"1"} />
-        ) : (
-          <Img src={mongoN} w="70%" ml={"3"} />
-        )}
-      </GridItem>
-      <GridItem
-        w="100%"
-        display={"flex"}
-        justifyContent={"center"}
+      {/* <Divider position={"absolute"} top="170px" /> */}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
         alignItems={"center"}
+        //  bg={"white"}
       >
-        {/* <Img src={reactN} w="35%" /> */}
+        <Img src={expressL} w="56.3%" />
+        <Box m={"3"}>Express Js</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        {colorMode === "light" ? (
+          <Img src={mongoD} w="95%" my={"6"} />
+        ) : (
+          <Img src={mongoN} />
+        )}
+        <Box m={"3"}>Mongo db</Box>
+      </Grid>
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
         <Img
           src={colorMode === "light" ? reactD : reactN}
-          w="35%"
+          w="63%"
           filter={"brightness(.92)"}
         />
-      </GridItem>
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={nodeL} w="50%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={reduxL} w="28%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={gitL} w="34%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        {/* <Img src={githubN} w="34%" /> */}
+        <Box m={"3"}>React Js</Box>
+      </Grid>
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={nodeL} w="56%" />
+        <Box m={"3"}>Node Js</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={reduxL} w="58.8%" />
+        <Box m={"3"}>Redux</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={gitL} w="56%" />
+        <Box m={"3"}>Git</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
         <Img
           src={colorMode === "light" ? githubD : githubN}
-          w="34%"
+          w="56%"
           filter={"brightness(.92)"}
         />
-      </GridItem>
-      <GridItem
-        w="100%"
-        display={"flex"}
-        justifyContent={"center"}
-        clipPath={["polygon(0 20%, 100% 20%, 100% 100%, 0% 100%)"]}
-        mb={"18px"}
+        <Box m={"3"}>GitHub</Box>
+      </Grid>
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
       >
-        <Img src={html} w="43%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={css} w="25%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={js} w="40%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={firebase} w="54%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={docker} w="44%" />
-      </GridItem>{" "}
-      <GridItem w="100%" display={"flex"} justifyContent={"center"}>
-        <Img src={ts} w="30%" />
-      </GridItem>
+        <Img src={html} w="49.5%" />
+        <Box m={"3"}>Html</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={css} w="49.5%" />
+        <Box m={"3"}>Css</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={js} w="56.5%" />
+        <Box m={"3"}>Javascript</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={firebase} w="70%" />
+        <Box m={"3"}>FireBase</Box>
+      </Grid>
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={docker} w="56.5%" />
+        <Box m={"3"}>Docker</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        <Img src={ts} w="56.5%" />
+        <Box m={"3"}>TypeScript</Box>
+      </Grid>{" "}
+      <Grid
+        templateRows={["repeat(2, 1fr)"]}
+        h="50%"
+        justifyItems={"center"}
+        alignItems={"center"}
+        //  bg={"white"}
+      >
+        {colorMode === "light" ? (
+          <Img src={resD} w="94.5%" />
+        ) : (
+          <Img src={resN} w="80.5%" />
+        )}
+
+        <Box m={"3"}>Responsive</Box>
+      </Grid>
     </Grid>
   );
 };
