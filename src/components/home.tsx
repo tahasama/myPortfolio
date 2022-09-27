@@ -24,11 +24,7 @@ import { Element } from "react-scroll";
 const flip = keyframes`
 from,to
 0%   {transform: scaleX(1);}
-25%  {opacity(.4);} 
-
 50% {transform: scaleX(-1);}
-75% { opacity(.8);}
-95% { opacity(.8);}
 100% {transform: scaleX(1);}
 `;
 
@@ -57,8 +53,8 @@ const Home = () => {
         // bg={bglOnLight}
         // top={"-2"}
         clipPath={[
-          "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
-          "polygon(0 0, 100% 0, 100% 80%, 0 100%)",
+          "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+          "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
         ]}
         zIndex={"1"}
         h={["125vh", "125vh"]}

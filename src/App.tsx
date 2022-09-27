@@ -19,6 +19,7 @@ function App() {
       <Home />
       {/* <Home2 /> */}
       <About />
+      {/* <Skills /> */}
     </Box>
   );
 }

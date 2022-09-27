@@ -2,12 +2,15 @@ import { TriangleDownIcon } from "@chakra-ui/icons";
 import {
   Box,
   Button,
+  Divider,
   Flex,
+  keyframes,
   Radio,
   Slider,
   SliderFilledTrack,
   SliderThumb,
   SliderTrack,
+  textDecoration,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -15,6 +18,18 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Element } from "react-scroll";
 import Skills from "./skills";
+
+const flip = keyframes`
+from,to
+0%   {color:white ;}
+
+
+
+50% {color:purple}
+
+
+100% {color:white;}
+`;
 
 const About = () => {
   const bgOnLight = useColorModeValue("green.300", "gray.900");
@@ -35,12 +50,12 @@ const About = () => {
       alignItems={"center"}
       //   justifyContent={"center"}
       flexDirection={["column"]}
-      h={"130vh"}
-      //   w="100vw"
+      h={"140vh"}
+      // w="100vw"
       //   bgGradient={bgGradieantOnLight}
       bg={bgOnLight}
       fontFamily={"roboto"}
-      top={"-25vh"}
+      top={"-20vh"}
     >
       <Element name="About"></Element>
 
@@ -52,17 +67,19 @@ const About = () => {
         justifyContent={"center"}
         mt={["0vh", "22vh"]}
         zIndex={"1"}
+        m={"20"}
       >
         <Flex
           // position={"relative"}
           justifyContent={"space-around"}
-          top={["15px", "10px"]}
+          // top={["15px", "-44"]}
           fontWeight={"500"}
           fontFamily={"ms madi"}
           zIndex={"1"}
           textAlign="center"
           w={["90%", "30%"]}
           // ml={["6", "5", "0"]}
+          mt={"-10"}
         >
           <Flex
             flexDirection={["column"]}
@@ -215,12 +232,15 @@ const About = () => {
             //   color={colorMode === "light" ? "gray.900" : "gray.100"}
             //   position={"relative"}
             textAlign="center"
-            my={"3"}
+            my={"7"}
             mx={"2"}
             letterSpacing="wider"
             w={"97vw"}
+            // animation={`${flip} .6s ease-in-out 2`}
           >
+            {/* <motion.div > */}
             I'm a self thaught Frontend focused Web Developer
+            {/* </motion.div> */}
           </Box>
         )}
         <Flex
@@ -369,7 +389,7 @@ const About = () => {
           </Button>
         </Flex>
       </Flex>
-      <Skills />
+      <Skills selected={selected} />
     </Flex>
   );
 };
