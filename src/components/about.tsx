@@ -131,8 +131,8 @@ const About = () => {
         )}
         <Flex
           flexDirection={"column"}
-          fontSize={["17px", "23px"]}
-          fontWeight={["400", "300"]}
+          fontSize={["17px", "19px", "23px"]}
+          fontWeight={["400", "300", "300"]}
           color={colorMode === "light" ? "gray.800" : "gray.200"}
           position={"relative"}
           h={"full"}

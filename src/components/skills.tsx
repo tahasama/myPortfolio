@@ -48,7 +48,7 @@ const Skills = () => {
       top={["0vh", "0vh"]}
       bg={bgOnLight}
       clipPath={[
-        "ellipse(100% 100% at 47% 100%)",
+        "ellipse(100% 100% at 50% 100%)",
         "ellipse(100% 100% at 47% 100%)",
         "ellipse(100% 100% at 38% 100%)",
         "ellipse(100% 100% at 35% 100%)",
@@ -267,7 +267,7 @@ const Skills = () => {
           fontFamily={"Quicksand"}
           fontWeight={"700"}
           fontSize={["10px", "18"]}
-          mt={["0vh", "30vh", "24vh", "14vh"]}
+          mt={["0vh", "30vh", "12vh", "14vh"]}
           transform={["scale(0.98)", "scale(0.9)"]}
         >
           <motion.div
