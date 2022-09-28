@@ -23,22 +23,22 @@ const About = () => {
       position={"relative"}
       alignItems={"center"}
       flexDirection={["column"]}
-      h={"170vh"}
+      h={["170vh", "200vh", "170vh", "170vh"]}
       bg={bgOnLight}
       fontFamily={"roboto"}
-      top={"-20vh"}
+      top={["-20vh", "-20vh"]}
+      // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
     >
       <Element name="About"></Element>
 
       <Flex
         flexDirection={["column"]}
-        w={"100%"}
+        // w={"100%"}
         position={"relative"}
         alignItems={"center"}
         justifyContent={"center"}
-        mt={["0vh", "22vh"]}
+        mt={["26vh", "22vh"]}
         zIndex={"1"}
-        m={"20"}
       >
         <Flex
           justifyContent={"space-around"}
@@ -46,7 +46,7 @@ const About = () => {
           fontFamily={"ms madi"}
           zIndex={"1"}
           textAlign="center"
-          w={["90%", "30%"]}
+          w={["100%", "70%"]}
           mt={"-10"}
         >
           <Flex
@@ -111,24 +111,25 @@ const About = () => {
           </Flex>
         </Flex>
 
-        <Flex flexDirection={["row"]}></Flex>
-        {(selected === "" ||
-          selected === "full" ||
-          selected === "short" ||
-          selected === "shorter") && (
-          <Box
-            fontSize={["20px", "20px", "26px"]}
-            fontWeight={["500", "400"]}
-            fontFamily="roboto slab"
-            textAlign="center"
-            my={"7"}
-            mx={"2"}
-            letterSpacing="wider"
-            w={"97vw"}
-          >
-            I'm a self thaught Frontend focused Web Developer
-          </Box>
-        )}
+        <Flex flexDirection={["row"]}>
+          {(selected === "" ||
+            selected === "full" ||
+            selected === "short" ||
+            selected === "shorter") && (
+            <Box
+              fontSize={["20px", "20px", "26px"]}
+              fontWeight={["500", "400"]}
+              fontFamily="roboto slab"
+              textAlign="center"
+              my={"7"}
+              mx={"2"}
+              letterSpacing="wider"
+              w={"auto"}
+            >
+              I'm a self thaught Frontend focused Web Developer
+            </Box>
+          )}
+        </Flex>
         <Flex
           flexDirection={"column"}
           fontSize={["17px", "19px", "23px"]}
@@ -187,8 +188,8 @@ const About = () => {
           )}
           <Button
             m={"6"}
-            py={"5vh"}
-            px={"7vw"}
+            py={["3.6vh", "5vh"]}
+            px={["8vw", "7vw"]}
             bg={colorMode === "light" ? "orange.500" : "blue.600"}
             _hover={{
               bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,

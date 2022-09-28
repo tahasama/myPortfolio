@@ -57,17 +57,17 @@ const Home = () => {
           "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
         ]}
         zIndex={"1"}
-        h={["125vh", "125vh"]}
+        h={["115vh", "125vh", "125vh", "125vh"]}
+        bg={bglOnLight}
       >
         <Flex
           position={"relative"}
           alignItems={"center"}
           flexDirection={["column-reverse", "column-reverse", "row"]}
-          bg={bglOnLight}
-          // top={"-20"}
+          top={["0", "-24vh", "0", "0"]}
           // mt={["40", "20"]}
         >
-          <Box position={"absolute"} top={"0"} right={"5"}>
+          <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
             <CloudNstars />
           </Box>
           <Flex
@@ -77,7 +77,7 @@ const Home = () => {
             alignItems={"center"}
             left={["0", "0", "-5", "-6", "16"]}
             mx={16}
-            top={["-24", "-10"]}
+            top={["0", "-8", "-10", "-10"]}
             onMouseOver={() => enterF()}
             w={["70%", "44%", "45%", "50%", "30%"]}
             cursor={"pointer"}
@@ -136,7 +136,7 @@ const Home = () => {
             <Divider w={[240, 280, 280, 380, 400]} />
             <Flex
               position={"relative"}
-              w={["288px", "60vw", "46vw"]}
+              w={["278px", "60vw", "46vw"]}
               fontSize={["md", "lg", "xl", "2xl", "3xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}

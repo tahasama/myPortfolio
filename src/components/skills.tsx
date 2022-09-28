@@ -36,26 +36,25 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
-  const bgOnLight = useColorModeValue("red.200", "gray.900");
+  const bgOnLight = useColorModeValue(
+    "linear( red.200 0%, red.300 80%)",
+    "gray.900"
+  );
 
   return (
     <Flex
-      position={"relative"}
-      alignItems={"center"}
-      flexDirection={["column"]}
-      h={"150vh"}
+      w={"100%"}
+      flexDir={"column"}
       fontFamily={"roboto"}
-      top={["0vh", "0vh"]}
-      bg={bgOnLight}
+      bgGradient={bgOnLight}
       clipPath={[
-        "ellipse(100% 100% at 50% 100%)",
+        "ellipse(99% 65% at 40% 65%)",
         "ellipse(100% 100% at 47% 100%)",
         "ellipse(100% 100% at 38% 100%)",
         "ellipse(100% 100% at 35% 100%)",
       ]}
-      mt={"-10vh"}
     >
-      <motion.div>
+      <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid
           templateColumns={[
             "repeat(2, 1fr)",
@@ -68,18 +67,19 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["0vh", "4vh"]}
-          textAlign={"center"}
-          transform={["scale(0.8)", "scale(1)"]}
+          mt={["0vh", "4vh", "24vh", "4vh"]}
+          //   textAlign={"center"}
+          transform={["scale(0.65)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
+          mx={"0"}
         >
-          <Flex flexDir={"column"}>
+          <Flex alignItems={"center"} flexDir={"column"} m={"2"}>
             <Flex
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "32"]}
-              h={["18vh", "10vh", "15vh", "18vh"]}
-              w={["34vw", "10vw", "12vw", "10vw"]}
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -99,7 +99,7 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={resN}
-                    h={["9vh", "9vh", "7vh", "9vh"]}
+                    h={["9vh", "9vh", "7vh", "8vh"]}
                     filter={"grayscale(100%) brightness(2)"}
                     m={0}
                   />
@@ -126,14 +126,14 @@ const Skills = () => {
               layouts that works on any device
             </Box>
           </Flex>
-          <Flex flexDir={"column"}>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "32"]}
-              h={["18vh", "10vh", "15vh", "18vh"]}
-              w={["34vw", "10vw", "12vw", "10vw"]}
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -174,14 +174,14 @@ const Skills = () => {
               User friendly and easy to use
             </Box>
           </Flex>
-          <Flex flexDir={"column"}>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "32"]}
-              h={["18vh", "10vh", "15vh", "18vh"]}
-              w={["34vw", "10vw", "12vw", "10vw"]}
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -210,14 +210,14 @@ const Skills = () => {
               from idea to great product
             </Box>
           </Flex>
-          <Flex flexDir={"column"}>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "32"]}
-              h={["18vh", "10vh", "15vh", "18vh"]}
-              w={["34vw", "10vw", "12vw", "10vw"]}
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -255,7 +255,7 @@ const Skills = () => {
         <Grid
           templateColumns={[
             "repeat(4, 1fr)",
-            "repeat(3, 1fr)",
+            "repeat(4, 1fr)",
             "repeat(6, 1fr)",
             "repeat(8, 1fr)",
           ]}
@@ -267,76 +267,40 @@ const Skills = () => {
           fontFamily={"Quicksand"}
           fontWeight={"700"}
           fontSize={["10px", "18"]}
-          mt={["0vh", "30vh", "12vh", "14vh"]}
-          transform={["scale(0.98)", "scale(0.9)"]}
+          mt={["-3vh", "10vh", "12vh", "14vh"]}
+          transform={["scale(1)", "scale(0.9)"]}
         >
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
+            transition={{ delay: 0.4 }}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
-              h="100%"
+              h="41%"
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={expressL} w="56.3%" />
-              <Box m={"3"}>Express Js</Box>
+              <Img src={html} w="45%" transform={"scale(0.95)"} />
+              <Box m={"3"}>Html</Box>
             </Grid>{" "}
           </motion.div>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.1 }}
+            transition={{ delay: 0.45 }}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
-              h="50%"
+              h="41%"
               justifyItems={"center"}
               alignItems={"center"}
             >
-              {colorMode === "light" ? (
-                <Img src={mongoD} w="56%" />
-              ) : (
-                <Img src={mongoN} />
-              )}
-              <Box m={"3"}>Mongodb</Box>
-            </Grid>
-          </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.15 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="50%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img
-                src={colorMode === "light" ? reactD : reactN}
-                w="63%"
-                filter={"brightness(.92)"}
-              />
-              <Box m={"3"}>React Js</Box>
-            </Grid>
-          </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.2 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="50%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img src={nodeL} w="56%" />
-              <Box m={"3"}>Node Js</Box>
+              <Img src={css} w="45%" transform={"scale(0.9)"} />
+              <Box m={"3"}>Css</Box>
             </Grid>{" "}
           </motion.div>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.25 }}
+            transition={{ delay: 0.5 }}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
@@ -344,8 +308,8 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={reduxL} w="58.8%" />
-              <Box m={"3"}>Redux</Box>
+              <Img src={js} w="56.5%" transform={"scale(0.8)"} />
+              <Box m={"3"}>Javascript</Box>
             </Grid>{" "}
           </motion.div>
           <motion.div
@@ -382,35 +346,7 @@ const Skills = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.4 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="41%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img src={html} w="45%" />
-              <Box m={"3"}>Html</Box>
-            </Grid>{" "}
-          </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.45 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="41%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img src={css} w="45%" />
-              <Box m={"3"}>Css</Box>
-            </Grid>{" "}
-          </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.15 }}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
@@ -418,10 +354,91 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={js} w="56.5%" />
-              <Box m={"3"}>Javascript</Box>
+              <Img
+                src={colorMode === "light" ? reactD : reactN}
+                w="63%"
+                filter={"brightness(.92)"}
+                transform={"scale(0.9)"}
+              />
+              <Box m={"3"}>React Js</Box>
+            </Grid>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 0.65 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="50%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              <Img src={ts} w="56.5%" transform={"scale(0.8)"} />
+              <Box m={"3"}>TypeScript</Box>
             </Grid>{" "}
           </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 0.25 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="50%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              <Img src={reduxL} w="58.8%" transform={"scale(0.95)"} />
+              <Box m={"3"}>Redux</Box>
+            </Grid>{" "}
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 0.2 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="50%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              <Img src={nodeL} w="56%" transform={"scale(1.4)"} />
+              <Box m={"3"}>Node Js</Box>
+            </Grid>{" "}
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ delay: 0.1 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="50%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              {colorMode === "light" ? (
+                <Img src={mongoD} w="56%" transform={"scale(1.2)"} />
+              ) : (
+                <Img src={mongoN} transform={"scale(1.2)"} />
+              )}
+              <Box m={"3"}>Mongodb</Box>
+            </Grid>
+          </motion.div>
+
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="100%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              <Img src={expressL} w="56.3%" transform={"scale(0.9)"} />
+              <Box m={"3"}>Express Js</Box>
+            </Grid>{" "}
+          </motion.div>
+
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 0.55 }}
@@ -432,7 +449,7 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={firebase} w="70%" />
+              <Img src={firebase} w="70%" transform={"scale(1.2)"} />
               <Box m={"3"}>FireBase</Box>
             </Grid>
           </motion.div>
@@ -450,20 +467,7 @@ const Skills = () => {
               <Box m={"3"}>Docker</Box>
             </Grid>{" "}
           </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ delay: 0.65 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="50%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img src={ts} w="56.5%" />
-              <Box m={"3"}>TypeScript</Box>
-            </Grid>{" "}
-          </motion.div>
+
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ delay: 0.7 }}
@@ -474,7 +478,7 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={mui} w="72%" />
+              <Img src={mui} w="72%" transform={"scale(0.7)"} />
               <Box m={"3"}>Material ui</Box>
             </Grid>{" "}
           </motion.div>
@@ -488,7 +492,7 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={tailwind} w="94.5%" />
+              <Img src={tailwind} w="94.5%" transform={"scale(0.7)"} />
               <Box m={"3"}>Tailwind ui</Box>
             </Grid>{" "}
           </motion.div>
