@@ -38,7 +38,7 @@ const Skills = () => {
   const { colorMode } = useColorMode();
   const bgOnLight = useColorModeValue(
     "linear( red.200 0%, red.300 80%)",
-    "gray.900"
+    "linear( gray.900 0%, gray.900 80%)"
   );
 
   return (
@@ -68,7 +68,6 @@ const Skills = () => {
           fontWeight={"600"}
           fontFamily={"Quicksand"}
           mt={["0vh", "4vh", "24vh", "4vh"]}
-          //   textAlign={"center"}
           transform={["scale(0.65)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"0"}
         >
@@ -109,6 +108,7 @@ const Skills = () => {
                     color="purple.500"
                     h="9vh"
                     filter={"grayscale(100%) brightness(2)"}
+                    transform={"scale(0.9)"}
                     m={0}
                   />
                 )}
@@ -401,8 +401,22 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
             >
-              <Img src={nodeL} w="56%" transform={"scale(1.4)"} />
+              <Img src={nodeL} w="56%" transform={"scale(1.8)"} />
               <Box m={"3"}>Node Js</Box>
+            </Grid>{" "}
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 0.5 }}
+          >
+            <Grid
+              templateRows={["repeat(2, 1fr)"]}
+              h="100%"
+              justifyItems={"center"}
+              alignItems={"center"}
+            >
+              <Img src={expressL} w="56.3%" transform={"scale(0.9)"} />
+              <Box m={"3"}>Express Js</Box>
             </Grid>{" "}
           </motion.div>
           <motion.div
@@ -422,21 +436,6 @@ const Skills = () => {
               )}
               <Box m={"3"}>Mongodb</Box>
             </Grid>
-          </motion.div>
-
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5 }}
-          >
-            <Grid
-              templateRows={["repeat(2, 1fr)"]}
-              h="100%"
-              justifyItems={"center"}
-              alignItems={"center"}
-            >
-              <Img src={expressL} w="56.3%" transform={"scale(0.9)"} />
-              <Box m={"3"}>Express Js</Box>
-            </Grid>{" "}
           </motion.div>
 
           <motion.div

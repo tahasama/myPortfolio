@@ -27,7 +27,6 @@ const About = () => {
       bg={bgOnLight}
       fontFamily={"roboto"}
       top={["-20vh", "-20vh"]}
-      // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
     >
       <Element name="About"></Element>
 
