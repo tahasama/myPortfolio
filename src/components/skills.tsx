@@ -53,6 +53,7 @@ const Skills = () => {
         "ellipse(100% 100% at 38% 100%)",
         "ellipse(100% 100% at 35% 100%)",
       ]}
+      mt={["20"]}
     >
       <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid

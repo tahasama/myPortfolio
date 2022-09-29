@@ -23,7 +23,7 @@ const About = () => {
       position={"relative"}
       alignItems={"center"}
       flexDirection={["column"]}
-      h={["170vh", "200vh", "170vh", "170vh"]}
+      h={["170vh", "200vh", "200vh", "170vh"]}
       bg={bgOnLight}
       fontFamily={"roboto"}
       top={["-20vh", "-20vh"]}
