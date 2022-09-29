@@ -37,7 +37,7 @@ import { motion } from "framer-motion";
 const Skills = () => {
   const { colorMode } = useColorMode();
   const bgOnLight = useColorModeValue(
-    "linear( red.200 0%, red.300 80%)",
+    "linear( red.200 0%, pink.300 80%)",
     "linear( gray.900 0%, gray.900 80%)"
   );
 
@@ -54,6 +54,7 @@ const Skills = () => {
         "ellipse(100% 100% at 35% 100%)",
       ]}
       mt={["20"]}
+      h={"200vh"}
     >
       <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid
@@ -68,7 +69,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["0vh", "4vh", "24vh", "4vh"]}
+          mt={["0vh", "4vh", "24vh", "14vh"]}
           transform={["scale(0.65)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"0"}
         >

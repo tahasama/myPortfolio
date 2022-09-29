@@ -23,10 +23,11 @@ const About = () => {
       position={"relative"}
       alignItems={"center"}
       flexDirection={["column"]}
-      h={["170vh", "200vh", "200vh", "170vh"]}
+      h={["170vh", "200vh", "170vh", "270vh"]}
       bg={bgOnLight}
       fontFamily={"roboto"}
       top={["-20vh", "-20vh"]}
+      // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
     >
       <Element name="About"></Element>
 
@@ -187,7 +188,7 @@ const About = () => {
           )}
           <Button
             m={"6"}
-            py={["3.6vh", "5vh"]}
+            py={["3.5vh", "5vh"]}
             px={["8vw", "7vw"]}
             bg={colorMode === "light" ? "orange.500" : "blue.600"}
             _hover={{
