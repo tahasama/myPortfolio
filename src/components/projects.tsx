@@ -1,10 +1,12 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 
 const Projects = () => {
+  const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
+
   return (
     <Box
       h="120vh"
-      bg={"rgba(111,134,198,255)"}
+      bg={bglOnLight}
       clipPath={[
         "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
         "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
