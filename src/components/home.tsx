@@ -72,7 +72,7 @@ const Home = () => {
           </Box>
           <Flex
             // top={[1, -1, -1]}
-            visibility={["hidden", "visible"]}
+            visibility={["hidden", "hidden", "visible", "visible"]}
             position={"relative"}
             alignItems={"center"}
             left={["0", "0", "-5", "-6", "16"]}
@@ -148,7 +148,7 @@ const Home = () => {
             </Flex>
 
             <motion.div
-              style={{ margin: "auto" }}
+              // style={{ margin: "auto" }}
               whileHover={{
                 y: [-1, 4, -1],
                 transition: { duration: 1, repeat: Infinity },
@@ -161,14 +161,16 @@ const Home = () => {
                 fontWeight={["400", "500"]}
                 position={"relative"}
                 top={["2", "5"]}
-                left={["0", "auto", "-6", "-58px", "-135px"]}
+                // left={["0", "auto", "-6", "-58px", "-15px"]}
                 my={["4", "auto", 0]}
                 variant="solid"
-                px={["74px", "74px", "100px", "32"]}
-                py={["5", "5", "6", "8"]}
+                px={["74px", "84px", "100px", "32"]}
+                py={["5", "7", "6", "8"]}
                 bg={buttonLight}
                 _hover={{ bg: buttonLightHover }}
                 _active={{ bg: buttonLightHover }}
+                // w={"max"}
+                // m={["auto"]}
               >
                 PROJECTS
               </Button>

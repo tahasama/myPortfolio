@@ -11,7 +11,7 @@ const Projects = () => {
         "polygon(26% 12%, 100% 0, 100% 100%, 0 100%, 0 0)",
         "polygon(26% 17%, 100% 0, 100% 100%, 0 100%, 0 0)",
       ]}
-      mt={["-70vh", "-40vh", "-40vh", "-90vh"]}
+      mt={["-70vh", "-40vh", "-45vh", "-45vh"]}
     >
       <Flex position={"relative"} top={"40"}>
         Projects

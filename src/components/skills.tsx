@@ -48,13 +48,14 @@ const Skills = () => {
       fontFamily={"roboto"}
       bgGradient={bgOnLight}
       clipPath={[
-        "ellipse(99% 65% at 40% 65%)",
+        // "ellipse(59% 65% at 40% 65%)",
+        "circle(50.7% at 49% 50%)",
         "ellipse(100% 100% at 47% 100%)",
         "ellipse(100% 100% at 38% 100%)",
-        "ellipse(100% 100% at 35% 100%)",
+        "ellipse(100% 100% at 45% 100%)",
       ]}
-      mt={["20"]}
-      h={["220vh", "260vh", "260vh", "260vh"]}
+      mt={["0", "20"]}
+      h={["200vh", "200vh", "180vh", "220vh"]}
     >
       <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid
@@ -69,7 +70,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["0vh", "4vh", "24vh", "28vh"]}
+          mt={["15vh", "4vh", "24vh", "28vh"]}
           transform={["scale(0.6)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"0"}
         >
@@ -251,374 +252,437 @@ const Skills = () => {
         </Grid>
       </motion.div>
       {/* skills */}
-      <Flex
-        flexDir={"row"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        mt={[0, 28]}
-        m={2}
-        transform={["scale(0.88)", "scale(1)"]}
-      >
-        <Box
-          textAlign={"center"}
-          // w={[28, "auto"]}
-          w={["2100px", "4000px", "1000px", "1100px"]}
-          fontSize={["sm", "2xl"]}
-          fontFamily={"Amiri"}
-          textDecor={"underline"}
-          // m={4}
+      <Box mt={["-20", 0]}>
+        <Flex
+          flexDir={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          mt={[0, 28]}
+          m={2}
         >
-          Frontend:
-        </Box>
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 2 }}
-        >
-          <Box>
-            {" "}
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 2 }}
-            >
-              <Grid
-                templateColumns={[
-                  "repeat(5, 1fr)",
-                  "repeat(4, 1fr)",
-                  "repeat(6, 1fr)",
-                  "repeat(6, 1fr)",
-                ]}
-                gap={0}
-                w={["100%"]}
-                position={"relative"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                fontFamily={"Quicksand"}
-                fontWeight={"700"}
-                fontSize={["10px", "18"]}
-                // mt={["-3vh", "10vh", "8vh", "20vh"]}
-                transform={["scale(1)", "scale(0.9)"]}
-                // opacity={0}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? reactD : reactN}
-                      w="63%"
-                      filter={"brightness(.92)"}
-                      transform={["scale(1.4)", "scale(0.7)"]}
-                      // mt={[5, 0]}
-                    />
-                    <Box m={"3"} textAlign={"center"}>
-                      React Js
-                    </Box>
-                  </Grid>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.4 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={ts}
-                      w="56.5%"
-                      transform={["scale(0.9)", "scale(0.6)"]}
-                    />
-                    <Box m={"3"}>TypeScript</Box>
-                  </Grid>{" "}
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.6 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={reduxL}
-                      w="58.8%"
-                      transform={["scale(1.2)", "scale(0.7)"]}
-                    />
-                    <Box m={"3"}>Redux</Box>
-                  </Grid>{" "}
-                </motion.div>
-                {/* <Grid opacity={0} w={0} /> */}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={tailwind}
-                      w="94.5%"
-                      transform={["scale(0.7)", "scale(0.55)"]}
-                      // mt={[5, 0]}
-                    />
-                    <Box m={"3"} textAlign={"center"}>
-                      Tailwind css
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 1 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={chakra}
-                      w="57%"
-                      transform={["scale(1.2)", "scale(0.7)"]}
-                      // mt={[5, 0]}
-                    />
-                    <Box m={"3"} textAlign={"center"}>
-                      Chakra ui
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>
-              </Grid>
-            </motion.div>
-          </Box>
-        </motion.div>
-      </Flex>
-      <Flex
-        flexDir={"row"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        m={2}
-      >
-        <Box
-          textAlign={"center"}
-          w={["2200px", "2600px", "2000px", "1300px"]}
-          fontSize={["sm", "2xl"]}
-          fontFamily={"Amiri"}
-          textDecor={"underline"}
-          m={1}
-        >
-          Backend & Baas:
-        </Box>
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 2 }}
-        >
-          <Box>
-            {" "}
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 1 }}
-            >
-              <Grid
-                templateColumns={[
-                  "repeat(4, 1fr)",
-                  "repeat(4, 1fr)",
-                  "repeat(6, 1fr)",
-                  "repeat(6, 1fr)",
-                ]}
-                gap={0}
-                w={["100%"]}
-                position={"relative"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                fontFamily={"Quicksand"}
-                fontWeight={"700"}
-                fontSize={["10px", "18"]}
-                // mt={["-3vh", "10vh", "12vh", "14vh"]}
-                transform={["scale(1)", "scale(0.9)"]}
-              >
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="100%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={expressL}
-                      w="56.3%"
-                      transform={["scale(0.9)", "scale(0.65)"]}
-                      mt={[4, 4, 0, 0]}
-                    />
-                    <Box m={"3"} textAlign={"center"}>
-                      Express Js
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    {colorMode === "light" ? (
-                      <Img
-                        src={mongoD}
-                        w="56%"
-                        transform={["scale(1.3)", "scale(0.8)"]}
-                      />
-                    ) : (
-                      <Img
-                        src={mongoN}
-                        transform={["scale(1)", "scale(0.8)"]}
-                      />
-                    )}
-                    <Box m={"3"}>Mongodb</Box>
-                  </Grid>
-                </motion.div>
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.55 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    h="50%"
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={firebase}
-                      w="70%"
-                      transform={["scale(1.5)", "scale(0.95)"]}
-                    />
-                    <Box m={"3"}>FireBase</Box>
-                  </Grid>
-                </motion.div>
-              </Grid>
-            </motion.div>
-          </Box>
-        </motion.div>
-      </Flex>
-      <Flex
-        flexDir={"row"}
-        justifyContent={"center"}
-        alignItems={"center"}
-        m={2}
-      >
-        <Box
-          textAlign={"center"}
-          w={["406px", "1000px", "185px", "540px"]}
-          fontSize={["sm", "2xl"]}
-          fontFamily={"Amiri"}
-          textDecor={"underline"}
-          mx={2}
-        >
-          Version Control Containerization:
-        </Box>
-        <motion.div
-          whileInView={{ opacity: [0, 1] }}
-          transition={{ duration: 2 }}
-        >
-          <Grid
-            templateColumns={[
-              "repeat(4, 1fr)",
-              "repeat(4, 1fr)",
-              "repeat(6, 1fr)",
-              "repeat(6, 1fr)",
-            ]}
-            gap={0}
-            w={["100%"]}
-            position={"relative"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            fontFamily={"Quicksand"}
-            fontWeight={"700"}
-            fontSize={["10px", "18"]}
-            // mt={["-3vh", "10vh", "12vh", "14vh"]}
-            transform={["scale(1)", "scale(0.9)"]}
+          <Box
+            // textAlign={"center"}
+            // w={[28, "auto"]}
+            w={["1440px", "2000px", "2000px", "1400px"]}
+            fontSize={["sm", "2xl"]}
+            fontFamily={"Amiri"}
+            textDecor={"underline"}
+            ml={2}
           >
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ delay: 0.3 }}
-            >
-              <Grid
-                templateRows={["repeat(2, 1fr)"]}
-                h="50%"
-                justifyItems={"center"}
-                alignItems={"center"}
+            Frontend:
+          </Box>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+          >
+            <Box>
+              {" "}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 2 }}
               >
-                <Img
-                  src={gitL}
-                  w="56%"
-                  transform={["scale(1.4)", "scale(0.75)"]}
-                />
-                <Box m={"3"}>Git</Box>
-              </Grid>{" "}
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ delay: 0.35 }}
-            >
-              <Grid
-                templateRows={["repeat(2, 1fr)"]}
-                h="50%"
-                justifyItems={"center"}
-                alignItems={"center"}
+                <Grid
+                  templateColumns={[
+                    "repeat(3, 1fr)",
+                    "repeat(3, 1fr)",
+                    "repeat(6, 1fr)",
+                    "repeat(6, 1fr)",
+                  ]}
+                  gap={0}
+                  w={["100%"]}
+                  position={"relative"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  fontFamily={"Quicksand"}
+                  fontWeight={"700"}
+                  fontSize={["10px", "18"]}
+                  // mt={["-3vh", "10vh", "8vh", "20vh"]}
+                  // transform={["scale(1)", "scale(0.9)"]}
+                  // opacity={0}
+                  // transform={["scale(0.8)", "scale(1)"]}
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={colorMode === "light" ? reactD : reactN}
+                        w="63%"
+                        filter={"brightness(.92)"}
+                        transform={[
+                          "scale(1)",
+                          "scale(0.8)",
+                          "scale(1.1)",
+                          "scale(0.6)",
+                        ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box m={"3"} textAlign={"center"}>
+                        React Js
+                      </Box>
+                    </Grid>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={ts}
+                        w="56.5%"
+                        transform={[
+                          "scale(0.8)",
+                          "scale(0.8)",
+                          "scale(0.7)",
+                          "scale(0.5)",
+                        ]}
+                      />
+                      <Box m={"3"}>TypeScript</Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={reduxL}
+                        w="63.8%"
+                        transform={[
+                          "scale(1)",
+                          "scale(1)",
+                          "scale(0.9)",
+                          "scale(0.5)",
+                        ]}
+                      />
+                      <Box m={["3", "3", "5", "3"]}>Redux</Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  {/* <Grid opacity={0} w={0} /> */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={tailwind}
+                        w="94.5%"
+                        transform={[
+                          "scale(0.6)",
+                          "scale(0.6)",
+                          "scale(0.6)",
+                          "scale(0.45)",
+                        ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box m={"3"} textAlign={"center"}>
+                        Tailwind css
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 1 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={chakra}
+                        w="57%"
+                        transform={[
+                          "scale(1)",
+                          "scale(0.8)",
+                          "scale(1.1)",
+                          "scale(0.6)",
+                        ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box m={"3"} textAlign={"center"}>
+                        Chakra ui
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                </Grid>
+              </motion.div>
+            </Box>
+          </motion.div>
+        </Flex>
+        <Flex
+          flexDir={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={2}
+        >
+          <Box
+            // textAlign={"center"}
+            w={["2200px", "2600px", "2000px", "1340px"]}
+            fontSize={["sm", "2xl"]}
+            fontFamily={"Amiri"}
+            textDecor={"underline"}
+            m={2}
+          >
+            Backend & Baas:
+          </Box>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+          >
+            <Box>
+              {" "}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 1 }}
               >
-                <Img
-                  src={colorMode === "light" ? githubD : githubN}
-                  w="56%"
-                  filter={"brightness(.92)"}
-                  transform={["scale(1)", "scale(0.75)"]}
-                />
-                <Box m={"3"}>GitHub</Box>
-              </Grid>
-            </motion.div>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ delay: 0.6 }}
+                <Grid
+                  templateColumns={[
+                    "repeat(4, 1fr)",
+                    "repeat(4, 1fr)",
+                    "repeat(6, 1fr)",
+                    "repeat(6, 1fr)",
+                  ]}
+                  gap={0}
+                  w={["100%"]}
+                  position={"relative"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  fontFamily={"Quicksand"}
+                  fontWeight={"700"}
+                  fontSize={["10px", "18"]}
+                  // mt={["-3vh", "10vh", "12vh", "14vh"]}
+                  transform={["scale(1)", "scale(0.9)"]}
+                >
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="100%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={expressL}
+                        w="56.3%"
+                        transform={[
+                          "scale(0.9)",
+                          "scale(0.9)",
+                          "scale(0.9)",
+                          "scale(0.55)",
+                        ]}
+                        mt={[4, 4, 6, 0]}
+                      />
+                      <Box m={"3"} textAlign={"center"}>
+                        Express Js
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.1 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      {colorMode === "light" ? (
+                        <Img
+                          src={mongoD}
+                          w="56%"
+                          transform={[
+                            "scale(1.3)",
+                            "scale(0.8)",
+                            "scale(1.2)",
+                            "scale(0.8)",
+                          ]}
+                          m={["0", "0", "-6", "0"]}
+                        />
+                      ) : (
+                        <Img
+                          src={mongoN}
+                          transform={[
+                            "scale(1)",
+                            "scale(0.8)",
+                            "scale(1.2)",
+                            "scale(0.8)",
+                          ]}
+                        />
+                      )}
+                      <Box m={"3"}>Mongodb</Box>
+                    </Grid>
+                  </motion.div>
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.55 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={firebase}
+                        w="70%"
+                        transform={[
+                          "scale(1.5)",
+                          "scale(0.8)",
+                          "scale(1.4)",
+                          "scale(0.95)",
+                        ]}
+                      />
+                      <Box m={"3"}>FireBase</Box>
+                    </Grid>
+                  </motion.div>
+                </Grid>
+              </motion.div>
+            </Box>
+          </motion.div>
+        </Flex>
+        <Flex
+          flexDir={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          m={2}
+        >
+          <Box
+            // textAlign={"center"}
+            w={["406px", "1000px", "185px", "590px"]}
+            fontSize={["sm", "2xl"]}
+            fontFamily={"Amiri"}
+            textDecor={"underline"}
+            ml={2}
+          >
+            Version Control Containerization:
+          </Box>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 2 }}
+          >
+            <Grid
+              templateColumns={[
+                "repeat(4, 1fr)",
+                "repeat(4, 1fr)",
+                "repeat(6, 1fr)",
+                "repeat(6, 1fr)",
+              ]}
+              gap={0}
+              w={["100%"]}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              fontFamily={"Quicksand"}
+              fontWeight={"700"}
+              fontSize={["10px", "18"]}
+              // mt={["-3vh", "10vh", "12vh", "14vh"]}
+              transform={["scale(1)", "scale(0.9)"]}
             >
-              <Grid
-                templateRows={["repeat(2, 1fr)"]}
-                h="50%"
-                justifyItems={"center"}
-                alignItems={"center"}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ delay: 0.3 }}
               >
-                <Img
-                  src={docker}
-                  w="56.5%"
-                  transform={["scale(1.2)", "scale(0.65)"]}
-                />
-                <Box m={"3"}>Docker</Box>
-              </Grid>{" "}
-            </motion.div>
-          </Grid>
-        </motion.div>
-      </Flex>
+                <Grid
+                  templateRows={["repeat(2, 1fr)"]}
+                  h="50%"
+                  justifyItems={"center"}
+                  alignItems={"center"}
+                >
+                  <Img
+                    src={gitL}
+                    w="56%"
+                    transform={[
+                      "scale(1.2)",
+                      "scale(0.8)",
+                      "scale(1)",
+                      "scale(0.75)",
+                    ]}
+                  />
+                  <Box m={"3"}>Git</Box>
+                </Grid>{" "}
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ delay: 0.35 }}
+              >
+                <Grid
+                  templateRows={["repeat(2, 1fr)"]}
+                  h="50%"
+                  justifyItems={"center"}
+                  alignItems={"center"}
+                >
+                  <Img
+                    src={colorMode === "light" ? githubD : githubN}
+                    w="56%"
+                    filter={"brightness(.92)"}
+                    transform={[
+                      "scale(1)",
+                      "scale(0.8)",
+                      "scale(1)",
+                      "scale(0.75)",
+                    ]}
+                  />
+                  <Box m={"3"}>GitHub</Box>
+                </Grid>
+              </motion.div>
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ delay: 0.6 }}
+              >
+                <Grid
+                  templateRows={["repeat(2, 1fr)"]}
+                  h="50%"
+                  justifyItems={"center"}
+                  alignItems={"center"}
+                >
+                  <Img
+                    src={docker}
+                    w="56.5%"
+                    transform={[
+                      "scale(1.2)",
+                      "scale(0.8)",
+                      "scale(1.2)",
+                      "scale(0.65)",
+                    ]}
+                  />
+                  <Box m={"3"}>Docker</Box>
+                </Grid>{" "}
+              </motion.div>
+            </Grid>
+          </motion.div>
+        </Flex>
+      </Box>
     </Flex>
   );
 };

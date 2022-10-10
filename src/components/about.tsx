@@ -23,7 +23,7 @@ const About = () => {
       position={"relative"}
       alignItems={"center"}
       flexDirection={["column"]}
-      h={["330vh", "360vh", "300vh", "360vh"]}
+      h={["270vh", "270vh", "250vh", "270vh"]}
       bg={bgOnLight}
       fontFamily={"roboto"}
       top={["-20vh", "-20vh"]}
@@ -46,7 +46,7 @@ const About = () => {
           fontFamily={"ms madi"}
           zIndex={"1"}
           textAlign="center"
-          w={["100%", "70%"]}
+          w={["100%", "100%", "container.md", "container.md"]}
           mt={"-10"}
         >
           <Flex
