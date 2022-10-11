@@ -64,6 +64,7 @@ const Navbar = () => {
           h={"full"}
           color={colorOn}
           bgGradient={navNav}
+          opacity={0.7}
           visibility={["visible", "visible", "hidden"]}
         >
           <List
