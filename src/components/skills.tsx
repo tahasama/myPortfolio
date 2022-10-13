@@ -626,7 +626,7 @@ const Skills = () => {
                       "scale(1.2)",
                       "scale(0.8)",
                       "scale(1)",
-                      "scale(0.75)",
+                      "scale(0.67)",
                     ]}
                   />
                   <Box m={"3"}>Git</Box>
