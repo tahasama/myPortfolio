@@ -1,5 +1,6 @@
 import {
   Box,
+  Text,
   Flex,
   Grid,
   Img,
@@ -56,27 +57,227 @@ const Skills = () => {
         "ellipse(100% 100% at 45% 100%)",
       ]}
       mt={["0", "20"]}
-      h={["600vh", "300vh", "180vh", "260vh"]}
+      h={["640vh", "600vh", "300vh", "280vh", "260vh"]}
     >
+      <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
+        <Grid
+          templateColumns={[
+            "repeat(2, 1fr)",
+            "repeat(2, 1fr)",
+            "repeat(4, 1fr)",
+            "repeat(4, 1fr)",
+          ]}
+          gap={[0, 4]}
+          justifyContent={"center"}
+          fontSize={"20"}
+          fontWeight={"600"}
+          fontFamily={"Quicksand"}
+          mt={["80vh", "4vh", "24vh", "28vh"]}
+          transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
+          mx={"0"}
+        >
+          <Flex alignItems={"center"} flexDir={"column"} m={"2"}>
+            <Flex
+              clipPath={
+                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+              }
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
+              mx={"5"}
+              bg={"white"}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              color="blue.50"
+              bgColor="purple.500"
+              textAlign={"center"}
+            >
+              <motion.div
+                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
+                transition={{ duration: 2 }}
+                style={{
+                  color: colorMode !== "light" ? "black" : "white",
+                }}
+              >
+                {colorMode === "light" ? (
+                  <Img
+                    src={resN}
+                    h={["9vh", "9vh", "7vh", "8vh"]}
+                    filter={"grayscale(100%) brightness(2)"}
+                    m={0}
+                  />
+                ) : (
+                  <Img
+                    src={resD}
+                    color="purple.500"
+                    h="9vh"
+                    filter={"grayscale(100%) brightness(2)"}
+                    // transform={"scale(0.9)"}
+                    m={0}
+                  />
+                )}
+              </motion.div>{" "}
+            </Flex>
+            <Box textAlign={"center"} m={"3"}>
+              Responsive
+            </Box>
+            <Box
+              textAlign={"center"}
+              fontSize="18"
+              fontWeight={500}
+              mx={["4", "0"]}
+            >
+              layouts that works on any device
+            </Box>
+          </Flex>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
+            <Flex
+              clipPath={
+                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+              }
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
+              mx={"5"}
+              bg={"white"}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              color="blue.50"
+              bgColor="purple.500"
+            >
+              <motion.div
+                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
+                transition={{ duration: 2 }}
+                style={{ color: colorMode !== "light" ? "gray.400" : "white" }}
+              >
+                {colorMode === "light" ? (
+                  <Img
+                    src={cloud}
+                    h="15vh"
+                    filter={"grayscale(0%) brightness(1.12)"}
+                  />
+                ) : (
+                  <Img
+                    src={cloudN}
+                    h="11vh"
+                    filter={"grayscale(100%) brightness(.8)"}
+                  />
+                )}
+              </motion.div>
+            </Flex>{" "}
+            <Box textAlign={"center"} m={"3"}>
+              Intuitive
+            </Box>
+            <Box
+              textAlign={"center"}
+              fontSize="18"
+              fontWeight={500}
+              mx={["4", "0"]}
+            >
+              User friendly and easy to use
+            </Box>
+          </Flex>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
+            <Flex
+              clipPath={
+                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+              }
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
+              mx={"5"}
+              bg={"white"}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              color="blue.50"
+              bgColor="purple.500"
+            >
+              <motion.div
+                whileInView={{ scaleX: [-1, 1, -1, 1, -1, 1] }}
+                transition={{ duration: 2 }}
+                style={{ color: colorMode !== "light" ? "black" : "white" }}
+              >
+                <AiOutlineBulb size={"72"} />
+              </motion.div>
+            </Flex>
+            <Box textAlign={"center"} m={"3"}>
+              Creative
+            </Box>
+            <Box
+              textAlign={"center"}
+              fontSize="18"
+              fontWeight={500}
+              mx={["4", "0"]}
+            >
+              from idea to great product
+            </Box>
+          </Flex>
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
+            <Flex
+              clipPath={
+                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+              }
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
+              mx={"5"}
+              bg={"white"}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              color="blue.50"
+              bgColor="purple.500"
+            >
+              <motion.div
+                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
+                transition={{ duration: 2 }}
+                style={{ color: colorMode !== "light" ? "black" : "white" }}
+              >
+                <IoIosRocket size={"72"} />
+              </motion.div>
+            </Flex>{" "}
+            <Box textAlign={"center"} m={"3"}>
+              Dynamic
+            </Box>
+            <Box
+              textAlign={"center"}
+              fontSize="18"
+              fontWeight={500}
+              mx={["4", "0"]}
+            >
+              full stack and databases
+            </Box>
+          </Flex>
+        </Grid>
+      </motion.div>
+
       {/* skills */}
-      <Flex mt={["96", "64"]} flexDir={["column", "row", "row", "row"]} mx={10}>
+      <Flex
+        mt={["0", "32"]}
+        flexDir={["column", "column", "row", "row"]}
+        mx={[10, 6]}
+      >
         <Flex
           flexDir={"column"}
           justifyContent={"center"}
           alignItems={"center"}
           flex={12}
           position={"relative"}
-          m={["8", "8", "6", "8"]}
+          // m={["8", "8", "6", "8"]}
         >
           <Box
             mt={["24", "2"]}
-            fontSize={["sm", "2xl"]}
+            // fontSize={["sm", "xl", "xl", "22px"]}
+            fontSize={["xl", "xl", "lg", "xl"]}
             fontFamily={"arial"}
-            w={["40vw", "25vw"]}
+            w={["80vw", "60vw", "30vw", "25vw"]}
             bgColor={"purple.700"}
             borderTopRadius={"18"}
             textAlign={"center"}
-            p={3}
+            p={[3, 3, 4, 3, 5]}
           >
             Frontend
           </Box>
@@ -91,9 +292,9 @@ const Skills = () => {
                 transition={{ duration: 2 }}
               >
                 <Flex
-                  h={["490px", "450px", "490px", "460px"]}
-                  w={["40vw", "40vw", "25vw"]}
-                  mt={["0", "4", "-8", "8"]}
+                  h={["490px", "560px", "490px", "460px"]}
+                  w={["80vw", "60vw", "30vw", "25vw"]}
+                  mt={["0", "24", "-8", "8"]}
                   p={0}
                   position={"relative"}
                   justifyContent={"center"}
@@ -104,7 +305,7 @@ const Skills = () => {
                   flexDir={"column"}
                   transform={[
                     "scale(0.14)",
-                    "scale(0.1)",
+                    "scale(0.14)",
                     "scale(0.1)",
                     "scale(0.14)",
                   ]}
@@ -127,7 +328,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? reactD : reactN}
-                        w={["60%", "100%", "100%", "40%"]}
+                        w={["60%", "55%", "100%", "45%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -142,7 +343,7 @@ const Skills = () => {
                         fontSize={"9xl"}
                         color={"gray.400"}
                         m={5}
-                        w={["180vw", "75vw"]}
+                        w={["180vw", "180vw", "75vw"]}
                       >
                         React Js
                       </Box>
@@ -224,7 +425,7 @@ const Skills = () => {
                     >
                       <Img
                         src={tailwind}
-                        w={["40%", "50%", "50%", "30%"]}
+                        w={["40%", "40%", "50%", "30%"]}
                         // transform={[
                         //   "scale(0.6)",
                         //   "scale(0.6)",
@@ -238,7 +439,7 @@ const Skills = () => {
                         textAlign={"center"}
                         fontSize={"9xl"}
                         color={"gray.400"}
-                        w={["250vw", "100vw"]}
+                        w={["250vw", "250vw", "100vw"]}
                       >
                         Tailwind css
                       </Box>
@@ -258,7 +459,7 @@ const Skills = () => {
                     >
                       <Img
                         src={chakra}
-                        w={["50%", "60%", "60%", "30%"]}
+                        w={["50%", "50%", "60%", "30%"]}
 
                         // transform={[
                         //   "scale(1)",
@@ -273,7 +474,7 @@ const Skills = () => {
                         textAlign={"center"}
                         fontSize={"9xl"}
                         color={"gray.400"}
-                        w={["200vw", "100vw"]}
+                        w={["200vw", "200vw", "100vw"]}
                       >
                         Chakra ui
                       </Box>
@@ -291,18 +492,18 @@ const Skills = () => {
           alignItems={"center"}
           flex={12}
           position={"relative"}
-          m={["8", "8", "6", "8"]}
+          m={["8", "8", "4", "4"]}
         >
           <Box
             mt={["24", "2"]}
-            fontSize={["sm", "sm", "22px", "22px"]}
+            // fontSize={["sm", "xl", "xl", "22px"]}
+            fontSize={["xl", "xl"]}
             fontFamily={"arial"}
-            w={["40vw", "25vw"]}
+            w={["80vw", "60vw", "30vw", "25vw"]}
             bgColor={"purple.700"}
             borderTopRadius={"18"}
             textAlign={"center"}
-            px={3}
-            py={4}
+            p={[3, 3, 4, 3, 5]}
           >
             Backend & Baas
           </Box>
@@ -317,8 +518,8 @@ const Skills = () => {
                 transition={{ duration: 2 }}
               >
                 <Flex
-                  h={["490px", "450px", "490px", "460px"]}
-                  w={["40vw", "40vw", "25vw"]}
+                  h={["490px", "560px", "490px", "460px"]}
+                  w={["80vw", "60vw", "30vw", "25vw"]}
                   mt={["0", "4", "-8", "8"]}
                   p={0}
                   position={"relative"}
@@ -330,7 +531,7 @@ const Skills = () => {
                   flexDir={"column"}
                   transform={[
                     "scale(0.14)",
-                    "scale(0.1)",
+                    "scale(0.14)",
                     "scale(0.1)",
                     "scale(0.14)",
                   ]}
@@ -354,7 +555,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? expressL : expressL}
-                        w={["60%", "100%", "90%", "45%"]}
+                        w={["60%", "50%", "90%", "45%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -369,7 +570,7 @@ const Skills = () => {
                         fontSize={"9xl"}
                         color={"gray.400"}
                         m={0}
-                        w={["180vw", "75vw"]}
+                        w={["180vw", "180vw", "75vw"]}
                       >
                         Express Js
                       </Box>
@@ -392,8 +593,8 @@ const Skills = () => {
                         // w={["50%", "60%", "60%", "100%"]}
                         // w="56.5%"
                         transform={[
-                          "scale(0.8)",
-                          "scale(0.8)",
+                          "scale(1.7)",
+                          "scale(1.7)",
                           "scale(2.0)",
                           "scale(1.8)",
                         ]}
@@ -424,12 +625,12 @@ const Skills = () => {
                       <Img
                         src={firebase}
                         // w="63.8%"
-                        // transform={[
-                        //   "scale(1)",
-                        //   "scale(1)",
-                        //   "scale(0.9)",
-                        //   "scale(0.5)",
-                        // ]}
+                        transform={[
+                          "scale(1.3)",
+                          "scale(1.3)",
+                          "scale(0.9)",
+                          "scale(1.2)",
+                        ]}
                       />
                       <Box
                         m={"3"}
@@ -453,20 +654,24 @@ const Skills = () => {
           alignItems={"center"}
           flex={12}
           position={"relative"}
-          m={["8", "8", "6", "8"]}
+          // m={["8", "8", "6", "8"]}
         >
           <Box
             mt={["24", "2"]}
-            fontSize={["sm", "16px", "16px", "16px", "22px"]}
+            // fontSize={["sm", "16px", "16px", "16px", "22px"]}
+            fontSize={["xl", "lg", "18px", "18px", "20px"]}
             fontFamily={"arial"}
-            w={["40vw", "25vw"]}
+            w={["80vw", "60vw", "30vw", "25vw"]}
             bgColor={"purple.700"}
             borderTopRadius={"18"}
             textAlign={"center"}
-            px={3}
-            py={[4, 4, "10px", 6, 5]}
+            fontWeight={"200"}
+            // px={1}
+            p={[4, 4, 1, 1, 1]}
+            // mx={-10}
           >
-            Version Control Containerization
+            <Text> Version Control </Text>
+            <Text>Containerization</Text>
           </Box>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
@@ -480,7 +685,7 @@ const Skills = () => {
               >
                 <Flex
                   h={["490px", "450px", "490px", "460px"]}
-                  w={["40vw", "40vw", "25vw"]}
+                  w={["80vw", "60vw", "30vw", "25vw", "25vw"]}
                   mt={["0", "4", "-8", "8"]}
                   p={0}
                   position={"relative"}
@@ -492,7 +697,7 @@ const Skills = () => {
                   flexDir={"column"}
                   transform={[
                     "scale(0.14)",
-                    "scale(0.1)",
+                    "scale(0.16)",
                     "scale(0.1)",
                     "scale(0.14)",
                   ]}
@@ -516,8 +721,8 @@ const Skills = () => {
                       // my={"90px 0 0px 0"}
                     >
                       <Img
-                        src={colorMode === "light" ? githubD : githubN}
-                        w={["50%", "60%", "90%", "80%"]}
+                        src={colorMode === "light" ? githubN : githubN}
+                        w={["80%", "70%", "90%", "80%"]}
                         // w="56.5%"
                         // transform={[
                         //   "scale(0.8)",
@@ -549,7 +754,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? gitL : gitL}
-                        w={["60%", "100%", "80%", "40%"]}
+                        w={["60%", "90%", "80%", "40%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -586,12 +791,13 @@ const Skills = () => {
                       <Img
                         src={docker}
                         // w="63.8%"
-                        // transform={[
-                        //   "scale(1)",
-                        //   "scale(1)",
-                        //   "scale(0.9)",
-                        //   "scale(0.5)",
-                        // ]}
+                        transform={[
+                          "scale(1)",
+                          "scale(0.9)",
+                          "scale(0.9)",
+                          "scale(0.7)",
+                          // "scale(0.7)",
+                        ]}
                       />
                       <Box
                         m={"3"}
