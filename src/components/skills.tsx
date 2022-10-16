@@ -42,6 +42,8 @@ const Skills = () => {
     "linear( red.200 0%, pink.300 80%)",
     "linear( gray.900 0%, gray.900 80%)"
   );
+  const bglCardHead = useColorModeValue("purple.300", "purple.500");
+  const bglCard = useColorModeValue("purple.700", "purple.900");
 
   return (
     <Flex
@@ -57,7 +59,7 @@ const Skills = () => {
         "ellipse(100% 100% at 45% 100%)",
       ]}
       mt={["0", "20"]}
-      h={["640vh", "600vh", "300vh", "280vh", "260vh"]}
+      h={["680vh", "600vh", "300vh", "280vh", "260vh"]}
     >
       <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
         <Grid
@@ -274,7 +276,7 @@ const Skills = () => {
             fontSize={["xl", "xl", "lg", "xl"]}
             fontFamily={"arial"}
             w={["80vw", "60vw", "30vw", "25vw"]}
-            bgColor={"purple.700"}
+            bgColor={bglCardHead}
             borderTopRadius={"18"}
             textAlign={"center"}
             p={[3, 3, 4, 3, 5]}
@@ -285,7 +287,7 @@ const Skills = () => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 2 }}
           >
-            <Box bgColor={"purple.900"} borderBottomRadius={"40"} py={30}>
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
               {" "}
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
@@ -500,7 +502,7 @@ const Skills = () => {
             fontSize={["xl", "xl"]}
             fontFamily={"arial"}
             w={["80vw", "60vw", "30vw", "25vw"]}
-            bgColor={"purple.700"}
+            bgColor={bglCardHead}
             borderTopRadius={"18"}
             textAlign={"center"}
             p={[3, 3, 4, 3, 5]}
@@ -511,7 +513,7 @@ const Skills = () => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 2 }}
           >
-            <Box bgColor={"purple.900"} borderBottomRadius={"40"} py={30}>
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
               {" "}
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
@@ -662,7 +664,7 @@ const Skills = () => {
             fontSize={["xl", "lg", "18px", "18px", "20px"]}
             fontFamily={"arial"}
             w={["80vw", "60vw", "30vw", "25vw"]}
-            bgColor={"purple.700"}
+            bgColor={bglCardHead}
             borderTopRadius={"18"}
             textAlign={"center"}
             fontWeight={"200"}
@@ -677,7 +679,7 @@ const Skills = () => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 2 }}
           >
-            <Box bgColor={"purple.900"} borderBottomRadius={"40"} py={30}>
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
               {" "}
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
