@@ -10,12 +10,12 @@ import {
 import reactD from "../svg/reactD.png";
 import reactN from "../svg/reactD1.png";
 import mongoN from "../svg/mongo.png";
-import mongoD from "../svg/mon2.png";
+// import mongoD from "../svg/mon2.png";
 // import nodeL from "../svg/node.png";
 import expressL from "../svg/express.png";
 import reduxL from "../svg/redux.png";
 import gitL from "../svg/git.png";
-import githubD from "../svg/githubD.png";
+// import githubD from "../svg/githubD.png";
 import githubN from "../svg/githubN.png";
 // import html from "../svg/html.png";
 // import css from "../svg/css.png";
@@ -34,7 +34,7 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 import { motion } from "framer-motion";
-import { relative } from "path";
+// import { relative } from "path";
 
 const Skills = () => {
   const { colorMode } = useColorMode();

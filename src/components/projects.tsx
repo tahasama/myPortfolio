@@ -1,13 +1,10 @@
 import {
   Box,
   Flex,
-  Grid,
-  GridItem,
   Img,
   List,
   ListIcon,
   ListItem,
-  UnorderedList,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -22,7 +19,7 @@ import proj2 from "../images/proj/proj2/EditorApp.png";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <Box
