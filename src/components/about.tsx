@@ -10,6 +10,7 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Element } from "react-scroll";
+import Projects from "./projects";
 import Skills from "./skills";
 
 const About = () => {
@@ -23,10 +24,18 @@ const About = () => {
       position={"relative"}
       alignItems={"center"}
       flexDirection={["column"]}
-      h={["760vh", "500vh", "270vh", "300vh", "320vh"]}
+      h={
+        selected === ""
+          ? ["100vh", "100vh", "120vh", "120vh", "120vh"]
+          : selected === "shorter"
+          ? ["125vh", "125vh", "140vh", "140vh", "125vh"]
+          : selected === "short"
+          ? ["155vh", "155vh", "160vh", "160vh", "135vh"]
+          : ["175vh", "175vh", "180vh", "175vh", "145vh"]
+      }
       bg={bgOnLight}
       fontFamily={"roboto"}
-      top={["-20vh", "-20vh"]}
+      top={["-20vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
       // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
     >
       <Element name="About"></Element>
@@ -37,8 +46,8 @@ const About = () => {
         position={"relative"}
         alignItems={"center"}
         justifyContent={"center"}
-        mt={["26vh", "22vh"]}
         zIndex={"1"}
+        top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
       >
         <Flex
           justifyContent={"space-around"}
@@ -215,7 +224,6 @@ const About = () => {
           </Button>
         </Flex>
       </Flex>
-      <Skills />
     </Flex>
   );
 };
