@@ -10,8 +10,8 @@ import {
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Element } from "react-scroll";
-import Projects from "./projects";
-import Skills from "./skills";
+// import Projects from "./projects";
+// import Skills from "./skills";
 
 const About = () => {
   const bgOnLight = useColorModeValue("green.300", "gray.900");

@@ -34,7 +34,7 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 import { motion } from "framer-motion";
-import Projects from "./projects";
+// import Projects from "./projects";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
