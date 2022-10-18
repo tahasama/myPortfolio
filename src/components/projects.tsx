@@ -32,7 +32,7 @@ const Projects = () => {
         "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
         "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
       ]}
-      mt={["-155vh", "-150vh", "-40vh", "-70vh", "-50vh"]}
+      mt={["-152vh", "-150vh", "-40vh", "-70vh", "-50vh"]}
       zIndex={2}
     >
       <Flex flexDir={"column"} top={80} position={"relative"} gap={20}>
@@ -42,7 +42,7 @@ const Projects = () => {
           alignItems={"center"}
           w={"97%"}
           mx={[2, 2, 2, 2, 10]}
-          mt={["-30vh", "-25vh", "-20vh", "-20vh", "-5vh"]}
+          mt={["-28vh", "-25vh", "-20vh", "-20vh", "-5vh"]}
         >
           <Img
             src={proj1}

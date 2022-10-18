@@ -820,23 +820,40 @@ const Skills = () => {
             </motion.div>
           </Flex>
         </Flex>
-        <Box visibility={["visible", "visible", "hidden", "hidden", "hidden"]}>
+        <Box
+          visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
+          mx={5}
+        >
           <Text
             fontFamily={"arial"}
             fontSize="2xl"
             textAlign={"center"}
-            mt={"28"}
+            mt={"32"}
           >
-            And everyday learning some more, and...
+            And everyday learning some more about
           </Text>
           <Text
             fontFamily={"arial"}
             fontSize="2xl"
             textAlign={"center"}
-            mt={"10"}
+            mt={"16"}
           >
-            everyday Learning something new...
+            Design, and planning better UI for a projects
           </Text>
+          <Text
+            fontFamily={"arial"}
+            fontSize="2xl"
+            textAlign={"center"}
+            mt={"16"}
+          >
+            APIs, Best practices, Clean Code...
+          </Text>
+          <Text
+            fontFamily={"arial"}
+            fontSize="2xl"
+            textAlign={"center"}
+            mt={"16"}
+          ></Text>
         </Box>
       </Flex>
     </>
