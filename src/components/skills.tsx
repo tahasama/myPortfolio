@@ -60,8 +60,8 @@ const Skills = () => {
           "ellipse(100% 100% at 48% 100%)",
           "ellipse(100% 100% at 45% 100%)",
         ]}
-        mt={["-145vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
-        h={["680vh", "615vh", "230vh", "270vh", "220vh"]}
+        mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
+        h={["4100px", "615vh", "230vh", "270vh", "220vh"]}
       >
         <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
           <Grid
@@ -76,7 +76,7 @@ const Skills = () => {
             fontSize={"20"}
             fontWeight={"600"}
             fontFamily={"Quicksand"}
-            mt={["100vh", "85vh", "24vh", "10vh", "10vh"]}
+            mt={["90vh", "85vh", "24vh", "10vh", "10vh"]}
             transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
             mx={"0"}
           >
@@ -262,7 +262,7 @@ const Skills = () => {
 
         {/* skills */}
         <Flex
-          mt={["0", "10", "32", "32", "32"]}
+          mt={["-20", "10", "32", "32", "32"]}
           flexDir={["column", "column", "row", "row"]}
           mx={[10, 6]}
         >
@@ -272,7 +272,7 @@ const Skills = () => {
             alignItems={"center"}
             flex={12}
             position={"relative"}
-            // m={["8", "8", "6", "8"]}
+            mt={["-10", "0", "0", "0", "0"]}
           >
             <Box
               mt={["24", "2"]}
@@ -498,7 +498,7 @@ const Skills = () => {
             alignItems={"center"}
             flex={12}
             position={"relative"}
-            m={["8", "8", "4", "4"]}
+            mt={["-16", "0", "0", "0", "0"]}
           >
             <Box
               mt={["24", "2"]}
@@ -660,7 +660,7 @@ const Skills = () => {
             alignItems={"center"}
             flex={12}
             position={"relative"}
-            // m={["8", "8", "6", "8"]}
+            mt={["-20", "0", "0", "0", "0"]}
           >
             <Box
               mt={["24", "2"]}
