@@ -31,7 +31,7 @@ const About = () => {
           ? ["125vh", "125vh", "140vh", "140vh", "125vh"]
           : selected === "short"
           ? ["155vh", "155vh", "160vh", "160vh", "135vh"]
-          : ["160vh", "175vh", "180vh", "175vh", "145vh"]
+          : ["165vh", "175vh", "180vh", "175vh", "145vh"]
       }
       bg={bgOnLight}
       fontFamily={"roboto"}
