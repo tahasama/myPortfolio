@@ -61,7 +61,7 @@ const Skills = () => {
           "ellipse(100% 100% at 45% 100%)",
         ]}
         mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
-        h={["4400px", "615vh", "230vh", "270vh", "220vh"]}
+        h={["4500px", "615vh", "230vh", "270vh", "220vh"]}
       >
         <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
           <Grid
