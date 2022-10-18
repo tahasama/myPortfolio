@@ -259,7 +259,6 @@ const Skills = () => {
             </Flex>
           </Grid>
         </motion.div>
-
         {/* skills */}
         <Flex
           mt={["-20", "10", "32", "32", "32"]}
@@ -673,7 +672,7 @@ const Skills = () => {
               textAlign={"center"}
               fontWeight={"200"}
               // px={1}
-              p={[4, 4, 1, 1, 1]}
+              p={[2, 4, 1, 1, 1]}
               // mx={-10}
             >
               <Text> Version Control </Text>
@@ -821,6 +820,24 @@ const Skills = () => {
             </motion.div>
           </Flex>
         </Flex>
+        <Box visibility={["visible", "visible", "hidden", "hidden", "hidden"]}>
+          <Text
+            fontFamily={"arial"}
+            fontSize="2xl"
+            textAlign={"center"}
+            mt={"28"}
+          >
+            And everyday learning some more, and...
+          </Text>
+          <Text
+            fontFamily={"arial"}
+            fontSize="2xl"
+            textAlign={"center"}
+            mt={"10"}
+          >
+            everyday Learning something new...
+          </Text>
+        </Box>
       </Flex>
     </>
   );
