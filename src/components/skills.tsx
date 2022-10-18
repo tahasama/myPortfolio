@@ -838,7 +838,7 @@ const Skills = () => {
             textAlign={"center"}
             mt={"16"}
           >
-            Design, and planning better UI for a projects
+            Design, and planning better UI for a projects.
           </Text>
           <Text
             fontFamily={"arial"}
