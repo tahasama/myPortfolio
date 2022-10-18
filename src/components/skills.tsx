@@ -107,7 +107,7 @@ const Skills = () => {
                   {colorMode === "light" ? (
                     <Img
                       src={resN}
-                      h={["9vh", "9vh", "7vh", "8vh", "7vh"]}
+                      h={["8.8vh", "9vh", "7vh", "8vh", "7vh"]}
                       filter={"grayscale(100%) brightness(2)"}
                       m={0}
                     />
