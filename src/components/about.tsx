@@ -195,6 +195,7 @@ const About = () => {
               </Box>
             </motion.div>
           )}
+
           <Button
             m={"6"}
             py={["3.5vh", "5vh"]}

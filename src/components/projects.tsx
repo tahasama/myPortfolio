@@ -1,7 +1,10 @@
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
   Box,
+  Button,
   Flex,
   Img,
+  Link,
   List,
   ListIcon,
   ListItem,
@@ -23,7 +26,7 @@ const Projects = () => {
 
   return (
     <Box
-      h={["200vh", "200vh", "130vh", "140vh", "140vh"]}
+      h={["220vh", "220vh", "160vh", "140vh", "140vh"]}
       bg={bglOnLight}
       clipPath={[
         "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -99,6 +102,37 @@ const Projects = () => {
                 detailed works
               </ListItem>{" "}
             </List>
+            <Flex
+              position="relative"
+              justifyContent={"center"}
+              alignItems="center"
+              w={"full"}
+              // bgColor="red.200"
+              // style={{ textIndent: 10 }}
+              ml={[0, 0, 0, 0, -16]}
+            >
+              <Link
+                href="https://thacoder.netlify.app/"
+                isExternal
+                colorScheme="pink"
+                fontSize={"xl"}
+                style={{ textDecoration: "none" }}
+              >
+                <Button px={"16"} py={6} my={10} mx={4} colorScheme="teal">
+                  Demo
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/tahasama/react-editor"
+                isExternal
+                fontSize={"xl"}
+                style={{ textDecoration: "none" }}
+              >
+                <Button px={"16"} py={6} my={10} mx={4} colorScheme="pink">
+                  Code
+                </Button>
+              </Link>
+            </Flex>
           </Box>
         </Flex>{" "}
         <Flex
@@ -157,6 +191,37 @@ const Projects = () => {
                 See/Clone/Like other users projects
               </ListItem>{" "}
             </List>
+            <Flex
+              position="relative"
+              // justifyContent={"center"}
+              alignItems="center"
+              w={"full"}
+              // bgColor="red.200"
+              // style={{ textIndent: 10 }}
+              ml={[0, 0, 0, 0, 48]}
+            >
+              <Link
+                href="https://thacoder.netlify.app/"
+                isExternal
+                colorScheme="pink"
+                fontSize={"xl"}
+                style={{ textDecoration: "none" }}
+              >
+                <Button px={"16"} py={6} my={10} mx={4} colorScheme="teal">
+                  Demo
+                </Button>
+              </Link>
+              <Link
+                href="https://github.com/tahasama/react-editor"
+                isExternal
+                fontSize={"xl"}
+                style={{ textDecoration: "none" }}
+              >
+                <Button px={"16"} py={6} my={10} mx={4} colorScheme="pink">
+                  Code
+                </Button>
+              </Link>
+            </Flex>
           </Box>
           <Img
             src={proj2}
