@@ -17,16 +17,16 @@ import dev from "../images/dev11.jpg";
 import dev1 from "../images/dev40.jpg";
 // import dev1 from "../images/developping.webp";
 import CloudNstars from "./cloudNstars";
-import { motion } from "framer-motion";
+import { m, motion } from "framer-motion";
 import { useState } from "react";
 import { Element } from "react-scroll";
 
-const flip = keyframes`
-from,to
-0%   {transform: scaleX(1);}
-50% {transform: scaleX(-1);}
-100% {transform: scaleX(1);}
-`;
+// const flip = keyframes`
+// from,to
+// 0%   {transform: rotate(0) scale(0);}
+// 50% {transform: rotate(180deg) scale(-1);}
+// 100% {transform: rotate(360deg);}
+// `;
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
@@ -39,7 +39,7 @@ const Home = () => {
   const enterF = () => {
     setTimeout(() => {
       setPic(!pic);
-    }, 50);
+    }, 450);
   };
 
   return (
@@ -70,6 +70,7 @@ const Home = () => {
           <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
             <CloudNstars />
           </Box>
+
           <Flex
             // top={[1, -1, -1]}
             visibility={["hidden", "hidden", "visible", "visible"]}
@@ -84,27 +85,35 @@ const Home = () => {
             onClick={toggleColorMode}
             borderRadius={"3xl"}
             border={"white"}
-            _hover={{ animation: `${flip} .6s ease-in-out` }}
+            // _hover={{ animation: `${flip} 2s ease-in-out` }}
           >
-            {colorMode !== "light" ? (
-              <Img
-                src={pic ? devNight2 : devNight}
-                alt="devNight"
-                borderRadius={"3xl"}
-                boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
-              />
-            ) : (
-              <Img
-                src={pic ? dev : dev1}
-                filter={
-                  pic
-                    ? "brightness(.9) grayscale(0%)"
-                    : "brightness(.9) grayscale(25%)"
-                }
-                alt="devDay2"
-                borderRadius={"3xl"}
-              />
-            )}
+            <motion.div
+              whileHover={{
+                // scale: [1.2, 1.6, 1],
+                rotate: [0, 5, -5, 5, -5, 5, -5, 1],
+              }}
+              transition={{ type: "spring", stiffness: 1000 }}
+            >
+              {colorMode !== "light" ? (
+                <Img
+                  src={pic ? devNight2 : devNight}
+                  alt="devNight"
+                  borderRadius={"3xl"}
+                  boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
+                />
+              ) : (
+                <Img
+                  src={pic ? dev : dev1}
+                  filter={
+                    pic
+                      ? "brightness(.9) grayscale(0%)"
+                      : "brightness(.9) grayscale(25%)"
+                  }
+                  alt="devDay2"
+                  borderRadius={"3xl"}
+                />
+              )}
+            </motion.div>
           </Flex>
           <Flex
             zIndex={2}
