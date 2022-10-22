@@ -62,8 +62,8 @@ const Skills = () => {
           "ellipse(100% 100% at 48% 100%)",
           "ellipse(100% 100% at 45% 100%)",
         ]}
-        // mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
-        mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
+        mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
+        // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         h={["4500px", "615vh", "230vh", "270vh", "220vh"]}
       >
         {/* <Element name="Skills"></Element> */}
@@ -813,7 +813,7 @@ const Skills = () => {
             </Box>
           </Flex>
         </Flex>
-        <Box
+        {/* <Box
           visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
           mx={5}
         >
@@ -847,7 +847,7 @@ const Skills = () => {
             textAlign={"center"}
             mt={"16"}
           ></Text>
-        </Box>
+        </Box> */}
       </Flex>
     </>
   );
