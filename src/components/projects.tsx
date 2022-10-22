@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["250vh", "220vh", "170vh", "170vh", "140vh"]}
+        h={["250vh", "250vh", "170vh", "170vh", "170vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -119,7 +119,7 @@ const Projects = () => {
               <Flex
                 position="relative"
                 justifyContent={"center"}
-                alignItems="center"
+                alignItems={["center"]}
                 w={"full"}
                 // bgColor="red.200"
                 // style={{ textIndent: 10 }}
@@ -129,17 +129,18 @@ const Projects = () => {
                   href="https://thacoder.netlify.app/"
                   isExternal
                   colorScheme="pink"
-                  fontSize={"xl"}
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["12", "16", "16", "16", "16"]}
-                    py={6}
+                    px={["20", "20", "16", "16", "16"]}
+                    py={[8, 8, 6, 6, 6]}
                     my={10}
                     mx={2}
                     colorScheme={
                       colorMode !== "light" ? "linkedin" : "facebook"
                     }
+                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
+                    letterSpacing={"wider"}
                   >
                     Demo
                   </Button>
@@ -151,11 +152,13 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["12", "16", "16", "16", "16"]}
-                    py={6}
+                    px={["20", "20", "16", "16", "16"]}
+                    py={[8, 8, 6, 6, 6]}
                     my={10}
                     mx={[1, 1, 4, 4, 4]}
                     colorScheme={colorMode !== "light" ? "teal" : "pink"}
+                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
+                    letterSpacing={"wider"}
                   >
                     Code
                   </Button>
@@ -168,7 +171,7 @@ const Projects = () => {
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
-            w={"97%"}
+            w={"96%"}
             // mx={[2, 2, 5, 0, 0]}
             mx={[2, 2, 0, 5, 10]}
           >
@@ -232,8 +235,8 @@ const Projects = () => {
               </List>
               <Flex
                 position="relative"
-                // justifyContent={"center"}
-                alignItems="center"
+                justifyContent={["center", "start"]}
+                alignItems={["center", "start"]}
                 w={"full"}
                 // bgColor="red.200"
                 // style={{ textIndent: 10 }}
@@ -247,13 +250,15 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["12", "16", "16", "16", "16"]}
-                    py={6}
+                    px={["20", "20", "16", "16", "16"]}
+                    py={[8, 8, 6, 6, 6]}
                     my={10}
                     mx={2}
                     colorScheme={
                       colorMode !== "light" ? "linkedin" : "facebook"
                     }
+                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
+                    letterSpacing={"wider"}
                   >
                     Demo
                   </Button>
@@ -265,11 +270,13 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["12", "16", "16", "16", "16"]}
-                    py={6}
+                    px={["20", "20", "16", "16", "16"]}
+                    py={[8, 8, 6, 6, 6]}
                     my={10}
                     mx={[1, 1, 4, 4, 4]}
                     colorScheme={colorMode !== "light" ? "teal" : "pink"}
+                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
+                    letterSpacing={"wider"}
                   >
                     Code
                   </Button>
