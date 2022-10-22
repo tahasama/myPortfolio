@@ -813,7 +813,7 @@ const Skills = () => {
             </Box>
           </Flex>
         </Flex>
-        {/* <Box
+        <Box
           visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
           mx={5}
         >
@@ -847,7 +847,7 @@ const Skills = () => {
             textAlign={"center"}
             mt={"16"}
           ></Text>
-        </Box> */}
+        </Box>
       </Flex>
     </>
   );

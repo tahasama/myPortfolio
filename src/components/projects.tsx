@@ -174,7 +174,7 @@ const Projects = () => {
             position={"relative"}
             w={"96%"}
             // mx={[2, 2, 5, 0, 0]}
-            mx={[2, 2, 0, 5, 10]}
+            mx={[2, 2, 0, 5, -20]}
           >
             <Box w={"100%"}>
               <Text
