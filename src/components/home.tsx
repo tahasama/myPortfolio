@@ -17,7 +17,7 @@ import dev from "../images/dev11.jpg";
 import dev1 from "../images/dev40.jpg";
 // import dev1 from "../images/developping.webp";
 import CloudNstars from "./cloudNstars";
-import { m, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Element } from "react-scroll";
 
@@ -78,9 +78,9 @@ const Home = () => {
           top={["0", "-24vh", "0", "0"]}
           // mt={["40", "20"]}
         >
-          {/* <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
+          <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
             <CloudNstars />
-          </Box> */}
+          </Box>
 
           <Flex
             // top={[1, -1, -1]}
