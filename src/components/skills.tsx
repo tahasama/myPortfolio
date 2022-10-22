@@ -35,6 +35,7 @@ import { IoIosRocket } from "react-icons/io";
 
 import { motion } from "framer-motion";
 // import Projects from "./projects";
+import { Element } from "react-scroll";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -47,6 +48,7 @@ const Skills = () => {
 
   return (
     <>
+      <Element name="Skills"></Element>
       <Flex
         w={"100%"}
         flexDir={["column", "column", "column", "column"]}
@@ -60,10 +62,13 @@ const Skills = () => {
           "ellipse(100% 100% at 48% 100%)",
           "ellipse(100% 100% at 45% 100%)",
         ]}
-        mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
+        // mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
+        mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         h={["4500px", "615vh", "230vh", "270vh", "220vh"]}
       >
+        {/* <Element name="Skills"></Element> */}
         <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
+          {/* <Element name="Skills"></Element> */}
           <Grid
             templateColumns={[
               "repeat(2, 1fr)",
@@ -115,7 +120,7 @@ const Skills = () => {
                     <Img
                       src={resD}
                       color="purple.500"
-                      h="9vh"
+                      h={["9vh", "9vh", "9vh", "9vh", "7.7vh"]}
                       filter={"grayscale(100%) brightness(2)"}
                       // transform={"scale(0.9)"}
                       m={0}
@@ -553,7 +558,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? expressL : expressL}
-                        w={["60%", "50%", "90%", "45%"]}
+                        w={["60%", "50%", "90%", "45%", "39%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -664,7 +669,7 @@ const Skills = () => {
               textAlign={"center"}
               fontWeight={"200"}
               // px={1}
-              p={[2, 4, 1, 1, 1]}
+              p={[2, 4, 1, 0, 1]}
               // mx={-10}
             >
               <Text> Version Control </Text>
@@ -748,7 +753,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? gitL : gitL}
-                        w={["60%", "90%", "80%", "40%"]}
+                        w={["60%", "90%", "80%", "40%", "35%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -789,7 +794,7 @@ const Skills = () => {
                           "scale(1)",
                           "scale(0.9)",
                           "scale(0.9)",
-                          "scale(0.7)",
+                          "scale(0.9)",
                           // "scale(0.7)",
                         ]}
                       />

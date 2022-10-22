@@ -78,20 +78,20 @@ const Home = () => {
           top={["0", "-24vh", "0", "0"]}
           // mt={["40", "20"]}
         >
-          <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
+          {/* <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
             <CloudNstars />
-          </Box>
+          </Box> */}
 
           <Flex
             // top={[1, -1, -1]}
             visibility={["hidden", "hidden", "visible", "visible"]}
             position={"relative"}
             alignItems={"center"}
-            left={["0", "0", "-5", "-6", "16"]}
+            left={["0", "0", "-10", "-6", "32"]}
             mx={16}
             top={["0", "-8", "-10", "-10"]}
             onMouseOver={() => enterF()}
-            w={["70%", "44%", "45%", "50%", "30%"]}
+            w={["70%", "44%", "43vw", "50%", "30%"]}
             cursor={"pointer"}
             onClick={toggleColorMode}
             // borderRadius={"3xl"}
@@ -127,42 +127,45 @@ const Home = () => {
               )}
               <Flex
                 pos={"relative"}
-                justifyContent="space-between"
-                mt={2}
+                // justifyContent="center"
+                // mt={[-10, -10, 2, 2, 2]}
                 fontWeight={"300"}
                 fontSize={"xl"}
                 fontFamily={"Amiri"}
+                w={["0", "full"]}
+                p={0}
+                m={[-4, 0, 0, 0, 0]}
               >
                 <Box
                   textAlign={"start"}
-                  _groupHover={{ animation: `${falling} 1.5s ease-in-out .4s` }}
+                  _groupHover={{ animation: `${falling} 1.3s ease-in-out .4s` }}
                   // bgColor={"white"}
-                  overflow={"visible"}
+                  // overflow={"visible"}
                   opacity={0}
                 >
                   Efficient Work
                 </Box>
                 <Box
                   textAlign={"center"}
-                  _groupHover={{ animation: `${falling} 2s ease-in-out .6s` }}
+                  _groupHover={{ animation: `${falling} 1.7s ease-in-out .6s` }}
                   // bgColor={"white"}
                   overflow={"visible"}
                   opacity={0}
                 >
                   Great UX
-                </Box>{" "}
+                </Box>
                 <Box
                   textAlign={"center"}
-                  _groupHover={{ animation: `${falling} 1.7s ease-in-out .2s` }}
+                  _groupHover={{ animation: `${falling} 1.4s ease-in-out .2s` }}
                   // bgColor={"white"}
                   overflow={"visible"}
                   opacity={0}
                 >
                   Exceptional Apps
-                </Box>{" "}
+                </Box>
                 <Box
                   textAlign={"end"}
-                  _groupHover={{ animation: `${falling} 2.3s ease-in-out .8s` }}
+                  _groupHover={{ animation: `${falling} 2s ease-in-out .8s` }}
                   // bgColor={"white"}
                   overflow={"visible"}
                   opacity={0}
@@ -172,15 +175,17 @@ const Home = () => {
               </Flex>
             </motion.div>
           </Flex>
+
           <Flex
             zIndex={2}
             flexDirection="column"
             position="relative"
-            alignItems={["center", "start"]}
+            alignItems={["center", "center", "start", "start", "start"]}
             lineHeight={"taller"}
             top={["-26vh", "-16"]}
             w={["full", "auto"]}
-            left={["0", "0", "-16", "-7", "24"]}
+            left={["0", "4", "-16", "-7", "40"]}
+            ml={[0, 0, 0, 0, 0]}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.300"}
@@ -202,7 +207,7 @@ const Home = () => {
             <Divider w={[240, 280, 280, 380, 400]} />
             <Flex
               position={"relative"}
-              w={["278px", "60vw", "46vw"]}
+              w={["278px", "60vw", "40vw", "46vw", "46vw"]}
               fontSize={["md", "lg", "xl", "2xl", "3xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}

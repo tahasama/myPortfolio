@@ -28,7 +28,7 @@ const Navbar = () => {
 
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
-  const navi = ["Home", "About", "Projects", "Contact"];
+  const navi = ["Home", "About", "Skills", "Projects", "Contact"];
 
   return (
     <Flex
@@ -51,9 +51,13 @@ const Navbar = () => {
         h={"12"}
       >
         {!isOpen ? (
-          <HamburgerIcon boxSize={8} mx={-1} />
+          <motion.div whileTap={{ rotate: 180 }}>
+            <HamburgerIcon boxSize={8} mx={-1} />
+          </motion.div>
         ) : (
-          <CloseIcon boxSize={5} mx={0} />
+          <motion.div whileTap={{ rotate: 180 }}>
+            <CloseIcon boxSize={5} mx={0} />
+          </motion.div>
         )}
       </Button>
       {/* </Flex> */}
@@ -64,7 +68,7 @@ const Navbar = () => {
           h={"full"}
           color={colorOn}
           bgGradient={navNav}
-          opacity={0.7}
+          opacity={1}
           visibility={["visible", "visible", "hidden"]}
         >
           <List
