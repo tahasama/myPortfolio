@@ -286,209 +286,205 @@ const Skills = () => {
             >
               Frontend
             </Box>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 2 }}
-            >
-              <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
-                {" "}
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 2 }}
-                >
-                  <Flex
-                    h={["490px", "560px", "490px", "460px"]}
-                    w={["80vw", "60vw", "30vw", "25vw"]}
-                    mt={["0", "24", "-8", "8"]}
-                    p={0}
-                    position={"relative"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    fontFamily={"Quicksand"}
-                    fontWeight={"700"}
-                    fontSize={["10px", "18"]}
-                    flexDir={"column"}
-                    transform={[
-                      "scale(0.14)",
-                      "scale(0.14)",
-                      "scale(0.1)",
-                      "scale(0.14)",
-                    ]}
-                    // h={"max-content"}
-                    // mt={["-3vh", "10vh", "8vh", "20vh"]}
-                    // transform={["scale(1)", "scale(0.9)"]}
-                    // opacity={0}
-                    // transform={["scale(0.8)", "scale(1)"]}
-                    // w="50%"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                      >
-                        <Img
-                          src={colorMode === "light" ? reactD : reactN}
-                          w={["60%", "55%", "100%", "45%"]}
-                          filter={"brightness(.92)"}
-                          // transform={[
-                          //   "scale(1)",
-                          //   "scale(0.8)",
-                          //   "scale(1.1)",
-                          //   "scale(0.6)",
-                          // ]}
-                          // mt={[5, 0]}
-                        />
-                        <Box
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                          m={5}
-                          w={["180vw", "180vw", "75vw"]}
-                        >
-                          React Js
-                        </Box>
-                      </Grid>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                      >
-                        <Img
-                          src={ts}
-                          w={["50%", "60%", "60%", "50%"]}
-                          // w="56.5%"
-                          // transform={[
-                          //   "scale(0.8)",
-                          //   "scale(0.8)",
-                          //   "scale(0.7)",
-                          //   "scale(0.5)",
-                          // ]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          TypeScript
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.6 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                      >
-                        <Img
-                          src={reduxL}
-                          // w="63.8%"
-                          // transform={[
-                          //   "scale(1)",
-                          //   "scale(1)",
-                          //   "scale(0.9)",
-                          //   "scale(0.5)",
-                          // ]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          Redux
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.8 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="100%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                      >
-                        <Img
-                          src={tailwind}
-                          w={["40%", "40%", "50%", "30%"]}
-                          // transform={[
-                          //   "scale(0.6)",
-                          //   "scale(0.6)",
-                          //   "scale(0.6)",
-                          //   "scale(0.45)",
-                          // ]}
-                          // mt={[5, 0]}
-                        />
-                        <Box
-                          m={"5"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                          w={["250vw", "250vw", "100vw"]}
-                        >
-                          Tailwind css
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 1 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        h="80%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        m={10}
-                      >
-                        <Img
-                          src={chakra}
-                          w={["50%", "50%", "60%", "30%"]}
 
-                          // transform={[
-                          //   "scale(1)",
-                          //   "scale(0.8)",
-                          //   "scale(1.1)",
-                          //   "scale(0.6)",
-                          // ]}
-                          // mt={[5, 0]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                          w={["200vw", "200vw", "100vw"]}
-                        >
-                          Chakra ui
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                  </Flex>
-                </motion.div>
-              </Box>
-            </motion.div>
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
+              {" "}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 2 }}
+              >
+                <Flex
+                  h={["490px", "560px", "490px", "460px"]}
+                  w={["80vw", "60vw", "30vw", "25vw"]}
+                  mt={["0", "24", "-8", "8"]}
+                  p={0}
+                  position={"relative"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  fontFamily={"Quicksand"}
+                  fontWeight={"700"}
+                  fontSize={["10px", "18"]}
+                  flexDir={"column"}
+                  transform={[
+                    "scale(0.14)",
+                    "scale(0.14)",
+                    "scale(0.1)",
+                    "scale(0.14)",
+                  ]}
+                  // h={"max-content"}
+                  // mt={["-3vh", "10vh", "8vh", "20vh"]}
+                  // transform={["scale(1)", "scale(0.9)"]}
+                  // opacity={0}
+                  // transform={["scale(0.8)", "scale(1)"]}
+                  // w="50%"
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={colorMode === "light" ? reactD : reactN}
+                        w={["60%", "55%", "100%", "45%"]}
+                        filter={"brightness(.92)"}
+                        // transform={[
+                        //   "scale(1)",
+                        //   "scale(0.8)",
+                        //   "scale(1.1)",
+                        //   "scale(0.6)",
+                        // ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                        m={5}
+                        w={["180vw", "180vw", "75vw"]}
+                      >
+                        React Js
+                      </Box>
+                    </Grid>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={ts}
+                        w={["50%", "60%", "60%", "50%"]}
+                        // w="56.5%"
+                        // transform={[
+                        //   "scale(0.8)",
+                        //   "scale(0.8)",
+                        //   "scale(0.7)",
+                        //   "scale(0.5)",
+                        // ]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                      >
+                        TypeScript
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={reduxL}
+                        // w="63.8%"
+                        // transform={[
+                        //   "scale(1)",
+                        //   "scale(1)",
+                        //   "scale(0.9)",
+                        //   "scale(0.5)",
+                        // ]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                      >
+                        Redux
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.8 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="100%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                    >
+                      <Img
+                        src={tailwind}
+                        w={["40%", "40%", "50%", "30%"]}
+                        // transform={[
+                        //   "scale(0.6)",
+                        //   "scale(0.6)",
+                        //   "scale(0.6)",
+                        //   "scale(0.45)",
+                        // ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box
+                        m={"5"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                        w={["250vw", "250vw", "100vw"]}
+                      >
+                        Tailwind css
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 1 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      h="80%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      m={10}
+                    >
+                      <Img
+                        src={chakra}
+                        w={["50%", "50%", "60%", "30%"]}
+
+                        // transform={[
+                        //   "scale(1)",
+                        //   "scale(0.8)",
+                        //   "scale(1.1)",
+                        //   "scale(0.6)",
+                        // ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                        w={["200vw", "200vw", "100vw"]}
+                      >
+                        Chakra ui
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                </Flex>
+              </motion.div>
+            </Box>
           </Flex>
 
           <Flex
@@ -512,145 +508,141 @@ const Skills = () => {
             >
               Backend & Baas
             </Box>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 2 }}
-            >
-              <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
-                {" "}
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 2 }}
+
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
+              {" "}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 2 }}
+              >
+                <Flex
+                  h={["490px", "560px", "490px", "460px"]}
+                  w={["80vw", "60vw", "30vw", "25vw"]}
+                  mt={["0", "4", "-8", "8"]}
+                  p={0}
+                  position={"relative"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  fontFamily={"Quicksand"}
+                  fontWeight={"700"}
+                  fontSize={["10px", "18"]}
+                  flexDir={"column"}
+                  transform={[
+                    "scale(0.14)",
+                    "scale(0.14)",
+                    "scale(0.1)",
+                    "scale(0.14)",
+                  ]}
+                  // h={"max-content"}
+                  // mt={["-3vh", "10vh", "8vh", "20vh"]}
+                  // transform={["scale(1)", "scale(0.9)"]}
+                  // opacity={0}
+                  // transform={["scale(0.8)", "scale(1)"]}
+                  // w="50%"
                 >
-                  <Flex
-                    h={["490px", "560px", "490px", "460px"]}
-                    w={["80vw", "60vw", "30vw", "25vw"]}
-                    mt={["0", "4", "-8", "8"]}
-                    p={0}
-                    position={"relative"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    fontFamily={"Quicksand"}
-                    fontWeight={"700"}
-                    fontSize={["10px", "18"]}
-                    flexDir={"column"}
-                    transform={[
-                      "scale(0.14)",
-                      "scale(0.14)",
-                      "scale(0.1)",
-                      "scale(0.14)",
-                    ]}
-                    // h={"max-content"}
-                    // mt={["-3vh", "10vh", "8vh", "20vh"]}
-                    // transform={["scale(1)", "scale(0.9)"]}
-                    // opacity={0}
-                    // transform={["scale(0.8)", "scale(1)"]}
-                    // w="50%"
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.2 }}
                   >
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.2 }}
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      mb={44}
                     >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        mb={44}
+                      <Img
+                        src={colorMode === "light" ? expressL : expressL}
+                        w={["60%", "50%", "90%", "45%"]}
+                        filter={"brightness(.92)"}
+                        // transform={[
+                        //   "scale(1)",
+                        //   "scale(0.8)",
+                        //   "scale(1.1)",
+                        //   "scale(0.6)",
+                        // ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                        m={0}
+                        w={["180vw", "180vw", "75vw"]}
                       >
-                        <Img
-                          src={colorMode === "light" ? expressL : expressL}
-                          w={["60%", "50%", "90%", "45%"]}
-                          filter={"brightness(.92)"}
-                          // transform={[
-                          //   "scale(1)",
-                          //   "scale(0.8)",
-                          //   "scale(1.1)",
-                          //   "scale(0.6)",
-                          // ]}
-                          // mt={[5, 0]}
-                        />
-                        <Box
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                          m={0}
-                          w={["180vw", "180vw", "75vw"]}
-                        >
-                          Express Js
-                        </Box>
-                      </Grid>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.4 }}
+                        Express Js
+                      </Box>
+                    </Grid>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      // m={"536px 0 60px 0"}
                     >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        // m={"536px 0 60px 0"}
+                      <Img
+                        src={colorMode === "light" ? mongoN : mongoN}
+                        // w={["50%", "60%", "60%", "100%"]}
+                        // w="56.5%"
+                        transform={[
+                          "scale(1.7)",
+                          "scale(1.7)",
+                          "scale(2.0)",
+                          "scale(1.8)",
+                        ]}
+                        mb={16}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
                       >
-                        <Img
-                          src={colorMode === "light" ? mongoN : mongoN}
-                          // w={["50%", "60%", "60%", "100%"]}
-                          // w="56.5%"
-                          transform={[
-                            "scale(1.7)",
-                            "scale(1.7)",
-                            "scale(2.0)",
-                            "scale(1.8)",
-                          ]}
-                          mb={16}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          Mongodb
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.6 }}
+                        Mongodb
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      my={20}
                     >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        my={20}
+                      <Img
+                        src={firebase}
+                        // w="63.8%"
+                        transform={[
+                          "scale(1.3)",
+                          "scale(1.3)",
+                          "scale(0.9)",
+                          "scale(1.2)",
+                        ]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
                       >
-                        <Img
-                          src={firebase}
-                          // w="63.8%"
-                          transform={[
-                            "scale(1.3)",
-                            "scale(1.3)",
-                            "scale(0.9)",
-                            "scale(1.2)",
-                          ]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          FireBase
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                  </Flex>
-                </motion.div>
-              </Box>
-            </motion.div>
+                        FireBase
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                </Flex>
+              </motion.div>
+            </Box>
           </Flex>
 
           <Flex
@@ -678,146 +670,142 @@ const Skills = () => {
               <Text> Version Control </Text>
               <Text>Containerization</Text>
             </Box>
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 2 }}
-            >
-              <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
-                {" "}
-                <motion.div
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ duration: 2 }}
-                >
-                  <Flex
-                    h={["490px", "450px", "490px", "460px"]}
-                    w={["80vw", "60vw", "30vw", "25vw", "25vw"]}
-                    mt={["0", "4", "-8", "8"]}
-                    p={0}
-                    position={"relative"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    fontFamily={"Quicksand"}
-                    fontWeight={"700"}
-                    fontSize={["10px", "18"]}
-                    flexDir={"column"}
-                    transform={[
-                      "scale(0.14)",
-                      "scale(0.16)",
-                      "scale(0.1)",
-                      "scale(0.14)",
-                    ]}
-                    // h={"max-content"}
-                    // mt={["-3vh", "10vh", "8vh", "20vh"]}
-                    // transform={["scale(1)", "scale(0.9)"]}
-                    // opacity={0}
-                    // transform={["scale(0.8)", "scale(1)"]}
-                    // w="50%"
-                  >
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.4 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        // my={"90px 0 0px 0"}
-                      >
-                        <Img
-                          src={colorMode === "light" ? githubN : githubN}
-                          w={["80%", "70%", "90%", "80%"]}
-                          // w="56.5%"
-                          // transform={[
-                          //   "scale(0.8)",
-                          //   "scale(0.8)",
-                          //   "scale(0.7)",
-                          //   "scale(0.5)",
-                          // ]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          GitHub
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        m={"180px 0 20px 0"}
-                      >
-                        <Img
-                          src={colorMode === "light" ? gitL : gitL}
-                          w={["60%", "90%", "80%", "40%"]}
-                          filter={"brightness(.92)"}
-                          // transform={[
-                          //   "scale(1)",
-                          //   "scale(0.8)",
-                          //   "scale(1.1)",
-                          //   "scale(0.6)",
-                          // ]}
-                          // mt={[5, 0]}
-                        />
-                        <Box
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                          m={5}
-                          w={["180vw", "75vw"]}
-                        >
-                          Git
-                        </Box>
-                      </Grid>
-                    </motion.div>
 
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.6 }}
+            <Box bgColor={bglCard} borderBottomRadius={"40"} py={30}>
+              {" "}
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 2 }}
+              >
+                <Flex
+                  h={["490px", "450px", "490px", "460px"]}
+                  w={["80vw", "60vw", "30vw", "25vw", "25vw"]}
+                  mt={["0", "4", "-8", "8"]}
+                  p={0}
+                  position={"relative"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
+                  fontFamily={"Quicksand"}
+                  fontWeight={"700"}
+                  fontSize={["10px", "18"]}
+                  flexDir={"column"}
+                  transform={[
+                    "scale(0.14)",
+                    "scale(0.16)",
+                    "scale(0.1)",
+                    "scale(0.14)",
+                  ]}
+                  // h={"max-content"}
+                  // mt={["-3vh", "10vh", "8vh", "20vh"]}
+                  // transform={["scale(1)", "scale(0.9)"]}
+                  // opacity={0}
+                  // transform={["scale(0.8)", "scale(1)"]}
+                  // w="50%"
+                >
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      // my={"90px 0 0px 0"}
                     >
-                      <Grid
-                        templateRows={["repeat(2, 1fr)"]}
-                        // h="50%"
-                        justifyItems={"center"}
-                        alignItems={"center"}
-                        my={20}
+                      <Img
+                        src={colorMode === "light" ? githubN : githubN}
+                        w={["80%", "70%", "90%", "80%"]}
+                        // w="56.5%"
+                        // transform={[
+                        //   "scale(0.8)",
+                        //   "scale(0.8)",
+                        //   "scale(0.7)",
+                        //   "scale(0.5)",
+                        // ]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
                       >
-                        <Img
-                          src={docker}
-                          // w="63.8%"
-                          transform={[
-                            "scale(1)",
-                            "scale(0.9)",
-                            "scale(0.9)",
-                            "scale(0.7)",
-                            // "scale(0.7)",
-                          ]}
-                        />
-                        <Box
-                          m={"3"}
-                          textAlign={"center"}
-                          fontSize={"9xl"}
-                          color={"gray.400"}
-                        >
-                          Docker
-                        </Box>
-                      </Grid>{" "}
-                    </motion.div>
-                  </Flex>
-                </motion.div>
-              </Box>
-            </motion.div>
+                        GitHub
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.2 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      m={"180px 0 20px 0"}
+                    >
+                      <Img
+                        src={colorMode === "light" ? gitL : gitL}
+                        w={["60%", "90%", "80%", "40%"]}
+                        filter={"brightness(.92)"}
+                        // transform={[
+                        //   "scale(1)",
+                        //   "scale(0.8)",
+                        //   "scale(1.1)",
+                        //   "scale(0.6)",
+                        // ]}
+                        // mt={[5, 0]}
+                      />
+                      <Box
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                        m={5}
+                        w={["180vw", "75vw"]}
+                      >
+                        Git
+                      </Box>
+                    </Grid>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ delay: 0.6 }}
+                  >
+                    <Grid
+                      templateRows={["repeat(2, 1fr)"]}
+                      // h="50%"
+                      justifyItems={"center"}
+                      alignItems={"center"}
+                      my={20}
+                    >
+                      <Img
+                        src={docker}
+                        // w="63.8%"
+                        transform={[
+                          "scale(1)",
+                          "scale(0.9)",
+                          "scale(0.9)",
+                          "scale(0.7)",
+                          // "scale(0.7)",
+                        ]}
+                      />
+                      <Box
+                        m={"3"}
+                        textAlign={"center"}
+                        fontSize={"9xl"}
+                        color={"gray.400"}
+                      >
+                        Docker
+                      </Box>
+                    </Grid>{" "}
+                  </motion.div>
+                </Flex>
+              </motion.div>
+            </Box>
           </Flex>
         </Flex>
         <Box
