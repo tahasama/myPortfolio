@@ -64,7 +64,7 @@ const Skills = () => {
         ]}
         mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["4500px", "615vh", "230vh", "270vh", "220vh"]}
+        h={["4900px", "615vh", "230vh", "270vh", "220vh"]}
       >
         {/* <Element name="Skills"></Element> */}
         <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>
