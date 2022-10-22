@@ -37,7 +37,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-212vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
+        mt={["-202vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
         zIndex={2}
       >
         <Element name="Projects"></Element>
