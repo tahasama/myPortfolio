@@ -28,7 +28,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["250vh", "250vh", "170vh", "170vh", "170vh"]}
+        h={["270vh", "250vh", "185vh", "220vh", "170vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -37,7 +37,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-152vh", "-150vh", "-40vh", "-70vh", "-50vh"]}
+        mt={["-212vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
         zIndex={2}
       >
         <Element name="Projects"></Element>
@@ -55,11 +55,12 @@ const Projects = () => {
               src={proj1}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "45%", "55%", "40%"]}
+              w={["100%", "100%", "50%", "55%", "40%"]}
+              ml={[0, 0, 12, 0, 0]}
             />
             <Box mx={10} w={"full"}>
               <Text
-                fontSize="28"
+                fontSize={["24", "28", "20", "24", "24"]}
                 textAlign={"center"}
                 mb={2}
                 fontFamily={"Raleway"}
@@ -70,7 +71,7 @@ const Projects = () => {
               <List
                 style={{ textIndent: 10 }}
                 ml={[0, 0, 0, 0, 32]}
-                fontSize="lg"
+                fontSize={["16", "28", "16", "20", "20"]}
               >
                 <ListItem>
                   <ListIcon
@@ -132,14 +133,14 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["20", "20", "16", "16", "16"]}
-                    py={[8, 8, 6, 6, 6]}
+                    px={["8", "20", "12", "16", "16"]}
+                    fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                    py={[7, 8, 6, 6, 6]}
                     my={10}
                     mx={2}
                     colorScheme={
                       colorMode !== "light" ? "linkedin" : "facebook"
                     }
-                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
                     letterSpacing={"wider"}
                   >
                     Demo
@@ -152,12 +153,12 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["20", "20", "16", "16", "16"]}
-                    py={[8, 8, 6, 6, 6]}
+                    px={["8", "20", "12", "16", "16"]}
+                    fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                    py={[7, 8, 6, 6, 6]}
                     my={10}
                     mx={[1, 1, 4, 4, 4]}
                     colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
                     letterSpacing={"wider"}
                   >
                     Code
@@ -177,9 +178,9 @@ const Projects = () => {
           >
             <Box w={"100%"}>
               <Text
-                fontSize="28"
+                fontSize={["24", "28", "20", "24", "24"]}
                 textAlign={"center"}
-                mb={2}
+                my={[4, 4, 2, 2, 2]}
                 fontFamily={"Raleway"}
                 fontWeight={900}
               >
@@ -188,7 +189,7 @@ const Projects = () => {
               <List
                 style={{ textIndent: 10 }}
                 ml={[0, 0, 0, 0, 48]}
-                fontSize="lg"
+                fontSize={["16", "28", "16", "20", "20"]}
               >
                 <ListItem>
                   <ListIcon
@@ -250,14 +251,14 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["20", "20", "16", "16", "16"]}
-                    py={[8, 8, 6, 6, 6]}
+                    px={["8", "20", "12", "16", "16"]}
+                    fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                    py={[7, 8, 6, 6, 6]}
                     my={10}
                     mx={2}
                     colorScheme={
                       colorMode !== "light" ? "linkedin" : "facebook"
                     }
-                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
                     letterSpacing={"wider"}
                   >
                     Demo
@@ -270,12 +271,12 @@ const Projects = () => {
                   style={{ textDecoration: "none" }}
                 >
                   <Button
-                    px={["20", "20", "16", "16", "16"]}
-                    py={[8, 8, 6, 6, 6]}
+                    px={["8", "20", "12", "16", "16"]}
+                    fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                    py={[7, 8, 6, 6, 6]}
                     my={10}
                     mx={[1, 1, 4, 4, 4]}
                     colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                    fontSize={["xl", "lg", "xl", "xl", "xl"]}
                     letterSpacing={"wider"}
                   >
                     Code
@@ -287,7 +288,7 @@ const Projects = () => {
               src={proj2}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "45%", "55%", "40%"]}
+              w={["100%", "100%", "50%", "55%", "40%"]}
             />
           </Flex>{" "}
           {/* <Flex
