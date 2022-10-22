@@ -21,12 +21,23 @@ import { m, motion } from "framer-motion";
 import { useState } from "react";
 import { Element } from "react-scroll";
 
-// const flip = keyframes`
-// from,to
-// 0%   {transform: rotate(0) scale(0);}
-// 50% {transform: rotate(180deg) scale(-1);}
-// 100% {transform: rotate(360deg);}
-// `;
+const falling = keyframes`
+from,to
+
+0%    {
+  transform: translateY(0)
+  opacity:1;
+}
+10%    {
+  opacity:1;
+}
+90%    {
+  opacity:1;
+}
+100%  {
+  transform: translateY(100px); 
+}
+`;
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
@@ -83,9 +94,10 @@ const Home = () => {
             w={["70%", "44%", "45%", "50%", "30%"]}
             cursor={"pointer"}
             onClick={toggleColorMode}
-            borderRadius={"3xl"}
+            // borderRadius={"3xl"}
             border={"white"}
             // _hover={{ animation: `${flip} 2s ease-in-out` }}
+            role="group"
           >
             <motion.div
               whileHover={{
@@ -113,6 +125,51 @@ const Home = () => {
                   borderRadius={"3xl"}
                 />
               )}
+              <Flex
+                pos={"relative"}
+                justifyContent="space-between"
+                mt={2}
+                fontWeight={"300"}
+                fontSize={"xl"}
+                fontFamily={"Amiri"}
+              >
+                <Box
+                  textAlign={"start"}
+                  _groupHover={{ animation: `${falling} 1.5s ease-in-out .4s` }}
+                  // bgColor={"white"}
+                  overflow={"visible"}
+                  opacity={0}
+                >
+                  Efficient Work
+                </Box>
+                <Box
+                  textAlign={"center"}
+                  _groupHover={{ animation: `${falling} 2s ease-in-out .6s` }}
+                  // bgColor={"white"}
+                  overflow={"visible"}
+                  opacity={0}
+                >
+                  Great UX
+                </Box>{" "}
+                <Box
+                  textAlign={"center"}
+                  _groupHover={{ animation: `${falling} 1.7s ease-in-out .2s` }}
+                  // bgColor={"white"}
+                  overflow={"visible"}
+                  opacity={0}
+                >
+                  Exceptional Apps
+                </Box>{" "}
+                <Box
+                  textAlign={"end"}
+                  _groupHover={{ animation: `${falling} 2.3s ease-in-out .8s` }}
+                  // bgColor={"white"}
+                  overflow={"visible"}
+                  opacity={0}
+                >
+                  Beautiful UI
+                </Box>
+              </Flex>
             </motion.div>
           </Flex>
           <Flex
