@@ -83,7 +83,7 @@ const Navbar = () => {
           <HamburgerIcon
             boxSize={7}
             mx={-1}
-            _groupActive={{ animation: !change && `${anime} .3s ease-in-out` }}
+            _groupActive={{ animation: !change && `${anime} 1.3s ease-in-out` }}
             _groupFocus={{ animation: change && `${anime} 1.3s ease-in-out ` }}
           />
         ) : (
@@ -92,14 +92,14 @@ const Navbar = () => {
           <CloseIcon
             boxSize={5}
             mx={0}
-            _groupActive={{ animation: change && `${anime} .3s ease-in-out` }}
+            _groupActive={{ animation: change && `${anime} 1.3s ease-in-out` }}
             _groupFocus={{ animation: !change && `${anime} 1.3s ease-in-out ` }}
           />
           // </motion.div>
         )}
       </Button>
       {/* </Flex> */}
-      <Slide direction="left" in={isOpen} style={{ top: "10%" }}>
+      <Slide direction="left" in={isOpen} style={{ top: "60px" }}>
         <Box
           position={"absolute"}
           w={"full"}
