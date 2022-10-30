@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["1700px", "250vh", "185vh", "220vh", "200vh"]}
+        h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
