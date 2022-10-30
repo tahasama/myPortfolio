@@ -10,6 +10,7 @@ import {
   ListItem,
   useColorMode,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
@@ -38,7 +39,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["270vh", "250vh", "185vh", "220vh", "200vh"]}
+        h={["1700px", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -324,7 +325,7 @@ const Projects = () => {
               w={["100%", "100%", "53%", "55%", "45%"]}
             />
           </Flex>
-          <Box
+          <VStack
             visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
           >
             <Text textAlign={"center"} fontSize={"xl"}>
@@ -333,7 +334,7 @@ const Projects = () => {
             <Button colorScheme="yellow" mx={12}>
               Github Repo
             </Button>
-          </Box>
+          </VStack>
         </Flex>
       </Box>
     </>
