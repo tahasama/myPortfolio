@@ -326,7 +326,7 @@ const Projects = () => {
             />
           </Flex>
           <VStack
-            visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
+            visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}
           >
             <Text textAlign={"center"} fontSize={"xl"}>
               Please visit my Github repository fot more Projects
