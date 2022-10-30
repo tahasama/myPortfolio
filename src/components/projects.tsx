@@ -10,7 +10,6 @@ import {
   ListItem,
   useColorMode,
   useColorModeValue,
-  VStack,
 } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
