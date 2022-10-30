@@ -54,7 +54,12 @@ const Projects = () => {
       >
         <Element name="Projects"></Element>
 
-        <Flex flexDir={"column"} top={96} position={"relative"} gap={20}>
+        <Flex
+          flexDir={"column"}
+          top={[80, 80, 60, 80, 80]}
+          position={"relative"}
+          gap={20}
+        >
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}
             justifyContent={"center"}
