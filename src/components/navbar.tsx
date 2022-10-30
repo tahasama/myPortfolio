@@ -78,7 +78,7 @@ const Navbar = () => {
         role="group"
         // _hover={{ transform: "rotate(360deg)" }}
       >
-        {isOpen ? (
+        {!isOpen ? (
           // <motion.div ={{ rotate: 180 }}>
           <HamburgerIcon
             boxSize={7}
