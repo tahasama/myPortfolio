@@ -68,14 +68,14 @@ const Home = () => {
           "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
         ]}
         zIndex={"1"}
-        h={["115vh", "125vh", "125vh", "125vh"]}
+        h={["105vh", "125vh", "125vh", "125vh"]}
         bg={bglOnLight}
       >
         <Flex
           position={"relative"}
           alignItems={"center"}
           flexDirection={["column-reverse", "column-reverse", "row"]}
-          top={["0", "-24vh", "0", "0"]}
+          top={["20", "-24vh", "0", "0"]}
           // mt={["40", "20"]}
         >
           <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
