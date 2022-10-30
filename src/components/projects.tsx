@@ -10,6 +10,7 @@ import {
   ListItem,
   useColorMode,
   useColorModeValue,
+  VStack,
 } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 
@@ -324,6 +325,10 @@ const Projects = () => {
               w={["100%", "100%", "53%", "55%", "45%"]}
             />
           </Flex>
+          <Text textAlign={"center"} fontSize={"xl"}>
+            Please visit my Github repository fot more Projects
+          </Text>
+          <VStack>Github Repo</VStack>
         </Flex>
       </Box>
     </>
