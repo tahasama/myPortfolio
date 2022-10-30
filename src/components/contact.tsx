@@ -1,19 +1,15 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
-  Box,
   Button,
-  Flex,
   FormControl,
-  FormHelperText,
   FormLabel,
   Input,
-  Text,
   Textarea,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
-import { Element, Link } from "react-scroll";
+import { Element } from "react-scroll";
 
 const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
@@ -59,17 +55,17 @@ const Contact = () => {
           "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
         ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
-        mt={[-40, -40, -60, -80, -80]}
+        mt={[-40, -40, -60, -80, -96]}
         // zIndex={99}
       >
         <Element name="Contact"></Element>
         <FormControl
           ref={form}
           onSubmit={sendEmail}
-          top={80}
+          top={[28, 80, 28, 28, 40]}
           w={[6 / 7, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
           //   fontSize={[20, 20, 20, 20, 20]}
-          mt={[-40, -60, -20, -20, -20]}
+          //   mt={[-40, -60, -80, -20, -40]}
         >
           <FormLabel p={2}>Name</FormLabel>
           <Input
@@ -102,8 +98,8 @@ const Contact = () => {
             border={"2px"}
             borderColor="gray.200"
             bgColor={bgPlaceHolder}
-            noOfLines={20}
             placeholder="say Hii !!"
+            rows={5}
           />
           <VStack>
             <Button

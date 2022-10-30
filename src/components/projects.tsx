@@ -20,9 +20,8 @@ import { MdSettings } from "react-icons/md";
 import proj1 from "../images/proj/proj1/QualityApp.png";
 import proj2 from "../images/proj/proj2/EditorApp.png";
 import { Element } from "react-scroll";
-import { motion, MotionConfig } from "framer-motion";
-import emailjs from "@emailjs/browser";
-import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
@@ -50,6 +49,7 @@ const Projects = () => {
         ]}
         mt={["-202vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
         zIndex={2}
+        // mb={40}
       >
         <Element name="Projects"></Element>
 
@@ -60,7 +60,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-25vh", "-20vh", "-20vh", "-5vh"]}
+            mt={["-28vh", "-25vh", "-20vh", "-20vh", "-20vh"]}
           >
             <Img
               src={proj1}
