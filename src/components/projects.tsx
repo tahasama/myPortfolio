@@ -56,7 +56,7 @@ const Projects = () => {
 
         <Flex
           flexDir={"column"}
-          top={[80, 80, 60, 80, 80]}
+          top={[80, 80, 80, 80, 80]}
           position={"relative"}
           gap={20}
         >
