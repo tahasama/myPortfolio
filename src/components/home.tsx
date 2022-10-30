@@ -84,14 +84,14 @@ const Home = () => {
 
           <Flex
             // top={[1, -1, -1]}
-            visibility={["hidden", "hidden", "visible", "visible"]}
+            visibility={["hidden", "hidden", "visible", "visible", "visible"]}
             position={"relative"}
             alignItems={"center"}
             left={["0", "0", "-10", "-6", "32"]}
             mx={16}
             top={["0", "-8", "-10", "-10"]}
             onMouseOver={() => enterF()}
-            w={["70%", "44%", "43vw", "50%", "30%"]}
+            w={["70%", "44%", "43%", "38%", "30%"]}
             cursor={"pointer"}
             onClick={toggleColorMode}
             // borderRadius={"3xl"}

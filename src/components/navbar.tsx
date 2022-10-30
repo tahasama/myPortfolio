@@ -22,7 +22,7 @@ import { useState } from "react";
 const anime = keyframes`
 from,to
 
-0% {transform:rotate(360deg); }
+0% {transform:rotate(-360deg); }
 
 
 
@@ -121,7 +121,7 @@ const Navbar = () => {
             w={"90%"}
           >
             {navi.map((n: any) => (
-              <motion.div whileHover={{ scale: 1.03, y: [-1, 1, -1] }}>
+              <motion.div whileHover={{ scale: 1.03, y: [-1, 1, -1] }} key={n}>
                 <ListItem
                   m={3}
                   cursor={"pointer"}
@@ -131,7 +131,7 @@ const Navbar = () => {
                   rounded={5}
                   w={"70vw"}
                 >
-                  <Link to={n} onClick={onToggle} smooth>
+                  <Link to={n} onClick={onToggle} smooth key={n}>
                     {" "}
                     {n}
                   </Link>
@@ -190,6 +190,7 @@ const Navbar = () => {
                   opacity: 0.9,
                   x: 2,
                 }}
+                key={n}
               >
                 <ListItem
                   mx={[2, 2, 2, 4]}
@@ -207,6 +208,7 @@ const Navbar = () => {
                     borderColor: navTextColorOn,
                     sx: { translateX: 0 },
                   }}
+                  key={n}
                 >
                   <Link to={n} smooth>
                     {n}

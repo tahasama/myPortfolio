@@ -22,12 +22,19 @@ import proj2 from "../images/proj/proj2/EditorApp.png";
 import { Element } from "react-scroll";
 import { motion, MotionConfig } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
   const { colorMode } = useColorMode();
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  function reportWindowSize() {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+  }
+
+  window.onresize = reportWindowSize;
+  console.log(window.onresize);
 
   return (
     <>
@@ -51,7 +58,7 @@ const Projects = () => {
             flexDir={["column", "column", "row", "row", "row"]}
             justifyContent={"center"}
             alignItems={"center"}
-            w={"97%"}
+            w={"96%"}
             mx={[2, 2, 2, 5, 10]}
             mt={["-28vh", "-25vh", "-20vh", "-20vh", "-5vh"]}
           >
@@ -59,7 +66,7 @@ const Projects = () => {
               src={proj1}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "50%", "55%", "45%"]}
+              w={["100%", "100%", "53%", "55%", "45%"]}
               ml={[0, 0, 12, 0, 0]}
               zIndex={55}
             />
@@ -67,14 +74,15 @@ const Projects = () => {
             <Box mx={10} w={"full"}>
               <motion.div
                 whileInView={{
-                  x: [isMobile ? "0px" : "-600px", "0px"],
+                  x: isMobile ? ["0px", "0px"] : ["-600px", "0px"],
                   scale: [0.6, 1],
                   opacity: [0, 1],
                 }}
                 transition={{ ease: "linear" }}
+                style={{ overflow: "hidden" }}
               >
                 <Text
-                  fontSize={["22", "22", "20", "24", "24"]}
+                  fontSize={["22", "22", "18", "24", "24"]}
                   textAlign={"center"}
                   mb={2}
                   fontFamily={"Raleway"}
@@ -85,7 +93,7 @@ const Projects = () => {
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
-                  fontSize={["18", "18", "12", "16", "20"]}
+                  fontSize={["18", "18", "14", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon
@@ -138,7 +146,7 @@ const Projects = () => {
                   w={"full"}
                   // bgColor="red.200"
                   // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, -16]}
+                  ml={[0, 0, 0, 0, -6]}
                 >
                   <Link
                     href="https://thacoder.netlify.app/"
@@ -147,7 +155,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "20", "12", "16", "16"]}
+                      px={["8", "16", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
@@ -167,7 +175,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "20", "12", "16", "16"]}
+                      px={["8", "16", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
@@ -181,7 +189,7 @@ const Projects = () => {
                 </Flex>
               </motion.div>
             </Box>
-          </Flex>{" "}
+          </Flex>
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
             justifyContent={"center"}
@@ -189,19 +197,20 @@ const Projects = () => {
             position={"relative"}
             w={"96%"}
             // mx={[2, 2, 5, 0, 0]}
-            mx={[2, 2, 0, 5, -20]}
+            mx={[2, 2, 4, 5, -20]}
           >
-            <Box w={"100%"}>
+            <Box w={"100%"} overflow={"inherit"}>
               <motion.div
                 whileInView={{
-                  x: [isMobile ? "0px" : "600px", "0px"],
+                  x: [isMobile ? "0px" : "400px", "0px"],
                   scale: [0.6, 1],
                   opacity: [0, 1],
                 }}
                 transition={{ ease: "linear" }}
+                style={{ overflow: "hidden" }}
               >
                 <Text
-                  fontSize={["22", "22", "16", "20", "24"]}
+                  fontSize={["22", "22", "18", "20", "24"]}
                   textAlign={"center"}
                   my={[4, 4, 2, 2, 2]}
                   fontFamily={"Raleway"}
@@ -212,7 +221,7 @@ const Projects = () => {
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 48]}
-                  fontSize={["18", "18", "12", "16", "20"]}
+                  fontSize={["18", "18", "14", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon
@@ -258,13 +267,13 @@ const Projects = () => {
                   </ListItem>{" "}
                 </List>
                 <Flex
-                  position="relative"
-                  justifyContent={["center", "start"]}
-                  alignItems={["center", "start"]}
                   w={"full"}
+                  position="relative"
+                  justifyContent={"center"}
+                  alignItems={["center"]}
                   // bgColor="red.200"
                   // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 48]}
+                  ml={[0, 0, 0, 0, 0]}
                 >
                   <Link
                     href="https://thacoder.netlify.app/"
@@ -274,7 +283,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "20", "12", "16", "16"]}
+                      px={["8", "16", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
@@ -294,7 +303,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "20", "12", "16", "16"]}
+                      px={["8", "16", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
@@ -312,9 +321,9 @@ const Projects = () => {
               src={proj2}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "50%", "55%", "45%"]}
+              w={["100%", "100%", "53%", "55%", "45%"]}
             />
-          </Flex>{" "}
+          </Flex>
         </Flex>
       </Box>
     </>

@@ -55,7 +55,7 @@ const About = () => {
             fontFamily={"ms madi"}
             zIndex={"1"}
             textAlign="center"
-            w={["100%", "100%", "container.md", "container.md"]}
+            w={["100%", "full", "full", "container.md"]}
             mt={"-10"}
           >
             <Flex
@@ -88,6 +88,7 @@ const About = () => {
                 m={"1"}
               />
             </Flex>
+
             <Flex
               flexDirection={["column"]}
               position={"relative"}

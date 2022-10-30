@@ -81,7 +81,7 @@ const Skills = () => {
             fontSize={"20"}
             fontWeight={"600"}
             fontFamily={"Quicksand"}
-            mt={["90vh", "85vh", "24vh", "10vh", "10vh"]}
+            mt={["97vh", "85vh", "24vh", "10vh", "10vh"]}
             transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
             mx={"0"}
           >
@@ -316,6 +316,7 @@ const Skills = () => {
                     "scale(0.1)",
                     "scale(0.14)",
                   ]}
+                  gap={[10, 10, 40, 32, 12]}
                   // h={"max-content"}
                   // mt={["-3vh", "10vh", "8vh", "20vh"]}
                   // transform={["scale(1)", "scale(0.9)"]}
@@ -335,7 +336,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? reactD : reactN}
-                        w={["60%", "55%", "100%", "45%"]}
+                        w={["60%", "55%", "70%", "55%", "45%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -350,7 +351,7 @@ const Skills = () => {
                         fontSize={"9xl"}
                         color={"gray.400"}
                         m={5}
-                        w={["180vw", "180vw", "75vw"]}
+                        w={["180vw", "180vw", "69vw"]}
                       >
                         React Js
                       </Box>
@@ -466,7 +467,7 @@ const Skills = () => {
                     >
                       <Img
                         src={chakra}
-                        w={["50%", "50%", "60%", "30%"]}
+                        w={["50%", "50%", "60%", "29%"]}
 
                         // transform={[
                         //   "scale(1)",
@@ -525,6 +526,7 @@ const Skills = () => {
                   w={["80vw", "60vw", "30vw", "25vw"]}
                   mt={["0", "4", "-8", "8"]}
                   p={0}
+                  gap={[10, 10, 80, 32, 32]}
                   position={"relative"}
                   justifyContent={"center"}
                   alignItems={"center"}
@@ -558,7 +560,7 @@ const Skills = () => {
                     >
                       <Img
                         src={colorMode === "light" ? expressL : expressL}
-                        w={["60%", "50%", "90%", "45%", "39%"]}
+                        w={["60%", "50%", "84%", "45%", "39%"]}
                         filter={"brightness(.92)"}
                         // transform={[
                         //   "scale(1)",
@@ -573,7 +575,7 @@ const Skills = () => {
                         fontSize={"9xl"}
                         color={"gray.400"}
                         m={0}
-                        w={["180vw", "180vw", "75vw"]}
+                        w={["180vw", "180vw", "76vw", "75vw", "75vw"]}
                       >
                         Express Js
                       </Box>
@@ -599,7 +601,7 @@ const Skills = () => {
                           "scale(1.7)",
                           "scale(1.7)",
                           "scale(2.0)",
-                          "scale(1.8)",
+                          "scale(2.1)",
                         ]}
                         mb={16}
                       />
@@ -631,8 +633,9 @@ const Skills = () => {
                         transform={[
                           "scale(1.3)",
                           "scale(1.3)",
-                          "scale(0.9)",
+                          "scale(1.3)",
                           "scale(1.2)",
+                          "scale(1.4)",
                         ]}
                       />
                       <Box
@@ -700,6 +703,7 @@ const Skills = () => {
                     "scale(0.1)",
                     "scale(0.14)",
                   ]}
+                  gap={[10, 10, 80, 32, 32]}
                   // h={"max-content"}
                   // mt={["-3vh", "10vh", "8vh", "20vh"]}
                   // transform={["scale(1)", "scale(0.9)"]}
@@ -793,8 +797,9 @@ const Skills = () => {
                         transform={[
                           "scale(1)",
                           "scale(0.9)",
+                          "scale(1.2)",
                           "scale(0.9)",
-                          "scale(0.9)",
+                          "scale(1)",
                           // "scale(0.7)",
                         ]}
                       />
