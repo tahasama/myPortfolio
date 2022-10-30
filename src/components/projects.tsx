@@ -48,13 +48,13 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-198vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
+        mt={["-196vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
         zIndex={2}
         // mb={40}
       >
         <Element name="Projects"></Element>
 
-        <Flex flexDir={"column"} top={80} position={"relative"} gap={20}>
+        <Flex flexDir={"column"} top={96} position={"relative"} gap={20}>
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}
             justifyContent={"center"}
