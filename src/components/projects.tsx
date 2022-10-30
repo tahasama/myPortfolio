@@ -39,7 +39,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["260vh", "250vh", "185vh", "220vh", "200vh"]}
+        h={["300vh", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -328,7 +328,9 @@ const Projects = () => {
           <Text textAlign={"center"} fontSize={"xl"}>
             Please visit my Github repository fot more Projects
           </Text>
-          <VStack>Github Repo</VStack>
+          <Button colorScheme="yellow" mx={12}>
+            Github Repo
+          </Button>
         </Flex>
       </Box>
     </>
