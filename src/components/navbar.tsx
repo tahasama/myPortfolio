@@ -4,6 +4,7 @@ import {
   Button,
   Flex,
   Img,
+  keyframes,
   List,
   ListItem,
   Slide,
@@ -16,6 +17,20 @@ import { motion } from "framer-motion";
 import logoNight from "../images/logoNight.png";
 import logoDay from "../images/logoDay.png";
 import { Link } from "react-scroll";
+import { useState } from "react";
+
+const anime = keyframes`
+from,to
+
+0% {transform:rotate(360deg); }
+
+
+
+50% {color: red; }
+ 
+100%{transform:rotate(360deg);}
+
+`;
 
 const Navbar = () => {
   const colorOn = useColorModeValue("#282c34", "gray.50 ");
@@ -29,6 +44,14 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onToggle } = useDisclosure();
   const navi = ["Home", "About", "Skills", "Projects", "Contact"];
+  const [change, setChange] = useState(false);
+
+  const changeIcon = () => {
+    onToggle();
+    setTimeout(() => {
+      setChange(!change);
+    }, 10);
+  };
 
   return (
     <Flex
@@ -43,21 +66,36 @@ const Navbar = () => {
     >
       {/* <Flex position={"absolute"} left={"2"} top={"2"}> */}
       <Button
-        onClick={onToggle}
+        onClick={() => {
+          // onToggle();
+          changeIcon();
+        }}
         mt={"-14px"}
         ml={"14px"}
         visibility={["visible", "visible", "hidden"]}
         // p={["4", "6"]}
         h={"12"}
+        role="group"
+        // _hover={{ transform: "rotate(360deg)" }}
       >
-        {!isOpen ? (
-          <motion.div whileTap={{ rotate: 180 }}>
-            <HamburgerIcon boxSize={8} mx={-1} />
-          </motion.div>
+        {isOpen ? (
+          // <motion.div ={{ rotate: 180 }}>
+          <HamburgerIcon
+            boxSize={7}
+            mx={-1}
+            _groupActive={{ animation: !change && `${anime} .3s ease-in-out` }}
+            _groupFocus={{ animation: change && `${anime} 1.3s ease-in-out ` }}
+          />
         ) : (
-          <motion.div whileTap={{ rotate: 180 }}>
-            <CloseIcon boxSize={5} mx={0} />
-          </motion.div>
+          // </motion.div>
+          // <motion.div whileTap={{ rotate: 180 }}>
+          <CloseIcon
+            boxSize={5}
+            mx={0}
+            _groupActive={{ animation: change && `${anime} .3s ease-in-out` }}
+            _groupFocus={{ animation: !change && `${anime} 1.3s ease-in-out ` }}
+          />
+          // </motion.div>
         )}
       </Button>
       {/* </Flex> */}
@@ -93,7 +131,7 @@ const Navbar = () => {
                   rounded={5}
                   w={"70vw"}
                 >
-                  <Link to={n} onClick={onToggle}>
+                  <Link to={n} onClick={onToggle} smooth>
                     {" "}
                     {n}
                   </Link>
@@ -170,7 +208,9 @@ const Navbar = () => {
                     sx: { translateX: 0 },
                   }}
                 >
-                  <Link to={n}> {n}</Link>
+                  <Link to={n} smooth>
+                    {n}
+                  </Link>
                 </ListItem>
               </motion.div>
             ))}

@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 // import Projects from "./projects";
 // import Skills from "./skills";
 
@@ -195,34 +195,35 @@ const About = () => {
                 </Box>
               </motion.div>
             )}
-
-            <Button
-              m={"6"}
-              py={["3.5vh", "5vh"]}
-              px={["8vw", "7vw"]}
-              bg={colorMode === "light" ? "orange.500" : "blue.600"}
-              _hover={{
-                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
-                transform: "translate(-5px,5px)",
-                boxShadow: "0px 0px 0px #276749",
-              }}
-              _active={{
-                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
-                transform: "translate(5px,5px)",
-              }}
-              color={"white"}
-              letterSpacing={1}
-              fontSize={"24"}
-              fontFamily={"calibri"}
-              fontWeight={["400", "500"]}
-              boxShadow={` ${
-                colorMode === "light"
-                  ? " -10px 10px 5px #276749"
-                  : " -7px 7px 3px #1A365D"
-              }`}
-            >
-              Get In Touch!
-            </Button>
+            <Link to="Contact" smooth>
+              <Button
+                m={"6"}
+                py={["3.5vh", "5vh"]}
+                px={["8vw", "7vw"]}
+                bg={colorMode === "light" ? "orange.500" : "blue.600"}
+                _hover={{
+                  bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                  transform: "translate(-5px,5px)",
+                  boxShadow: "0px 0px 0px #276749",
+                }}
+                _active={{
+                  bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                  transform: "translate(5px,5px)",
+                }}
+                color={"white"}
+                letterSpacing={1}
+                fontSize={"24"}
+                fontFamily={"calibri"}
+                fontWeight={["400", "500"]}
+                boxShadow={` ${
+                  colorMode === "light"
+                    ? " -10px 10px 5px #276749"
+                    : " -7px 7px 3px #1A365D"
+                }`}
+              >
+                Get In Touch!
+              </Button>
+            </Link>
           </Flex>
         </Flex>
       </Flex>

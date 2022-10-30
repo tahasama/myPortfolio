@@ -74,7 +74,7 @@ const Projects = () => {
                 transition={{ ease: "linear" }}
               >
                 <Text
-                  fontSize={["24", "28", "20", "24", "24"]}
+                  fontSize={["22", "22", "20", "24", "24"]}
                   textAlign={"center"}
                   mb={2}
                   fontFamily={"Raleway"}
@@ -85,7 +85,7 @@ const Projects = () => {
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
-                  fontSize={["16", "28", "12", "16", "20"]}
+                  fontSize={["18", "18", "12", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon
@@ -201,7 +201,7 @@ const Projects = () => {
                 transition={{ ease: "linear" }}
               >
                 <Text
-                  fontSize={["24", "28", "16", "20", "24"]}
+                  fontSize={["22", "22", "16", "20", "24"]}
                   textAlign={"center"}
                   my={[4, 4, 2, 2, 2]}
                   fontFamily={"Raleway"}
@@ -212,7 +212,7 @@ const Projects = () => {
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 48]}
-                  fontSize={["16", "28", "12", "16", "20"]}
+                  fontSize={["18", "18", "12", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon

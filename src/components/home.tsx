@@ -19,7 +19,7 @@ import dev1 from "../images/dev40.jpg";
 import CloudNstars from "./cloudNstars";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Element } from "react-scroll";
+import { Element, Link } from "react-scroll";
 
 const falling = keyframes`
 from,to
@@ -225,26 +225,28 @@ const Home = () => {
                 transition: { duration: 1, repeat: Infinity },
               }}
             >
-              <Button
-                color="white"
-                letterSpacing={1}
-                fontSize={"20"}
-                fontWeight={["400", "500"]}
-                position={"relative"}
-                top={["2", "5"]}
-                // left={["0", "auto", "-6", "-58px", "-15px"]}
-                my={["4", "auto", 0]}
-                variant="solid"
-                px={["74px", "84px", "100px", "32"]}
-                py={["5", "7", "6", "8"]}
-                bg={buttonLight}
-                _hover={{ bg: buttonLightHover }}
-                _active={{ bg: buttonLightHover }}
-                // w={"max"}
-                // m={["auto"]}
-              >
-                PROJECTS
-              </Button>
+              <Link to="Projects" smooth>
+                <Button
+                  color="white"
+                  letterSpacing={1}
+                  fontSize={"20"}
+                  fontWeight={["400", "500"]}
+                  position={"relative"}
+                  top={["2", "5"]}
+                  // left={["0", "auto", "-6", "-58px", "-15px"]}
+                  my={["4", "auto", 0]}
+                  variant="solid"
+                  px={["74px", "84px", "100px", "32"]}
+                  py={["5", "7", "6", "8"]}
+                  bg={buttonLight}
+                  _hover={{ bg: buttonLightHover }}
+                  _active={{ bg: buttonLightHover }}
+                  // w={"max"}
+                  // m={["auto"]}
+                >
+                  PROJECTS
+                </Button>
+              </Link>
             </motion.div>
           </Flex>
         </Flex>
