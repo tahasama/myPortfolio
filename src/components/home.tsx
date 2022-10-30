@@ -68,7 +68,7 @@ const Home = () => {
           "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
         ]}
         zIndex={"1"}
-        h={["800px", "125vh", "125vh", "125vh"]}
+        h={["860px", "125vh", "125vh", "125vh"]}
         bg={bglOnLight}
       >
         <Flex
