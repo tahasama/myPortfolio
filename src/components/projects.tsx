@@ -38,7 +38,7 @@ const Projects = () => {
   return (
     <>
       <Box
-        h={["300vh", "250vh", "185vh", "220vh", "200vh"]}
+        h={["270vh", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
         clipPath={[
           "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
@@ -324,12 +324,16 @@ const Projects = () => {
               w={["100%", "100%", "53%", "55%", "45%"]}
             />
           </Flex>
-          <Text textAlign={"center"} fontSize={"xl"}>
-            Please visit my Github repository fot more Projects
-          </Text>
-          <Button colorScheme="yellow" mx={12}>
-            Github Repo
-          </Button>
+          <Box
+            visibility={["visible", "visible", "hidden", "hidden", "hidden"]}
+          >
+            <Text textAlign={"center"} fontSize={"xl"}>
+              Please visit my Github repository fot more Projects
+            </Text>
+            <Button colorScheme="yellow" mx={12}>
+              Github Repo
+            </Button>
+          </Box>
         </Flex>
       </Box>
     </>
