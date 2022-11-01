@@ -16,8 +16,10 @@ import dev from "../images/dev11.jpg";
 // import dev1 from "../images/dev2.jpg";
 import dev1 from "../images/dev40.jpg";
 // import dev1 from "../images/developping.webp";
+import airplane from "../images/airplane.png";
+
 import CloudNstars from "./cloudNstars";
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
 
@@ -35,7 +37,7 @@ from,to
   opacity:1;
 }
 100%  {
-  transform: translateY(100px); 
+  transform: translateY(100px);
 }
 `;
 
@@ -53,9 +55,41 @@ const Home = () => {
     }, 450);
   };
 
+  const { scrollY } = useViewportScroll();
+  const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
+  const x2 = useTransform(scrollY, [0, 100], [-300, 1500]);
+  const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
+  const y2 = useTransform(scrollY, [0, 100], [0, -450]);
+  // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
+
   return (
-    <>
+    <Box overflow={"hidden"}>
       <Element name="Home"></Element>
+      <motion.div
+        style={{
+          x: colorMode !== "light" ? x2 : x1,
+          // background: "salmon",
+          y: colorMode !== "light" ? y2 : y1,
+
+          width: "20%",
+          // height: "0vw",
+          position: "fixed",
+          top: 300,
+          left: 0,
+          zIndex: 2,
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          // left={"0"}
+          // bgColor={"yellow.400"}
+          // zIndex={99}
+          // w={"20%"}
+          overflow={"hidden"}
+        >
+          <Img src={airplane} overflow={"hidden"} />
+        </Box>
+      </motion.div>
       <Flex
         position={"relative"}
         // alignItems={"center"}
@@ -115,12 +149,13 @@ const Home = () => {
                 />
               ) : (
                 <Img
-                  src={pic ? dev : dev1}
-                  filter={
-                    pic
-                      ? "brightness(.9) grayscale(0%)"
-                      : "brightness(.9) grayscale(25%)"
-                  }
+                  // src={pic ? dev : dev1}
+                  src={pic ? devNight2 : dev1}
+                  // filter={
+                  //   pic
+                  //     ? "brightness(.9) grayscale(0%)"
+                  //     : "brightness(.9) grayscale(25%)"
+                  // }
                   alt="devDay2"
                   borderRadius={"3xl"}
                 />
@@ -250,8 +285,8 @@ const Home = () => {
             </motion.div>
           </Flex>
         </Flex>
-      </Flex>{" "}
-    </>
+      </Flex>
+    </Box>
   );
 };
 
