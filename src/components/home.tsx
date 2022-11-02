@@ -17,6 +17,7 @@ import dev from "../images/dev11.jpg";
 import dev1 from "../images/dev40.jpg";
 // import dev1 from "../images/developping.webp";
 import airplane from "../images/airplane.png";
+import parachute from "../images/parachute.png";
 
 import CloudNstars from "./cloudNstars";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
@@ -56,10 +57,13 @@ const Home = () => {
   };
 
   const { scrollY } = useViewportScroll();
-  const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
-  const x2 = useTransform(scrollY, [0, 100], [-300, 1500]);
-  const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
-  const y2 = useTransform(scrollY, [0, 100], [0, -450]);
+  // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
+  const x2 = useTransform(scrollY, [0, 100], [-300, 1700]);
+  // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
+  const y2 = useTransform(scrollY, [0, 100], [0, -800]);
+  const x3 = useTransform(scrollY, [0, 10], [0, 0]);
+  // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
+  const y3 = useTransform(scrollY, [0, 100], [-200, 200]);
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
@@ -67,14 +71,15 @@ const Home = () => {
       <Element name="Home"></Element>
       <motion.div
         style={{
-          x: colorMode !== "light" ? x2 : x1,
+          // x: colorMode !== "light" ? x2 : x1,
+          x: x2,
           // background: "salmon",
-          y: colorMode !== "light" ? y2 : y1,
-
-          width: "20%",
+          // y: colorMode !== "light" ? y2 : y1,
+          y: y2,
+          width: "100vw",
           // height: "0vw",
           position: "fixed",
-          top: 300,
+          bottom: -80,
           left: 0,
           zIndex: 2,
           overflow: "hidden",
@@ -84,12 +89,35 @@ const Home = () => {
           // left={"0"}
           // bgColor={"yellow.400"}
           // zIndex={99}
-          // w={"20%"}
+          w={"20%"}
           overflow={"hidden"}
         >
           <Img src={airplane} overflow={"hidden"} />
         </Box>
       </motion.div>
+
+      <motion.div
+        whileInView={{ rotate: [0.7, -0.7, 0.7] }}
+        transition={{ repeat: Infinity }}
+        style={{
+          // x: colorMode !== "light" ? x2 : x1,
+          x: x3,
+          // background: "salmon",
+          // y: colorMode !== "light" ? y2 : y1,
+          y: y3,
+          width: "10%",
+          // height: "0vw",
+          position: "fixed",
+          top: 0,
+          right: 20,
+          zIndex: 2,
+          overflow: "hidden",
+          // opacity: o1,
+        }}
+      >
+        <Img src={parachute} overflow={"hidden"} />
+      </motion.div>
+
       <Flex
         position={"relative"}
         // alignItems={"center"}
@@ -102,14 +130,14 @@ const Home = () => {
           "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
         ]}
         zIndex={"1"}
-        h={["860px", "125vh", "125vh", "125vh"]}
+        h={["860px", "125vh", "120vh", "125vh", "125vh"]}
         bg={bglOnLight}
       >
         <Flex
           position={"relative"}
           alignItems={"center"}
           flexDirection={["column-reverse", "column-reverse", "row"]}
-          top={["20", "-24vh", "0", "0", "0"]}
+          top={["20", "-24vh", "10", "0", "0"]}
           // mt={["40", "20"]}
         >
           <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>

@@ -3,21 +3,34 @@ import {
   Box,
   Button,
   Flex,
+  Img,
   Radio,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
 // import Projects from "./projects";
 // import Skills from "./skills";
+import bird from "../images/bird.png";
+import Birds from "./birds";
 
 const About = () => {
   const bgOnLight = useColorModeValue("green.300", "gray.900");
   const [selected, setSelected] = useState("");
   const { colorMode } = useColorMode();
   const radioValue = (e: any) => setSelected(e.target.value);
+
+  const { scrollY } = useViewportScroll();
+  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
+  const y2 = useTransform(scrollY, [300, 500], [0, 100]);
+  // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
+  // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
+  // const x3 = useTransform(scrollY, [0, 10], [0, 0]);
+  // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
+  // const y3 = useTransform(scrollY, [0, 100], [-200, 200]);
+  // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
     <>
@@ -38,8 +51,14 @@ const About = () => {
         fontFamily={"roboto"}
         top={["-20vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
+        overflow={"hidden"}
       >
         <Element name="About"></Element>
+
+        <Box top={"20"}>
+          <Birds />
+        </Box>
+
         <Flex
           flexDirection={["column"]}
           // w={"100%"}
@@ -48,6 +67,7 @@ const About = () => {
           justifyContent={"center"}
           zIndex={"1"}
           top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
+          overflow={"hidden"}
         >
           <Flex
             justifyContent={"space-around"}

@@ -76,14 +76,15 @@ const Skills = () => {
               "repeat(4, 1fr)",
               "repeat(4, 1fr)",
             ]}
-            gap={[0, 4]}
-            justifyContent={"center"}
+            // gap={[0, 4]}
+            position={"relative"}
+            justifyContent={"space-evenly"}
             fontSize={"20"}
             fontWeight={"600"}
             fontFamily={"Quicksand"}
             mt={["97vh", "85vh", "24vh", "10vh", "10vh"]}
             transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
-            mx={"0"}
+            mx={"40"}
           >
             <Flex alignItems={"center"} flexDir={"column"} m={"2"}>
               <Flex
