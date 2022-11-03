@@ -33,7 +33,10 @@ import cloud from "../svg/cloud.png";
 import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
-import { motion } from "framer-motion";
+// import bubbles from "../images/bubbles.jpg";
+import bubbles from "../images/bubble.jpg";
+
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
 
@@ -46,9 +49,39 @@ const Skills = () => {
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
+  const { scrollY } = useViewportScroll();
+  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
+  const y2 = useTransform(scrollY, [300, 500], [0, 100]);
+
   return (
     <>
       <Element name="Skills"></Element>
+      <motion.div
+        style={{
+          // x: colorMode !== "light" ? x2 : x1,
+          x: x2,
+          // background: "salmon",
+          // y: colorMode !== "light" ? y2 : y1,
+          y: y2,
+          width: "100vw",
+          // height: "0vw",
+          position: "fixed",
+          bottom: -80,
+          left: 0,
+          zIndex: 2,
+          overflow: "hidden",
+        }}
+      >
+        <Box
+          // left={"0"}
+          // bgColor={"yellow.400"}
+          zIndex={99}
+          w={"100%"}
+          overflow={"hidden"}
+        >
+          {/* <Img src={bubbles} overflow={"hidden"} /> */}
+        </Box>
+      </motion.div>
       <Flex
         w={"100%"}
         flexDir={["column", "column", "column", "column"]}
@@ -64,7 +97,7 @@ const Skills = () => {
         ]}
         mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["4900px", "615vh", "230vh", "270vh", "220vh"]}
+        h={["4900px", "615vh", "230vh", "270vh", "240vh"]}
       >
         {/* <Element name="Skills"></Element> */}
         <motion.div style={{ margin: 0, padding: 0, width: "100%" }}>

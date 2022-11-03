@@ -113,9 +113,10 @@ const Home = () => {
           zIndex: 2,
           overflow: "hidden",
           // opacity: o1,
+          // zIndex: 99,
         }}
       >
-        <Img src={parachute} overflow={"hidden"} />
+        <Img src={parachute} overflow={"hidden"} zIndex={"99"} />
       </motion.div>
 
       <Flex

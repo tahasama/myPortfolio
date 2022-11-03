@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Flex,
+  HStack,
   Img,
   Link,
   List,
@@ -21,8 +22,10 @@ import { MdSettings } from "react-icons/md";
 import proj1 from "../images/proj/proj1/QualityApp.png";
 import proj2 from "../images/proj/proj2/EditorApp.png";
 import { Element } from "react-scroll";
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useState } from "react";
+// import underwater from "../images/underwater.png";
+import water from "../images/fff.png";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
@@ -36,6 +39,11 @@ const Projects = () => {
   window.onresize = reportWindowSize;
   console.log(window.onresize);
 
+  const { scrollY } = useViewportScroll();
+  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
+  const y2 = useTransform(scrollY, [1800, 2600], [700, -400]);
+  const o2 = useTransform(scrollY, [2400, 2500], [0.6, 0]);
+
   return (
     <>
       <Box
@@ -48,7 +56,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-192vh", "-160vh", "-50vh", "-80vh", "-60vh"]}
+        mt={["-192vh", "-160vh", "-60vh", "-80vh", "-80vh"]}
         zIndex={2}
         // mb={40}
       >
@@ -66,7 +74,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-25vh", "-20vh", "-20vh", "-20vh"]}
+            mt={["-28vh", "-25vh", "0vh", "-20vh", "20vh"]}
           >
             <Img
               src={proj1}
@@ -341,6 +349,43 @@ const Projects = () => {
             </Button>
           </VStack>
         </Flex>
+      </Box>
+      <Box mt={[0, 0, -40, 60, 0]}>
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            // background: "salmon",
+            // y: colorMode !== "light" ? y2 : y1,
+            y: y2,
+            width: "100vw",
+            // height: "0vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            opacity: o2,
+          }}
+        >
+          <Box
+            // left={"0"}
+            // bgColor={"yellow.400"}
+            zIndex={99}
+            w={"100%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"row"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            {/* <Img src={water} overflow={"hidden"} w={"50%"} /> */}
+            {/* <Img src={underwater} overflow={"hidden"} w={"24%"} />
+          <Img src={underwater} overflow={"hidden"} w={"24%"} />
+          <Img src={underwater} overflow={"hidden"} w={"24%"} />
+          <Img src={underwater} overflow={"hidden"} w={"24%"} /> */}
+            {/* <Img src={underwater} overflow={"hidden"} w={"24%"} /> */}
+          </Box>
+        </motion.div>
       </Box>
     </>
   );
