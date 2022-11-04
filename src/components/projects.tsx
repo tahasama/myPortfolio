@@ -25,7 +25,7 @@ import { Element } from "react-scroll";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import { useState } from "react";
 // import underwater from "../images/underwater.png";
-import water from "../images/fff.png";
+import water from "../images/bubble.png";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
@@ -40,9 +40,21 @@ const Projects = () => {
   console.log(window.onresize);
 
   const { scrollY } = useViewportScroll();
-  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
-  const y2 = useTransform(scrollY, [1800, 2600], [700, -400]);
-  const o2 = useTransform(scrollY, [2400, 2500], [0.6, 0]);
+  const x1 = useTransform(scrollY, [2000, 2800], [100, 100]);
+  const x2 = useTransform(scrollY, [2000, 2800], [400, 400]);
+  const x3 = useTransform(scrollY, [2000, 2800], [700, 700]);
+  const x4 = useTransform(scrollY, [2000, 2800], [1000, 1000]);
+  const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
+  const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
+
+  const y1 = useTransform(scrollY, [2000, 2200], [750, -800]);
+  const y2 = useTransform(scrollY, [2000, 2500], [750, -1000]);
+  const y3 = useTransform(scrollY, [1900, 2600], [550, -1200]);
+  const y4 = useTransform(scrollY, [2100, 2300], [550, -900]);
+  const y5 = useTransform(scrollY, [2000, 2400], [550, -1100]);
+  const y6 = useTransform(scrollY, [1800, 2400], [550, -1300]);
+
+  const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
     <>
@@ -56,7 +68,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-192vh", "-160vh", "-60vh", "-80vh", "-80vh"]}
+        mt={["-192vh", "-160vh", "-60vh", "-80vh", "-84vh"]}
         zIndex={2}
         // mb={40}
       >
@@ -74,7 +86,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-25vh", "0vh", "-20vh", "20vh"]}
+            mt={["-28vh", "-25vh", "0vh", "-20vh", "0vh"]}
           >
             <Img
               src={proj1}
@@ -350,43 +362,182 @@ const Projects = () => {
           </VStack>
         </Flex>
       </Box>
-      <Box mt={[0, 0, -40, 60, 0]}>
+
+      <HStack mt={[0, 0, -40, 0, 80]}>
         <motion.div
           style={{
             // x: colorMode !== "light" ? x2 : x1,
             // x: x2,
-            // background: "salmon",
-            // y: colorMode !== "light" ? y2 : y1,
-            y: y2,
+            y: y1,
+            x: x1,
             width: "100vw",
-            // height: "0vw",
             position: "fixed",
             top: 200,
             left: 0,
             zIndex: 2,
             overflow: "hidden",
-            opacity: o2,
+            // opacity: o2,
           }}
         >
           <Box
-            // left={"0"}
-            // bgColor={"yellow.400"}
             zIndex={99}
-            w={"100%"}
+            w={"10%"}
             overflow={"hidden"}
             display={"flex"}
-            flexDirection={"row"}
+            flexDirection={"column"}
           >
             <Img src={water} overflow={"hidden"} w={"100%"} />
-            {/* <Img src={water} overflow={"hidden"} w={"50%"} /> */}
-            {/* <Img src={underwater} overflow={"hidden"} w={"24%"} />
-          <Img src={underwater} overflow={"hidden"} w={"24%"} />
-          <Img src={underwater} overflow={"hidden"} w={"24%"} />
-          <Img src={underwater} overflow={"hidden"} w={"24%"} /> */}
-            {/* <Img src={underwater} overflow={"hidden"} w={"24%"} /> */}
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
           </Box>
         </motion.div>
-      </Box>
+
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            y: y2,
+            x: x2,
+            width: "100vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o2,
+          }}
+        >
+          <Box
+            zIndex={99}
+            w={"10%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+          </Box>
+        </motion.div>
+
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            y: y3,
+            x: x3,
+            width: "100vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o2,
+          }}
+        >
+          <Box
+            zIndex={99}
+            w={"10%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+          </Box>
+        </motion.div>
+
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            y: y4,
+            x: x4,
+            width: "100vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o2,
+          }}
+        >
+          <Box
+            zIndex={99}
+            w={"10%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+          </Box>
+        </motion.div>
+
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            y: y5,
+            x: x5,
+            width: "100vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o2,
+          }}
+        >
+          <Box
+            zIndex={99}
+            w={"10%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+          </Box>
+        </motion.div>
+
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            // x: x2,
+            y: y6,
+            x: x6,
+            width: "100vw",
+            position: "fixed",
+            top: 200,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o2,
+          }}
+        >
+          <Box
+            zIndex={99}
+            w={"10%"}
+            overflow={"hidden"}
+            display={"flex"}
+            flexDirection={"column"}
+          >
+            <Img src={water} overflow={"hidden"} w={"100%"} />
+            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+          </Box>
+        </motion.div>
+      </HStack>
     </>
   );
 };

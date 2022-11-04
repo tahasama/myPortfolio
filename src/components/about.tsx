@@ -40,16 +40,16 @@ const About = () => {
         flexDirection={["column"]}
         h={
           selected === ""
-            ? ["120vh", "100vh", "120vh", "120vh", "120vh"]
+            ? ["120vh", "100vh", "120vh", "120vh", "122vh"]
             : selected === "shorter"
-            ? ["125vh", "125vh", "140vh", "140vh", "125vh"]
+            ? ["125vh", "125vh", "140vh", "140vh", "127vh"]
             : selected === "short"
-            ? ["155vh", "155vh", "160vh", "160vh", "135vh"]
-            : ["165vh", "175vh", "180vh", "175vh", "145vh"]
+            ? ["155vh", "155vh", "160vh", "160vh", "137vh"]
+            : ["165vh", "175vh", "180vh", "175vh", "150vh"]
         }
         bg={bgOnLight}
         fontFamily={"roboto"}
-        top={["-20vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
+        top={["-20vh", "-20vh", "-20vh", "-20vh", "-32vh"]}
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
       >

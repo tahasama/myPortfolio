@@ -34,11 +34,14 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 // import bubbles from "../images/bubbles.jpg";
-import bubbles from "../images/bubble.jpg";
+import land from "../images/land.png";
+import palm1 from "../images/palm1.png";
+import palm2 from "../images/palm2.png";
 
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
+import { PlusSquareIcon } from "@chakra-ui/icons";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -50,12 +53,49 @@ const Skills = () => {
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
   const { scrollY } = useViewportScroll();
-  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
-  const y2 = useTransform(scrollY, [300, 500], [0, 100]);
+  const x1 = useTransform(scrollY, [300, 500], [0, 0]);
+  const y1 = useTransform(scrollY, [1000, 1200], [1200, -200]);
+
+  const x2 = useTransform(scrollY, [900, 1100, 1300], [-900, -400, -900]);
+  const y2 = useTransform(scrollY, [800, 1000], [0, -100]);
+
+  const x3 = useTransform(scrollY, [900, 1100, 1300], [1000, 500, 1000]);
+  const y3 = useTransform(scrollY, [900, 1000], [0, -100]);
 
   return (
     <>
       <Element name="Skills"></Element>
+
+      {/* <motion.div
+        style={{
+          // x: colorMode !== "light" ? x2 : x1,
+          x: x1,
+          // background: "salmon",
+          // y: colorMode !== "light" ? y2 : y1,
+          y: y1,
+          width: "100%",
+          // height: "0vw",
+          position: "fixed",
+          bottom: -80,
+          left: 0,
+          zIndex: 2,
+          overflow: "hidden",
+
+          transform: "translateX(-50%)",
+        }}
+      >
+        <Box
+          // left={"0"}
+          // bgColor={"yellow.400"}
+          zIndex={99}
+          w={"100%"}
+          overflow={"hidden"}
+          transform={"translateX(35%)"}
+        >
+          <Img src={land} overflow={"hidden"} w={"25%"} />
+        </Box>
+      </motion.div> */}
+
       <motion.div
         style={{
           // x: colorMode !== "light" ? x2 : x1,
@@ -63,7 +103,42 @@ const Skills = () => {
           // background: "salmon",
           // y: colorMode !== "light" ? y2 : y1,
           y: y2,
-          width: "100vw",
+          width: "100%",
+          // height: "0vw",
+          position: "fixed",
+          bottom: -80,
+          left: 0,
+          zIndex: 2,
+          overflow: "hidden",
+
+          transform: "translateX(-50%)",
+        }}
+      >
+        <Box
+          // left={"0"}
+          // bgColor={"yellow.400"}
+          zIndex={99}
+          w={"100%"}
+          overflow={"hidden"}
+          transform={"translateX(35%)"}
+        >
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={"21%"}
+            filter={"brightness(0.75) grayscale(75%)"}
+          />
+        </Box>
+      </motion.div>
+
+      <motion.div
+        style={{
+          // x: colorMode !== "light" ? x2 : x1,
+          x: x3,
+          // background: "salmon",
+          // y: colorMode !== "light" ? y2 : y1,
+          y: y3,
+          width: "100%",
           // height: "0vw",
           position: "fixed",
           bottom: -80,
@@ -78,10 +153,18 @@ const Skills = () => {
           zIndex={99}
           w={"100%"}
           overflow={"hidden"}
+          transform={"translateX(35%)"}
         >
-          {/* <Img src={bubbles} overflow={"hidden"} /> */}
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={"21%"}
+            filter={"brightness(0.75) grayscale(75%)"}
+            transform={"scaleX(-1)"}
+          />
         </Box>
       </motion.div>
+
       <Flex
         w={"100%"}
         flexDir={["column", "column", "column", "column"]}
@@ -95,7 +178,7 @@ const Skills = () => {
           "ellipse(100% 100% at 48% 100%)",
           "ellipse(100% 100% at 45% 100%)",
         ]}
-        mt={["-140vh", "-130vh", "-70vh", "-80vh", "-60vh"]}
+        mt={["-140vh", "-130vh", "-70vh", "-80vh", "-72vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         h={["4900px", "615vh", "230vh", "270vh", "240vh"]}
       >
