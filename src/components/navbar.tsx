@@ -94,7 +94,7 @@ const Navbar = () => {
         )}
       </Button>
       {/* </Flex> */}
-      <Slide direction="left" in={isOpen} style={{ top: "60px" }}>
+      <Slide direction="left" in={isOpen} style={{ top: "64px" }}>
         <Box
           position={"absolute"}
           w={"full"}
