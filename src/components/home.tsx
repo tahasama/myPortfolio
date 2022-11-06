@@ -12,8 +12,6 @@ import {
 import Hero from "./hero";
 import devNight from "../images/devNight2.png";
 import devNight2 from "../images/devNight.png";
-import dev from "../images/dev11.jpg";
-// import dev1 from "../images/dev2.jpg";
 import dev1 from "../images/dev40.jpg";
 // import dev1 from "../images/developping.webp";
 import airplane from "../images/airplane.png";

@@ -3,17 +3,15 @@ import {
   Box,
   Button,
   Flex,
-  Img,
   Radio,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
 // import Projects from "./projects";
 // import Skills from "./skills";
-import bird from "../images/bird.png";
 import Birds from "./birds";
 
 const About = () => {
@@ -22,9 +20,6 @@ const About = () => {
   const { colorMode } = useColorMode();
   const radioValue = (e: any) => setSelected(e.target.value);
 
-  const { scrollY } = useViewportScroll();
-  const x2 = useTransform(scrollY, [300, 500], [800, -900]);
-  const y2 = useTransform(scrollY, [300, 500], [0, 100]);
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
   // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   // const x3 = useTransform(scrollY, [0, 10], [0, 0]);

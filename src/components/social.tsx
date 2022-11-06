@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, Img, VStack } from "@chakra-ui/react";
+import { Img, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const Social = () => {

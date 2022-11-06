@@ -54,7 +54,7 @@ const Projects = () => {
   const y5 = useTransform(scrollY, [2200, 2400], [550, -1100]);
   const y6 = useTransform(scrollY, [2000, 2400], [550, -1300]);
 
-  const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
+  // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
     <>

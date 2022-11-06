@@ -5,7 +5,7 @@ import About from "./components/about";
 import Projects from "./components/projects";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
-import Social from "./components/social";
+// import Social from "./components/social";
 
 function App() {
   const colorOnLight = useColorModeValue("gray.800", "gray.200");

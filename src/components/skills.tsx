@@ -34,14 +34,11 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 // import bubbles from "../images/bubbles.jpg";
-import land from "../images/land.png";
 import palm1 from "../images/palm1.png";
-import palm2 from "../images/palm2.png";
 
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
-import { PlusSquareIcon } from "@chakra-ui/icons";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -53,8 +50,6 @@ const Skills = () => {
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
   const { scrollY } = useViewportScroll();
-  const x1 = useTransform(scrollY, [300, 500], [0, 0]);
-  const y1 = useTransform(scrollY, [1000, 1200], [1200, -200]);
 
   const x2 = useTransform(
     scrollY,
