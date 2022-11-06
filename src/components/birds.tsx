@@ -1,4 +1,4 @@
-import { Box, HStack, Img, useColorMode, VStack } from "@chakra-ui/react";
+import { Box, HStack, Img, useColorMode } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 import React from "react";
 import bird from "../images/bird.png";
@@ -24,7 +24,7 @@ const Birds = () => {
   const x6 = useTransform(scrollY, [270, 590], [1200, -1500]);
   const y6 = useTransform(scrollY, [370, 590], [300, 200]);
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <HStack>
