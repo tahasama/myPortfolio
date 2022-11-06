@@ -2,18 +2,24 @@ import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import {
   Button,
+  Flex,
   FormControl,
   FormLabel,
+  HStack,
+  Img,
   Input,
   Textarea,
+  useColorMode,
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react";
 import { Element } from "react-scroll";
+import tresor from "../images/tresor.png";
 
 const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
+  const { colorMode } = useColorMode();
 
   //   const bgOnLight = useColorModeValue(
   //     "linear( #ad9ba0 0%, #ad9ba0 80%)",
@@ -45,7 +51,7 @@ const Contact = () => {
     <>
       <VStack
         position={"relative"}
-        h={["120vh", "120vh", "120vh", "120vh", "120vh"]}
+        h={["120vh", "120vh", "120vh", "120vh", "100vh"]}
         // bgGradient={bgOnLight}
         bgColor={bglOnLight}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
@@ -55,10 +61,12 @@ const Contact = () => {
           "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
         ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
-        mt={[-20, -40, -40, -80, -24]}
+        mt={[-20, -40, 20, -80, `${colorMode !== "dark" ? "-60vh" : "-30vh"}`]}
         // zIndex={99}
+        w={"100%"}
       >
         <Element name="Contact"></Element>
+
         <FormControl
           ref={form}
           onSubmit={sendEmail}
@@ -115,6 +123,17 @@ const Contact = () => {
           </VStack>
           {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
         </FormControl>
+        <Flex
+          // bgColor={"red.300"}
+          pos={"absolute"}
+          justifyContent={"end"}
+          left={10}
+          bottom={0}
+          transform={"scaleX(-1) rotate(12deg)"}
+          w={"16%"}
+        >
+          <Img src={tresor} />
+        </Flex>
       </VStack>
     </>
   );

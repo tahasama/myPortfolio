@@ -47,12 +47,12 @@ const Projects = () => {
   const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
   const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2000, 2200], [750, -800]);
-  const y2 = useTransform(scrollY, [2000, 2500], [750, -1000]);
-  const y3 = useTransform(scrollY, [1900, 2600], [550, -1200]);
+  const y1 = useTransform(scrollY, [2300, 2400], [750, -800]);
+  const y2 = useTransform(scrollY, [2300, 2500], [750, -1000]);
+  const y3 = useTransform(scrollY, [2100, 2600], [700, -1200]);
   const y4 = useTransform(scrollY, [2100, 2300], [550, -900]);
-  const y5 = useTransform(scrollY, [2000, 2400], [550, -1100]);
-  const y6 = useTransform(scrollY, [1800, 2400], [550, -1300]);
+  const y5 = useTransform(scrollY, [2200, 2400], [550, -1100]);
+  const y6 = useTransform(scrollY, [2000, 2400], [550, -1300]);
 
   const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
@@ -363,181 +363,183 @@ const Projects = () => {
         </Flex>
       </Box>
 
-      <HStack mt={[0, 0, -40, 0, 80]}>
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y1,
-            x: x1,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+      {colorMode !== "dark" && (
+        <HStack mt={[0, 0, -40, 0, 80]}>
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y1,
+              x: x1,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
 
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y2,
-            x: x2,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y2,
+              x: x2,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
 
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y3,
-            x: x3,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y3,
+              x: x3,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
 
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y4,
-            x: x4,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y4,
+              x: x4,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
 
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y5,
-            x: x5,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y5,
+              x: x5,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
 
-        <motion.div
-          style={{
-            // x: colorMode !== "light" ? x2 : x1,
-            // x: x2,
-            y: y6,
-            x: x6,
-            width: "100vw",
-            position: "fixed",
-            top: 200,
-            left: 0,
-            zIndex: 2,
-            overflow: "hidden",
-            // opacity: o2,
-          }}
-        >
-          <Box
-            zIndex={99}
-            w={"10%"}
-            overflow={"hidden"}
-            display={"flex"}
-            flexDirection={"column"}
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y6,
+              x: x6,
+              width: "100vw",
+              position: "fixed",
+              top: 200,
+              left: 0,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
           >
-            <Img src={water} overflow={"hidden"} w={"100%"} />
-            <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-            <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-            <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-          </Box>
-        </motion.div>
-      </HStack>
+            <Box
+              zIndex={99}
+              w={"10%"}
+              overflow={"hidden"}
+              display={"flex"}
+              flexDirection={"column"}
+            >
+              <Img src={water} overflow={"hidden"} w={"100%"} />
+              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
+              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
+              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
+            </Box>
+          </motion.div>
+        </HStack>
+      )}
     </>
   );
 };

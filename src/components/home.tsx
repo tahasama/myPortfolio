@@ -59,65 +59,69 @@ const Home = () => {
   const { scrollY } = useViewportScroll();
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
   const x2 = useTransform(scrollY, [0, 100], [-300, 1700]);
-  // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   const y2 = useTransform(scrollY, [0, 100], [0, -800]);
+  // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   const x3 = useTransform(scrollY, [0, 10], [0, 0]);
   // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
-  const y3 = useTransform(scrollY, [0, 100], [-200, 200]);
+  const y3 = useTransform(scrollY, [0, 100, 10000], [-200, 200, 800]);
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
     <Box overflow={"hidden"}>
       <Element name="Home"></Element>
-      <motion.div
-        style={{
-          // x: colorMode !== "light" ? x2 : x1,
-          x: x2,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          y: y2,
-          width: "100vw",
-          // height: "0vw",
-          position: "fixed",
-          bottom: -80,
-          left: 0,
-          zIndex: 2,
-          overflow: "hidden",
-        }}
-      >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          w={"20%"}
-          overflow={"hidden"}
+      {colorMode !== "dark" && (
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            x: x2,
+            // background: "salmon",
+            // y: colorMode !== "light" ? y2 : y1,
+            y: y2,
+            width: "100vw",
+            // height: "0vw",
+            position: "fixed",
+            bottom: -80,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+          }}
         >
-          <Img src={airplane} overflow={"hidden"} />
-        </Box>
-      </motion.div>
+          <Box
+            // left={"0"}
+            // bgColor={"yellow.400"}
+            // zIndex={99}
+            w={"20%"}
+            overflow={"hidden"}
+          >
+            <Img src={airplane} overflow={"hidden"} />
+          </Box>
+        </motion.div>
+      )}
 
-      <motion.div
-        whileInView={{ rotate: [0.7, -0.7, 0.7] }}
-        transition={{ repeat: Infinity }}
-        style={{
-          // x: colorMode !== "light" ? x2 : x1,
-          x: x3,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          y: y3,
-          width: "10%",
-          // height: "0vw",
-          position: "fixed",
-          top: 0,
-          right: 20,
-          zIndex: 2,
-          overflow: "hidden",
-          // opacity: o1,
-          // zIndex: 99,
-        }}
-      >
-        <Img src={parachute} overflow={"hidden"} zIndex={"99"} />
-      </motion.div>
+      {colorMode !== "dark" && (
+        <motion.div
+          whileInView={{ rotate: [0.7, -0.7, 0.7] }}
+          transition={{ repeat: Infinity }}
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            x: x3,
+            // background: "salmon",
+            // y: colorMode !== "light" ? y2 : y1,
+            y: y3,
+            width: "10%",
+            // height: "0vw",
+            position: "fixed",
+            top: 0,
+            right: 20,
+            zIndex: 2,
+            overflow: "hidden",
+            // opacity: o1,
+            // zIndex: 99,
+          }}
+        >
+          <Img src={parachute} overflow={"hidden"} zIndex={"99"} />
+        </motion.div>
+      )}
 
       <Flex
         position={"relative"}

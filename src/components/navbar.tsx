@@ -21,15 +21,10 @@ import { useState } from "react";
 
 const anime = keyframes`
 from,to
-
 0% {transform:rotate(-360deg); }
-
-
-
-50% {color: red; }
+40% {color: red;transform:scale(.7) rotate(360deg); }
  
-100%{transform:rotate(360deg);}
-
+100%{transform:rotate(-360deg);}
 `;
 
 const Navbar = () => {
@@ -56,7 +51,7 @@ const Navbar = () => {
   return (
     <Flex
       w={"full"}
-      h={"20"}
+      h={["16", "20"]}
       zIndex={99}
       alignItems="center"
       justifyContent="space-between"
@@ -70,7 +65,7 @@ const Navbar = () => {
           // onToggle();
           changeIcon();
         }}
-        mt={"-14px"}
+        mt={"-3px"}
         ml={"14px"}
         visibility={["visible", "visible", "hidden"]}
         // p={["4", "6"]}
@@ -78,13 +73,13 @@ const Navbar = () => {
         role="group"
         // _hover={{ transform: "rotate(360deg)" }}
       >
-        {!isOpen ? (
+        {!change ? (
           // <motion.div ={{ rotate: 180 }}>
           <HamburgerIcon
             boxSize={7}
             mx={-1}
-            _groupActive={{ animation: !change && `${anime} 1.3s ease-in-out` }}
-            _groupFocus={{ animation: change && `${anime} 1.3s ease-in-out ` }}
+            // _groupActive={{ animation: !change && `${anime} 1.3s ease-in-out` }}
+            _groupFocus={{ animation: !isOpen && `${anime} 1.3s ease-in-out ` }}
           />
         ) : (
           // </motion.div>
@@ -92,8 +87,8 @@ const Navbar = () => {
           <CloseIcon
             boxSize={5}
             mx={0}
-            _groupActive={{ animation: change && `${anime} 1.3s ease-in-out` }}
-            _groupFocus={{ animation: !change && `${anime} 1.3s ease-in-out ` }}
+            // _groupActive={{ animation: change && `${anime} 1.3s ease-in-out` }}
+            _groupFocus={{ animation: isOpen && `${anime} 1.3s ease-in-out ` }}
           />
           // </motion.div>
         )}
@@ -142,21 +137,6 @@ const Navbar = () => {
         </Box>
       </Slide>
 
-      {/* <Box
-        position={"relative"}
-        // display={"block"}
-        left={[3, 4, 0]}
-        alignItems="center"
-        letterSpacing={3}
-        fontSize={["26px", "3xl", "4xl", "5xl"]}
-        color={colorOn}
-        fontFamily={colorMode === "light" ? "alex brush" : "tangerine"}
-        fontWeight={"200"}
-        w={["full"]}
-        cursor={"pointer"}
-      >
-        Maatof Taha
-      </Box> */}
       <Img
         visibility={["visible"]}
         src={colorMode !== "light" ? logoNight : logoDay}
@@ -169,12 +149,7 @@ const Navbar = () => {
         w={["53%", "auto"]}
         cursor={"pointer"}
       />
-      <Flex
-        w={"auto"}
-        h={"16"}
-        alignItems="center"
-        justifyContent="space-between"
-      >
+      <Flex h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
           w={["0", "0", "full"]}
           visibility={["hidden", "hidden", "visible"]}
@@ -193,7 +168,7 @@ const Navbar = () => {
                 key={n}
               >
                 <ListItem
-                  mx={[2, 2, 2, 4]}
+                  mx={[0, 0, 2, 2, 4]}
                   p={1}
                   fontSize={["sm", "sm", "md", "20px"]}
                   cursor={"pointer"}

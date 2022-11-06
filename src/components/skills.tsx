@@ -56,10 +56,18 @@ const Skills = () => {
   const x1 = useTransform(scrollY, [300, 500], [0, 0]);
   const y1 = useTransform(scrollY, [1000, 1200], [1200, -200]);
 
-  const x2 = useTransform(scrollY, [900, 1100, 1300], [-900, -400, -900]);
+  const x2 = useTransform(
+    scrollY,
+    [900, 1000, 1200, 1300],
+    [-900, -450, -450, -900]
+  );
   const y2 = useTransform(scrollY, [800, 1000], [0, -100]);
 
-  const x3 = useTransform(scrollY, [900, 1100, 1300], [1000, 500, 1000]);
+  const x3 = useTransform(
+    scrollY,
+    [900, 1000, 1200, 1300],
+    [1000, 550, 550, 1000]
+  );
   const y3 = useTransform(scrollY, [900, 1000], [0, -100]);
 
   return (
@@ -96,74 +104,78 @@ const Skills = () => {
         </Box>
       </motion.div> */}
 
-      <motion.div
-        style={{
-          // x: colorMode !== "light" ? x2 : x1,
-          x: x2,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          y: y2,
-          width: "100%",
-          // height: "0vw",
-          position: "fixed",
-          bottom: -80,
-          left: 0,
-          zIndex: 2,
-          overflow: "hidden",
+      {colorMode !== "dark" && (
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            x: x2,
+            // background: "salmon",
+            // y: colorMode !== "light" ? y2 : y1,
+            y: y2,
+            width: "100%",
+            // height: "0vw",
+            position: "fixed",
+            bottom: -80,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
 
-          transform: "translateX(-50%)",
-        }}
-      >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          zIndex={99}
-          w={"100%"}
-          overflow={"hidden"}
-          transform={"translateX(35%)"}
+            transform: "translateX(-50%)",
+          }}
         >
-          <Img
-            src={palm1}
+          <Box
+            // left={"0"}
+            // bgColor={"yellow.400"}
+            zIndex={99}
+            w={"100%"}
             overflow={"hidden"}
-            w={"21%"}
-            filter={"brightness(0.75) grayscale(75%)"}
-          />
-        </Box>
-      </motion.div>
+            transform={"translateX(35%)"}
+          >
+            <Img
+              src={palm1}
+              overflow={"hidden"}
+              w={"21%"}
+              filter={"brightness(0.75) grayscale(75%)"}
+            />
+          </Box>
+        </motion.div>
+      )}
 
-      <motion.div
-        style={{
-          // x: colorMode !== "light" ? x2 : x1,
-          x: x3,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          y: y3,
-          width: "100%",
-          // height: "0vw",
-          position: "fixed",
-          bottom: -80,
-          left: 0,
-          zIndex: 2,
-          overflow: "hidden",
-        }}
-      >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          zIndex={99}
-          w={"100%"}
-          overflow={"hidden"}
-          transform={"translateX(35%)"}
+      {colorMode !== "dark" && (
+        <motion.div
+          style={{
+            // x: colorMode !== "light" ? x2 : x1,
+            x: x3,
+            // background: "salmon",
+            // y: colorMode !== "light" ? y2 : y1,
+            y: y3,
+            width: "100%",
+            // height: "0vw",
+            position: "fixed",
+            bottom: -80,
+            left: 0,
+            zIndex: 2,
+            overflow: "hidden",
+          }}
         >
-          <Img
-            src={palm1}
+          <Box
+            // left={"0"}
+            // bgColor={"yellow.400"}
+            zIndex={99}
+            w={"100%"}
             overflow={"hidden"}
-            w={"21%"}
-            filter={"brightness(0.75) grayscale(75%)"}
-            transform={"scaleX(-1)"}
-          />
-        </Box>
-      </motion.div>
+            transform={"translateX(35%)"}
+          >
+            <Img
+              src={palm1}
+              overflow={"hidden"}
+              w={"21%"}
+              filter={"brightness(0.75) grayscale(75%)"}
+              transform={"scaleX(-1)"}
+            />
+          </Box>
+        </motion.div>
+      )}
 
       <Flex
         w={"100%"}

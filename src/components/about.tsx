@@ -55,9 +55,11 @@ const About = () => {
       >
         <Element name="About"></Element>
 
-        <Box top={"20"}>
-          <Birds />
-        </Box>
+        {colorMode !== "dark" && (
+          <Box top={"20"}>
+            <Birds />
+          </Box>
+        )}
 
         <Flex
           flexDirection={["column"]}

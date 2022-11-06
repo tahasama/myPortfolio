@@ -6,22 +6,22 @@ import birdN from "../images/birdN.png";
 
 const Birds = () => {
   const { scrollY } = useViewportScroll();
-  const x1 = useTransform(scrollY, [370, 590], [1600, -900]);
+  const x1 = useTransform(scrollY, [170, 590], [1600, -900]);
   const y1 = useTransform(scrollY, [370, 590], [-50, 200]);
 
-  const x2 = useTransform(scrollY, [370, 590], [1500, -800]);
+  const x2 = useTransform(scrollY, [170, 590], [1500, -800]);
   const y2 = useTransform(scrollY, [370, 590], [100, -100]);
 
-  const x3 = useTransform(scrollY, [370, 590], [1400, -700]);
+  const x3 = useTransform(scrollY, [170, 590], [1400, -700]);
   const y3 = useTransform(scrollY, [370, 590], [260, 400]);
 
-  const x4 = useTransform(scrollY, [370, 590], [1600, -700]);
+  const x4 = useTransform(scrollY, [170, 590], [1600, -700]);
   const y4 = useTransform(scrollY, [370, 590], [200, 200]);
 
-  const x5 = useTransform(scrollY, [370, 590], [1000, -1500]);
+  const x5 = useTransform(scrollY, [170, 590], [1000, -1500]);
   const y5 = useTransform(scrollY, [370, 590], [250, 100]);
 
-  const x6 = useTransform(scrollY, [370, 590], [1200, -1500]);
+  const x6 = useTransform(scrollY, [270, 590], [1200, -1500]);
   const y6 = useTransform(scrollY, [370, 590], [300, 200]);
 
   const { colorMode, toggleColorMode } = useColorMode();
