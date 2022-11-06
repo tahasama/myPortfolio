@@ -123,17 +123,19 @@ const Contact = () => {
           </VStack>
           {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
         </FormControl>
-        <Flex
-          // bgColor={"red.300"}
-          pos={"absolute"}
-          justifyContent={"end"}
-          left={10}
-          bottom={0}
-          transform={"scaleX(-1) rotate(12deg)"}
-          w={"16%"}
-        >
-          <Img src={tresor} />
-        </Flex>
+        {colorMode !== "dark" && (
+          <Flex
+            // bgColor={"red.300"}
+            pos={"absolute"}
+            justifyContent={"end"}
+            left={10}
+            bottom={10}
+            transform={"scaleX(-1) rotate(12deg)"}
+            w={"16%"}
+          >
+            <Img src={tresor} />
+          </Flex>
+        )}
       </VStack>
     </>
   );
