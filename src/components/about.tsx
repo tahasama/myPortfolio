@@ -44,7 +44,7 @@ const About = () => {
         }
         bg={bgOnLight}
         fontFamily={"roboto"}
-        top={["-20vh", "-20vh", "-20vh", "-20vh", "-32vh"]}
+        top={["-20vh", "-20vh", "-30vh", "-36vh", "-32vh"]}
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
       >

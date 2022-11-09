@@ -127,10 +127,10 @@ const Contact = () => {
             // bgColor={"red.300"}
             pos={"absolute"}
             justifyContent={"end"}
-            left={10}
-            bottom={10}
+            left={[1, 1, 10]}
+            bottom={[36, 40, 10]}
             transform={"scaleX(-1) rotate(12deg)"}
-            w={"16%"}
+            w={["23%", "20%", "16%"]}
           >
             <Img src={tresor} />
           </Flex>
