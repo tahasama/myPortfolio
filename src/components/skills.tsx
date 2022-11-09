@@ -34,9 +34,9 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 // import bubbles from "../images/bubbles.jpg";
-import palm1 from "../images/palm1.png";
+// import palm1 from "../images/palm1.png";
 
-import { m, motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
 
@@ -49,21 +49,21 @@ const Skills = () => {
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
-  const { scrollY } = useViewportScroll();
+  // const { scrollY } = useViewportScroll();
 
-  const x2 = useTransform(
-    scrollY,
-    [900, 1000, 1200, 1300],
-    [-900, -450, -450, -900]
-  );
-  const y2 = useTransform(scrollY, [800, 1000], [0, -100]);
+  // const x2 = useTransform(
+  //   scrollY,
+  //   [900, 1000, 1200, 1300],
+  //   [-900, -450, -450, -900]
+  // );
+  // const y2 = useTransform(scrollY, [800, 1000], [0, -100]);
 
-  const x3 = useTransform(
-    scrollY,
-    [900, 1000, 1200, 1300],
-    [1000, 550, 550, 1000]
-  );
-  const y3 = useTransform(scrollY, [900, 1000], [0, -100]);
+  // const x3 = useTransform(
+  //   scrollY,
+  //   [900, 1000, 1200, 1300],
+  //   [1000, 550, 550, 1000]
+  // );
+  // const y3 = useTransform(scrollY, [900, 1000], [0, -100]);
 
   return (
     <>
