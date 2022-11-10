@@ -52,7 +52,7 @@ const Contact = () => {
     <>
       <VStack
         position={"relative"}
-        h={["100vh", "100vh", "100vh", "100vh", "100vh"]}
+        h={["100vh", "135vh", "100vh", "100vh", "100vh"]}
         // bgGradient={bgOnLight}
         bgColor={bglOnLight}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"

@@ -39,7 +39,7 @@ import palm1 from "../images/palm1.png";
 import { motion } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
-// import { useState } from "react";
+import { useState } from "react";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -50,65 +50,14 @@ const Skills = () => {
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
-  // const [isTablet, setIsTablet] = useState(false);
-  // const [isMobile, setIsMobile] = useState(false);
-  // const [isLaptop, setIsLaptop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // function reportWindowSize() {
-  //   window.innerWidth < 1024 && window.innerWidth >= 768
-  //     ? setIsTablet(true)
-  //     : setIsTablet(false);
-  //   window.innerWidth >= 1024 && window.innerWidth < 1440
-  //     ? setIsLaptop(true)
-  //     : setIsLaptop(false);
-  //   window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
-  // }
+  function reportWindowSize() {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+  }
 
-  // window.onresize = reportWindowSize;
-  // console.log(window.onresize);
-
-  // const { scrollY } = useViewportScroll();
-
-  // const x2 = useTransform(
-  //   scrollY,
-  //   [900, 1000, 1400, 1500],
-  //   [
-  //     -100,
-  //     isLaptop ? 500 : isTablet ? 470 : isMobile ? 460 : 500,
-  //     isLaptop ? 500 : isTablet ? 470 : isMobile ? 460 : 500,
-  //     -100,
-  //   ]
-  // );
-
-  // const x1 = useTransform(
-  //   scrollY,
-  //   [900, 1000, 1400, 1500],
-  //   [
-  //     100,
-  //     isLaptop ? -500 : isTablet ? -470 : isMobile ? -520 : -500,
-  //     isLaptop ? -500 : isTablet ? -470 : isMobile ? -520 : -500,
-  //     100,
-  //   ]
-  // );
-
-  // const y2 = useTransform(
-  //   scrollY,
-  //   isLaptop
-  //     ? [2000, 2600]
-  //     : isTablet
-  //     ? [1500, 2000]
-  //     : isMobile
-  //     ? [2000, 2600]
-  //     : [1000, 1600],
-  //   [0, -500]
-  // );
-
-  // const x3 = useTransform(
-  //   scrollY,
-  //   [900, 1000, 1200, 1300],
-  //   [1000, 550, 550, 1000]
-  // );
-  // const y3 = useTransform(scrollY, [900, 1000], [0, -100]);
+  window.onresize = reportWindowSize;
+  console.log(window.onresize);
 
   return (
     <>
@@ -150,7 +99,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["3vh", "-16vh", "24vh", "10vh", "10vh"]}
+          mt={["-3vh", "-13vh", "24vh", "10vh", "10vh"]}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"40"}
         >
@@ -739,7 +688,7 @@ const Skills = () => {
         {/* <Box>gggggggggg</Box> */}
       </Flex>
 
-      {colorMode !== "dark" && (
+      {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
           position={"absolute"}
@@ -747,7 +696,7 @@ const Skills = () => {
           // bgColor={"red"}
           justifyContent={"space-between"}
           // top={"-20"}
-          mt={["-261vh", "-225vh", "-225vh", "-255vh", "-210vh"]}
+          mt={["-170vh", "-225vh", "-225vh", "-255vh", "-210vh"]}
         >
           <Img
             src={palm1}
