@@ -62,7 +62,7 @@ const About = () => {
           position={"relative"}
           alignItems={"center"}
           justifyContent={"center"}
-          zIndex={"99"}
+          // zIndex={"99"}
           top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
           overflow={"hidden"}
         >

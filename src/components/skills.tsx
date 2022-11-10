@@ -87,15 +87,16 @@ const Skills = () => {
         bgGradient={bgOnLight}
         clipPath={[
           // "ellipse(59% 65% at 40% 65%)",
-          "circle(50.7% at 49% 50%)",
-          "circle(50.7% at 49% 50%)",
+
+          "ellipse(300% 100% at 47% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
           "ellipse(150% 100% at 47% 100%)",
           "ellipse(140% 100% at 50% 100%)",
           "ellipse(130% 100% at 45% 100%)",
         ]}
-        mt={["-120vh", "-80vh", "-60vh", "-65vh", "-65vh"]}
+        mt={["-40vh", "-80vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["3300px", "3000px", "260vh", "290vh", "230vh"]}
+        h={["1700px", "3000px", "260vh", "290vh", "230vh"]}
         // h={"100%"}
         py={"28"}
       >
@@ -115,7 +116,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["52vh", "72vh", "24vh", "10vh", "10vh"]}
+          mt={["0vh", "72vh", "24vh", "10vh", "10vh"]}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"40"}
         >

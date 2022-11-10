@@ -68,7 +68,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-160vh", "-160vh", "-40vh", "-80vh", "-84vh"]}
+        mt={["-20vh", "-160vh", "-40vh", "-80vh", "-84vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
@@ -216,14 +216,14 @@ const Projects = () => {
                 </Flex>
               </motion.div>
             </Box>
-          </Flex>{" "}
+          </Flex>
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
             justifyContent={"center"}
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-25vh", "-10vh", "0vh", "0vh"]}
+            mt={["-8vh", "-25vh", "-10vh", "0vh", "0vh"]}
           >
             <Box w={"full"} overflow={"hidden"}>
               <motion.div
@@ -352,140 +352,6 @@ const Projects = () => {
               zIndex={55}
             />
           </Flex>
-          {/* <Flex
-            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
-            justifyContent={"center"}
-            alignItems={"center"}
-            position={"relative"}
-            w={"96%"}
-            // mx={[2, 2, 5, 0, 0]}
-            mx={[2, 2, 4, 5, -20]}
-          >
-            <Box w={"100%"} overflow={"hidden"}>
-              <motion.div
-                whileInView={{
-                  x: [isMobile ? "0px" : "400px", "0px"],
-                  scale: [0.6, 1],
-                  opacity: [0, 1],
-                }}
-                transition={{ ease: "linear" }}
-                style={{ overflow: "hidden" }}
-              >
-                <Text
-                  fontSize={["22", "22", "18", "20", "24"]}
-                  textAlign={"center"}
-                  my={[4, 4, 2, 2, 2]}
-                  fontFamily={"Raleway"}
-                  fontWeight={900}
-                >
-                  Online Editor : An app for creating simple Projects
-                </Text>
-                <List
-                  style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 48]}
-                  fontSize={["18", "18", "14", "16", "20"]}
-                >
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Create project with Vanilla Html/Css/Jacasript
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Create project with React
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    import any package
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    see immediate result
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Create/Read/Update/Delete own projects
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    See/Clone/Like other users projects
-                  </ListItem>{" "}
-                </List>
-                <Flex
-                  w={"full"}
-                  position="relative"
-                  justifyContent={"center"}
-                  alignItems={["center"]}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 0]}
-                >
-                  <Link
-                    href="https://thacoder.netlify.app/"
-                    isExternal
-                    colorScheme="pink"
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["8", "16", "12", "16", "16"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
-                      my={10}
-                      mx={2}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
-                      letterSpacing={"wider"}
-                    >
-                      Demo
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["8", "16", "12", "16", "16"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
-                      my={10}
-                      mx={[1, 1, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
-                    >
-                      Code
-                    </Button>
-                  </Link>
-                </Flex>
-              </motion.div>
-            </Box>
-            <Img
-              src={proj2}
-              alt="devNight"
-              borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "45%"]}
-            />
-          </Flex> */}
           <VStack
             visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}
           >
