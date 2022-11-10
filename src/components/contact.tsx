@@ -11,9 +11,11 @@ import {
   useColorMode,
   useColorModeValue,
   VStack,
+  Text,
 } from "@chakra-ui/react";
 import { Element } from "react-scroll";
 import tresor from "../images/tresor.png";
+import copyRight from "../images/copyright.png";
 
 const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
@@ -75,7 +77,7 @@ const Contact = () => {
         <FormControl
           ref={form}
           onSubmit={sendEmail}
-          top={[28, 80, 28, 28, 40]}
+          top={[28, 80, 28, 28, 28]}
           w={[6 / 7, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
           //   fontSize={[20, 20, 20, 20, 20]}
           //   mt={[-40, -60, -80, -20, -40]}
@@ -141,6 +143,11 @@ const Contact = () => {
             <Img src={tresor} />
           </Flex>
         )}
+        <Flex pos={"absolute"} justifyContent={"center"} bottom={0} p={4}>
+          <Text>Made with passion by Maatof Taha </Text>
+          <Img src={copyRight} w={"2.5%"} />
+          <Text>2022</Text>
+        </Flex>
       </VStack>
     </>
   );

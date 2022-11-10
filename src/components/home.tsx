@@ -54,9 +54,18 @@ const Home = () => {
     }, 450);
   };
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  function reportWindowSize() {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+  }
+
+  window.onresize = reportWindowSize;
+  console.log(window.onresize);
+
   const { scrollY } = useViewportScroll();
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
-  const x2 = useTransform(scrollY, [0, 100], [-300, 1700]);
+  const x2 = useTransform(scrollY, [0, 100], [-300, isMobile ? 850 : 1700]);
   const y2 = useTransform(scrollY, [0, 100], [0, -800]);
   // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   const x3 = useTransform(scrollY, [0, 10], [0, 0]);

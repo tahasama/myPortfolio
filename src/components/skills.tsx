@@ -181,7 +181,7 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={resN}
-                    h={["8.8vh", "9vh", "7vh", "8vh", "7vh"]}
+                    h={["8.8vh", "7.8vh", "7vh", "8vh", "7vh"]}
                     filter={"grayscale(100%) brightness(2)"}
                     m={0}
                   />
@@ -189,7 +189,7 @@ const Skills = () => {
                   <Img
                     src={resD}
                     color="purple.500"
-                    h={["9vh", "9vh", "9vh", "9vh", "7.7vh"]}
+                    h={["9vh", "7.4vh", "9vh", "9vh", "7.7vh"]}
                     filter={"grayscale(100%) brightness(2)"}
                     // transform={"scale(0.9)"}
                     m={0}
@@ -235,7 +235,7 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={cloud}
-                    h={["15vh", "15vh", "15vh", "15vh", "13.7vh"]}
+                    h={["15vh", "14.6vh", "15vh", "15vh", "13.7vh"]}
                     filter={"grayscale(0%) brightness(1.12)"}
                   />
                 ) : (
@@ -445,7 +445,7 @@ const Skills = () => {
                 w={["86vw", "60vw", "30vw", "25vw"]}
                 // mt={["0", "2", "8", "24", "24"]}
                 position={"relative"}
-                justifyContent={"space-around"}
+                justifyContent={"space-evenly"}
                 alignItems={"center"}
                 textAlign={"center"}
                 flexDir={["row", "row", "column"]}
@@ -467,7 +467,7 @@ const Skills = () => {
                       mb={2}
                       mt={[0, 0, 7, 4, 4]}
                     />
-                    <Box textAlign={"center"} color={"gray.400"} mt={-8}>
+                    <Box textAlign={"center"} color={"gray.400"} mt={"-30px"}>
                       Tailwind css
                     </Box>
                   </Grid>{" "}
@@ -484,7 +484,7 @@ const Skills = () => {
                   >
                     <Img
                       src={chakra}
-                      w={["70px", "70px", "48px", "58px", "68px"]}
+                      w={["70px", "64px", "48px", "58px", "68px"]}
                       mb={[-1]}
                       mt={[0, 0, -4, -4, -7]}
                     />
@@ -531,7 +531,7 @@ const Skills = () => {
                 w={["86vw", "60vw", "30vw", "25vw"]}
                 mt={["1", "2", "20", "12", "20"]}
                 position={"relative"}
-                justifyContent={"space-around"}
+                justifyContent={"space-evenly"}
                 alignItems={"center"}
                 textAlign={"center"}
                 flexDir={["row", "row", "column"]}
@@ -656,7 +656,7 @@ const Skills = () => {
             >
               <Flex
                 w={["86vw", "60vw", "30vw", "25vw"]}
-                mt={["3", "2", "20", "20", "20"]}
+                mt={["5", "5", "20", "20", "20"]}
                 position={"relative"}
                 justifyContent={"space-around"}
                 alignItems={"center"}
@@ -724,10 +724,10 @@ const Skills = () => {
                   >
                     <Img
                       src={docker}
-                      w={["68px", "60px", "50px", "60px", "70px"]}
+                      w={["68px", "68px", "50px", "60px", "70px"]}
                       filter={"brightness(.92)"}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-3}>
+                    <Box textAlign={"center"} color={"gray.400"} mt={-5}>
                       Docker
                     </Box>
                   </Grid>
