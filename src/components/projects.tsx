@@ -23,21 +23,21 @@ import proj1 from "../images/proj/proj1/QualityApp.png";
 import proj2 from "../images/proj/proj2/EditorApp.png";
 import { Element } from "react-scroll";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 // import underwater from "../images/underwater.png";
 import water from "../images/bubble.png";
 
 const Projects = () => {
   const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
   const { colorMode } = useColorMode();
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
 
-  function reportWindowSize() {
-    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
-  }
+  // function reportWindowSize() {
+  //   window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+  // }
 
-  window.onresize = reportWindowSize;
-  console.log(window.onresize);
+  // window.onresize = reportWindowSize;
+  // console.log(window.onresize);
 
   const { scrollY } = useViewportScroll();
   const x1 = useTransform(scrollY, [2000, 2800], [100, 100]);
