@@ -68,7 +68,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-20vh", "-160vh", "-40vh", "-80vh", "-84vh"]}
+        mt={["-10vh", "-14vh", "-70vh", "-80vh", "-30vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
@@ -83,11 +83,11 @@ const Projects = () => {
         >
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}
-            justifyContent={"center"}
+            justifyContent={"space-around"}
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-25vh", "-20vh", "-20vh", "0vh"]}
+            mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
           >
             <Img
               src={proj1}
@@ -101,11 +101,11 @@ const Projects = () => {
             <Box w={"full"}>
               <motion.div
                 whileInView={{
-                  x: isMobile ? ["0px", "0px"] : ["-600px", "0px"],
+                  // x: !isMobile ? ["-20px", "0px"] : ["-600px", "0px"],
                   scale: [0.6, 1],
                   opacity: [0, 1],
                 }}
-                transition={{ ease: "linear" }}
+                // transition={{ ease: "linear" }}
                 style={{ overflow: "hidden" }}
               >
                 <Text
@@ -219,20 +219,20 @@ const Projects = () => {
           </Flex>
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
-            justifyContent={"center"}
+            justifyContent={"space-around"}
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-8vh", "-25vh", "-10vh", "0vh", "0vh"]}
+            mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
           >
             <Box w={"full"} overflow={"hidden"}>
               <motion.div
                 whileInView={{
-                  x: isMobile ? ["0px", "0px"] : ["400px", "0px"],
+                  // x: isMobile ? ["10px", "0px"] : ["400px", "0px"],
                   scale: [0.6, 1],
                   opacity: [0, 1],
                 }}
-                transition={{ ease: "linear" }}
+                // transition={{ ease: "linear" }}
                 style={{ overflow: "hidden" }}
               >
                 <Text
@@ -254,7 +254,7 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Create project with Vanilla Html/Css/Jacasript
+                    Create project with Vanilla Html / Css / Javacasript
                   </ListItem>
                   <ListItem>
                     <ListIcon

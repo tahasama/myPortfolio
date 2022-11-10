@@ -61,9 +61,9 @@ const Contact = () => {
         ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
         mt={[
-          -40,
-          -40,
-          -48,
+          -32,
+          -32,
+          -32,
           "-50vh",
           `${colorMode !== "dark" ? "-80vh" : "-30vh"}`,
         ]}
@@ -133,10 +133,10 @@ const Contact = () => {
             // bgColor={"red.300"}
             pos={"absolute"}
             justifyContent={"end"}
-            left={[1, 1, 10]}
-            bottom={[4, 36, 40, 10]}
+            left={[1, 1, 1, 4, 10]}
+            bottom={[4, 36, 4, 4, 24]}
             transform={"scaleX(-1) rotate(12deg)"}
-            w={["23%", "20%", "16%"]}
+            w={["23%", "20%", "22%", "21%", "18%"]}
           >
             <Img src={tresor} />
           </Flex>

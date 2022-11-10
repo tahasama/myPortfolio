@@ -52,9 +52,17 @@ const Skills = () => {
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
   const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLaptop, setIsLaptop] = useState(false);
 
   function reportWindowSize() {
-    window.innerWidth < 1024 ? setIsTablet(true) : setIsTablet(false);
+    window.innerWidth < 1024 && window.innerWidth >= 768
+      ? setIsTablet(true)
+      : setIsTablet(false);
+    window.innerWidth >= 1024 && window.innerWidth < 1440
+      ? setIsLaptop(true)
+      : setIsLaptop(false);
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
   }
 
   window.onresize = reportWindowSize;
@@ -64,10 +72,37 @@ const Skills = () => {
 
   const x2 = useTransform(
     scrollY,
-    [900, 1000, 1200, 1300],
-    [-1500, isTablet ? -200 : 370, isTablet ? -200 : 370, -1500]
+    [900, 1000, 1400, 1500],
+    [
+      -100,
+      isLaptop ? 500 : isTablet ? 470 : isMobile ? 460 : 500,
+      isLaptop ? 500 : isTablet ? 470 : isMobile ? 460 : 500,
+      -100,
+    ]
   );
-  const y2 = useTransform(scrollY, [800, 1200], [0, -100]);
+
+  const x1 = useTransform(
+    scrollY,
+    [900, 1000, 1400, 1500],
+    [
+      100,
+      isLaptop ? -500 : isTablet ? -470 : isMobile ? -520 : -500,
+      isLaptop ? -500 : isTablet ? -470 : isMobile ? -520 : -500,
+      100,
+    ]
+  );
+
+  const y2 = useTransform(
+    scrollY,
+    isLaptop
+      ? [2000, 2600]
+      : isTablet
+      ? [1500, 2000]
+      : isMobile
+      ? [2000, 2600]
+      : [1000, 1600],
+    [0, -500]
+  );
 
   // const x3 = useTransform(
   //   scrollY,
@@ -94,9 +129,9 @@ const Skills = () => {
           "ellipse(140% 100% at 50% 100%)",
           "ellipse(130% 100% at 45% 100%)",
         ]}
-        mt={["-40vh", "-80vh", "-60vh", "-65vh", "-65vh"]}
+        mt={["-30vh", "-40vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["1700px", "3000px", "260vh", "290vh", "230vh"]}
+        h={["1700px", "1700px", "260vh", "290vh", "230vh"]}
         // h={"100%"}
         py={"28"}
       >
@@ -116,7 +151,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["0vh", "72vh", "24vh", "10vh", "10vh"]}
+          mt={["0vh", "-16vh", "24vh", "10vh", "10vh"]}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"40"}
         >
@@ -456,7 +491,7 @@ const Skills = () => {
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={[-6, 0, 2, -1, -1]}
+                      mt={[-6, -10, 2, -1, -1]}
                     >
                       Chakra ui
                     </Box>
@@ -471,7 +506,7 @@ const Skills = () => {
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
-            mt={["-10", "0", "0", "0", "0"]}
+            mt={["-10", "-16", "0", "0", "0"]}
           >
             <Box
               mt={["2", "2"]}
@@ -490,7 +525,7 @@ const Skills = () => {
               bgColor={bglCard}
               borderBottomRadius={"40"}
               py={0}
-              h={["60%", "80%", "90%", "80%", "90%"]}
+              h={["60%", "60%", "90%", "80%", "90%"]}
             >
               <Flex
                 w={["86vw", "60vw", "30vw", "25vw"]}
@@ -575,7 +610,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? mongoN : mongoN}
-                      w={["160px", "480px", "130px", "140px", "150px"]}
+                      w={["160px", "160px", "130px", "140px", "150px"]}
                       // mb={20}
                       // h={"80px"}
                     />
@@ -597,7 +632,7 @@ const Skills = () => {
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
-            mt={["-10", "0", "0", "0", "0"]}
+            mt={["-10", "-16", "0", "0", "0"]}
           >
             <Box
               mt={["2", "10", "2"]}
@@ -641,11 +676,15 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? gitL : gitL}
-                      w={["60px", "500px", "50px", "60px", "70px"]}
+                      w={["60px", "60px", "50px", "60px", "70px"]}
                       filter={"brightness(.92)"}
-                      mb={2}
+                      mb={[2, 1, 2, 2, 2]}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-4}>
+                    <Box
+                      textAlign={"center"}
+                      color={"gray.400"}
+                      mt={[-4, -4, -4, -4, -4]}
+                    >
                       Git
                     </Box>
                   </Grid>
@@ -663,7 +702,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? githubN : githubN}
-                      w={["65px", "500px", "44px", "54px", "64px"]}
+                      w={["65px", "60px", "44px", "54px", "64px"]}
                       filter={"brightness(.92)"}
                       mb={1}
                     ></Img>
@@ -685,10 +724,10 @@ const Skills = () => {
                   >
                     <Img
                       src={docker}
-                      w={["68px", "500px", "50px", "60px", "70px"]}
+                      w={["68px", "60px", "50px", "60px", "70px"]}
                       filter={"brightness(.92)"}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-4}>
+                    <Box textAlign={"center"} color={"gray.400"} mt={-3}>
                       Docker
                     </Box>
                   </Grid>
@@ -702,25 +741,27 @@ const Skills = () => {
       </Flex>
 
       {colorMode !== "dark" && (
-        <HStack mt={[0, 0, -40, 0, 80]}>
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y2,
-              x: x2,
-              width: "100vw",
-              position: "fixed",
-              top: 300,
-              left: -500,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Img src={palm1} overflow={"hidden"} w={"30%"} />
-          </motion.div>
-        </HStack>
+        <Flex
+          flexDirection={"row"}
+          position={"absolute"}
+          w={"100%"}
+          // bgColor={"red"}
+          justifyContent={"space-between"}
+          // top={"-20"}
+          mt={[0, 0, "-225vh", "-255vh", "-210vh"]}
+        >
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={["60%", "20%", "25%", "23%", "20%"]}
+          />
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={["60%", "20%", "25%", "23%", "20%"]}
+            transform={"scaleX(-1)"}
+          />
+        </Flex>
       )}
     </>
   );

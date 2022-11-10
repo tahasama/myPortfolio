@@ -143,7 +143,7 @@ const Navbar = () => {
         alt="devDay2"
         position={"absolute"}
         left={["25vw", "22vw", "5"]}
-        top={["10px", "2px", "0px"]}
+        top={["7px", "2px", "0px"]}
         // left={["0", "0", "-60px", "-140px", "-200px"]}
         // mx={["20", "20", "6"]}
         w={["53%", "auto"]}

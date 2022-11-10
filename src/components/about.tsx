@@ -35,7 +35,7 @@ const About = () => {
         flexDirection={["column"]}
         h={
           selected === ""
-            ? ["120vh", "100vh", "120vh", "120vh", "122vh"]
+            ? ["100vh", "100vh", "120vh", "120vh", "122vh"]
             : selected === "shorter"
             ? ["125vh", "125vh", "140vh", "140vh", "127vh"]
             : selected === "short"
