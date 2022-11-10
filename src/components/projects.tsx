@@ -68,7 +68,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-10vh", "-14vh", "-70vh", "-80vh", "-30vh"]}
+        mt={["-10vh", "-14vh", "-75vh", "-85vh", "-50vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
@@ -77,7 +77,7 @@ const Projects = () => {
 
         <Flex
           flexDir={"column"}
-          top={[80, 80, 80, 80, 80]}
+          top={[80, 80, "60", 80, 60]}
           position={"relative"}
           gap={20}
         >
@@ -109,6 +109,7 @@ const Projects = () => {
                 style={{ overflow: "hidden" }}
               >
                 <Text
+                  style={{ textIndent: 40 }}
                   fontSize={["22", "22", "18", "24", "24"]}
                   textAlign={"center"}
                   mb={2}
@@ -173,7 +174,7 @@ const Projects = () => {
                   w={"full"}
                   // bgColor="red.200"
                   // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, -6]}
+                  ml={[0, 0, 0, 0, 0]}
                 >
                   <Link
                     href="https://thacoder.netlify.app/"
@@ -246,7 +247,7 @@ const Projects = () => {
                 </Text>
                 <List
                   style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 48]}
+                  ml={[0, 0, 0, 0, 32]}
                   fontSize={["18", "18", "14", "16", "20"]}
                 >
                   <ListItem>
@@ -312,7 +313,7 @@ const Projects = () => {
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
-                      mx={2}
+                      mx={3}
                       colorScheme={
                         colorMode !== "light" ? "linkedin" : "facebook"
                       }
@@ -332,9 +333,10 @@ const Projects = () => {
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
-                      mx={[1, 1, 4, 4, 4]}
+                      // mx={[1, 1, 4, 4, 4]}
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
                       letterSpacing={"wider"}
+                      mx={3}
                     >
                       Code
                     </Button>
@@ -348,7 +350,7 @@ const Projects = () => {
               alt="devNight"
               borderRadius={"3xl"}
               w={["100%", "100%", "53%", "55%", "45%"]}
-              ml={[0, 0, 12, 0, 0]}
+              ml={[0, 0, 0, 0, 0]}
               zIndex={55}
             />
           </Flex>

@@ -150,7 +150,7 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["0vh", "-16vh", "24vh", "10vh", "10vh"]}
+          mt={["3vh", "-16vh", "24vh", "10vh", "10vh"]}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={"40"}
         >
@@ -747,18 +747,20 @@ const Skills = () => {
           // bgColor={"red"}
           justifyContent={"space-between"}
           // top={"-20"}
-          mt={[0, 0, "-225vh", "-255vh", "-210vh"]}
+          mt={["-261vh", "-225vh", "-225vh", "-255vh", "-210vh"]}
         >
           <Img
             src={palm1}
             overflow={"hidden"}
-            w={["60%", "20%", "25%", "23%", "20%"]}
+            w={["100%", "30%", "25%", "23%", "20%"]}
+            mx={[6, 0, 0, 0, 0]}
           />
           <Img
             src={palm1}
             overflow={"hidden"}
-            w={["60%", "20%", "25%", "23%", "20%"]}
+            w={["100%", "30%", "25%", "23%", "20%"]}
             transform={"scaleX(-1)"}
+            mx={[6, 0, 0, 0, 0]}
           />
         </Flex>
       )}
