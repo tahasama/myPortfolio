@@ -62,7 +62,7 @@ const About = () => {
           position={"relative"}
           alignItems={"center"}
           justifyContent={"center"}
-          zIndex={"1"}
+          zIndex={"99"}
           top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
           overflow={"hidden"}
         >
@@ -73,7 +73,7 @@ const About = () => {
             zIndex={"1"}
             textAlign="center"
             w={["100%", "full", "full", "container.md"]}
-            mt={"-10"}
+            mt={"0"}
           >
             <Flex
               flexDirection={["column"]}

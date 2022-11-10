@@ -50,7 +50,7 @@ const Contact = () => {
     <>
       <VStack
         position={"relative"}
-        h={["120vh", "120vh", "120vh", "120vh", "100vh"]}
+        h={["100vh", "120vh", "120vh", "120vh", "100vh"]}
         // bgGradient={bgOnLight}
         bgColor={bglOnLight}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
@@ -60,7 +60,7 @@ const Contact = () => {
           "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
         ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
-        mt={[-20, -40, 20, -80, `${colorMode !== "dark" ? "-60vh" : "-30vh"}`]}
+        mt={[-80, -40, -48, -80, `${colorMode !== "dark" ? "-40vh" : "-30vh"}`]}
         // zIndex={99}
         w={"100%"}
       >
@@ -128,7 +128,7 @@ const Contact = () => {
             pos={"absolute"}
             justifyContent={"end"}
             left={[1, 1, 10]}
-            bottom={[36, 40, 10]}
+            bottom={[4, 36, 40, 10]}
             transform={"scaleX(-1) rotate(12deg)"}
             w={["23%", "20%", "16%"]}
           >

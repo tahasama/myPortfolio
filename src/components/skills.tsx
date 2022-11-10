@@ -6,6 +6,7 @@ import {
   Img,
   useColorMode,
   useColorModeValue,
+  HStack,
 } from "@chakra-ui/react";
 import reactD from "../svg/reactD.png";
 import reactN from "../svg/reactD1.png";
@@ -34,11 +35,12 @@ import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
 // import bubbles from "../images/bubbles.jpg";
-// import palm1 from "../images/palm1.png";
+import palm1 from "../images/palm1.png";
 
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
+import { useState } from "react";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -49,14 +51,23 @@ const Skills = () => {
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
   const bglCard = useColorModeValue("purple.700", "purple.900");
 
-  // const { scrollY } = useViewportScroll();
+  const [isTablet, setIsTablet] = useState(false);
 
-  // const x2 = useTransform(
-  //   scrollY,
-  //   [900, 1000, 1200, 1300],
-  //   [-900, -450, -450, -900]
-  // );
-  // const y2 = useTransform(scrollY, [800, 1000], [0, -100]);
+  function reportWindowSize() {
+    window.innerWidth < 1024 ? setIsTablet(true) : setIsTablet(false);
+  }
+
+  window.onresize = reportWindowSize;
+  console.log(window.onresize);
+
+  const { scrollY } = useViewportScroll();
+
+  const x2 = useTransform(
+    scrollY,
+    [900, 1000, 1200, 1300],
+    [-1500, isTablet ? -200 : 370, isTablet ? -200 : 370, -1500]
+  );
+  const y2 = useTransform(scrollY, [800, 1200], [0, -100]);
 
   // const x3 = useTransform(
   //   scrollY,
@@ -78,13 +89,13 @@ const Skills = () => {
           // "ellipse(59% 65% at 40% 65%)",
           "circle(50.7% at 49% 50%)",
           "circle(50.7% at 49% 50%)",
-          "ellipse(100% 100% at 47% 100%)",
-          "ellipse(100% 100% at 50% 100%)",
-          "ellipse(100% 100% at 45% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
+          "ellipse(140% 100% at 50% 100%)",
+          "ellipse(130% 100% at 45% 100%)",
         ]}
-        mt={["-100vh", "-100vh", "-80vh", "-85vh", "-80vh"]}
+        mt={["-120vh", "-80vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["3300px", "3000px", "260vh", "290vh", "280vh"]}
+        h={["3300px", "3000px", "260vh", "290vh", "230vh"]}
         // h={"100%"}
         py={"28"}
       >
@@ -588,7 +599,7 @@ const Skills = () => {
             mt={["-10", "0", "0", "0", "0"]}
           >
             <Box
-              mt={["10", "2"]}
+              mt={["2", "10", "2"]}
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
               w={["86vw", "60vw", "30vw", "25vw"]}
@@ -685,7 +696,31 @@ const Skills = () => {
             </Box>
           </Flex>
         </Flex>
+
+        {/* <Box>gggggggggg</Box> */}
       </Flex>
+
+      {colorMode !== "dark" && (
+        <HStack mt={[0, 0, -40, 0, 80]}>
+          <motion.div
+            style={{
+              // x: colorMode !== "light" ? x2 : x1,
+              // x: x2,
+              y: y2,
+              x: x2,
+              width: "100vw",
+              position: "fixed",
+              top: 300,
+              left: -500,
+              zIndex: 2,
+              overflow: "hidden",
+              // opacity: o2,
+            }}
+          >
+            <Img src={palm1} overflow={"hidden"} w={"30%"} />
+          </motion.div>
+        </HStack>
+      )}
     </>
   );
 };
