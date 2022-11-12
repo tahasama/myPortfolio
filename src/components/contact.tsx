@@ -16,6 +16,7 @@ import {
 import { Element } from "react-scroll";
 import tresor from "../images/tresor.png";
 import copyRight from "../images/copyright.png";
+import copyRightN from "../images/copyrightN.png";
 
 const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
@@ -52,7 +53,7 @@ const Contact = () => {
     <>
       <VStack
         position={"relative"}
-        h={["100vh", "135vh", "100vh", "100vh", "100vh"]}
+        h={["110vh", "110vh", "107vh", "110vh", "99vh"]}
         // bgGradient={bgOnLight}
         bgColor={bglOnLight}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
@@ -63,11 +64,13 @@ const Contact = () => {
         ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
         mt={[
-          -32,
-          -32,
-          -32,
+          -48,
+          -48,
+          `${colorMode !== "dark" ? "-30vh" : "-54vh"}`,
+
           "-50vh",
-          `${colorMode !== "dark" ? "-80vh" : "-30vh"}`,
+          // "-80vh",
+          `${colorMode !== "dark" ? "-99vh" : "-30vh"}`,
         ]}
         // zIndex={99}
         w={"100%"}
@@ -77,7 +80,7 @@ const Contact = () => {
         <FormControl
           ref={form}
           onSubmit={sendEmail}
-          top={[28, 80, 28, 28, 28]}
+          top={[28, 28, 28, 28, 28]}
           w={[6 / 7, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
           //   fontSize={[20, 20, 20, 20, 20]}
           //   mt={[-40, -60, -80, -20, -40]}
@@ -130,22 +133,35 @@ const Contact = () => {
           </VStack>
           {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
         </FormControl>
+
         {colorMode !== "dark" && (
           <Flex
             // bgColor={"red.300"}
             pos={"absolute"}
             justifyContent={"end"}
             left={[1, 1, 1, 4, 10]}
-            bottom={[4, 36, 4, 4, 24]}
+            bottom={[20, 36, 4, 5, 24]}
             transform={"scaleX(-1) rotate(12deg)"}
-            w={["23%", "20%", "22%", "21%", "18%"]}
+            w={["23%", "20%", "22%", "21%", "16%"]}
           >
             <Img src={tresor} />
           </Flex>
         )}
-        <Flex pos={"absolute"} justifyContent={"center"} bottom={0} p={4}>
+
+        <Flex
+          pos={"absolute"}
+          justifyContent={"center"}
+          bottom={0}
+          p={4}
+          m={6}
+          alignItems={"center"}
+        >
           <Text>Made with passion by Maatof Taha </Text>
-          <Img src={copyRight} w={"2.5%"} />
+          {colorMode !== "dark" ? (
+            <Img src={copyRight} w={"2.5%"} h={"2.5%"} mx={0} />
+          ) : (
+            <Img src={copyRightN} w={"1%"} h={"1%"} mx={2} />
+          )}
           <Text>2022</Text>
         </Flex>
       </VStack>

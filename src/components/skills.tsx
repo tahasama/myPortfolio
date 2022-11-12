@@ -77,9 +77,9 @@ const Skills = () => {
           "ellipse(140% 100% at 50% 100%)",
           "ellipse(130% 100% at 45% 100%)",
         ]}
-        mt={["-30vh", "-40vh", "-60vh", "-65vh", "-65vh"]}
+        mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["1700px", "1700px", "260vh", "290vh", "230vh"]}
+        h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
         // h={"100%"}
         py={"28"}
       >
@@ -95,14 +95,65 @@ const Skills = () => {
           ]}
           // gap={[0, 4]}
           position={"relative"}
-          justifyContent={"space-evenly"}
+          justifyContent={"center"}
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["-3vh", "-13vh", "24vh", "10vh", "10vh"]}
+          mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
-          mx={"40"}
+          mx={[0, 0, "40"]}
+          p={5}
         >
+          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
+            <Flex
+              clipPath={
+                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
+              }
+              mt={["0", "12", "0", "32"]}
+              h={["135px", "105px", "110px", "110px"]}
+              w={["150px", "120px", "120px", "130px"]}
+              mx={"5"}
+              bg={"white"}
+              position={"relative"}
+              justifyContent={"center"}
+              alignItems={"center"}
+              color="blue.50"
+              bgColor="purple.500"
+            >
+              <motion.div
+                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
+                transition={{ duration: 2 }}
+                style={{
+                  color: colorMode !== "light" ? "gray.400" : "white",
+                }}
+              >
+                {colorMode === "light" ? (
+                  <Img
+                    src={cloud}
+                    h={["15vh", "14.6vh", "15vh", "15vh", "13.7vh"]}
+                    filter={"grayscale(0%) brightness(1.12)"}
+                  />
+                ) : (
+                  <Img
+                    src={cloudN}
+                    h="11vh"
+                    filter={"grayscale(100%) brightness(.8)"}
+                  />
+                )}
+              </motion.div>
+            </Flex>{" "}
+            <Box textAlign={"center"} m={"3"}>
+              Intuitive
+            </Box>
+            <Box
+              textAlign={"center"}
+              fontSize="18"
+              fontWeight={500}
+              mx={["4", "0"]}
+            >
+              User friendly and easy to use
+            </Box>
+          </Flex>
           <Flex alignItems={"center"} flexDir={"column"} m={"2"}>
             <Flex
               clipPath={
@@ -157,56 +208,7 @@ const Skills = () => {
               layouts that works on any device
             </Box>
           </Flex>
-          <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
-            <Flex
-              clipPath={
-                "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
-              }
-              mt={["0", "12", "0", "32"]}
-              h={["135px", "105px", "110px", "110px"]}
-              w={["150px", "120px", "120px", "130px"]}
-              mx={"5"}
-              bg={"white"}
-              position={"relative"}
-              justifyContent={"center"}
-              alignItems={"center"}
-              color="blue.50"
-              bgColor="purple.500"
-            >
-              <motion.div
-                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
-                transition={{ duration: 2 }}
-                style={{
-                  color: colorMode !== "light" ? "gray.400" : "white",
-                }}
-              >
-                {colorMode === "light" ? (
-                  <Img
-                    src={cloud}
-                    h={["15vh", "14.6vh", "15vh", "15vh", "13.7vh"]}
-                    filter={"grayscale(0%) brightness(1.12)"}
-                  />
-                ) : (
-                  <Img
-                    src={cloudN}
-                    h="11vh"
-                    filter={"grayscale(100%) brightness(.8)"}
-                  />
-                )}
-              </motion.div>
-            </Flex>{" "}
-            <Box textAlign={"center"} m={"3"}>
-              Intuitive
-            </Box>
-            <Box
-              textAlign={"center"}
-              fontSize="18"
-              fontWeight={500}
-              mx={["4", "0"]}
-            >
-              User friendly and easy to use
-            </Box>
-          </Flex>
+
           <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
               clipPath={
@@ -284,7 +286,7 @@ const Skills = () => {
         {/* skills */}
 
         <Flex
-          mt={["-12", "-6", "32", "32", "40"]}
+          mt={["-12", "-6", "10", "24", "32"]}
           flexDir={["column", "column", "row", "row", "row"]}
           gap={[3, 10, 0]}
           justifyContent={"space-around"}
@@ -696,18 +698,18 @@ const Skills = () => {
           // bgColor={"red"}
           justifyContent={"space-between"}
           // top={"-20"}
-          mt={["-170vh", "-225vh", "-225vh", "-255vh", "-210vh"]}
+          mt={["-170vh", "-225vh", "-267vh", "-290vh", "-220vh"]}
         >
           <Img
             src={palm1}
             overflow={"hidden"}
-            w={["100%", "30%", "25%", "23%", "20%"]}
+            w={["100%", "30%", "29%", "25%", "20%"]}
             mx={[6, 0, 0, 0, 0]}
           />
           <Img
             src={palm1}
             overflow={"hidden"}
-            w={["100%", "30%", "25%", "23%", "20%"]}
+            w={["100%", "30%", "29%", "25%", "20%"]}
             transform={"scaleX(-1)"}
             mx={[6, 0, 0, 0, 0]}
           />

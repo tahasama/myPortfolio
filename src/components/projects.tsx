@@ -47,12 +47,12 @@ const Projects = () => {
   const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
   const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2300, 2400], [750, -800]);
-  const y2 = useTransform(scrollY, [2300, 2500], [750, -1000]);
-  const y3 = useTransform(scrollY, [2100, 2600], [700, -1200]);
-  const y4 = useTransform(scrollY, [2100, 2300], [550, -900]);
-  const y5 = useTransform(scrollY, [2200, 2400], [550, -1100]);
-  const y6 = useTransform(scrollY, [2000, 2400], [550, -1300]);
+  const y1 = useTransform(scrollY, [2500, 2800], [750, -800]);
+  const y2 = useTransform(scrollY, [2600, 2800], [750, -1300]);
+  const y3 = useTransform(scrollY, [2550, 2750], [780, -1200]);
+  const y4 = useTransform(scrollY, [2650, 2750], [770, -900]);
+  const y5 = useTransform(scrollY, [2500, 2650], [740, -1400]);
+  const y6 = useTransform(scrollY, [2600, 2800], [550, -1300]);
 
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
@@ -68,7 +68,7 @@ const Projects = () => {
           "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
           "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         ]}
-        mt={["-10vh", "-14vh", "-75vh", "-85vh", "-50vh"]}
+        mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
@@ -493,7 +493,7 @@ const Projects = () => {
               x: x5,
               width: "100vw",
               position: "fixed",
-              top: 200,
+              top: 1000,
               left: 0,
               zIndex: 2,
               overflow: "hidden",
