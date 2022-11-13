@@ -51,36 +51,37 @@ const Contact = () => {
   };
   return (
     <>
+      <Element name="Contact"></Element>
+
       <VStack
         position={"relative"}
-        h={["110vh", "110vh", "107vh", "110vh", "99vh"]}
+        // h={["110vh", "110vh", "107vh", "110vh", "99vh"]}
         // bgGradient={bgOnLight}
         bgColor={bglOnLight}
+        p={12}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
-        clipPath={[
-          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-          "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
-        ]}
+        // clipPath={[
+        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+        //   "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
+        // ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
-        mt={[
-          -48,
-          -48,
-          `${colorMode !== "dark" ? "-30vh" : "-54vh"}`,
+        // mt={[
+        //   -48,
+        //   -48,
+        //   `${colorMode !== "dark" ? "-30vh" : "-54vh"}`,
 
-          "-50vh",
-          // "-80vh",
-          `${colorMode !== "dark" ? "-99vh" : "-30vh"}`,
-        ]}
+        //   "-50vh",
+        //   // "-80vh",
+        //   `${colorMode !== "dark" ? "-99vh" : "-30vh"}`,
+        // ]}
         // zIndex={99}
-        w={"100%"}
+        // w={"100%"}
       >
-        <Element name="Contact"></Element>
-
         <FormControl
           ref={form}
           onSubmit={sendEmail}
-          top={[28, 28, 28, 28, 28]}
+          // top={[28, 28, 28, 28, 28]}
           w={[6 / 7, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
           //   fontSize={[20, 20, 20, 20, 20]}
           //   mt={[-40, -60, -80, -20, -40]}
@@ -149,12 +150,14 @@ const Contact = () => {
         )}
 
         <Flex
-          pos={"absolute"}
+          pos={"relative"}
           justifyContent={"center"}
           bottom={0}
           p={4}
           m={6}
           alignItems={"center"}
+          textAlign="center"
+          flexDir={["column", "column", "row"]}
         >
           <Text>Made with passion by Maatof Taha </Text>
           {colorMode !== "dark" ? (
@@ -172,7 +175,7 @@ const Contact = () => {
               mx={2}
             />
           )}
-          <Text>2022</Text>
+          <Text textAlign="center">2022</Text>
         </Flex>
       </VStack>
     </>

@@ -60,29 +60,29 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <>
-      <Element name="Skills"></Element>
-
+    <Box h={"100%"}>
       <Flex
         // w={"100%"}
         flexDir={["column", "column", "column", "column"]}
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
-        clipPath={[
-          // "ellipse(59% 65% at 40% 65%)",
+        // clipPath={[
+        //   // "ellipse(59% 65% at 40% 65%)",
 
-          "ellipse(300% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(140% 100% at 50% 100%)",
-          "ellipse(130% 100% at 45% 100%)",
-        ]}
-        mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
+        //   "ellipse(300% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(140% 100% at 50% 100%)",
+        //   "ellipse(130% 100% at 45% 100%)",
+        // ]}
+        // mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
-        h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
+        // h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
         // h={"100%"}
         py={"28"}
       >
+        <Element name="Skills"></Element>
+
         {/* <Element name="Skills"></Element> */}
         {/* <motion.div style={{ margin: 0, padding: 0, width: "100%" }}> */}
         {/* <Element name="Skills"></Element> */}
@@ -99,7 +99,8 @@ const Skills = () => {
           fontSize={"20"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
-          mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
+          // mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
+          // mt={"-20"}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={[0, 0, "40"]}
           p={5}
@@ -130,14 +131,14 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={cloud}
-                    h={["15vh", "14.6vh", "15vh", "15vh", "13.7vh"]}
+                    h="28"
                     filter={"grayscale(0%) brightness(1.12)"}
                     transform={"scale(0.85)"}
                   />
                 ) : (
                   <Img
                     src={cloudN}
-                    h="11vh"
+                    h="20"
                     filter={"grayscale(100%) brightness(.8)"}
                     transform={"scale(0.85)"}
                   />
@@ -182,7 +183,8 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={resN}
-                    h={["8.8vh", "7.8vh", "7vh", "8vh", "7vh"]}
+                    // h={["8.8vh", "7.8vh", "7vh", "8vh", "7vh"]}
+                    h={16}
                     filter={"grayscale(100%) brightness(2)"}
                     m={0}
                     transform={"scale(0.85)"}
@@ -191,7 +193,8 @@ const Skills = () => {
                   <Img
                     src={resD}
                     color="purple.500"
-                    h={["9vh", "7.4vh", "9vh", "9vh", "7.7vh"]}
+                    // h={["9vh", "7.4vh", "9vh", "9vh", "7.7vh"]}
+                    h={16}
                     filter={"grayscale(100%) brightness(2)"}
                     transform={"scale(0.85)"}
                     m={0}
@@ -291,7 +294,7 @@ const Skills = () => {
         <Flex
           mt={["-12", "-6", "10", "24", "32"]}
           flexDir={["column", "column", "row", "row", "row"]}
-          gap={[3, 10, 0]}
+          gap={[3, 10, 5, 0]}
           justifyContent={"space-around"}
           mx={"20"}
         >
@@ -306,7 +309,8 @@ const Skills = () => {
               mt={["20", "3"]}
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
-              w={["86vw", "60vw", "30vw", "25vw"]}
+              // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
+              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
@@ -322,8 +326,9 @@ const Skills = () => {
               h={["70%", "70%", "100%", "80%", "100%"]}
             >
               <Flex
-                w={["86vw", "60vw", "30vw", "25vw"]}
-                mt={["3", "2", "8", "6", "4"]}
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                mt={["3", "2", "6", "6", "4"]}
                 position={"relative"}
                 justifyContent={"space-around"}
                 alignItems={"center"}
@@ -343,7 +348,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? reactD : reactN}
-                      w={["74px", "74px", "48px", "58px", "68px"]}
+                      w={["64px", "74px", "48px", "58px", "68px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"}>
@@ -364,7 +369,7 @@ const Skills = () => {
                   >
                     <Img
                       src={ts}
-                      w={["64px", "64px", "48px", "48px", "58px"]}
+                      w={["54px", "64px", "48px", "48px", "58px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"} mt={1}>
@@ -385,7 +390,7 @@ const Skills = () => {
                   >
                     <Img
                       src={reduxL}
-                      w={["70px", "70px", "38px", "48px", "58px"]}
+                      w={["60px", "70px", "38px", "48px", "58px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"}>
@@ -396,7 +401,8 @@ const Skills = () => {
               </Flex>
 
               <Flex
-                w={["86vw", "60vw", "30vw", "25vw"]}
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
                 // mt={["0", "2", "8", "24", "24"]}
                 position={"relative"}
                 justifyContent={"space-evenly"}
@@ -435,12 +441,13 @@ const Skills = () => {
                     templateRows={["repeat(2, 1fr)"]}
                     justifyItems={"center"}
                     alignItems={"center"}
+                    p={2}
                   >
                     <Img
                       src={chakra}
-                      w={["70px", "64px", "48px", "58px", "68px"]}
+                      w={["64px", "64px", "48px", "58px", "68px"]}
                       mb={[-1]}
-                      mt={[0, 0, -4, -4, -7]}
+                      mt={[-3, -3, -4, -4, -7]}
                     />
                     <Box
                       textAlign={"center"}
@@ -460,13 +467,14 @@ const Skills = () => {
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
-            mt={["-10", "-16", "0", "0", "0"]}
+            mt={["-16", "0", "0", "0", "0"]}
           >
             <Box
-              mt={["2", "2"]}
+              mt={["20", "3"]}
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
-              w={["86vw", "60vw", "30vw", "25vw"]}
+              // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
+              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
@@ -482,8 +490,9 @@ const Skills = () => {
               h={["60%", "60%", "90%", "80%", "90%"]}
             >
               <Flex
-                w={["86vw", "60vw", "30vw", "25vw"]}
-                mt={["1", "2", "20", "12", "20"]}
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                mt={["0", "0", "20", "12", "20"]}
                 position={"relative"}
                 justifyContent={"space-evenly"}
                 alignItems={"center"}
@@ -532,7 +541,7 @@ const Skills = () => {
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={[-12, -12, 0, -8, -6]}
+                      mt={[-12, -12, -16, -8, -6]}
                     >
                       Firebase
                     </Box>
@@ -541,41 +550,47 @@ const Skills = () => {
               </Flex>
 
               <Flex
-                w={["86vw", "60vw", "30vw", "25vw"]}
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
                 // mt={["0", "2", "8", "24", "24"]}
                 position={"relative"}
                 justifyContent={"space-around"}
                 alignItems={"center"}
-                textAlign={"center"}
+                // textAlign={"center"}
                 flexDir={["row", "row", "column"]}
-                mt={[-7, -7, 0, 0, 0]}
+                mt={[0, 0, 0, 0, 0]}
+                pb={[3, 3, 0]}
+                // m={0}
+                textAlign={"center"}
               >
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: [0, 1] }}
                   transition={{ delay: 0.8 }}
                 >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
+                  <Flex
+                    // templateRows={["repeat(2, 1fr)"]}
+                    flexDirection={["column", "column"]}
                     justifyItems={"center"}
                     alignItems={"center"}
-                    mt={["-12", "-12", "-12", "-28", "-12"]}
-                    py={[6, 6, 6, 16, 6]}
+                    mt={["-16", "-12", "-12", "-56", "-16"]}
+                    py={[0, 0, 6, 40, 6]}
+                    textAlign={"center"}
                   >
                     <Img
                       src={colorMode === "light" ? mongoN : mongoN}
-                      w={["160px", "160px", "130px", "140px", "150px"]}
+                      w={["160px", "160px", "130px", "170px", "190px"]}
                       // mb={20}
                       // h={"80px"}
                     />
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={["-24", "-24", -16, -16, -16]}
+                      mt={["-4", "-4", -2, -3, -4]}
                     >
                       Mongo db
                     </Box>
-                  </Grid>{" "}
+                  </Flex>{" "}
                 </motion.div>
               </Flex>
             </Box>
@@ -586,13 +601,14 @@ const Skills = () => {
             justifyContent={"center"}
             alignItems={"center"}
             position={"relative"}
-            mt={["-10", "-16", "0", "0", "0"]}
+            mt={["3", "-6", "0", "0", "0"]}
           >
             <Box
               mt={["2", "10", "2"]}
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
-              w={["86vw", "60vw", "30vw", "25vw"]}
+              // w={["86vw", "60vw", "30vw", "25vw"]}
+              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
@@ -605,11 +621,13 @@ const Skills = () => {
             <Box
               bgColor={bglCard}
               borderBottomRadius={"40"}
-              py={0}
+              // py={-20}
               h={["100%", "100%", "90%", "80%", "90%"]}
+              py={[8, 8, 0]}
             >
               <Flex
-                w={["86vw", "60vw", "30vw", "25vw"]}
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
                 mt={["5", "5", "20", "20", "20"]}
                 position={"relative"}
                 justifyContent={"space-around"}
@@ -637,7 +655,7 @@ const Skills = () => {
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={[-4, -4, -4, -4, -4]}
+                      mt={[-4, -4, -10, -12, -4]}
                     >
                       Git
                     </Box>
@@ -658,7 +676,7 @@ const Skills = () => {
                       src={colorMode === "light" ? githubN : githubN}
                       w={["65px", "60px", "44px", "54px", "64px"]}
                       filter={"brightness(.92)"}
-                      mb={1}
+                      mb={2}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"} mt={-4}>
                       GitHub
@@ -675,13 +693,18 @@ const Skills = () => {
                     templateRows={["repeat(2, 1fr)"]}
                     justifyItems={"center"}
                     alignItems={"center"}
+                    mt={[0, 0, 4, 0, 0]}
                   >
                     <Img
                       src={docker}
                       w={["68px", "68px", "50px", "60px", "70px"]}
                       filter={"brightness(.92)"}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-5}>
+                    <Box
+                      textAlign={"center"}
+                      color={"gray.400"}
+                      mt={[-5, -5, -3, -5, -5]}
+                    >
                       Docker
                     </Box>
                   </Grid>
@@ -694,7 +717,7 @@ const Skills = () => {
         {/* <Box>gggggggggg</Box> */}
       </Flex>
 
-      {colorMode !== "dark" && !isMobile && (
+      {/* {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
           position={"absolute"}
@@ -718,8 +741,8 @@ const Skills = () => {
             mx={[6, 0, 0, 0, 0]}
           />
         </Flex>
-      )}
-    </>
+      )} */}
+    </Box>
   );
 };
 

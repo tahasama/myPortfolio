@@ -28,34 +28,116 @@ const About = () => {
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
-    <>
+    <Box
+      h={
+        selected === ""
+          ? ["53vh"]
+          : selected === "shorter"
+          ? ["62vh"]
+          : selected === "short"
+          ? ["71vh"]
+          : ["81vh"]
+      }
+    >
+      <Element name="About"></Element>
+
       <Flex
         position={"relative"}
         alignItems={"center"}
         flexDirection={["column"]}
-        h={
-          selected === ""
-            ? ["100vh", "100vh", "120vh", "120vh", "122vh"]
-            : selected === "shorter"
-            ? ["125vh", "125vh", "140vh", "140vh", "127vh"]
-            : selected === "short"
-            ? ["155vh", "155vh", "160vh", "160vh", "137vh"]
-            : ["165vh", "175vh", "180vh", "175vh", "150vh"]
-        }
+        // h={
+        //   selected === ""
+        //     ? ["100vh", "100vh", "120vh", "120vh", "60vh"]
+        //     : selected === "shorter"
+        //     ? ["125vh", "125vh", "140vh", "140vh", "70vh"]
+        //     : selected === "short"
+        //     ? ["155vh", "155vh", "160vh", "160vh", "80vh"]
+        //     : ["165vh", "175vh", "180vh", "175vh", "100vh"]
+        // }
         bg={bgOnLight}
         fontFamily={"roboto"}
-        top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
+        // top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
+        justifyContent={"space-around"}
       >
-        <Element name="About"></Element>
-
         {colorMode !== "dark" && (
           <Box top={"20"}>
             <Birds />
           </Box>
         )}
+        <Flex
+          justifyContent={"space-around"}
+          fontWeight={"500"}
+          fontFamily={"ms madi"}
+          zIndex={"1"}
+          textAlign="center"
+          w={["100%", "full", "full", "container.md"]}
 
+          // mt={"0"}
+        >
+          <Flex
+            flexDirection={["column"]}
+            position={"relative"}
+            alignItems={"center"}
+          >
+            <Box>Shortest</Box>
+            <TriangleDownIcon />
+            <Radio
+              onChange={radioValue}
+              value=""
+              defaultChecked={true}
+              isChecked={selected === "" ? true : false}
+              m={"1"}
+            />
+          </Flex>
+
+          <Flex
+            flexDirection={["column"]}
+            position={"relative"}
+            alignItems={"center"}
+          >
+            <Box> Shorter</Box>
+            <TriangleDownIcon />
+            <Radio
+              onChange={radioValue}
+              value="shorter"
+              isChecked={selected === "shorter" ? true : false}
+              m={"1"}
+            />
+          </Flex>
+
+          <Flex
+            flexDirection={["column"]}
+            position={"relative"}
+            alignItems={"center"}
+          >
+            <Box>Short</Box>
+            <TriangleDownIcon />
+            <Radio
+              onChange={radioValue}
+              value="short"
+              isChecked={selected === "short" ? true : false}
+              m={"1"}
+            />
+          </Flex>
+
+          <Flex
+            flexDirection={["column"]}
+            position={"relative"}
+            alignItems={"center"}
+          >
+            <Box> Full </Box>
+
+            <TriangleDownIcon />
+            <Radio
+              onChange={radioValue}
+              value="full"
+              isChecked={selected === "full" ? true : false}
+              m={"1"}
+            />
+          </Flex>
+        </Flex>
         <Flex
           flexDirection={["column"]}
           // w={"100%"}
@@ -63,88 +145,17 @@ const About = () => {
           alignItems={"center"}
           justifyContent={"center"}
           // zIndex={"99"}
-          top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
+          // top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
           overflow={"hidden"}
+          fontSize={"2xl"}
         >
-          <Flex
-            justifyContent={"space-around"}
-            fontWeight={"500"}
-            fontFamily={"ms madi"}
-            zIndex={"1"}
-            textAlign="center"
-            w={["100%", "full", "full", "container.md"]}
-            mt={"0"}
-          >
-            <Flex
-              flexDirection={["column"]}
-              position={"relative"}
-              alignItems={"center"}
-            >
-              <Box>Shortest</Box>
-              <TriangleDownIcon />
-              <Radio
-                onChange={radioValue}
-                value=""
-                defaultChecked={true}
-                isChecked={selected === "" ? true : false}
-                m={"1"}
-              />
-            </Flex>
-
-            <Flex
-              flexDirection={["column"]}
-              position={"relative"}
-              alignItems={"center"}
-            >
-              <Box> Shorter</Box>
-              <TriangleDownIcon />
-              <Radio
-                onChange={radioValue}
-                value="shorter"
-                isChecked={selected === "shorter" ? true : false}
-                m={"1"}
-              />
-            </Flex>
-
-            <Flex
-              flexDirection={["column"]}
-              position={"relative"}
-              alignItems={"center"}
-            >
-              <Box>Short</Box>
-              <TriangleDownIcon />
-              <Radio
-                onChange={radioValue}
-                value="short"
-                isChecked={selected === "short" ? true : false}
-                m={"1"}
-              />
-            </Flex>
-
-            <Flex
-              flexDirection={["column"]}
-              position={"relative"}
-              alignItems={"center"}
-            >
-              <Box> Full </Box>
-
-              <TriangleDownIcon />
-              <Radio
-                onChange={radioValue}
-                value="full"
-                isChecked={selected === "full" ? true : false}
-                m={"1"}
-              />
-            </Flex>
-          </Flex>
-
           <Flex flexDirection={["row"]}>
             {(selected === "" ||
               selected === "full" ||
               selected === "short" ||
               selected === "shorter") && (
               <Box
-                fontSize={["20px", "20px", "26px"]}
+                // fontSize={["20px", "20px", "26px"]}
                 fontWeight={["500", "400"]}
                 fontFamily="roboto slab"
                 textAlign="center"
@@ -152,6 +163,7 @@ const About = () => {
                 mx={"2"}
                 letterSpacing="wider"
                 w={"auto"}
+                // h={"full"}
               >
                 I'm a self thaught Frontend focused Web Developer
               </Box>
@@ -159,17 +171,18 @@ const About = () => {
           </Flex>
           <Flex
             flexDirection={"column"}
-            fontSize={["17px", "19px", "23px"]}
+            // fontSize={["17px", "19px", "23px"]}
             fontWeight={["400", "300", "300"]}
             color={colorMode === "light" ? "gray.800" : "gray.200"}
             position={"relative"}
-            h={"full"}
+            // h={"full"}
             overflow={"hidden"}
             transition={"all .2s ease-out"}
             lineHeight={["6", "9"]}
             letterSpacing={"wide"}
             fontFamily="roboto slab"
             mx={["2", "5"]}
+            // m={0}
             justifyContent={"center"}
             alignItems={"center"}
           >
@@ -215,8 +228,8 @@ const About = () => {
             )}
             <Link to="Contact" smooth>
               <Button
-                m={"6"}
-                py={["3.5vh", "5vh"]}
+                m={"20"}
+                py={["9"]}
                 px={["8vw", "7vw"]}
                 bg={colorMode === "light" ? "orange.500" : "blue.600"}
                 _hover={{
@@ -245,7 +258,7 @@ const About = () => {
           </Flex>
         </Flex>
       </Flex>
-    </>
+    </Box>
   );
 };
 

@@ -23,7 +23,7 @@ import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
 import CloudNstars from "./cloudNstars";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { m, motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 
@@ -70,7 +70,7 @@ const Home = () => {
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
-    <Box overflow={"hidden"}>
+    <Box overflow={"hidden"} h={["100vh"]}>
       <Element name="Home"></Element>
       {colorMode !== "dark" && (
         <motion.div
@@ -130,24 +130,27 @@ const Home = () => {
         position={"relative"}
         // alignItems={"center"}
         // flexDirection={["column-reverse", "column-reverse", "row"]}
-        // h={"140vh"}
+        // h={"100%"}
         // bg={bglOnLight}
         // top={"-2"}
-        clipPath={[
-          "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
-          "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
-          "polygon(0 0, 100% 0, 100% 86%, 0 100%)",
-        ]}
+        // clipPath={[
+        //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+        //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+        //   // "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
+        // ]}
         zIndex={"1"}
-        h={["690px", "130vh", "120vh", "125vh", "125vh"]}
+        // h={["690px", "130vh", "120vh", "125vh", "125vh"]}
         bg={bglOnLight}
         alignItems={"center"}
         flexDirection={["column-reverse", "column-reverse", "row"]}
-        top={["0", "-24vh", "10", "0", "0"]}
+        top={["0", "0", "16", "16", "10"]}
+        // ml={[0, 0, 5, 5, 5]}
         // mt={["40", "20"]}
         justifyContent={"center"}
+        // py={[48, 48, 48, 48, 44]}
+        h={"100%"}
       >
-        <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
+        <Box position={"absolute"} top={[0, 0, "-8"]} right={"5"}>
           <CloudNstars />
         </Box>
 
@@ -157,8 +160,9 @@ const Home = () => {
           position={"relative"}
           alignItems={"center"}
           // left={["0", "0", "-10", "-6", "32"]}
-          mx={16}
-          top={["0", "-8", "-10", "-10"]}
+          mx={[0, 0, 12, 20, 16]}
+          justifyContent={"center"}
+          top={["0", "0", "0", "0", "0"]}
           // onMouseOver={() => enterF()}
           // w={["70%", "44%", "43%", "38%", "30%"]}
           cursor={"pointer"}
@@ -167,7 +171,10 @@ const Home = () => {
           border={"white"}
           // _hover={{ animation: `${flip} 2s ease-in-out` }}
           role="group"
-          w={[0, 0, "500px", "500px", "500px"]}
+          // w={[0, 0, "450px", "450px", "1450px"]}
+          w={["30%", "30%", "40%", "60%", "33%"]}
+          // h={"auto"}
+          ml={[0, 0, 5, 24, 20]}
         >
           <motion.div
             whileHover={{
@@ -195,6 +202,7 @@ const Home = () => {
                 // }
                 alt="devDay2"
                 borderRadius={"3xl"}
+                // w={["full"]}
               />
             )}
             <Flex
@@ -254,7 +262,7 @@ const Home = () => {
           position="relative"
           alignItems={["center", "center", "start", "start", "start"]}
           lineHeight={"taller"}
-          top={["-6vh", "34vh", "-16"]}
+          top={["36", "40", "-8"]}
           w={["full", "auto"]}
           // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}

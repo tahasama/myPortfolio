@@ -57,29 +57,30 @@ const Projects = () => {
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
-    <>
+    <Box h={"100%"}>
+      <Element name="Projects"></Element>
+
       <Box
-        h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
+        // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
-        clipPath={[
-          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        ]}
-        mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
+        // clipPath={[
+        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        // ]}
+        // mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
       >
-        <Element name="Projects"></Element>
-
         <Flex
           flexDir={"column"}
-          top={[80, 80, "60", 80, 60]}
+          // top={[80, 80, "60", 80, 60]}
           position={"relative"}
           gap={20}
+          pt={20}
         >
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}
@@ -87,7 +88,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
           >
             <Img
               src={proj1}
@@ -224,7 +225,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
+            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
           >
             <Box w={"full"} overflow={"hidden"}>
               <motion.div
@@ -366,9 +367,8 @@ const Projects = () => {
           </VStack>
         </Flex>
       </Box>
-
       {colorMode !== "dark" && (
-        <HStack mt={[0, 0, -40, 0, 80]}>
+        <HStack>
           <motion.div
             style={{
               // x: colorMode !== "light" ? x2 : x1,
@@ -544,7 +544,7 @@ const Projects = () => {
           </motion.div>
         </HStack>
       )}
-    </>
+    </Box>
   );
 };
 
