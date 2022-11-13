@@ -10,21 +10,21 @@ import {
 } from "@chakra-ui/react";
 
 import Hero from "./hero";
-import devNight from "../images/devNight2.png";
-import devNight2 from "../images/devNight4.png";
-import dev1 from "../images/dev40.jpg";
-import dev2 from "../images/dev11.jpg";
-import tt from "../images/tt.jpg";
-import tt1 from "../images/tt1.jpg";
+// import devNight from "../images/devNight2.png";
+// import devNight2 from "../images/devNight4.png";
+// import dev1 from "../images/dev40.jpg";
+// import dev2 from "../images/dev11.jpg";
+// import tt from "../images/tt.jpg";
+// import tt1 from "../images/tt1.jpg";
 import tttt from "../images/tttt.png";
-import nnn from "../images/nnn.png";
+// import nnn from "../images/nnn.png";
 import nnnight from "../images/nnnight1.png";
 import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
 import CloudNstars from "./cloudNstars";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import { useState } from "react";
+// import { useState } from "react";
 import { Element, Link } from "react-scroll";
 
 const falling = keyframes`
@@ -51,13 +51,13 @@ const Home = () => {
   const buttonLightHover = useColorModeValue("#f55c56", "teal.600");
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const [pic, setPic] = useState(true);
+  // const [pic, setPic] = useState(true);
 
-  const enterF = () => {
-    setTimeout(() => {
-      setPic(!pic);
-    }, 450);
-  };
+  // const enterF = () => {
+  //   setTimeout(() => {
+  //     setPic(!pic);
+  //   }, 450);
+  // };
 
   const { scrollY } = useViewportScroll();
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
@@ -178,20 +178,16 @@ const Home = () => {
           >
             {colorMode !== "light" ? (
               <Img
-                src={!pic ? nnnight : nnnight}
+                src={nnnight}
                 alt="devNight"
                 borderRadius={"3xl"}
-                boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
-                filter={
-                  pic
-                    ? "brightness(.7) grayscale(25%)  saturate(65%)"
-                    : "brightness(1) grayscale(90%)"
-                }
+                boxShadow={"0px 0px 50px #2C5282"}
+                filter={"brightness(.7) grayscale(25%)  saturate(65%)"}
               />
             ) : (
               <Img
                 // src={pic ? dev : dev1}
-                src={pic ? tttt : tttt}
+                src={tttt}
                 // filter={
                 //   pic
                 //     ? "brightness(3) grayscale(0%)"
