@@ -7,7 +7,7 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { m, motion } from "framer-motion";
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
 // import Projects from "./projects";
@@ -31,12 +31,12 @@ const About = () => {
     <Box
       h={
         selected === ""
-          ? ["53vh"]
+          ? ["65vh", "53vh"]
           : selected === "shorter"
-          ? ["62vh"]
+          ? ["96vh", "62vh"]
           : selected === "short"
-          ? ["71vh"]
-          : ["81vh"]
+          ? ["123vh", "71vh"]
+          : ["147vh", "81vh"]
       }
     >
       <Element name="About"></Element>
@@ -60,6 +60,7 @@ const About = () => {
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
         justifyContent={"space-around"}
+        h={"100%"}
       >
         {colorMode !== "dark" && (
           <Box top={"20"}>
@@ -147,7 +148,8 @@ const About = () => {
           // zIndex={"99"}
           // top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
           overflow={"hidden"}
-          fontSize={"2xl"}
+          fontSize={["lg", "lg", "2xl"]}
+          w={"100vw"}
         >
           <Flex flexDirection={["row"]}>
             {(selected === "" ||
@@ -193,7 +195,12 @@ const About = () => {
                 animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
                 transition={{ duration: 2 }}
               >
-                <Box px={3} py={2} style={{ textIndent: 40 }}>
+                <Box
+                  w={["90vw", "auto"]}
+                  px={0}
+                  py={2}
+                  style={{ textIndent: 40 }}
+                >
                   I can build creative user friendly interfaces (but also full
                   backend for full control) of Websites and Web Applications,
                   bringing both the technical and visual aspects of a product.
@@ -206,7 +213,12 @@ const About = () => {
                 transition={{ duration: 2 }}
               >
                 {" "}
-                <Box px={3} py={2} style={{ textIndent: 40 }}>
+                <Box
+                  w={["90vw", "auto"]}
+                  px={3}
+                  py={2}
+                  style={{ textIndent: 40 }}
+                >
                   I started learning to code in mid 2020, with python then moved
                   to Javascript all the way to MERN Stack, where i fell in love
                   with the infinite possibility of creating and renovating
@@ -219,7 +231,12 @@ const About = () => {
                 animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
                 transition={{ duration: 1.5 }}
               >
-                <Box px={3} py={2} style={{ textIndent: 40 }}>
+                <Box
+                  w={["90vw", "auto"]}
+                  px={3}
+                  py={2}
+                  style={{ textIndent: 40 }}
+                >
                   I'm open to Job opportunities where I can contribute, learn
                   and grow. If you have a good opportunity that matches my
                   skills then don't hesitate to contact me.

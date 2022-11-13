@@ -60,7 +60,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={"100%"}>
+    <Box h={["250vh", "250vh", "100%"]}>
       {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
@@ -87,10 +87,12 @@ const Skills = () => {
         </Flex>
       )}
       <Flex
+        h={"100%"}
         // w={"100%"}
         flexDir={["column", "column", "column", "column"]}
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
+        // mt={}
         // clipPath={[
         //   // "ellipse(59% 65% at 40% 65%)",
 
@@ -128,7 +130,7 @@ const Skills = () => {
           // mt={"-20"}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={[0, 0, "40"]}
-          p={5}
+          // p={5}
         >
           <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
