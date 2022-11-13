@@ -158,9 +158,19 @@ const Contact = () => {
         >
           <Text>Made with passion by Maatof Taha </Text>
           {colorMode !== "dark" ? (
-            <Img src={copyRight} w={"2.5%"} h={"2.5%"} mx={0} />
+            <Img
+              src={copyRight}
+              w={["5%", "5%", "2.5%"]}
+              h={["5%", "5%", "2.5%"]}
+              mx={0}
+            />
           ) : (
-            <Img src={copyRightN} w={"1%"} h={"1%"} mx={2} />
+            <Img
+              src={copyRightN}
+              w={["3%", "3%", "1%"]}
+              h={["3%", "3%", "1%"]}
+              mx={2}
+            />
           )}
           <Text>2022</Text>
         </Flex>

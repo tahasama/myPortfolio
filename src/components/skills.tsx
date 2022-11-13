@@ -132,12 +132,14 @@ const Skills = () => {
                     src={cloud}
                     h={["15vh", "14.6vh", "15vh", "15vh", "13.7vh"]}
                     filter={"grayscale(0%) brightness(1.12)"}
+                    transform={"scale(0.85)"}
                   />
                 ) : (
                   <Img
                     src={cloudN}
                     h="11vh"
                     filter={"grayscale(100%) brightness(.8)"}
+                    transform={"scale(0.85)"}
                   />
                 )}
               </motion.div>
@@ -183,6 +185,7 @@ const Skills = () => {
                     h={["8.8vh", "7.8vh", "7vh", "8vh", "7vh"]}
                     filter={"grayscale(100%) brightness(2)"}
                     m={0}
+                    transform={"scale(0.85)"}
                   />
                 ) : (
                   <Img
@@ -190,7 +193,7 @@ const Skills = () => {
                     color="purple.500"
                     h={["9vh", "7.4vh", "9vh", "9vh", "7.7vh"]}
                     filter={"grayscale(100%) brightness(2)"}
-                    // transform={"scale(0.9)"}
+                    transform={"scale(0.85)"}
                     m={0}
                   />
                 )}
@@ -290,6 +293,7 @@ const Skills = () => {
           flexDir={["column", "column", "row", "row", "row"]}
           gap={[3, 10, 0]}
           justifyContent={"space-around"}
+          mx={"20"}
         >
           <Flex
             flexDir={"column"}
@@ -698,7 +702,7 @@ const Skills = () => {
           // bgColor={"red"}
           justifyContent={"space-between"}
           // top={"-20"}
-          mt={["-170vh", "-225vh", "-267vh", "-290vh", "-220vh"]}
+          mt={["0vh", "0vh", "-227vh", "-270vh", "-130vh"]}
         >
           <Img
             src={palm1}

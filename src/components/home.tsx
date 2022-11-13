@@ -145,6 +145,7 @@ const Home = () => {
         flexDirection={["column-reverse", "column-reverse", "row"]}
         top={["0", "-24vh", "10", "0", "0"]}
         // mt={["40", "20"]}
+        justifyContent={"center"}
       >
         <Box position={"absolute"} top={["0vh", "30vh", "0vh"]} right={"5"}>
           <CloudNstars />
@@ -155,17 +156,18 @@ const Home = () => {
           visibility={["hidden", "hidden", "visible", "visible", "visible"]}
           position={"relative"}
           alignItems={"center"}
-          left={["0", "0", "-10", "-6", "32"]}
+          // left={["0", "0", "-10", "-6", "32"]}
           mx={16}
           top={["0", "-8", "-10", "-10"]}
           // onMouseOver={() => enterF()}
-          w={["70%", "44%", "43%", "38%", "30%"]}
+          // w={["70%", "44%", "43%", "38%", "30%"]}
           cursor={"pointer"}
           onClick={toggleColorMode}
           // borderRadius={"3xl"}
           border={"white"}
           // _hover={{ animation: `${flip} 2s ease-in-out` }}
           role="group"
+          w={[0, 0, "500px", "500px", "500px"]}
         >
           <motion.div
             whileHover={{
@@ -182,7 +184,7 @@ const Home = () => {
                 boxShadow={pic ? "0px 0px 50px #2C5282" : "none"}
                 filter={
                   pic
-                    ? "brightness(.6) grayscale(40%)  saturate(65%)"
+                    ? "brightness(.7) grayscale(25%)  saturate(65%)"
                     : "brightness(1) grayscale(90%)"
                 }
               />
@@ -256,9 +258,9 @@ const Home = () => {
           position="relative"
           alignItems={["center", "center", "start", "start", "start"]}
           lineHeight={"taller"}
-          top={["-6vh", "-16"]}
+          top={["-6vh", "34vh", "-16"]}
           w={["full", "auto"]}
-          left={["0", "4", "-16", "-7", "40"]}
+          // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}
         >
           <Box
@@ -281,7 +283,7 @@ const Home = () => {
           <Divider w={[240, 280, 280, 380, 400]} />
           <Flex
             position={"relative"}
-            w={["278px", "60vw", "40vw", "46vw", "46vw"]}
+            w={["auto", "auto", "40vw", "46vw", "34vw"]}
             fontSize={["md", "lg", "xl", "2xl", "3xl"]}
             fontWeight={[600, 400]}
             fontFamily={"tajawal"}

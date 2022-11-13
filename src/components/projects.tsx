@@ -47,10 +47,10 @@ const Projects = () => {
   const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
   const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2500, 2800], [750, -800]);
-  const y2 = useTransform(scrollY, [2600, 2800], [750, -1300]);
-  const y3 = useTransform(scrollY, [2550, 2750], [780, -1200]);
-  const y4 = useTransform(scrollY, [2650, 2750], [770, -900]);
+  const y1 = useTransform(scrollY, [2500, 2800], [900, -800]);
+  const y2 = useTransform(scrollY, [2600, 2800], [950, -1300]);
+  const y3 = useTransform(scrollY, [2550, 2750], [980, -1200]);
+  const y4 = useTransform(scrollY, [2650, 2750], [970, -900]);
   const y5 = useTransform(scrollY, [2500, 2650], [740, -1400]);
   const y6 = useTransform(scrollY, [2600, 2800], [550, -1300]);
 
