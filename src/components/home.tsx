@@ -23,7 +23,7 @@ import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
 import CloudNstars from "./cloudNstars";
-import { m, motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 

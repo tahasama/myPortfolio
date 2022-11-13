@@ -61,6 +61,31 @@ const Skills = () => {
 
   return (
     <Box h={"100%"}>
+      {colorMode !== "dark" && !isMobile && (
+        <Flex
+          flexDirection={"row"}
+          position={"absolute"}
+          w={"100%"}
+          // bgColor={"red"}
+          justifyContent={"space-between"}
+          // top={"-20"}
+          // mt={["0vh", "0vh", "-227vh", "-270vh", "-130vh"]}
+        >
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={["100%", "30%", "29%", "25%", "20%"]}
+            mx={[6, 0, 0, 0, 0]}
+          />
+          <Img
+            src={palm1}
+            overflow={"hidden"}
+            w={["100%", "30%", "29%", "25%", "20%"]}
+            transform={"scaleX(-1)"}
+            mx={[6, 0, 0, 0, 0]}
+          />
+        </Flex>
+      )}
       <Flex
         // w={"100%"}
         flexDir={["column", "column", "column", "column"]}
@@ -716,32 +741,6 @@ const Skills = () => {
 
         {/* <Box>gggggggggg</Box> */}
       </Flex>
-
-      {/* {colorMode !== "dark" && !isMobile && (
-        <Flex
-          flexDirection={"row"}
-          position={"absolute"}
-          w={"100%"}
-          // bgColor={"red"}
-          justifyContent={"space-between"}
-          // top={"-20"}
-          mt={["0vh", "0vh", "-227vh", "-270vh", "-130vh"]}
-        >
-          <Img
-            src={palm1}
-            overflow={"hidden"}
-            w={["100%", "30%", "29%", "25%", "20%"]}
-            mx={[6, 0, 0, 0, 0]}
-          />
-          <Img
-            src={palm1}
-            overflow={"hidden"}
-            w={["100%", "30%", "29%", "25%", "20%"]}
-            transform={"scaleX(-1)"}
-            mx={[6, 0, 0, 0, 0]}
-          />
-        </Flex>
-      )} */}
     </Box>
   );
 };
