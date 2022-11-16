@@ -109,20 +109,28 @@ const Projects = () => {
                 // transition={{ ease: "linear" }}
                 style={{ overflow: "hidden" }}
               >
-                <Text
-                  style={{ textIndent: 40 }}
-                  fontSize={["22", "22", "18", "24", "24"]}
-                  textAlign={"center"}
+                <VStack
+                  position={"relative"}
+                  // style={{ textIndent: 40 }}
+                  fontSize={["20", "22", "18", "24", "24"]}
                   mb={2}
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  Quality Control App : An app for construction projects
-                </Text>
+                  <Text fontSize={["20", "22", "18", "24", "24"]}>
+                    Quality Control App :
+                  </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontSize={["18", "20", "16", "22", "22"]}
+                  >
+                    An app for big construction sites projects
+                  </Text>
+                </VStack>
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
-                  fontSize={["18", "18", "14", "16", "20"]}
+                  fontSize={["17", "18", "14", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon
@@ -135,22 +143,22 @@ const Projects = () => {
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />{" "}
-                    tracking of quantities of the used materiel,
+                    />
+                    Tracking of quantities of the used materiel,
                   </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    the advancement of the projects and its pace
+                    The advancement of the projects and its pace
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    every Quality inspection With necessary Laboratory and
+                    Every Quality inspection With necessary Laboratory and
                     Topography assistance
                   </ListItem>{" "}
                   <ListItem>
@@ -165,7 +173,7 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    detailed works
+                    Detailed works
                   </ListItem>{" "}
                 </List>
                 <Flex
@@ -208,7 +216,7 @@ const Projects = () => {
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[7, 8, 6, 6, 6]}
                       my={10}
-                      mx={[1, 1, 4, 4, 4]}
+                      mx={[2, 2, 4, 4, 4]}
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
                       letterSpacing={"wider"}
                     >
@@ -237,19 +245,28 @@ const Projects = () => {
                 // transition={{ ease: "linear" }}
                 style={{ overflow: "hidden" }}
               >
-                <Text
-                  fontSize={["22", "22", "18", "20", "24"]}
-                  textAlign={"center"}
-                  my={[4, 4, 2, 2, 2]}
+                <VStack
+                  position={"relative"}
+                  // style={{ textIndent: 40 }}
+                  fontSize={["20", "22", "18", "24", "24"]}
+                  mb={2}
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  Online Editor : An app for creating simple Projects
-                </Text>
+                  <Text fontSize={["20", "22", "18", "20", "24"]}>
+                    Online Editor App :
+                  </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontSize={["18", "22", "18", "20", "24"]}
+                  >
+                    An app for creating simple WebDev Projects
+                  </Text>
+                </VStack>
                 <List
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
-                  fontSize={["18", "18", "14", "16", "20"]}
+                  fontSize={["17", "18", "14", "16", "20"]}
                 >
                   <ListItem>
                     <ListIcon
@@ -270,14 +287,14 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    import any package
+                    Import any package
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    see immediate result
+                    See immediate result
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon

@@ -8,13 +8,18 @@ const CloudNstars = () => {
 
   return (
     <Box>
-      <Box position={"absolute"} right={"90px"} top={"160px"}>
+      <Box position={"absolute"} right={["24px", "90px"]} top={"160px"}>
         <Cloud delay={0.5} />
       </Box>
-      <Box position={"absolute"} right={"400px"} top={"130px"}>
+      <Box
+        position={"absolute"}
+        right={"400px"}
+        top={"130px"}
+        visibility={["hidden", "hidden", "hidden", "visible", "visible"]}
+      >
         <Cloud delay={1.5} />
       </Box>
-      <Box position={"absolute"} right={"20px"} top={"330px"}>
+      <Box position={"absolute"} right={["80px", "20px"]} top={"330px"}>
         <Cloud delay={3} />
       </Box>
       {colorMode !== "light" && (

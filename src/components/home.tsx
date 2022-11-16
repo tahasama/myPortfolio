@@ -18,7 +18,8 @@ import Hero from "./hero";
 // import tt1 from "../images/tt1.jpg";
 import tttt from "../images/tttt.png";
 // import nnn from "../images/nnn.png";
-import nnnight from "../images/nnnight1.png";
+// import nnnight from "../images/nnnight1.png";
+import nnnight from "../images/dddN1.png";
 import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
@@ -70,7 +71,15 @@ const Home = () => {
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
-    <Box overflow={"hidden"} h={["100vh"]}>
+    <Box
+      overflow={"hidden"}
+      h={["100vh"]}
+      // clipPath={[
+      //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+      //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+      //   // "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
+      // ]}
+    >
       <Element name="Home"></Element>
       {colorMode !== "dark" && (
         <motion.div
@@ -133,11 +142,7 @@ const Home = () => {
         // h={"100%"}
         // bg={bglOnLight}
         // top={"-2"}
-        // clipPath={[
-        //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
-        //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
-        //   // "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
-        // ]}
+
         zIndex={"1"}
         // h={["690px", "130vh", "120vh", "125vh", "125vh"]}
         bg={bglOnLight}
@@ -150,11 +155,11 @@ const Home = () => {
         // py={[48, 48, 48, 48, 44]}
         h={"100%"}
       >
-        <Box position={"absolute"} top={[0, 0, "-8"]} right={"5"}>
+        <Box position={"absolute"} top={[-10, 0, "-8"]} right={[-4, "5"]}>
           <CloudNstars />
         </Box>
 
-        <Flex
+        {/* <Flex
           // top={[1, -1, -1]}
           visibility={["hidden", "hidden", "visible", "visible", "visible"]}
           position={"relative"}
@@ -172,7 +177,7 @@ const Home = () => {
           // _hover={{ animation: `${flip} 2s ease-in-out` }}
           role="group"
           // w={[0, 0, "450px", "450px", "1450px"]}
-          w={["30%", "30%", "40%", "60%", "33%"]}
+          w={["30%", "30%", "40%", "60%", "30%"]}
           // h={"auto"}
           ml={[0, 0, 5, 24, 20]}
         >
@@ -182,14 +187,16 @@ const Home = () => {
               rotate: [0, 5, -5, 5, -5, 5, -5, 1],
             }}
             transition={{ type: "spring", stiffness: 1000 }}
+            // style={{ zIndex: 5 }}
           >
             {colorMode !== "light" ? (
               <Img
                 src={nnnight}
                 alt="devNight"
                 borderRadius={"3xl"}
-                boxShadow={"0px 0px 50px #2C5282"}
-                filter={"brightness(.7) grayscale(25%)  saturate(65%)"}
+                // boxShadow={"0px 0px 50px #2C5282"}
+                filter={"brightness(.7) grayscale(5%)  saturate(75%)"}
+                zIndex={6}
               />
             ) : (
               <Img
@@ -254,15 +261,16 @@ const Home = () => {
               </Box>
             </Flex>
           </motion.div>
-        </Flex>
+        </Flex> */}
 
         <Flex
           zIndex={2}
           flexDirection="column"
           position="relative"
-          alignItems={["center", "center", "start", "start", "start"]}
+          // alignItems={["center", "center", "start", "start", "start"]}
+          alignItems={["center", "center"]}
           lineHeight={"taller"}
-          top={["36", "40", "-8"]}
+          top={["32", "40", "-8"]}
           w={["full", "auto"]}
           // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}
@@ -287,7 +295,8 @@ const Home = () => {
           <Divider w={[240, 280, 280, 380, 400]} />
           <Flex
             position={"relative"}
-            w={["auto", "auto", "40vw", "46vw", "34vw"]}
+            // w={["auto", "auto", "40vw", "46vw", "34vw"]}
+            w={["auto"]}
             fontSize={["md", "lg", "xl", "2xl", "3xl"]}
             fontWeight={[600, 400]}
             fontFamily={"tajawal"}
@@ -316,8 +325,8 @@ const Home = () => {
                 // left={["0", "auto", "-6", "-58px", "-15px"]}
                 my={["4", "auto", 0]}
                 variant="solid"
-                px={["74px", "84px", "100px", "32"]}
-                py={["5", "7", "6", "8"]}
+                px={["74px", "84px", "20", "28", "32"]}
+                py={["5", "7", "7", "7", "8"]}
                 bg={buttonLight}
                 _hover={{ bg: buttonLightHover }}
                 _active={{ bg: buttonLightHover }}

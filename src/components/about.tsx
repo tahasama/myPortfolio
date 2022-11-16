@@ -31,20 +31,20 @@ const About = () => {
     <Box
       h={
         selected === ""
-          ? ["65vh", "53vh"]
+          ? ["lg"]
           : selected === "shorter"
-          ? ["96vh", "62vh"]
+          ? ["xl"]
           : selected === "short"
-          ? ["123vh", "71vh"]
-          : ["147vh", "81vh"]
+          ? ["3xl", "3xl", "2xl"]
+          : ["4xl", "4xl", "3xl"]
       }
     >
       <Element name="About"></Element>
 
-      <Flex
+      <Box
         position={"relative"}
         alignItems={"center"}
-        flexDirection={["column"]}
+        // flexDirection={["column"]}
         // h={
         //   selected === ""
         //     ? ["100vh", "100vh", "120vh", "120vh", "60vh"]
@@ -59,7 +59,7 @@ const About = () => {
         // top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
-        justifyContent={"space-around"}
+        justifyContent={"center"}
         h={"100%"}
       >
         {colorMode !== "dark" && (
@@ -68,12 +68,17 @@ const About = () => {
           </Box>
         )}
         <Flex
-          justifyContent={"space-around"}
+          justifyContent={"center"}
+          alignItems={"center"}
           fontWeight={"500"}
           fontFamily={"ms madi"}
           zIndex={"1"}
           textAlign="center"
-          w={["100%", "full", "full", "container.md"]}
+          w={["100%", "full", "full"]}
+          position={"absolute"}
+          top={[24, 24, 32]}
+          gap={[10, 9, 24, 28, 36]}
+          fontSize={["xs", "lg", "sm", "sm", "lg"]}
 
           // mt={"0"}
         >
@@ -139,6 +144,7 @@ const About = () => {
             />
           </Flex>
         </Flex>
+
         <Flex
           flexDirection={["column"]}
           // w={"100%"}
@@ -148,133 +154,129 @@ const About = () => {
           // zIndex={"99"}
           // top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
           overflow={"hidden"}
-          fontSize={["lg", "lg", "2xl"]}
-          w={"100vw"}
+          fontSize={["md", "md", "lg", "lg", "2xl"]}
+          // w={"7xl"}
+          // fontSize={["17px", "19px", "23px"]}
+          fontWeight={["400", "300", "300"]}
+          color={colorMode === "light" ? "gray.800" : "gray.200"}
+          // h={"full"}
+          transition={"all .2s ease-out"}
+          lineHeight={["6", "9"]}
+          letterSpacing={"wide"}
+          fontFamily="roboto slab"
+          mx={["2", "2", "24", "40", "40"]}
+          // m={0}
+          top={[colorMode !== "dark" ? 32 : 56]}
         >
-          <Flex flexDirection={["row"]}>
-            {(selected === "" ||
-              selected === "full" ||
-              selected === "short" ||
-              selected === "shorter") && (
+          {(selected === "" ||
+            selected === "full" ||
+            selected === "short" ||
+            selected === "shorter") && (
+            <Box
+              flexDirection={"column"}
+              // fontSize={["17px", "19px", "23px"]}
+              fontWeight={["400", "300", "300"]}
+              color={colorMode === "light" ? "gray.800" : "gray.200"}
+              position={"relative"}
+              // h={"full"}
+              overflow={"hidden"}
+              transition={"all .2s ease-out"}
+              lineHeight={["6", "9"]}
+              letterSpacing={"wide"}
+              fontFamily="roboto slab"
+              mx={["2", "5"]}
+              // m={0}
+              justifyContent={"center"}
+              alignItems={"center"}
+            >
+              I'm a self thaught Frontend focused Web Developer
+            </Box>
+          )}
+          {(selected === "full" ||
+            selected === "short" ||
+            selected === "shorter") && (
+            <motion.div
+              animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 2 }}
+            >
               <Box
-                // fontSize={["20px", "20px", "26px"]}
-                fontWeight={["500", "400"]}
-                fontFamily="roboto slab"
-                textAlign="center"
-                my={"7"}
-                mx={"2"}
-                letterSpacing="wider"
-                w={"auto"}
-                // h={"full"}
+                w={["90vw", "auto"]}
+                px={0}
+                py={2}
+                style={{ textIndent: 40 }}
               >
-                I'm a self thaught Frontend focused Web Developer
+                I can build creative user friendly interfaces (but also full
+                backend for full control) of Websites and Web Applications,
+                bringing both the technical and visual aspects of a product.
               </Box>
-            )}
-          </Flex>
-          <Flex
-            flexDirection={"column"}
-            // fontSize={["17px", "19px", "23px"]}
-            fontWeight={["400", "300", "300"]}
-            color={colorMode === "light" ? "gray.800" : "gray.200"}
-            position={"relative"}
-            // h={"full"}
-            overflow={"hidden"}
-            transition={"all .2s ease-out"}
-            lineHeight={["6", "9"]}
-            letterSpacing={"wide"}
-            fontFamily="roboto slab"
-            mx={["2", "5"]}
-            // m={0}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            {(selected === "full" ||
-              selected === "short" ||
-              selected === "shorter") && (
-              <motion.div
-                animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
-                transition={{ duration: 2 }}
+            </motion.div>
+          )}
+          {(selected === "full" || selected === "short") && (
+            <motion.div
+              animate={{ x: [1000, -20, 0, -10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 2 }}
+            >
+              <Box
+                w={["90vw", "auto"]}
+                px={3}
+                py={2}
+                style={{ textIndent: 40 }}
               >
-                <Box
-                  w={["90vw", "auto"]}
-                  px={0}
-                  py={2}
-                  style={{ textIndent: 40 }}
-                >
-                  I can build creative user friendly interfaces (but also full
-                  backend for full control) of Websites and Web Applications,
-                  bringing both the technical and visual aspects of a product.
-                </Box>
-              </motion.div>
-            )}
-            {(selected === "full" || selected === "short") && (
-              <motion.div
-                animate={{ x: [1000, -20, 0, -10, 0], opacity: [0.5, 0.8, 1] }}
-                transition={{ duration: 2 }}
+                I started learning to code in mid 2020, with python then moved
+                to Javascript all the way to MERN Stack, where i fell in love
+                with the infinite possibility of creating and renovating
+                incredible projects.
+              </Box>
+            </motion.div>
+          )}
+          {selected === "full" && (
+            <motion.div
+              animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 1.5 }}
+            >
+              <Box
+                w={["90vw", "auto"]}
+                px={3}
+                py={2}
+                style={{ textIndent: 40 }}
               >
-                {" "}
-                <Box
-                  w={["90vw", "auto"]}
-                  px={3}
-                  py={2}
-                  style={{ textIndent: 40 }}
-                >
-                  I started learning to code in mid 2020, with python then moved
-                  to Javascript all the way to MERN Stack, where i fell in love
-                  with the infinite possibility of creating and renovating
-                  incredible projects.
-                </Box>
-              </motion.div>
-            )}
-            {selected === "full" && (
-              <motion.div
-                animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
-                transition={{ duration: 1.5 }}
-              >
-                <Box
-                  w={["90vw", "auto"]}
-                  px={3}
-                  py={2}
-                  style={{ textIndent: 40 }}
-                >
-                  I'm open to Job opportunities where I can contribute, learn
-                  and grow. If you have a good opportunity that matches my
-                  skills then don't hesitate to contact me.
-                </Box>
-              </motion.div>
-            )}
-            <Link to="Contact" smooth>
-              <Button
-                m={"20"}
-                py={["9"]}
-                px={["8vw", "7vw"]}
-                bg={colorMode === "light" ? "orange.500" : "blue.600"}
-                _hover={{
-                  bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
-                  transform: "translate(-5px,5px)",
-                  boxShadow: "0px 0px 0px #276749",
-                }}
-                _active={{
-                  bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
-                  transform: "translate(5px,5px)",
-                }}
-                color={"white"}
-                letterSpacing={1}
-                fontSize={"24"}
-                fontFamily={"calibri"}
-                fontWeight={["400", "500"]}
-                boxShadow={` ${
-                  colorMode === "light"
-                    ? " -10px 10px 5px #276749"
-                    : " -7px 7px 3px #1A365D"
-                }`}
-              >
-                Get In Touch!
-              </Button>
-            </Link>
-          </Flex>
+                I'm open to Job opportunities where I can contribute, learn and
+                grow. If you have a good opportunity that matches my skills then
+                don't hesitate to contact me.
+              </Box>
+            </motion.div>
+          )}
+          <Link to="Contact" smooth>
+            <Button
+              my={["12", "12", "8", "16", "12"]}
+              py={["8", "7", "9"]}
+              px={["8vw", "7vw"]}
+              bg={colorMode === "light" ? "orange.500" : "blue.600"}
+              _hover={{
+                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                transform: "translate(-5px,5px)",
+                boxShadow: "0px 0px 0px #276749",
+              }}
+              _active={{
+                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                transform: "translate(5px,5px)",
+              }}
+              color={"white"}
+              letterSpacing={1}
+              fontSize={"24"}
+              fontFamily={"calibri"}
+              fontWeight={["400", "500"]}
+              boxShadow={` ${
+                colorMode === "light"
+                  ? " -10px 10px 5px #276749"
+                  : " -7px 7px 3px #1A365D"
+              }`}
+            >
+              Get In Touch!
+            </Button>
+          </Link>
         </Flex>
-      </Flex>
+      </Box>
     </Box>
   );
 };
