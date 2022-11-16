@@ -12,6 +12,8 @@ import {
   useColorModeValue,
   VStack,
   Text,
+  useClipboard,
+  HStack,
 } from "@chakra-ui/react";
 import { Element } from "react-scroll";
 import tresor from "../images/tresor.png";
@@ -22,6 +24,7 @@ const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
   const { colorMode } = useColorMode();
+  const { onCopy, value, hasCopied } = useClipboard("");
 
   //   const bgOnLight = useColorModeValue(
   //     "linear( #ad9ba0 0%, #ad9ba0 80%)",
@@ -148,18 +151,59 @@ const Contact = () => {
             <Img src={tresor} />
           </Flex>
         )}
-
+        <HStack
+          p={10}
+          spacing={7}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Text
+            fontFamily={"lato"}
+            fontSize={21}
+            lineHeight={4}
+            letterSpacing={2}
+            fontWeight={500}
+            bgGradient={
+              colorMode !== "dark"
+                ? "linear(to-l, #7928CA, #FF0080)"
+                : "linear(to-r, cyan.500, pink.600)"
+            }
+            bgClip={"text"}
+            h={"6"}
+          >
+            taha.maatof@gmail.com
+          </Text>
+          <Button
+            bgColor={colorMode !== "dark" ? "blue.400" : "blue.600"}
+            onClick={onCopy}
+            value={"taha.maatof@gmail.com"}
+            borderRadius={40}
+            transform="scale(1.2)"
+            _active={{
+              bgColor: colorMode !== "dark" ? "blue.600" : "blue.800",
+            }}
+            _hover={{ bgColor: colorMode !== "dark" ? "blue.500" : "blue.700" }}
+            // py={1}
+            // mx={10}
+            top={-1}
+          >
+            {hasCopied ? "Copied!" : "Copy"}
+          </Button>
+        </HStack>
         <Flex
           pos={"relative"}
           justifyContent={"center"}
           bottom={0}
-          p={4}
-          m={6}
+          // p={4}
+          // m={6}
           alignItems={"center"}
           textAlign="center"
           flexDir={["column", "column", "row"]}
+          fontSize={18}
+          letterSpacing={4}
         >
           <Text>Made with passion by Maatof Taha </Text>
+
           {colorMode !== "dark" ? (
             <Img
               src={copyRight}

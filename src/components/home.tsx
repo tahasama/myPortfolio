@@ -48,8 +48,8 @@ from,to
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const buttonLight = useColorModeValue("#dd6358", "teal.500");
-  const buttonLightHover = useColorModeValue("#f55c56", "teal.600");
+  const buttonLight = useColorModeValue("#f55c56", "teal.500");
+  const buttonLightHover = useColorModeValue("#dd6358", "teal.600");
   const { colorMode, toggleColorMode } = useColorMode();
 
   // const [pic, setPic] = useState(true);
@@ -73,7 +73,7 @@ const Home = () => {
   return (
     <Box
       overflow={"hidden"}
-      h={["100vh"]}
+      h={["3xl"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
@@ -324,7 +324,7 @@ const Home = () => {
                 top={["2", "5"]}
                 // left={["0", "auto", "-6", "-58px", "-15px"]}
                 my={["4", "auto", 0]}
-                variant="solid"
+                // variant="solid"
                 px={["74px", "84px", "20", "28", "32"]}
                 py={["5", "7", "7", "7", "8"]}
                 bg={buttonLight}

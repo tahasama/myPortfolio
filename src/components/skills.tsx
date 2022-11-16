@@ -60,7 +60,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={["250vh", "250vh", "100%"]}>
+    <Box h={["4xl", "100%"]}>
       {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
@@ -321,7 +321,7 @@ const Skills = () => {
         <Flex
           mt={["-12", "-6", "10", "24", "32"]}
           flexDir={["column", "column", "row", "row", "row"]}
-          gap={[3, 10, 5, 0]}
+          gap={[3, 0, 5, 0]}
           justifyContent={"space-around"}
           mx={"20"}
         >
@@ -375,7 +375,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? reactD : reactN}
-                      w={["64px", "74px", "48px", "58px", "68px"]}
+                      w={["64px", "64px", "48px", "58px", "68px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"}>
@@ -396,7 +396,7 @@ const Skills = () => {
                   >
                     <Img
                       src={ts}
-                      w={["54px", "64px", "48px", "48px", "58px"]}
+                      w={["54px", "53px", "48px", "48px", "58px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"} mt={1}>
@@ -417,7 +417,7 @@ const Skills = () => {
                   >
                     <Img
                       src={reduxL}
-                      w={["60px", "70px", "38px", "48px", "58px"]}
+                      w={["60px", "60px", "38px", "48px", "58px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"}>
@@ -479,7 +479,7 @@ const Skills = () => {
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={[-6, -10, 2, -1, -1]}
+                      mt={[-6, -6, 2, -1, -1]}
                     >
                       Chakra ui
                     </Box>
@@ -600,20 +600,20 @@ const Skills = () => {
                     flexDirection={["column", "column"]}
                     justifyItems={"center"}
                     alignItems={"center"}
-                    mt={["-16", "-12", "-12", "-56", "-16"]}
-                    py={[0, 0, 6, 40, 6]}
+                    mt={["-16", "-32", "-12", "-56", "-16"]}
+                    py={[0, 16, 6, 40, 6]}
                     textAlign={"center"}
                   >
                     <Img
                       src={colorMode === "light" ? mongoN : mongoN}
-                      w={["160px", "160px", "130px", "170px", "190px"]}
+                      w={["160px", "150px", "130px", "170px", "190px"]}
                       // mb={20}
                       // h={"80px"}
                     />
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={["-4", "-4", -2, -3, -4]}
+                      mt={["-4", "-3", -2, -3, -4]}
                     >
                       Mongo db
                     </Box>

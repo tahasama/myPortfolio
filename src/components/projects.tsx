@@ -47,12 +47,12 @@ const Projects = () => {
   const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
   const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2500, 2800], [900, -800]);
-  const y2 = useTransform(scrollY, [2600, 2800], [950, -1300]);
-  const y3 = useTransform(scrollY, [2550, 2750], [980, -1200]);
-  const y4 = useTransform(scrollY, [2650, 2750], [970, -900]);
-  const y5 = useTransform(scrollY, [2500, 2650], [740, -1400]);
-  const y6 = useTransform(scrollY, [2600, 2800], [550, -1300]);
+  const y1 = useTransform(scrollY, [2300, 2800], [900, -800]);
+  const y2 = useTransform(scrollY, [2400, 2800], [950, -1300]);
+  const y3 = useTransform(scrollY, [2350, 2750], [980, -1200]);
+  const y4 = useTransform(scrollY, [2450, 2750], [970, -900]);
+  const y5 = useTransform(scrollY, [2300, 2650], [740, -1400]);
+  const y6 = useTransform(scrollY, [2400, 2800], [550, -1300]);
 
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
@@ -96,7 +96,7 @@ const Projects = () => {
               borderRadius={"3xl"}
               w={["100%", "100%", "53%", "55%", "45%"]}
               ml={[0, 0, 12, 0, 0]}
-              zIndex={55}
+              // zIndex={55}
             />
 
             <Box w={"full"}>
@@ -131,6 +131,7 @@ const Projects = () => {
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
+                  lineHeight={"8"}
                 >
                   <ListItem>
                     <ListIcon
@@ -267,6 +268,7 @@ const Projects = () => {
                   style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
+                  lineHeight={"8"}
                 >
                   <ListItem>
                     <ListIcon
@@ -369,7 +371,7 @@ const Projects = () => {
               borderRadius={"3xl"}
               w={["100%", "100%", "53%", "55%", "45%"]}
               ml={[0, 0, 0, 0, 0]}
-              zIndex={55}
+              // zIndex={55}
             />
           </Flex>
           <VStack

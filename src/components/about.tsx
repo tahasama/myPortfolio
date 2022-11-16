@@ -28,17 +28,7 @@ const About = () => {
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
-    <Box
-      h={
-        selected === ""
-          ? ["lg"]
-          : selected === "shorter"
-          ? ["xl"]
-          : selected === "short"
-          ? ["3xl", "3xl", "2xl"]
-          : ["4xl", "4xl", "3xl"]
-      }
-    >
+    <Box h={"100%"}>
       <Element name="About"></Element>
 
       <Box
@@ -60,7 +50,7 @@ const About = () => {
         // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
         overflow={"hidden"}
         justifyContent={"center"}
-        h={"100%"}
+        // h={"100%"}
       >
         {colorMode !== "dark" && (
           <Box top={"20"}>
@@ -166,7 +156,17 @@ const About = () => {
           fontFamily="roboto slab"
           mx={["2", "2", "24", "40", "40"]}
           // m={0}
-          top={[colorMode !== "dark" ? 32 : 56]}
+          top={[20, colorMode !== "dark" ? 32 : 56]}
+          // pb={
+          //   selected === ""
+          //     ? ["28"]
+          //     : selected === "shorter"
+          //     ? ["28"]
+          //     : selected === "short"
+          //     ? ["28"]
+          //     : ["28"]
+          // }
+          pb={colorMode !== "dark" ? 36 : 48}
         >
           {(selected === "" ||
             selected === "full" ||
@@ -248,17 +248,17 @@ const About = () => {
           )}
           <Link to="Contact" smooth>
             <Button
-              my={["12", "12", "8", "16", "12"]}
+              my={["8", "12", "8", "16", "12"]}
               py={["8", "7", "9"]}
               px={["8vw", "7vw"]}
-              bg={colorMode === "light" ? "orange.500" : "blue.600"}
+              bg={colorMode === "light" ? "red.500" : "blue.600"}
               _hover={{
-                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                bg: `${colorMode === "light" ? "red.600" : "blue.700"}`,
                 transform: "translate(-5px,5px)",
                 boxShadow: "0px 0px 0px #276749",
               }}
               _active={{
-                bg: `${colorMode === "light" ? "orange.600" : "blue.700"}`,
+                bg: `${colorMode === "light" ? "red.700" : "blue.800"}`,
                 transform: "translate(5px,5px)",
               }}
               color={"white"}

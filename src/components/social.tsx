@@ -4,12 +4,16 @@ import {
   Flex,
   HStack,
   Img,
+  Link,
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { Link as LinkScroll } from "react-scroll";
+
 import React from "react";
+import { PollingWatchKind } from "typescript";
 const Social = () => {
   const { colorMode, toggleColorMode } = useColorMode();
 
@@ -37,25 +41,30 @@ const Social = () => {
           // flexDir={["row", "column", "column", "column", "column"]}
           // transform={"rotate(90deg)"}
         >
-          <Box
-            h={[10, 12, "54px", 16, 16]}
-            w={[10, 12, "54px", 16, 16]}
-            borderRadius={[8, 8, 10, 12, 10]}
-            bgColor={colorMode !== "dark" ? "blue.500" : "blue.900"}
-            border={
-              colorMode !== "dark" ? "5px solid #9B2C2C" : "5px solid #0987A0"
-            }
-            transform={"rotate(45deg)"}
+          <Link
+            href="https://www.linkedin.com/in/taha-maatof-126058129/"
+            isExternal
           >
             <Box
-              transform={"rotate(-45deg)"}
-              fontSize={[20, 24, 30, 36]}
-              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 2]}
+              h={[10, 12, "54px", 16, 16]}
+              w={[10, 12, "54px", 16, 16]}
+              borderRadius={[8, 8, 10, 12, 10]}
+              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+              border={
+                colorMode !== "dark" ? "5px solid #9B2C2C" : "5px solid #0987A0"
+              }
+              transform={"rotate(45deg)"}
             >
-              <FaLinkedinIn />
+              <Box
+                transform={"rotate(-45deg)"}
+                fontSize={[20, 24, 30, 36]}
+                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+                m={[1, 2]}
+              >
+                <FaLinkedinIn />
+              </Box>
             </Box>
-          </Box>{" "}
+          </Link>
           <Box
             h={[5, 8, 6, 7, 8]}
             w={[5, 8, 6, 7, 8]}
@@ -67,27 +76,28 @@ const Social = () => {
               "rotate(45deg) translateY(20px) translateX(-20px);",
               "rotate(45deg) translateY(25px) translateX(-25px);",
             ]}
-          ></Box>{" "}
-          <Box
-            h={[10, 12, "54px", 16, 16]}
-            w={[10, 12, "54px", 16, 16]}
-            borderRadius={[8, 8, 10, 12, 10]}
-            bgColor={colorMode !== "dark" ? "blue.500" : "blue.900"}
-            border={
-              colorMode !== "dark" ? "5px solid #C53030" : "5px solid #086F83"
-            }
-            transform={"rotate(45deg)"}
-          >
-            {" "}
+          ></Box>
+          <Link href="https://github.com/tahasama" isExternal>
             <Box
-              transform={"rotate(-45deg)"}
-              fontSize={[24, 30, 36, 42]}
-              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 1]}
+              h={[10, 12, "54px", 16, 16]}
+              w={[10, 12, "54px", 16, 16]}
+              borderRadius={[8, 8, 10, 12, 10]}
+              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+              border={
+                colorMode !== "dark" ? "5px solid #C53030" : "5px solid #086F83"
+              }
+              transform={"rotate(45deg)"}
             >
-              <FaGithub />
-            </Box>
-          </Box>{" "}
+              <Box
+                transform={"rotate(-45deg)"}
+                fontSize={[24, 30, 36, 42]}
+                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+                m={[1, 1]}
+              >
+                <FaGithub />
+              </Box>
+            </Box>{" "}
+          </Link>
           <Box
             h={[5, 8, 6, 7, 8]}
             w={[5, 8, 6, 7, 8]}
@@ -100,26 +110,28 @@ const Social = () => {
               "rotate(45deg) translateY(-25px) translateX(25px);",
             ]}
           ></Box>{" "}
-          <Box
-            h={[10, 12, "54px", 16, 16]}
-            w={[10, 12, "54px", 16, 16]}
-            borderRadius={[8, 8, 10, 12, 10]}
-            bgColor={colorMode !== "dark" ? "blue.500" : "blue.900"}
-            border={
-              colorMode !== "dark" ? "5px solid #E53E3E" : "5px solid #065666"
-            }
-            transform={"rotate(45deg)"}
-          >
-            {" "}
+          <LinkScroll to="Contact" smooth>
             <Box
-              transform={"rotate(-45deg)"}
-              fontSize={[24, 28, 34, 42]}
-              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={1}
+              cursor={"pointer"}
+              h={[10, 12, "54px", 16, 16]}
+              w={[10, 12, "54px", 16, 16]}
+              borderRadius={[8, 8, 10, 12, 10]}
+              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+              border={
+                colorMode !== "dark" ? "5px solid #E53E3E" : "5px solid #065666"
+              }
+              transform={"rotate(45deg)"}
             >
-              <AiOutlineMail />
+              <Box
+                transform={"rotate(-45deg)"}
+                fontSize={[24, 28, 34, 42]}
+                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+                m={1}
+              >
+                <AiOutlineMail />
+              </Box>
             </Box>
-          </Box>
+          </LinkScroll>
           <Box
             h={[5, 8, 6, 7, 8]}
             w={[5, 8, 6, 7, 8]}
