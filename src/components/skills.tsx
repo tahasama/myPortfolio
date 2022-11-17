@@ -60,7 +60,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={["4xl", "100%"]}>
+    <Box h={["100%"]}>
       {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}

@@ -24,7 +24,7 @@ const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
   const { colorMode } = useColorMode();
-  const { onCopy, value, hasCopied } = useClipboard("");
+  const { onCopy, value, hasCopied } = useClipboard("taha.maatof@gmail.com");
 
   //   const bgOnLight = useColorModeValue(
   //     "linear( #ad9ba0 0%, #ad9ba0 80%)",
@@ -144,18 +144,19 @@ const Contact = () => {
             pos={"absolute"}
             justifyContent={"end"}
             left={[1, 1, 1, 4, 10]}
-            bottom={[20, 36, 4, 5, 24]}
+            bottom={[10, 36, 4, 5, 24]}
             transform={"scaleX(-1) rotate(12deg)"}
             w={["23%", "20%", "22%", "21%", "16%"]}
           >
             <Img src={tresor} />
           </Flex>
         )}
-        <HStack
-          p={10}
-          spacing={7}
+        <Flex
+          py={10}
+          gap={7}
           justifyContent={"center"}
           alignItems={"center"}
+          flexDir={["column", "column", "row"]}
         >
           <Text
             fontFamily={"lato"}
@@ -173,6 +174,7 @@ const Contact = () => {
           >
             taha.maatof@gmail.com
           </Text>
+
           <Button
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.600"}
             onClick={onCopy}
@@ -187,9 +189,9 @@ const Contact = () => {
             // mx={10}
             top={-1}
           >
-            {hasCopied ? "Copied!" : "Copy"}
+            {hasCopied ? "Copied!" : "Copy E-mail"}
           </Button>
-        </HStack>
+        </Flex>
         <Flex
           pos={"relative"}
           justifyContent={"center"}
