@@ -12,9 +12,8 @@ function App() {
 
   return (
     <Box color={colorOnLight}>
-      <Social />
-
       <Navbar />
+      <Social />
       <Home />
       <About />
       <Skills />

@@ -57,19 +57,19 @@ const Projects = () => {
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
-    <Box h={"100%"}>
+    <Box h={"100%"} mt={-36}>
       <Element name="Projects"></Element>
 
       <Box
         // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bg={bglOnLight}
-        // clipPath={[
-        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        // ]}
+        clipPath={[
+          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        ]}
         // mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         zIndex={2}
         // mb={40}
@@ -81,6 +81,8 @@ const Projects = () => {
           position={"relative"}
           gap={20}
           pt={20}
+          top={40}
+          pb={64}
         >
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}

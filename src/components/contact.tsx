@@ -13,7 +13,6 @@ import {
   VStack,
   Text,
   useClipboard,
-  HStack,
 } from "@chakra-ui/react";
 import { Element } from "react-scroll";
 import tresor from "../images/tresor.png";
@@ -24,7 +23,7 @@ const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
   const { colorMode } = useColorMode();
-  const { onCopy, value, hasCopied } = useClipboard("taha.maatof@gmail.com");
+  const { onCopy, hasCopied } = useClipboard("taha.maatof@gmail.com");
 
   //   const bgOnLight = useColorModeValue(
   //     "linear( #ad9ba0 0%, #ad9ba0 80%)",
@@ -63,11 +62,11 @@ const Contact = () => {
         bgColor={bglOnLight}
         p={12}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
-        // clipPath={[
-        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-        //   "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
-        // ]}
+        clipPath={[
+          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+          "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
+        ]}
         // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
         // mt={[
         //   -48,
@@ -80,12 +79,14 @@ const Contact = () => {
         // ]}
         // zIndex={99}
         // w={"100%"}
+        mt={-24}
       >
         <FormControl
+          mt={32}
           ref={form}
           onSubmit={sendEmail}
           // top={[28, 28, 28, 28, 28]}
-          w={[6 / 7, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
+          w={[72, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
           //   fontSize={[20, 20, 20, 20, 20]}
           //   mt={[-40, -60, -80, -20, -40]}
         >
@@ -152,7 +153,7 @@ const Contact = () => {
           </Flex>
         )}
         <Flex
-          py={10}
+          py={[7, 10]}
           gap={7}
           justifyContent={"center"}
           alignItems={"center"}

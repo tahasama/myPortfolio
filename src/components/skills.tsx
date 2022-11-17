@@ -60,7 +60,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={["100%"]}>
+    <Box h={["100%"]} mt={-36}>
       {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
@@ -70,6 +70,7 @@ const Skills = () => {
           justifyContent={"space-between"}
           // top={"-20"}
           // mt={["0vh", "0vh", "-227vh", "-270vh", "-130vh"]}
+          zIndex={1}
         >
           <Img
             src={palm1}
@@ -88,20 +89,21 @@ const Skills = () => {
       )}
       <Flex
         h={"100%"}
+        // top={32}
         // w={"100%"}
         flexDir={["column", "column", "column", "column"]}
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
         // mt={}
-        // clipPath={[
-        //   // "ellipse(59% 65% at 40% 65%)",
+        clipPath={[
+          // "ellipse(59% 65% at 40% 65%)",
 
-        //   "ellipse(300% 100% at 47% 100%)",
-        //   "ellipse(150% 100% at 47% 100%)",
-        //   "ellipse(150% 100% at 47% 100%)",
-        //   "ellipse(140% 100% at 50% 100%)",
-        //   "ellipse(130% 100% at 45% 100%)",
-        // ]}
+          "ellipse(300% 100% at 47% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
+          "ellipse(140% 100% at 50% 100%)",
+          "ellipse(130% 100% at 45% 100%)",
+        ]}
         // mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         // h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
@@ -324,6 +326,7 @@ const Skills = () => {
           gap={[3, 0, 5, 0]}
           justifyContent={"space-around"}
           mx={"20"}
+          pb={32}
         >
           <Flex
             flexDir={"column"}

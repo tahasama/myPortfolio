@@ -28,7 +28,7 @@ const About = () => {
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
-    <Box h={"100%"}>
+    <Box h={"100%"} mt={-20} zIndex={-1}>
       <Element name="About"></Element>
 
       <Box
@@ -51,6 +51,7 @@ const About = () => {
         overflow={"hidden"}
         justifyContent={"center"}
         // h={"100%"}
+        clipPath={"polygon(0 10%, 100% 0, 100% 100%, 0% 100%);"}
       >
         {colorMode !== "dark" && (
           <Box top={"20"}>
@@ -166,7 +167,8 @@ const About = () => {
           //     ? ["28"]
           //     : ["28"]
           // }
-          pb={colorMode !== "dark" ? 36 : 48}
+          // pb={colorMode !== "dark" ? 36 : 48}
+          pb={80}
         >
           {(selected === "" ||
             selected === "full" ||
@@ -248,6 +250,7 @@ const About = () => {
           )}
           <Link to="Contact" smooth>
             <Button
+              // pb={40}
               my={["8", "12", "8", "16", "12"]}
               py={["8", "7", "9"]}
               px={["8vw", "7vw"]}

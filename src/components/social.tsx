@@ -1,21 +1,10 @@
-import {
-  Box,
-  color,
-  Flex,
-  HStack,
-  Img,
-  Link,
-  useColorMode,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Link, useColorMode, VStack } from "@chakra-ui/react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 import { Link as LinkScroll } from "react-scroll";
 
-import React from "react";
-import { PollingWatchKind } from "typescript";
 const Social = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   return (
     <>
@@ -36,7 +25,7 @@ const Social = () => {
           pos={"absolute"}
           top={["-5", "32", "24", "32", "40"]}
           bottom={["auto", 53, "auto"]}
-          left={["4", "12", "7", "10", "8"]}
+          left={["4", "8", "7", "10", "8"]}
           spacing={[0, -1, 0, -1, 0]}
           // flexDir={["row", "column", "column", "column", "column"]}
           // transform={"rotate(90deg)"}
@@ -145,8 +134,9 @@ const Social = () => {
             ]}
           ></Box>{" "}
         </VStack>
+
         <Box
-          visibility={["visible", "hidden", "visible", "visible", "visible"]}
+          // visibility={["visible", "hidden", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[24, 0, 28, 44, 56]}
           w={[24, 0, 28, 44, 56]}
@@ -159,7 +149,7 @@ const Social = () => {
           left={["20", "80", "64", "72", "80"]}
         ></Box>
         <Box
-          visibility={["visible", "hidden", "visible", "visible", "visible"]}
+          // visibility={["visible", "hidden", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[6, 6, 6, 6, 6]}
           w={[6, 6, 6, 6, 6]}
@@ -173,7 +163,7 @@ const Social = () => {
           mx={[0, 0, -2, -1]}
         ></Box>
         <Box
-          visibility={["visible", "hidden", "visible", "visible", "visible"]}
+          // visibility={["visible", "hidden", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[7, 0, 16, 20, 24]}
           w={[7, 0, 16, 20, 24]}
@@ -185,9 +175,10 @@ const Social = () => {
           top={["-16", "2", "2", "2", "12"]}
           left={["6", "56", "48", "56", "60"]}
           m={-1}
+          opacity={[0, 0, 1]}
         ></Box>
         <Box
-          visibility={["hidden", "hidden", "visible", "visible", "visible"]}
+          // visibility={["hidden", "hidden", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[0, 0, 32, 36, 40]}
           w={[0, 0, 32, 36, 40]}
@@ -198,9 +189,10 @@ const Social = () => {
           transform={"rotate(45deg)"}
           top={["-32", "-32", "-32", "-32", "-28"]}
           left={["52", "52", "40", "52", "56"]}
+          opacity={[0, 0, 1]}
         ></Box>
         <Box
-          visibility={["visible", "visible", "visible", "visible", "visible"]}
+          // visibility={["visible", "visible", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[10, 16, 12, 16, 16]}
           w={[10, 16, 12, 16, 16]}
@@ -215,7 +207,7 @@ const Social = () => {
           my={-2}
         ></Box>
         <Box
-          visibility={["visible", "visible", "visible", "visible", "visible"]}
+          // visibility={["visible", "visible", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[8, 12, 10, 12, 12]}
           w={[8, 12, 10, 12, 12]}
@@ -229,7 +221,7 @@ const Social = () => {
           // my={1}
         ></Box>
         <Box
-          visibility={["hidden", "visible", "visible", "visible", "visible"]}
+          // visibility={["hidden", "visible", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[28, 28, 24, 28, 32]}
           w={[28, 28, 24, 28, 32]}
@@ -240,9 +232,10 @@ const Social = () => {
           transform={"rotate(45deg)"}
           top={["-12", "-12", "-12", "-12", "-8"]}
           left={["16", "16", "12", "16", "16"]}
+          opacity={[0, 1]}
         ></Box>
         <Box
-          visibility={["visible", "visible", "visible", "visible", "visible"]}
+          // visibility={["visible", "visible", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[12, 16, 12, 16, 20]}
           w={[12, 16, 12, 16, 20]}
@@ -255,7 +248,7 @@ const Social = () => {
           left={["10", "20", "16", "20", "20"]}
         ></Box>
         <Box
-          visibility={["visible", "visible", "visible", "visible", "visible"]}
+          // visibility={["visible", "visible", "visible", "visible", "visible"]}
           pos={"absolute"}
           h={[16, 16, 12, 16, 20]}
           w={[16, 16, 12, 16, 20]}

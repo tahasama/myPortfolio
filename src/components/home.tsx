@@ -4,7 +4,6 @@ import {
   Divider,
   Flex,
   Img,
-  keyframes,
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -16,10 +15,10 @@ import Hero from "./hero";
 // import dev2 from "../images/dev11.jpg";
 // import tt from "../images/tt.jpg";
 // import tt1 from "../images/tt1.jpg";
-import tttt from "../images/tttt.png";
+// import tttt from "../images/tttt.png";
 // import nnn from "../images/nnn.png";
 // import nnnight from "../images/nnnight1.png";
-import nnnight from "../images/dddN1.png";
+// import nnnight from "../images/dddN1.png";
 import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
@@ -28,29 +27,29 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 
-const falling = keyframes`
-from,to
+// const falling = keyframes`
+// from,to
 
-0%    {
-  transform: translateY(0)
-  opacity:1;
-}
-10%    {
-  opacity:1;
-}
-90%    {
-  opacity:1;
-}
-100%  {
-  transform: translateY(100px);
-}
-`;
+// 0%    {
+//   transform: translateY(0)
+//   opacity:1;
+// }
+// 10%    {
+//   opacity:1;
+// }
+// 90%    {
+//   opacity:1;
+// }
+// 100%  {
+//   transform: translateY(100px);
+// }
+// `;
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const buttonLight = useColorModeValue("#f55c56", "teal.500");
   const buttonLightHover = useColorModeValue("#dd6358", "teal.600");
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   // const [pic, setPic] = useState(true);
 
@@ -73,14 +72,16 @@ const Home = () => {
   return (
     <Box
       overflow={"hidden"}
-      h={["3xl"]}
+      h={["4xl"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
-      //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
+      //   "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
       //   // "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
       // ]}
+      // // zindex={99}
     >
       <Element name="Home"></Element>
+      {/* <Social /> */}
       {colorMode !== "dark" && (
         <motion.div
           style={{
@@ -101,9 +102,9 @@ const Home = () => {
           <Box
             // left={"0"}
             // bgColor={"yellow.400"}
-            // zIndex={99}
             w={"20%"}
             overflow={"hidden"}
+            // zIndex={99}
           >
             <Img src={airplane} overflow={"hidden"} />
           </Box>
@@ -125,10 +126,10 @@ const Home = () => {
             position: "fixed",
             top: 0,
             right: 20,
-            zIndex: 2,
+            // zindex: 2,
             overflow: "hidden",
             // opacity: o1,
-            // zIndex: 99,
+            zIndex: 99,
           }}
         >
           <Img src={parachute} overflow={"hidden"} zIndex={"99"} />
@@ -143,7 +144,7 @@ const Home = () => {
         // bg={bglOnLight}
         // top={"-2"}
 
-        zIndex={"1"}
+        // zindex={"1"}
         // h={["690px", "130vh", "120vh", "125vh", "125vh"]}
         bg={bglOnLight}
         alignItems={"center"}
@@ -187,7 +188,7 @@ const Home = () => {
               rotate: [0, 5, -5, 5, -5, 5, -5, 1],
             }}
             transition={{ type: "spring", stiffness: 1000 }}
-            // style={{ zIndex: 5 }}
+            // style={{ // zindex: 5 }}
           >
             {colorMode !== "light" ? (
               <Img
@@ -196,7 +197,7 @@ const Home = () => {
                 borderRadius={"3xl"}
                 // boxShadow={"0px 0px 50px #2C5282"}
                 filter={"brightness(.7) grayscale(5%)  saturate(75%)"}
-                zIndex={6}
+                // zindex={6}
               />
             ) : (
               <Img
@@ -264,13 +265,13 @@ const Home = () => {
         </Flex> */}
 
         <Flex
-          zIndex={2}
+          // zindex={2}
           flexDirection="column"
           position="relative"
           // alignItems={["center", "center", "start", "start", "start"]}
           alignItems={["center", "center"]}
           lineHeight={"taller"}
-          top={["32", "40", "-8"]}
+          top={["2", "10", "-8"]}
           w={["full", "auto"]}
           // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}
