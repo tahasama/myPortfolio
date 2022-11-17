@@ -79,7 +79,7 @@ const Contact = () => {
         // ]}
         // zIndex={99}
         // w={"100%"}
-        mt={-24}
+        mt={[-48, -24]}
       >
         <FormControl
           mt={32}

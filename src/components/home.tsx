@@ -72,13 +72,14 @@ const Home = () => {
   return (
     <Box
       overflow={"hidden"}
-      h={["3xl", "4xl"]}
+      h={["51em", "4xl"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       //   "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
       //   // "polygon(0 0, 100% 0, 100% 90%, 0 100%)",
       // ]}
       // // zindex={99}
+      // pb={20}
     >
       <Element name="Home"></Element>
       {/* <Social /> */}
@@ -149,7 +150,7 @@ const Home = () => {
         bg={bglOnLight}
         alignItems={"center"}
         flexDirection={["column-reverse", "column-reverse", "row"]}
-        top={["0", "0", "16", "16", "10"]}
+        top={["10", "0", "16", "16", "10"]}
         // ml={[0, 0, 5, 5, 5]}
         // mt={["40", "20"]}
         justifyContent={"center"}
