@@ -255,7 +255,7 @@ const About = () => {
             <Button
               // pb={40}
               my={["8", "12", "8", "16", "12"]}
-              py={["8", "7", "9"]}
+              py={["7", "7", "9"]}
               px={["8vw", "7vw"]}
               bg={colorMode === "light" ? "red.500" : "blue.600"}
               _hover={{
