@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <Box
       overflow={"hidden"}
-      h={["51em", "4xl"]}
+      h={["54em", "4xl"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       //   "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
