@@ -72,7 +72,7 @@ const Home = () => {
   return (
     <Box
       overflow={"hidden"}
-      h={["4xl"]}
+      h={["3xl", "4xl"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       //   "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
@@ -271,7 +271,7 @@ const Home = () => {
           // alignItems={["center", "center", "start", "start", "start"]}
           alignItems={["center", "center"]}
           lineHeight={"taller"}
-          top={["2", "10", "-8"]}
+          top={["16", "12", "-8"]}
           w={["full", "auto"]}
           // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}

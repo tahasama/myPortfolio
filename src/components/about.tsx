@@ -51,7 +51,10 @@ const About = () => {
         overflow={"hidden"}
         justifyContent={"center"}
         // h={"100%"}
-        clipPath={"polygon(0 10%, 100% 0, 100% 100%, 0% 100%);"}
+        clipPath={[
+          "polygon(0 6%, 100% 0, 100% 100%, 0% 100%);",
+          "polygon(0 10%, 100% 0, 100% 100%, 0% 100%);",
+        ]}
       >
         {colorMode !== "dark" && (
           <Box top={"20"}>

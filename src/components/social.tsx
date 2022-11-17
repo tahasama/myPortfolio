@@ -35,8 +35,8 @@ const Social = () => {
             isExternal
           >
             <Box
-              h={[10, 12, "54px", 16, 16]}
-              w={[10, 12, "54px", 16, 16]}
+              h={[12, 12, "54px", 16, 16]}
+              w={[12, 12, "54px", 16, 16]}
               borderRadius={[8, 8, 10, 12, 10]}
               bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
               border={
@@ -46,7 +46,7 @@ const Social = () => {
             >
               <Box
                 transform={"rotate(-45deg)"}
-                fontSize={[20, 24, 30, 36]}
+                fontSize={[24, 24, 30, 36]}
                 color={colorMode !== "dark" ? "gray.100" : "gray.300"}
                 m={[1, 2]}
               >
@@ -68,8 +68,8 @@ const Social = () => {
           ></Box>
           <Link href="https://github.com/tahasama" isExternal>
             <Box
-              h={[10, 12, "54px", 16, 16]}
-              w={[10, 12, "54px", 16, 16]}
+              h={[12, 12, "54px", 16, 16]}
+              w={[12, 12, "54px", 16, 16]}
               borderRadius={[8, 8, 10, 12, 10]}
               bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
               border={
@@ -79,7 +79,7 @@ const Social = () => {
             >
               <Box
                 transform={"rotate(-45deg)"}
-                fontSize={[24, 30, 36, 42]}
+                fontSize={[30, 30, 36, 42]}
                 color={colorMode !== "dark" ? "gray.100" : "gray.300"}
                 m={[1, 1]}
               >
@@ -102,8 +102,8 @@ const Social = () => {
           <LinkScroll to="Contact" smooth>
             <Box
               cursor={"pointer"}
-              h={[10, 12, "54px", 16, 16]}
-              w={[10, 12, "54px", 16, 16]}
+              h={[12, 12, "54px", 16, 16]}
+              w={[12, 12, "54px", 16, 16]}
               borderRadius={[8, 8, 10, 12, 10]}
               bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
               border={
@@ -113,7 +113,7 @@ const Social = () => {
             >
               <Box
                 transform={"rotate(-45deg)"}
-                fontSize={[24, 28, 34, 42]}
+                fontSize={[28, 28, 34, 42]}
                 color={colorMode !== "dark" ? "gray.100" : "gray.300"}
                 m={1}
               >
