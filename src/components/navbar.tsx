@@ -47,6 +47,18 @@ const Navbar = () => {
       setChange(!change);
     }, 10);
   };
+  const handleClick = () => {
+    toggleColorMode();
+    const styleEl = document.createElement("style");
+    const cssText = document.createTextNode(
+      "html * { transition: color, background-color 0.3s ease-out!important }"
+    );
+    styleEl.appendChild(cssText);
+    document.head.appendChild(styleEl);
+    setTimeout(() => {
+      document.head.removeChild(styleEl);
+    }, 300);
+  };
 
   return (
     <Flex
@@ -58,6 +70,7 @@ const Navbar = () => {
       flexDirection={"row"}
       bg={textColorOn}
       position="fixed"
+      // pb={40}
     >
       {/* <Flex position={"absolute"} left={"2"} top={"2"}> */}
       <Button
@@ -136,19 +149,20 @@ const Navbar = () => {
           </List>
         </Box>
       </Slide>
-
-      <Img
-        visibility={["visible"]}
-        src={colorMode !== "light" ? logoNight : logoDay}
-        alt="devDay2"
-        position={"absolute"}
-        left={["25vw", "22vw", "5"]}
-        top={["7px", "2px", "0px"]}
-        // left={["0", "0", "-60px", "-140px", "-200px"]}
-        // mx={["20", "20", "6"]}
-        w={["53%", "auto"]}
-        cursor={"pointer"}
-      />
+      <Link to={"Home"} onClick={onToggle} smooth>
+        <Img
+          visibility={["visible"]}
+          src={colorMode !== "light" ? logoNight : logoDay}
+          alt="devDay2"
+          position={"absolute"}
+          left={["25vw", "22vw", "5"]}
+          top={["7px", "2px", "0px"]}
+          // left={["0", "0", "-60px", "-140px", "-200px"]}
+          // mx={["20", "20", "6"]}
+          w={["53%", "auto"]}
+          cursor={"pointer"}
+        />
+      </Link>
       <Flex h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
           w={["0", "0", "full"]}
@@ -195,6 +209,7 @@ const Navbar = () => {
         </Flex>
         <motion.div
           whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
+          // whileTap={{ filter: "blur(.5)" }}
         >
           <Button
             bg={colorMode !== "light" ? "teal.900" : "blue.500"}

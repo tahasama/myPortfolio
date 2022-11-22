@@ -9,16 +9,7 @@ import {
 } from "@chakra-ui/react";
 
 import Hero from "./hero";
-// import devNight from "../images/devNight2.png";
-// import devNight2 from "../images/devNight4.png";
-// import dev1 from "../images/dev40.jpg";
-// import dev2 from "../images/dev11.jpg";
-// import tt from "../images/tt.jpg";
-// import tt1 from "../images/tt1.jpg";
-// import tttt from "../images/tttt.png";
-// import nnn from "../images/nnn.png";
-// import nnnight from "../images/nnnight1.png";
-// import nnnight from "../images/dddN1.png";
+
 import airplane from "../images/airplane.png";
 import parachute from "../images/parachute.png";
 
@@ -26,6 +17,8 @@ import CloudNstars from "./cloudNstars";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
+import Social from "./social";
+import { MdNoMeals } from "react-icons/md";
 
 // const falling = keyframes`
 // from,to
@@ -61,18 +54,18 @@ const Home = () => {
 
   const { scrollY } = useViewportScroll();
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
-  const x2 = useTransform(scrollY, [0, 100], [-300, 1700]);
-  const y2 = useTransform(scrollY, [0, 100], [0, -800]);
+  const x2 = useTransform(scrollY, [0, 1000], [-300, 3400]);
+  const y2 = useTransform(scrollY, [0, 1000], [-100, -1700]);
   // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   const x3 = useTransform(scrollY, [0, 10], [0, 0]);
   // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
-  const y3 = useTransform(scrollY, [0, 100, 10000], [-200, 200, 800]);
+  const y3 = useTransform(scrollY, [0, 100, 10000], [-200, 350, 800]);
   // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
     <Box
       overflow={"hidden"}
-      h={["56em", "4xl"]}
+      h={["56em", "4xl", "3xl", "3xl", "56.5em"]}
       // clipPath={[
       //   "polygon(0 0, 100% 0, 100% 96%, 0 100%)",
       //   "polygon(0 0, 100% 0, 100% 92%, 0 100%)",
@@ -82,7 +75,10 @@ const Home = () => {
       // pb={20}
     >
       <Element name="Home"></Element>
-      {/* <Social /> */}
+      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 40]}>
+        <Social />
+      </Box>
+
       {colorMode !== "dark" && (
         <motion.div
           style={{
@@ -95,7 +91,7 @@ const Home = () => {
             // height: "0vw",
             position: "fixed",
             bottom: -80,
-            left: 0,
+            left: -200,
             zIndex: 2,
             overflow: "hidden",
           }}
@@ -125,7 +121,7 @@ const Home = () => {
             width: "10%",
             // height: "0vw",
             position: "fixed",
-            top: 0,
+            top: -200,
             right: 20,
             // zindex: 2,
             overflow: "hidden",
@@ -272,8 +268,9 @@ const Home = () => {
           // alignItems={["center", "center", "start", "start", "start"]}
           alignItems={["center", "center"]}
           lineHeight={"taller"}
-          top={["16", "12", "-8"]}
+          top={["16", "12", "-20"]}
           w={["full", "auto"]}
+          // justifyContent={"center"}
           // left={["0", "4", "-16", "-7", "40"]}
           ml={[0, 0, 0, 0, 0]}
         >

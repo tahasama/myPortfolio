@@ -2,263 +2,245 @@ import { Box, Link, useColorMode, VStack } from "@chakra-ui/react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { Link as LinkScroll } from "react-scroll";
+import { motion } from "framer-motion";
 
 const Social = () => {
   const { colorMode } = useColorMode();
 
   return (
     <>
-      <Box
-        pos={"absolute"}
-        // transform={"translateY(68%) translateX(20%)"}
-        zIndex={3}
-        // borderRadius={50}
-        blur={"50px"}
-        // opacity={0.5}
-        // spacing={[8, -3]}
-        justifyContent={"center"}
-        h={"100vh"}
-        m={"8px 18px"}
-        top={["44", "40", "36", "32", "28"]}
+      <VStack
+        pos={"relative"}
+        top={["-7", "32", "24", "32", "40"]}
+        bottom={["auto", 53, "0"]}
+        left={["0", "2", "-4", "-5", "-10"]}
+        spacing={[0, -1, 0, -1, 0]}
+        // flexDir={["row", "column", "column", "column", "column"]}
+        // transform={"rotate(90deg)"}
       >
-        <VStack
-          pos={"absolute"}
-          top={["-5", "32", "24", "32", "40"]}
-          bottom={["auto", 53, "auto"]}
-          left={["4", "8", "7", "10", "8"]}
-          spacing={[0, -1, 0, -1, 0]}
-          // flexDir={["row", "column", "column", "column", "column"]}
-          // transform={"rotate(90deg)"}
+        <Link
+          href="https://www.linkedin.com/in/taha-maatof-126058129/"
+          isExternal
         >
-          <Link
-            href="https://www.linkedin.com/in/taha-maatof-126058129/"
-            isExternal
+          <Box
+            h={[12, 12, "54px", 16, 16]}
+            w={[12, 12, "54px", 16, 16]}
+            borderRadius={[8, 8, 10, 12, 10]}
+            bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+            borderColor={colorMode !== "dark" ? "#9B2C2C" : "#0987A0"}
+            borderWidth="5px"
+            transform={"rotate(45deg)"}
           >
             <Box
-              h={[12, 12, "54px", 16, 16]}
-              w={[12, 12, "54px", 16, 16]}
-              borderRadius={[8, 8, 10, 12, 10]}
-              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
-              border={
-                colorMode !== "dark" ? "5px solid #9B2C2C" : "5px solid #0987A0"
-              }
-              transform={"rotate(45deg)"}
+              transform={"rotate(-45deg)"}
+              fontSize={[24, 24, 30, 36]}
+              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+              m={[1, 2]}
             >
-              <Box
-                transform={"rotate(-45deg)"}
-                fontSize={[24, 24, 30, 36]}
-                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-                m={[1, 2]}
-              >
+              <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaLinkedinIn />
-              </Box>
+              </motion.div>
             </Box>
-          </Link>
+          </Box>
+        </Link>
+        <Box
+          h={[5, 8, 6, 7, 8]}
+          w={[5, 8, 6, 7, 8]}
+          borderRadius={[5, 8, 7, 6, 8]}
+          borderColor={colorMode !== "dark" ? "#9B2C2C" : "#0987A0"}
+          borderWidth="5px"
+          transform={[
+            "rotate(45deg) translateY(20px) translateX(-20px);",
+            "rotate(45deg) translateY(25px) translateX(-25px);",
+          ]}
+        ></Box>
+        <Link href="https://github.com/tahasama" isExternal>
           <Box
-            h={[5, 8, 6, 7, 8]}
-            w={[5, 8, 6, 7, 8]}
-            borderRadius={[5, 8, 7, 6, 8]}
-            border={
-              colorMode !== "dark" ? "5px solid #9B2C2C" : "5px solid #0987A0"
-            }
-            transform={[
-              "rotate(45deg) translateY(20px) translateX(-20px);",
-              "rotate(45deg) translateY(25px) translateX(-25px);",
-            ]}
-          ></Box>
-          <Link href="https://github.com/tahasama" isExternal>
+            h={[12, 12, "54px", 16, 16]}
+            w={[12, 12, "54px", 16, 16]}
+            borderRadius={[8, 8, 10, 12, 10]}
+            bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+            borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
+            borderWidth="5px"
+            transform={"rotate(45deg)"}
+          >
             <Box
-              h={[12, 12, "54px", 16, 16]}
-              w={[12, 12, "54px", 16, 16]}
-              borderRadius={[8, 8, 10, 12, 10]}
-              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
-              border={
-                colorMode !== "dark" ? "5px solid #C53030" : "5px solid #086F83"
-              }
-              transform={"rotate(45deg)"}
+              transform={"rotate(-45deg)"}
+              fontSize={[30, 30, 36, 42]}
+              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+              m={[1, 1]}
             >
-              <Box
-                transform={"rotate(-45deg)"}
-                fontSize={[30, 30, 36, 42]}
-                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-                m={[1, 1]}
-              >
+              <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaGithub />
-              </Box>
-            </Box>{" "}
-          </Link>
-          <Box
-            h={[5, 8, 6, 7, 8]}
-            w={[5, 8, 6, 7, 8]}
-            borderRadius={[5, 8, 7, 6, 8]}
-            border={
-              colorMode !== "dark" ? "5px solid #C53030" : "5px solid #086F83"
-            }
-            transform={[
-              "rotate(45deg) translateY(-20px) translateX(20px);",
-              "rotate(45deg) translateY(-25px) translateX(25px);",
-            ]}
-          ></Box>{" "}
-          <LinkScroll to="Contact" smooth>
-            <Box
-              cursor={"pointer"}
-              h={[12, 12, "54px", 16, 16]}
-              w={[12, 12, "54px", 16, 16]}
-              borderRadius={[8, 8, 10, 12, 10]}
-              bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
-              border={
-                colorMode !== "dark" ? "5px solid #E53E3E" : "5px solid #065666"
-              }
-              transform={"rotate(45deg)"}
-            >
-              <Box
-                transform={"rotate(-45deg)"}
-                fontSize={[28, 28, 34, 42]}
-                color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-                m={1}
-              >
-                <AiOutlineMail />
-              </Box>
+              </motion.div>
             </Box>
-          </LinkScroll>
+          </Box>{" "}
+        </Link>
+        <Box
+          h={[5, 8, 6, 7, 8]}
+          w={[5, 8, 6, 7, 8]}
+          borderRadius={[5, 8, 7, 6, 8]}
+          borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
+          borderWidth="5px"
+          // transform={"rotate(45deg)"}
+          transform={[
+            "rotate(45deg) translateY(-20px) translateX(20px);",
+            "rotate(45deg) translateY(-25px) translateX(25px);",
+          ]}
+        ></Box>{" "}
+        <LinkScroll to="Contact" smooth>
           <Box
-            h={[5, 8, 6, 7, 8]}
-            w={[5, 8, 6, 7, 8]}
-            borderRadius={[5, 8, 7, 6, 8]}
-            border={
-              colorMode !== "dark" ? "5px solid #E53E3E" : "5px solid #065666"
-            }
-            transform={[
-              "rotate(45deg) translateY(20px) translateX(-20px);",
-              "rotate(45deg) translateY(25px) translateX(-25px);",
-            ]}
-          ></Box>{" "}
-        </VStack>
-
+            cursor={"pointer"}
+            h={[12, 12, "54px", 16, 16]}
+            w={[12, 12, "54px", 16, 16]}
+            borderRadius={[8, 8, 10, 12, 10]}
+            bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
+            borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
+            borderWidth="5px"
+            transform={"rotate(45deg)"}
+          >
+            <Box
+              transform={"rotate(-45deg)"}
+              fontSize={[28, 28, 34, 42]}
+              color={colorMode !== "dark" ? "gray.100" : "gray.300"}
+              m={1}
+            >
+              <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
+                <AiOutlineMail />
+              </motion.div>
+            </Box>
+          </Box>
+        </LinkScroll>
+        <Box
+          h={[5, 8, 6, 7, 8]}
+          w={[5, 8, 6, 7, 8]}
+          borderRadius={[5, 8, 7, 6, 8]}
+          borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
+          borderWidth="5px"
+          transform={[
+            "rotate(45deg) translateY(20px) translateX(-20px);",
+            "rotate(45deg) translateY(25px) translateX(-25px);",
+          ]}
+        ></Box>{" "}
+      </VStack>
+      <Box ml={[0, 0, 4, 3, 4]}>
         <Box
           // visibility={["visible", "hidden", "visible", "visible", "visible"]}
-          pos={"absolute"}
-          h={[24, 0, 28, 44, 56]}
-          w={[24, 0, 28, 44, 56]}
+          pos={"relative"}
+          h={[24, 24, 28, 44, 56]}
+          w={[24, 24, 28, 44, 56]}
           borderRadius={[8, 8, 10, 10, 10]}
-          border={
-            colorMode !== "dark" ? "5px solid #ED8936" : "5px solid #38A169"
-          }
+          borderColor={colorMode !== "dark" ? "#ED8936" : "#38A169"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-44", "-32", "-28", "-32", "-32"]}
-          left={["20", "80", "64", "72", "80"]}
+          top={["-23em", "-20em", "-21em", "-23.5em", "-25em"]}
+          left={["28", "16", "64", "72", "80"]}
         ></Box>
         <Box
           // visibility={["visible", "hidden", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[6, 6, 6, 6, 6]}
           w={[6, 6, 6, 6, 6]}
           borderRadius={[5, 5, 5, 5, 5]}
-          border={
-            colorMode !== "dark" ? "5px solid #DD6B20" : "5px solid #319795"
-          }
+          borderColor={colorMode !== "dark" ? "#DD6B20" : "#319795"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-7", "24", "16", "24", "28"]}
-          left={["20", "44", "36", "44", "48"]}
-          mx={[0, 0, -2, -1]}
+          top={["-20em", "-21em", "-17.5em", "-20.5em", "-24.5em"]}
+          left={["28", "12", "36", "44", "48"]}
+          mx={[-1, 0, -2, -1]}
         ></Box>
         <Box
           // visibility={["visible", "hidden", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[7, 0, 16, 20, 24]}
           w={[7, 0, 16, 20, 24]}
           borderRadius={[4, 8, 10, 10, 10]}
-          border={
-            colorMode !== "dark" ? "5px solid #C05621" : "5px solid #2C7A7B"
-          }
+          borderColor={colorMode !== "dark" ? "#C05621" : "#2C7A7B"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-16", "2", "2", "2", "12"]}
-          left={["6", "56", "48", "56", "60"]}
+          top={["-26em", "-20em", "-22.5em", "-27.5em", "-30em"]}
+          left={["6", "6", "48", "56", "60"]}
           m={-1}
           opacity={[0, 0, 1]}
         ></Box>
         <Box
           // visibility={["hidden", "hidden", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[0, 0, 32, 36, 40]}
           w={[0, 0, 32, 36, 40]}
           borderRadius={[8, 8, 10, 12, 12]}
-          border={
-            colorMode !== "dark" ? "5px solid #9C4221" : "5px solid #4FD1C5"
-          }
+          borderColor={colorMode !== "dark" ? "#9C4221" : "#4FD1C5"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-32", "-32", "-32", "-32", "-28"]}
+          top={["-28em", "-28em", "-34.5em", "-41em", "-46em"]}
           left={["52", "52", "40", "52", "56"]}
           opacity={[0, 0, 1]}
         ></Box>
         <Box
           // visibility={["visible", "visible", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[10, 16, 12, 16, 16]}
           w={[10, 16, 12, 16, 16]}
           borderRadius={[8, 8, 10, 12, 12]}
-          border={
-            colorMode !== "dark" ? "5px solid #F6AD55" : "5px solid #2F855A"
-          }
+          borderColor={colorMode !== "dark" ? "#F6AD55" : "#2F855A"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-28", "8", "8", "8", "12"]}
-          left={["4", "44", "40", "44", "48"]}
+          top={["-28.7em", "-20em", "-33em", "-40em", "-46em"]}
+          left={["10", "10", "40", "44", "48"]}
           mx={-0}
           my={-2}
         ></Box>
         <Box
           // visibility={["visible", "visible", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[8, 12, 10, 12, 12]}
           w={[8, 12, 10, 12, 12]}
           borderRadius={[7, 8, 10, 12, 12]}
-          border={
-            colorMode !== "dark" ? "5px solid #ED8936" : "5px solid #319795"
-          }
+          borderColor={colorMode !== "dark" ? "#ED8936" : "#319795"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-28", "-10", "-10", "-10", "-8"]}
-          left={["-1", "48", "40", "48", "48"]}
+          top={["-30.2em", "-30.2em", "-39em", "-47.5em", "-54em"]}
+          left={["5", "5", "40", "48", "48"]}
           // my={1}
         ></Box>
         <Box
           // visibility={["hidden", "visible", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[28, 28, 24, 28, 32]}
           w={[28, 28, 24, 28, 32]}
           borderRadius={[8, 8, 10, 16, 16]}
-          border={
-            colorMode !== "dark" ? "5px solid #DD6B20" : "5px solid #38B2AC"
-          }
+          borderColor={colorMode !== "dark" ? "#DD6B20" : "#38B2AC"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-12", "-12", "-12", "-12", "-8"]}
-          left={["16", "16", "12", "16", "16"]}
+          top={["-28em", "-34em", "-42em", "-51em", "-57em"]}
+          left={["1", "40", "12", "16", "16"]}
           opacity={[0, 1]}
         ></Box>
         <Box
           // visibility={["visible", "visible", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[12, 16, 12, 16, 20]}
           w={[12, 16, 12, 16, 20]}
           borderRadius={[8, 8, 10, 16, 16]}
-          border={
-            colorMode !== "dark" ? "5px solid #F6AD55" : "5px solid #48BB78"
-          }
+          borderColor={colorMode !== "dark" ? "#F6AD55" : "#48BB78"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-20", "16", "12", "16", "20"]}
-          left={["10", "20", "16", "20", "20"]}
+          top={["-37.4em", "-36.4em", "-42em", "-51em", "-58em"]}
+          left={["20", "24", "16", "20", "20"]}
+          m={-1}
         ></Box>
+
         <Box
           // visibility={["visible", "visible", "visible", "visible", "visible"]}
-          pos={"absolute"}
+          pos={"relative"}
           h={[16, 16, 12, 16, 20]}
           w={[16, 16, 12, 16, 20]}
           borderRadius={[8, 8, 10, 16, 16]}
-          border={
-            colorMode !== "dark" ? "5px solid #ED8936" : "5px solid #319795"
-          }
+          borderColor={colorMode !== "dark" ? "#ED8936" : "#319795"}
+          borderWidth="5px"
           transform={"rotate(45deg)"}
-          top={["-24", "-3", "-3", "-3", "0"]}
-          left={["20", "2", "2", "2", "0"]}
+          top={["-41em", "-37em", "-49em", "-60em", "-68em"]}
+          left={["28", "24", "0", "0", "0"]}
         ></Box>
       </Box>
     </>

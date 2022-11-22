@@ -47,17 +47,17 @@ const Projects = () => {
   const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
   const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2300, 2800], [900, -800]);
-  const y2 = useTransform(scrollY, [2400, 2800], [950, -1300]);
-  const y3 = useTransform(scrollY, [2350, 2750], [980, -1200]);
-  const y4 = useTransform(scrollY, [2450, 2750], [970, -900]);
-  const y5 = useTransform(scrollY, [2300, 2650], [740, -1400]);
-  const y6 = useTransform(scrollY, [2400, 2800], [550, -1300]);
+  const y1 = useTransform(scrollY, [2300, 2800], [1300, -800]);
+  const y2 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
+  const y3 = useTransform(scrollY, [2350, 2750], [1300, -1200]);
+  const y4 = useTransform(scrollY, [2450, 2750], [1300, -900]);
+  const y5 = useTransform(scrollY, [2300, 2650], [1300, -1600]);
+  const y6 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
 
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
-    <Box h={"100%"} mt={-36}>
+    <Box h={"100%"} mt={[colorMode !== "dark" ? -40 : -52]}>
       <Element name="Projects"></Element>
 
       <Box
@@ -195,9 +195,9 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "16", "12", "16", "16"]}
+                      px={["8", "12", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
+                      py={[6, 6, 6, 6, 6]}
                       my={10}
                       mx={2}
                       colorScheme={
@@ -215,9 +215,9 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "16", "12", "16", "16"]}
+                      px={["8", "12", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
+                      py={[6, 6, 6, 6, 6]}
                       my={10}
                       mx={[2, 2, 4, 4, 4]}
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
@@ -331,9 +331,9 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "16", "12", "16", "16"]}
+                      px={["8", "12", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
+                      py={[6, 6, 6, 6, 6]}
                       my={10}
                       mx={3}
                       colorScheme={
@@ -351,9 +351,9 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "16", "12", "16", "16"]}
+                      px={["8", "12", "12", "16", "16"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[7, 8, 6, 6, 6]}
+                      py={[6, 6, 6, 6, 6]}
                       my={10}
                       // mx={[1, 1, 4, 4, 4]}
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
@@ -389,17 +389,17 @@ const Projects = () => {
         </Flex>
       </Box>
       {colorMode !== "dark" && (
-        <HStack>
+        <Flex justifyContent={"space-between"}>
           <motion.div
             style={{
               // x: colorMode !== "light" ? x2 : x1,
               // x: x2,
               y: y1,
               x: x1,
-              width: "100vw",
+              // width: "100vw",
               position: "fixed",
               top: 200,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -425,10 +425,10 @@ const Projects = () => {
               // x: x2,
               y: y2,
               x: x2,
-              width: "100vw",
+              // width: "100vw",
               position: "fixed",
               top: 200,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -454,10 +454,10 @@ const Projects = () => {
               // x: x2,
               y: y3,
               x: x3,
-              width: "100vw",
+              // width: "100vw",
               position: "fixed",
               top: 200,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -483,10 +483,10 @@ const Projects = () => {
               // x: x2,
               y: y4,
               x: x4,
-              width: "100vw",
+              // width: "100vw",
               position: "fixed",
               top: 200,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -512,10 +512,10 @@ const Projects = () => {
               // x: x2,
               y: y5,
               x: x5,
-              width: "100vw",
+              // width: "100vw",
               position: "fixed",
               top: 1000,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -544,7 +544,7 @@ const Projects = () => {
               width: "100vw",
               position: "fixed",
               top: 200,
-              left: 0,
+              // left: 0,
               zIndex: 2,
               overflow: "hidden",
               // opacity: o2,
@@ -563,7 +563,7 @@ const Projects = () => {
               <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
             </Box>
           </motion.div>
-        </HStack>
+        </Flex>
       )}
     </Box>
   );
