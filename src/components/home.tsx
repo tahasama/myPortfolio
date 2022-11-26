@@ -18,7 +18,7 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 import Social from "./social";
-import { MdNoMeals } from "react-icons/md";
+// import { MdNoMeals } from "react-icons/md";
 
 // const falling = keyframes`
 // from,to
