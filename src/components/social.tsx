@@ -10,6 +10,7 @@ const Social = () => {
   return (
     <>
       <VStack
+        zIndex={99}
         pos={"relative"}
         top={["-7", "32", "24", "32", "40"]}
         bottom={["auto", 53, "0"]}
@@ -63,6 +64,7 @@ const Social = () => {
             borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
             borderWidth="5px"
             transform={"rotate(45deg)"}
+            zIndex={99}
           >
             <Box
               transform={"rotate(-45deg)"}
@@ -98,14 +100,19 @@ const Social = () => {
             borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
             borderWidth="5px"
             transform={"rotate(45deg)"}
+            // zIndex="99"
           >
             <Box
               transform={"rotate(-45deg)"}
               fontSize={[28, 28, 34, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
               m={1}
+              // zIndex="99"
             >
-              <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
+              <motion.div
+                whileHover={{ scale: 1.1, rotate: 45 }}
+                // style={{ zIndex: "99" }}
+              >
                 <AiOutlineMail />
               </motion.div>
             </Box>
@@ -123,7 +130,7 @@ const Social = () => {
           ]}
         ></Box>{" "}
       </VStack>
-      <Box ml={[0, 0, 4, 3, 4]}>
+      <Box ml={[0, 0, 4, 3, 4]} zIndex={1}>
         <Box
           // visibility={["visible", "hidden", "visible", "visible", "visible"]}
           pos={"relative"}

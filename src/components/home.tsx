@@ -55,7 +55,7 @@ const Home = () => {
   const { scrollY } = useViewportScroll();
   // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
   const x2 = useTransform(scrollY, [0, 1000], [-300, 3400]);
-  const y2 = useTransform(scrollY, [0, 1000], [-100, -1700]);
+  const y2 = useTransform(scrollY, [0, 1000], [100, -1700]);
   // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
   const x3 = useTransform(scrollY, [0, 10], [0, 0]);
   // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
@@ -307,7 +307,7 @@ const Home = () => {
           </Flex>
 
           <motion.div
-            // style={{ margin: "auto" }}
+            style={{ zIndex: 99 }}
             whileHover={{
               y: [-1, 4, -1],
               transition: { duration: 1, repeat: Infinity },
@@ -329,6 +329,7 @@ const Home = () => {
                 bg={buttonLight}
                 _hover={{ bg: buttonLightHover }}
                 _active={{ bg: buttonLightHover }}
+
                 // w={"max"}
                 // m={["auto"]}
               >
