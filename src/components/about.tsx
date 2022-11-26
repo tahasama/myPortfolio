@@ -3,7 +3,7 @@ import {
   Box,
   Button,
   Flex,
-  Img,
+  // Img,
   Radio,
   useColorMode,
   useColorModeValue,
@@ -14,8 +14,8 @@ import { Element, Link } from "react-scroll";
 // import Projects from "./projects";
 // import Skills from "./skills";
 import Birds from "./birds";
-import bbb from "../images/bbb.png";
-import mmm from "../images/mmm.png";
+// import bbb from "../images/bbb.png";
+// import mmm from "../images/mmm.png";
 
 const About = () => {
   const bgOnLight = useColorModeValue("green.300", "gray.900");
