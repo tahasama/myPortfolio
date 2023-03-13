@@ -57,7 +57,7 @@ const Projects = () => {
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   return (
-    <Box h={"100%"} mt={[colorMode !== "dark" ? -40 : -52]}>
+    <Box h={"100%"} mt={[colorMode !== "dark" ? -52 : -52]}>
       <Element name="Projects"></Element>
 
       <Box
@@ -376,11 +376,304 @@ const Projects = () => {
               // zIndex={55}
             />
           </Flex>
+          <Flex
+            flexDir={["column", "column", "row", "row", "row"]}
+            justifyContent={"space-around"}
+            alignItems={"center"}
+            w={"96%"}
+            mx={[2, 2, 2, 5, 10]}
+            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+          >
+            <Img
+              src={proj1}
+              alt="devNight"
+              borderRadius={"3xl"}
+              w={["100%", "100%", "53%", "55%", "45%"]}
+              ml={[0, 0, 12, 0, 0]}
+              // zIndex={55}
+            />
+
+            <Box w={"full"}>
+              <motion.div
+                whileInView={{
+                  // x: !isMobile ? ["-20px", "0px"] : ["-600px", "0px"],
+                  scale: [0.6, 1],
+                  opacity: [0, 1],
+                }}
+                // transition={{ ease: "linear" }}
+                style={{ overflow: "hidden" }}
+              >
+                <VStack
+                  position={"relative"}
+                  // style={{ textIndent: 40 }}
+                  fontSize={["20", "22", "18", "24", "24"]}
+                  mb={2}
+                  fontFamily={"Raleway"}
+                  fontWeight={900}
+                >
+                  <Text fontSize={["20", "22", "18", "24", "24"]}>
+                    Quality Control App :
+                  </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontSize={["18", "20", "16", "22", "22"]}
+                  >
+                    An app for big construction sites projects
+                  </Text>
+                </VStack>
+                <List
+                  style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, 32]}
+                  fontSize={["17", "18", "14", "16", "20"]}
+                  lineHeight={"8"}
+                >
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Full Storage and arrangement of the documentation{" "}
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Tracking of quantities of the used materiel,
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    The advancement of the projects and its pace
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Every Quality inspection With necessary Laboratory and
+                    Topography assistance
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Procedures, plans, and Updates
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Detailed works
+                  </ListItem>{" "}
+                </List>
+                <Flex
+                  position="relative"
+                  justifyContent={"center"}
+                  alignItems={["center"]}
+                  w={"full"}
+                  // bgColor="red.200"
+                  // style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, 0]}
+                >
+                  <Link
+                    href="https://thacoder.netlify.app/"
+                    isExternal
+                    colorScheme="pink"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      mx={2}
+                      colorScheme={
+                        colorMode !== "light" ? "linkedin" : "facebook"
+                      }
+                      letterSpacing={"wider"}
+                    >
+                      Demo
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://github.com/tahasama/react-editor"
+                    isExternal
+                    fontSize={"xl"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      mx={[2, 2, 4, 4, 4]}
+                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
+                      letterSpacing={"wider"}
+                    >
+                      Code
+                    </Button>
+                  </Link>
+                </Flex>
+              </motion.div>
+            </Box>
+          </Flex>
+          <Flex
+            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
+            justifyContent={"space-around"}
+            alignItems={"center"}
+            w={"96%"}
+            mx={[2, 2, 2, 5, 10]}
+            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
+          >
+            <Box w={"full"} overflow={"hidden"}>
+              <motion.div
+                whileInView={{
+                  // x: isMobile ? ["10px", "0px"] : ["400px", "0px"],
+                  scale: [0.6, 1],
+                  opacity: [0, 1],
+                }}
+                // transition={{ ease: "linear" }}
+                style={{ overflow: "hidden" }}
+              >
+                <VStack
+                  position={"relative"}
+                  // style={{ textIndent: 40 }}
+                  fontSize={["20", "22", "18", "24", "24"]}
+                  mb={2}
+                  fontFamily={"Raleway"}
+                  fontWeight={900}
+                >
+                  <Text fontSize={["20", "22", "18", "20", "24"]}>
+                    Online Editor App :
+                  </Text>
+                  <Text
+                    textAlign={"center"}
+                    fontSize={["18", "22", "18", "20", "24"]}
+                  >
+                    An app for creating simple WebDev Projects
+                  </Text>
+                </VStack>
+                <List
+                  style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, 32]}
+                  fontSize={["17", "18", "14", "16", "20"]}
+                  lineHeight={"8"}
+                >
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Create project with Vanilla Html / Css / Javacasript
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Create project with React
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Import any package
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    See immediate result
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Create/Read/Update/Delete own projects
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    See/Clone/Like other users projects
+                  </ListItem>{" "}
+                </List>
+                <Flex
+                  position="relative"
+                  justifyContent={"center"}
+                  alignItems={["center"]}
+                  w={"full"}
+                  // bgColor="red.200"
+                  // style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, -6]}
+                >
+                  <Link
+                    href="https://thacoder.netlify.app/"
+                    isExternal
+                    colorScheme="pink"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      mx={3}
+                      colorScheme={
+                        colorMode !== "light" ? "linkedin" : "facebook"
+                      }
+                      letterSpacing={"wider"}
+                    >
+                      Demo
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://github.com/tahasama/react-editor"
+                    isExternal
+                    fontSize={"xl"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      // mx={[1, 1, 4, 4, 4]}
+                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
+                      letterSpacing={"wider"}
+                      mx={3}
+                    >
+                      Code
+                    </Button>
+                  </Link>
+                </Flex>
+              </motion.div>
+            </Box>
+
+            <Img
+              src={proj2}
+              alt="devNight"
+              borderRadius={"3xl"}
+              w={["100%", "100%", "53%", "55%", "45%"]}
+              ml={[0, 0, 0, 0, 0]}
+              // zIndex={55}
+            />
+          </Flex>
+
           <VStack
             visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}
           >
             <Text textAlign={"center"} fontSize={"xl"}>
-              Please visit my Github repository fot more Projects
+              Please visit my Github repository for more Projects
             </Text>
             <Button colorScheme="yellow" mx={12}>
               Github Repo

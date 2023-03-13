@@ -30,6 +30,8 @@ import tailwind from "../svg/tailwind.png";
 import chakra from "../svg/chakra.png";
 import cloudN from "../svg/cloudN.png";
 import cloud from "../svg/cloud.png";
+import expoLight from "../svg/logo-wordmark-light.png";
+import expo from "../svg/logo-wordmark.png";
 import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 
@@ -340,24 +342,27 @@ const Skills = () => {
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
               // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
-              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
               p={[3, 3, 4, 5, 4]}
             >
-              Frontend
+              Frontend & Mobile UI
             </Box>
 
-            <Box
+            <Flex
               bgColor={bglCard}
               borderBottomRadius={"40"}
               py={0}
               h={["70%", "70%", "100%", "80%", "100%"]}
+              gap={5}
+              flexDirection={"column"}
+              p={[4, 4, 0]}
             >
               <Flex
                 // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
                 mt={["3", "2", "6", "6", "4"]}
                 position={"relative"}
                 justifyContent={"space-around"}
@@ -378,13 +383,39 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? reactD : reactN}
-                      w={["64px", "64px", "48px", "58px", "68px"]}
+                      w={["44px", "44px", "48px", "58px", "58px"]}
                       filter={"brightness(.92)"}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"}>
-                      React Js
+                    <Box textAlign={"center"} color={"gray.400"} mt={[0, 2, 0]}>
+                      React Js / Native
                     </Box>
                   </Grid>
+                </motion.div>{" "}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ delay: 0.8 }}
+                >
+                  <Grid
+                    templateRows={["repeat(2, 1fr)"]}
+                    justifyItems={"center"}
+                    alignItems={"center"}
+                  >
+                    <Img
+                      src={expoLight}
+                      w={["240px", "240px", "85px", "90px", "94px"]}
+                      mb={2}
+                      filter={"brightness(.8)"}
+                      mt={[0, 0, 2, 0, 0]}
+                    />
+                    <Box
+                      textAlign={"center"}
+                      color={"gray.400"}
+                      mt={[2, 2, -2]}
+                    >
+                      Expo
+                    </Box>
+                  </Grid>{" "}
                 </motion.div>{" "}
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -399,14 +430,27 @@ const Skills = () => {
                   >
                     <Img
                       src={ts}
-                      w={["54px", "53px", "48px", "48px", "58px"]}
+                      w={["44px", "44px", "46px", "48px", "46px"]}
                       filter={"brightness(.92)"}
                     ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={1}>
+                    <Box textAlign={"center"} color={"gray.400"} mt={[0, 0, 1]}>
                       TypeScript
                     </Box>
                   </Grid>
                 </motion.div>{" "}
+              </Flex>
+
+              <Flex
+                // w={["86vw", "60vw", "30vw", "25vw"]}
+                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
+                // mt={["0", "2", "8", "24", "24"]}
+                position={"relative"}
+                justifyContent={"space-evenly"}
+                alignItems={"center"}
+                textAlign={"center"}
+                flexDir={["row", "row", "column"]}
+                mt={[0, 0, -5]}
+              >
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: [0, 1] }}
@@ -420,7 +464,7 @@ const Skills = () => {
                   >
                     <Img
                       src={reduxL}
-                      w={["60px", "60px", "38px", "48px", "58px"]}
+                      w={["40px", "40px", "38px", "48px", "50px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box textAlign={"center"} color={"gray.400"}>
@@ -428,19 +472,6 @@ const Skills = () => {
                     </Box>
                   </Grid>
                 </motion.div>
-              </Flex>
-
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
-                // mt={["0", "2", "8", "24", "24"]}
-                position={"relative"}
-                justifyContent={"space-evenly"}
-                alignItems={"center"}
-                textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-                mt={[-3]}
-              >
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: [0, 1] }}
@@ -450,14 +481,21 @@ const Skills = () => {
                     templateRows={["repeat(2, 1fr)"]}
                     justifyItems={"center"}
                     alignItems={"center"}
+                    ml={[5, 5, 0]}
+                    mt={[4, 4, 0]}
                   >
                     <Img
                       src={tailwind}
-                      w={["70px", "70px", "48px", "58px", "68px"]}
-                      mb={2}
-                      mt={[0, 0, 7, 4, 4]}
+                      w={["60px", "60px", "48px", "58px", "56px"]}
+
+                      // mt={[0, 0, 7, 4, 4]}
                     />
-                    <Box textAlign={"center"} color={"gray.400"} mt={"-30px"}>
+                    <Box
+                      textAlign={"center"}
+                      color={"gray.400"}
+                      // mt={"-30px"}
+                      mb={[4, 6, 2]}
+                    >
                       Tailwind css
                     </Box>
                   </Grid>{" "}
@@ -472,24 +510,25 @@ const Skills = () => {
                     justifyItems={"center"}
                     alignItems={"center"}
                     p={2}
+                    ml={[5, 5, 0]}
                   >
                     <Img
                       src={chakra}
-                      w={["64px", "64px", "48px", "58px", "68px"]}
+                      w={["54px", "54px", "48px", "58px", "56px"]}
                       mb={[-1]}
-                      mt={[-3, -3, -4, -4, -7]}
+                      mt={[-0, -0, -4, -4, -4]}
                     />
                     <Box
                       textAlign={"center"}
                       color={"gray.400"}
-                      mt={[-6, -6, 2, -1, -1]}
+                      mt={[2, 2, 2, -1, -1]}
                     >
-                      Chakra ui
+                      Chakra UI
                     </Box>
                   </Grid>{" "}
                 </motion.div>
               </Flex>
-            </Box>
+            </Flex>
           </Flex>
 
           <Flex
@@ -504,7 +543,7 @@ const Skills = () => {
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
               // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
-              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
@@ -517,11 +556,12 @@ const Skills = () => {
               bgColor={bglCard}
               borderBottomRadius={"40"}
               py={0}
-              h={["60%", "60%", "90%", "80%", "90%"]}
+              h={["60%", "20%", "90%", "80%", "90%"]}
+              px={[4, 4, 0]}
             >
               <Flex
                 // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
                 mt={["0", "0", "20", "12", "20"]}
                 position={"relative"}
                 justifyContent={"space-evenly"}
@@ -543,7 +583,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? expressL : expressL}
-                      w={["60px", "60px", "44px", "54px", "64px"]}
+                      w={["50px", "50px", "44px", "54px", "60px"]}
                       filter={"brightness(.92)"}
                       mb={2}
                     ></Img>
@@ -565,7 +605,7 @@ const Skills = () => {
                   >
                     <Img
                       src={firebase}
-                      w={["110px", "110px", "90px", "100px", "110px"]}
+                      w={["100px", "100px", "90px", "100px", "100px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box
@@ -581,7 +621,7 @@ const Skills = () => {
 
               <Flex
                 // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
                 // mt={["0", "2", "8", "24", "24"]}
                 position={"relative"}
                 justifyContent={"space-around"}
@@ -609,7 +649,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? mongoN : mongoN}
-                      w={["160px", "150px", "130px", "170px", "190px"]}
+                      w={["140px", "140px", "120px", "160px", "180px"]}
                       // mb={20}
                       // h={"80px"}
                     />
@@ -638,7 +678,7 @@ const Skills = () => {
               fontSize={["xl", "xl", "lg", "xl"]}
               fontFamily={"arial"}
               // w={["86vw", "60vw", "30vw", "25vw"]}
-              w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
               bgColor={bglCardHead}
               borderTopRadius={"18"}
               textAlign={"center"}
@@ -654,10 +694,11 @@ const Skills = () => {
               // py={-20}
               h={["100%", "100%", "90%", "80%", "90%"]}
               py={[8, 8, 0]}
+              px={[4, 4, 0]}
             >
               <Flex
                 // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "sm"]}
+                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
                 mt={["5", "5", "20", "20", "20"]}
                 position={"relative"}
                 justifyContent={"space-around"}
@@ -678,7 +719,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? gitL : gitL}
-                      w={["60px", "60px", "50px", "60px", "70px"]}
+                      w={["50px", "50px", "50px", "60px", "60px"]}
                       filter={"brightness(.92)"}
                       mb={[2, 1, 2, 2, 2]}
                     ></Img>
@@ -704,7 +745,7 @@ const Skills = () => {
                   >
                     <Img
                       src={colorMode === "light" ? githubN : githubN}
-                      w={["65px", "60px", "44px", "54px", "64px"]}
+                      w={["50px", "50px", "44px", "54px", "54px"]}
                       filter={"brightness(.92)"}
                       mb={2}
                     ></Img>
@@ -727,7 +768,7 @@ const Skills = () => {
                   >
                     <Img
                       src={docker}
-                      w={["68px", "68px", "50px", "60px", "70px"]}
+                      w={["58px", "58px", "50px", "60px", "60px"]}
                       filter={"brightness(.92)"}
                     ></Img>
                     <Box

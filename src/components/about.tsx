@@ -33,7 +33,7 @@ const About = () => {
   return (
     <Box
       h={"100%"}
-      mt={[-16, -16, -16, -24, colorMode !== "dark" ? -20 : -48]}
+      mt={[-16, -20, -16, -24, colorMode !== "dark" ? -20 : -48]}
       // zIndex={-1}
       position={"relative"}
       alignItems={"center"}
