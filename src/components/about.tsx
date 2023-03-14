@@ -3,6 +3,7 @@ import {
   Box,
   Button,
   Flex,
+  Text,
   // Img,
   Radio,
   useColorMode,
@@ -230,11 +231,12 @@ const About = () => {
             animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
             transition={{ duration: 2 }}
           >
-            <Box w={["90vw", "auto"]} px={0} py={2} style={{ textIndent: 40 }}>
+            <Text w={["90vw", "auto"]} px={0} py={2} style={{ textIndent: 40 }}>
               I can build creative user friendly interfaces (but also full
-              backend for full control) of Websites and Web Applications,
-              bringing both the technical and visual aspects of a product.
-            </Box>
+              backend ) of <Text as={"b"}>Web</Text> and{" "}
+              <Text as={"b"}>mobile</Text> Applications, bringing both the
+              technical and visual aspects of a product.
+            </Text>
           </motion.div>
         )}
         {(selected === "full" || selected === "short") && (
@@ -244,9 +246,10 @@ const About = () => {
           >
             <Box w={["90vw", "auto"]} px={3} py={2} style={{ textIndent: 40 }}>
               I started learning to code in mid 2020, with python then moved to
-              Javascript all the way to MERN Stack, where i fell in love with
-              the infinite possibility of creating and renovating incredible
-              projects.
+              Javascript all the way to <Text as={"b"}>MERN Stack</Text> and
+              then <Text as={"b"}>React Native / Expo</Text> World, where i fell
+              in love with the infinite possibility of creating and renovating
+              incredible projects.
             </Box>
           </motion.div>
         )}

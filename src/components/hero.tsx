@@ -43,6 +43,7 @@ const Hero = () => {
           " Self - thaught ",
           " MERN - Stack ",
           "Problem-solving",
+          "Mobile Apps",
           // "Curious & Creative",
         ]}
         loop={Infinity}

@@ -20,7 +20,9 @@ import { MdSettings } from "react-icons/md";
 // import proj1 from "../images/proj/proj1/proj1.jpeg";
 // import proj1n from "../images/proj/proj1/proj1n1.png";
 import proj1 from "../images/proj/proj1/QualityApp.png";
+import resp from "../images/proj/proj1/resp.png";
 import proj2 from "../images/proj/proj2/EditorApp.png";
+import phone from "../images/proj/proj2/phone.png";
 import { Element } from "react-scroll";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
@@ -85,6 +87,160 @@ const Projects = () => {
           pb={64}
         >
           <Flex
+            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
+            justifyContent={"space-around"}
+            alignItems={"center"}
+            w={"96%"}
+            mx={[2, 2, 2, 5, 10]}
+            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+          >
+            <Box w={"full"} flex={2}>
+              <motion.div
+                whileInView={{
+                  // x: !isMobile ? ["-20px", "0px"] : ["-600px", "0px"],
+                  scale: [0.6, 1],
+                  opacity: [0, 1],
+                }}
+                // transition={{ ease: "linear" }}
+                style={{ overflow: "hidden" }}
+              >
+                <VStack
+                  position={"relative"}
+                  // style={{ textIndent: 40 }}
+                  fontSize={["20", "22", "18", "24", "24"]}
+                  mb={2}
+                  fontFamily={"Raleway"}
+                  fontWeight={900}
+                >
+                  <Text fontSize={["20", "22", "18", "24", "24"]}>Storyat</Text>
+                  <Text
+                    textAlign={"center"}
+                    fontSize={["18", "20", "16", "22", "22"]}
+                  >
+                    A mobile app for for sharing and reacting
+                  </Text>
+                </VStack>
+                <List
+                  style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, 32]}
+                  fontSize={["17", "18", "14", "16", "20"]}
+                  lineHeight={"8"}
+                >
+                  <ListItem
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={"center"}
+                  >
+                    for quick access please use email : t@t.com ,and passsword :
+                    tttttt{" "}
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Share a story, a situation, ....
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Share imagem photos, ...
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    React to others stories
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Comments and reply to comments
+                  </ListItem>{" "}
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Get notification for comments, reactions
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon
+                      as={MdSettings}
+                      color={colorMode !== "light" ? "green.500" : "pink.500"}
+                    />
+                    Profile with all user contribution, updates, ...
+                  </ListItem>{" "}
+                </List>
+                <Flex
+                  position="relative"
+                  justifyContent={"center"}
+                  alignItems={["center"]}
+                  w={"full"}
+                  // bgColor="red.200"
+                  // style={{ textIndent: 10 }}
+                  ml={[0, 0, 0, 0, 0]}
+                >
+                  <Link
+                    href="https://thacoder.netlify.app/"
+                    isExternal
+                    colorScheme="pink"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      mx={2}
+                      colorScheme={
+                        colorMode !== "light" ? "linkedin" : "facebook"
+                      }
+                      letterSpacing={"wider"}
+                    >
+                      Demo
+                    </Button>
+                  </Link>
+                  <Link
+                    href="https://github.com/tahasama/react-editor"
+                    isExternal
+                    fontSize={"xl"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Button
+                      px={["8", "12", "12", "16", "16"]}
+                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
+                      py={[6, 6, 6, 6, 6]}
+                      my={10}
+                      mx={[2, 2, 4, 4, 4]}
+                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
+                      letterSpacing={"wider"}
+                    >
+                      Code
+                    </Button>
+                  </Link>
+                </Flex>
+              </motion.div>
+            </Box>
+            <Flex flex={2} justifyContent={"center"}>
+              <Img
+                src={phone}
+                alt="devNight"
+                borderRadius={"3xl"}
+                w={["50%", "50%", "40%", "37%", "25%"]}
+                ml={[0, 0, 12, 0, 0]}
+                // zIndex={55}
+                mb={[5, 5, 0]}
+              />
+            </Flex>
+          </Flex>
+
+          <Flex
             flexDir={["column", "column", "row", "row", "row"]}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -135,6 +291,14 @@ const Projects = () => {
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
                 >
+                  <ListItem
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={"center"}
+                  >
+                    for quick access please use email : t@t.com ,and passsword :
+                    tttttt{" "}
+                  </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
@@ -230,6 +394,7 @@ const Projects = () => {
               </motion.div>
             </Box>
           </Flex>
+
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
             justifyContent={"space-around"}
@@ -272,6 +437,14 @@ const Projects = () => {
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
                 >
+                  <ListItem
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={"center"}
+                  >
+                    for quick access please use email : t@t.com ,and passsword :
+                    tttttt{" "}
+                  </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
@@ -376,160 +549,25 @@ const Projects = () => {
               // zIndex={55}
             />
           </Flex>
+
           <Flex
             flexDir={["column", "column", "row", "row", "row"]}
-            justifyContent={"space-around"}
-            alignItems={"center"}
-            w={"96%"}
-            mx={[2, 2, 2, 5, 10]}
-            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
-          >
-            <Img
-              src={proj1}
-              alt="devNight"
-              borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "45%"]}
-              ml={[0, 0, 12, 0, 0]}
-              // zIndex={55}
-            />
-
-            <Box w={"full"}>
-              <motion.div
-                whileInView={{
-                  // x: !isMobile ? ["-20px", "0px"] : ["-600px", "0px"],
-                  scale: [0.6, 1],
-                  opacity: [0, 1],
-                }}
-                // transition={{ ease: "linear" }}
-                style={{ overflow: "hidden" }}
-              >
-                <VStack
-                  position={"relative"}
-                  // style={{ textIndent: 40 }}
-                  fontSize={["20", "22", "18", "24", "24"]}
-                  mb={2}
-                  fontFamily={"Raleway"}
-                  fontWeight={900}
-                >
-                  <Text fontSize={["20", "22", "18", "24", "24"]}>
-                    Quality Control App :
-                  </Text>
-                  <Text
-                    textAlign={"center"}
-                    fontSize={["18", "20", "16", "22", "22"]}
-                  >
-                    An app for big construction sites projects
-                  </Text>
-                </VStack>
-                <List
-                  style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 32]}
-                  fontSize={["17", "18", "14", "16", "20"]}
-                  lineHeight={"8"}
-                >
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Full Storage and arrangement of the documentation{" "}
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Tracking of quantities of the used materiel,
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    The advancement of the projects and its pace
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Every Quality inspection With necessary Laboratory and
-                    Topography assistance
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Procedures, plans, and Updates
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Detailed works
-                  </ListItem>{" "}
-                </List>
-                <Flex
-                  position="relative"
-                  justifyContent={"center"}
-                  alignItems={["center"]}
-                  w={"full"}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 0]}
-                >
-                  <Link
-                    href="https://thacoder.netlify.app/"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["8", "12", "12", "16", "16"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={2}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
-                      letterSpacing={"wider"}
-                    >
-                      Demo
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["8", "12", "12", "16", "16"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={[2, 2, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
-                    >
-                      Code
-                    </Button>
-                  </Link>
-                </Flex>
-              </motion.div>
-            </Box>
-          </Flex>
-          <Flex
-            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
-            justifyContent={"space-around"}
+            justifyContent={"space-evenly"}
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
             // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
+            // backgroundColor={"green"}
           >
+            <Img
+              src={resp}
+              alt="devNight"
+              borderRadius={"3xl"}
+              w={["100%", "100%", "53%", "55%", "47%"]}
+              ml={[0, 0, 0, 0, 0]}
+              // zIndex={55}
+              margin={0}
+            />
             <Box w={"full"} overflow={"hidden"}>
               <motion.div
                 whileInView={{
@@ -549,13 +587,13 @@ const Projects = () => {
                   fontWeight={900}
                 >
                   <Text fontSize={["20", "22", "18", "20", "24"]}>
-                    Online Editor App :
+                    Portfolio
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "22", "18", "20", "24"]}
                   >
-                    An app for creating simple WebDev Projects
+                    My personal portfolio
                   </Text>
                 </VStack>
                 <List
@@ -569,42 +607,28 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Create project with Vanilla Html / Css / Javacasript
+                    Responsive portfolio
                   </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Create project with React
+                    Dark / Light mode
                   </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Import any package
+                    Animations
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    See immediate result
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Create/Read/Update/Delete own projects
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    See/Clone/Like other users projects
+                    Links to deployed Apps and Github
                   </ListItem>{" "}
                 </List>
                 <Flex
@@ -658,15 +682,9 @@ const Projects = () => {
                 </Flex>
               </motion.div>
             </Box>
+            {/* <Flex justifyContent={"flex-end"}> */}
 
-            <Img
-              src={proj2}
-              alt="devNight"
-              borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "45%"]}
-              ml={[0, 0, 0, 0, 0]}
-              // zIndex={55}
-            />
+            {/* </Flex> */}
           </Flex>
 
           <VStack
