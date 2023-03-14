@@ -129,7 +129,7 @@ const Projects = () => {
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
-                    textAlign={"center"}
+                    textAlign={["center", "center", "start"]}
                   >
                     for quick access please use email : t@t.com ,and passsword :
                     tttttt{" "}
@@ -294,7 +294,14 @@ const Projects = () => {
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
-                    textAlign={"center"}
+                    textAlign={["center", "center", "start"]}
+                  >
+                    if you register you'll have to wait for authorization
+                  </ListItem>
+                  <ListItem
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={["center", "center", "justify"]}
                   >
                     for quick access please use email : t@t.com ,and passsword :
                     tttttt{" "}
@@ -440,7 +447,7 @@ const Projects = () => {
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
-                    textAlign={"center"}
+                    textAlign={["center", "center", "start"]}
                   >
                     for quick access please use email : t@t.com ,and passsword :
                     tttttt{" "}
