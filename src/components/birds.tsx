@@ -58,7 +58,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          111
         </Box>
       </motion.div>
       <motion.div
@@ -89,7 +88,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          222
         </Box>
       </motion.div>
       <motion.div
@@ -121,7 +119,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          333
         </Box>
       </motion.div>
       <motion.div
@@ -153,7 +150,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          444
         </Box>
       </motion.div>
       <motion.div
@@ -186,7 +182,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          555
         </Box>
       </motion.div>
       <motion.div
@@ -219,7 +214,6 @@ const Birds = () => {
           overflow={"hidden"}
         >
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
-          666
         </Box>
       </motion.div>
     </HStack>

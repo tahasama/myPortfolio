@@ -187,13 +187,13 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 0]}
                 >
                   <Link
-                    href="https://thacoder.netlify.app/"
+                    href="https://play.google.com/store/apps/details?id=com.storyat"
                     isExternal
                     colorScheme="pink"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -203,17 +203,17 @@ const Projects = () => {
                       }
                       letterSpacing={"wider"}
                     >
-                      Demo
+                      Play Store
                     </Button>
                   </Link>
                   <Link
-                    href="https://github.com/tahasama/react-editor"
+                    href="https://github.com/tahasama/storyat"
                     isExternal
                     fontSize={"xl"}
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -221,7 +221,7 @@ const Projects = () => {
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
                       letterSpacing={"wider"}
                     >
-                      Code
+                      Case study
                     </Button>
                   </Link>
                 </Flex>
@@ -292,6 +292,14 @@ const Projects = () => {
                   lineHeight={"8"}
                 >
                   <ListItem
+                    color={colorMode !== "light" ? "green.400" : "red.600"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={["center", "center", "start"]}
+                  >
+                    ! ALL Data and files in this project are fake and are just
+                    for demontration !
+                  </ListItem>
+                  <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
                     textAlign={["center", "center", "start"]}
@@ -360,13 +368,13 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 0]}
                 >
                   <Link
-                    href="https://thacoder.netlify.app/"
+                    href="https://qualityc.netlify.app/"
                     isExternal
                     colorScheme="pink"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -376,17 +384,17 @@ const Projects = () => {
                       }
                       letterSpacing={"wider"}
                     >
-                      Demo
+                      Go to app
                     </Button>
                   </Link>
                   <Link
-                    href="https://github.com/tahasama/react-editor"
+                    href="https://github.com/tahasama/proApp"
                     isExternal
                     fontSize={"xl"}
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -394,7 +402,7 @@ const Projects = () => {
                       colorScheme={colorMode !== "light" ? "teal" : "pink"}
                       letterSpacing={"wider"}
                     >
-                      Code
+                      Case study
                     </Button>
                   </Link>
                 </Flex>
@@ -511,7 +519,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -521,7 +529,7 @@ const Projects = () => {
                       }
                       letterSpacing={"wider"}
                     >
-                      Demo
+                      Go to app
                     </Button>
                   </Link>
                   <Link
@@ -531,7 +539,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -540,7 +548,7 @@ const Projects = () => {
                       letterSpacing={"wider"}
                       mx={3}
                     >
-                      Code
+                      Case study
                     </Button>
                   </Link>
                 </Flex>
@@ -648,13 +656,13 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, -6]}
                 >
                   <Link
-                    href="https://thacoder.netlify.app/"
+                    href="http://tahadev.com/"
                     isExternal
                     colorScheme="pink"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -664,7 +672,7 @@ const Projects = () => {
                       }
                       letterSpacing={"wider"}
                     >
-                      Demo
+                      Go to app
                     </Button>
                   </Link>
                   <Link
@@ -674,7 +682,7 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["8", "12", "12", "16", "16"]}
+                      px={["5", "5", "6", "6", "6"]}
                       fontSize={["lg", "lg", "lg", "xl", "xl"]}
                       py={[6, 6, 6, 6, 6]}
                       my={10}
@@ -683,7 +691,7 @@ const Projects = () => {
                       letterSpacing={"wider"}
                       mx={3}
                     >
-                      Code
+                      Case study
                     </Button>
                   </Link>
                 </Flex>
