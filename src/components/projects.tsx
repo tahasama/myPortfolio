@@ -112,10 +112,16 @@ const Projects = () => {
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  <Text fontSize={["20", "22", "18", "24", "24"]}>Storyat</Text>
+                  <Text
+                    fontSize={["20", "22", "18", "24", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                  >
+                    Storyat
+                  </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "20", "16", "22", "22"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
                   >
                     A mobile app for for sharing and reacting
                   </Text>
@@ -125,6 +131,7 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
+                  color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
@@ -275,12 +282,16 @@ const Projects = () => {
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  <Text fontSize={["20", "22", "18", "24", "24"]}>
+                  <Text
+                    fontSize={["20", "22", "18", "24", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                  >
                     Quality Control App :
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "20", "16", "22", "22"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
                   >
                     An app for big construction sites projects
                   </Text>
@@ -290,6 +301,7 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
+                  color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
                   <ListItem
                     color={colorMode !== "light" ? "green.400" : "red.600"}
@@ -436,12 +448,16 @@ const Projects = () => {
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  <Text fontSize={["20", "22", "18", "20", "24"]}>
+                  <Text
+                    fontSize={["20", "22", "18", "20", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                  >
                     Online Editor App :
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "22", "18", "20", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
                   >
                     An app for creating simple WebDev Projects
                   </Text>
@@ -451,6 +467,7 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
+                  color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
@@ -601,12 +618,16 @@ const Projects = () => {
                   fontFamily={"Raleway"}
                   fontWeight={900}
                 >
-                  <Text fontSize={["20", "22", "18", "20", "24"]}>
+                  <Text
+                    fontSize={["20", "22", "18", "20", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                  >
                     Portfolio
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "22", "18", "20", "24"]}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
                   >
                     My personal portfolio
                   </Text>
@@ -616,6 +637,7 @@ const Projects = () => {
                   ml={[0, 0, 0, 0, 32]}
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
+                  color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
                   <ListItem>
                     <ListIcon
