@@ -34,7 +34,7 @@ const About = () => {
   return (
     <Box
       h={"100%"}
-      mt={[-16, -20, -16, -24, colorMode !== "dark" ? -20 : -48]}
+      mt={[-16, -20, -20, -24, colorMode !== "dark" ? -20 : -48]}
       // zIndex={-1}
       position={"relative"}
       alignItems={"center"}
@@ -96,7 +96,8 @@ const About = () => {
         textAlign="center"
         w={["100%", "full", "full"]}
         position={"absolute"}
-        top={[colorMode !== "dark" ? 28 : 10, 24, 32]}
+        top={[colorMode !== "dark" ? 16 : 16, 24, 32]}
+        // paddingX={[colorMode !== "dark" ? 5 : 0, 7]}
         gap={[10, 9, 24, 28, 36]}
         fontSize={["xs", "lg", "sm", "sm", "lg"]}
 
@@ -187,7 +188,8 @@ const About = () => {
         mx={["2", "2", "24", "60", "96"]}
         // mr={["2", "2", "24", "40", "6"]}
         // m={0}
-        top={[colorMode !== "dark" ? 16 : 40, colorMode !== "dark" ? 32 : 56]}
+        // top={[colorMode !== "dark" ? 16 : 40, colorMode !== "dark" ? 32 : 56]}
+        top={colorMode === "light" ? [20, 20, 44, 40] : [40, 20, 48, 56]}
         // pb={
         //   selected === ""
         //     ? ["28"]

@@ -307,7 +307,7 @@ const Home = () => {
           </Flex>
 
           <motion.div
-            style={{ zIndex: 99 }}
+            style={{ zIndex: 98 }}
             whileHover={{
               y: [-1, 4, -1],
               transition: { duration: 1, repeat: Infinity },

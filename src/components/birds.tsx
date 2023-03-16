@@ -10,7 +10,7 @@ const Birds = () => {
   const y1 = useTransform(scrollY, [320, 600], [0, 200]);
 
   const x2 = useTransform(scrollY, [270, 590], [2600, -800]);
-  const y2 = useTransform(scrollY, [320, 600], [100, -100]);
+  const y2 = useTransform(scrollY, [320, 450, 600], [100, 50, 300]);
 
   const x3 = useTransform(scrollY, [370, 590], [2600, -700]);
   const y3 = useTransform(scrollY, [320, 600], [260, 400]);
