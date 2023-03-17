@@ -50,6 +50,7 @@ const Contact = () => {
           console.log(error.text);
         }
       );
+    form.current.reset();
   };
   return (
     <>
@@ -82,63 +83,72 @@ const Contact = () => {
         mt={[-48, colorMode !== "dark" ? -28 : -48]}
         // mt={[-48, -24]}
       >
-        <FormControl
-          mt={32}
+        <form
           ref={form}
           onSubmit={sendEmail}
-          // top={[28, 28, 28, 28, 28]}
-          w={[72, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
-          //   fontSize={[20, 20, 20, 20, 20]}
-          //   mt={[-40, -60, -80, -20, -40]}
+          style={{
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "center",
+            display: "flex",
+          }}
         >
-          <FormLabel p={2}>Name</FormLabel>
-          <Input
-            type="text"
-            name="from_name"
-            p={5}
-            border={"2px"}
-            borderColor="gray.200"
-            bgColor={bgPlaceHolder}
-            placeholder="lucky !"
-          />
-          <FormLabel p={2} mt={4}>
-            Email
-          </FormLabel>
-          <Input
-            type="email"
-            name="from_email"
-            p={5}
-            border={"2px"}
-            borderColor="gray.200"
-            bgColor={bgPlaceHolder}
-            placeholder="example: i-want-to-hire@you.com"
-          />
-          <FormLabel p={2} mt={4}>
-            Message
-          </FormLabel>
-          <Textarea
-            name="message"
-            p={5}
-            border={"2px"}
-            borderColor="gray.200"
-            bgColor={bgPlaceHolder}
-            placeholder="say Hii !!"
-            rows={5}
-          />
-          <VStack>
-            <Button
-              mt={10}
-              w={[4 / 7, 4 / 7, 3 / 7, 3 / 7, 3 / 7]}
-              type="submit"
-              bgColor={"teal.400"}
-              py={6}
-              //   px={20}
-            >
-              Send
-            </Button>
-          </VStack>
-          {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
-        </FormControl>
+          <FormControl
+            mt={32}
+            // top={[28, 28, 28, 28, 28]}
+            w={[72, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}
+            //   fontSize={[20, 20, 20, 20, 20]}
+            //   mt={[-40, -60, -80, -20, -40]}
+          >
+            <FormLabel p={2}>Name</FormLabel>
+            <Input
+              type="text"
+              name="from_name"
+              p={5}
+              border={"2px"}
+              borderColor="gray.200"
+              bgColor={bgPlaceHolder}
+              placeholder="lucky !"
+            />
+            <FormLabel p={2} mt={4}>
+              Email
+            </FormLabel>
+            <Input
+              type="email"
+              name="from_email"
+              p={5}
+              border={"2px"}
+              borderColor="gray.200"
+              bgColor={bgPlaceHolder}
+              placeholder="example: i-want-to-hire@you.com"
+            />
+            <FormLabel p={2} mt={4}>
+              Message
+            </FormLabel>
+            <Textarea
+              name="message"
+              p={5}
+              border={"2px"}
+              borderColor="gray.200"
+              bgColor={bgPlaceHolder}
+              placeholder="say Hii !!"
+              rows={5}
+            />
+            <VStack>
+              <Button
+                mt={10}
+                w={[4 / 7, 4 / 7, 3 / 7, 3 / 7, 3 / 7]}
+                type="submit"
+                bgColor={"teal.400"}
+                py={6}
+                //   px={20}
+              >
+                Send
+              </Button>
+            </VStack>
+            {/* <FormHelperText>We'll never share your email.</FormHelperText> */}
+          </FormControl>
+        </form>
 
         {colorMode !== "dark" && (
           <Flex
