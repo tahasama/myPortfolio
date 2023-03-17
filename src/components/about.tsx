@@ -240,10 +240,11 @@ const About = () => {
               style={{ textIndent: 40 }}
               color={colorMode === "light" ? "gray.800" : "gray.300"}
             >
-              I can build creative user friendly interfaces (but also full
-              backend ) of <Text as={"b"}>Web</Text> and{" "}
-              <Text as={"b"}>mobile</Text> Applications, bringing both the
-              technical and visual aspects of a product.
+              Hi there! I'm a<Text as={"b"}>Web</Text> and{" "}
+              <Text as={"b"}>mobile</Text> App Developer with a passion for
+              creating user-friendly interfaces and building solid backends for
+              seamless user experiences, bringing both the technical and visual
+              aspects of a product.
             </Text>
           </motion.div>
         )}
@@ -259,11 +260,13 @@ const About = () => {
               style={{ textIndent: 40 }}
               color={colorMode === "light" ? "gray.800" : "gray.300"}
             >
-              I started learning to code in mid 2021, with python then moved to
-              Javascript all the way to <Text as={"b"}>MERN Stack</Text> and
-              then <Text as={"b"}>React Native / Expo</Text> World, where i fell
-              in love with the infinite possibility of creating and renovating
-              incredible projects.
+              I'm self-taught and started learning to code in mid-2021. Since
+              then, I've gained proficiency in Python and JavaScript and have
+              been exploring different technologies like the
+              <Text as={"b"}> MERN Stack </Text> and{" "}
+              <Text as={"b"}> React Native/Expo </Text> universe. I'm excited
+              about the possibilities of building creative and innovative
+              projects.
             </Box>
           </motion.div>
         )}
