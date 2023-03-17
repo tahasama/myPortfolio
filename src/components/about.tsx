@@ -241,7 +241,7 @@ const About = () => {
               color={colorMode === "light" ? "gray.800" : "gray.300"}
             >
               Hi there! I'm a<Text as={"b"}>Web</Text> and
-              <Text as={"b"}>mobile</Text> App Developer with a passion for
+              <Text as={"b"}> mobile</Text> App Developer with a passion for
               creating user-friendly interfaces and building solid backends for
               seamless user experiences, bringing both the technical and visual
               aspects of a product.
