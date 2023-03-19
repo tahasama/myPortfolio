@@ -40,10 +40,10 @@ const Hero = () => {
       <Typewriter
         words={[
           "Frontend-Focused",
+          " Mobile Apps ",
           " Self - thaught ",
           " MERN - Stack ",
           "Problem-solving",
-          "Mobile Apps",
           // "Curious & Creative",
         ]}
         loop={Infinity}
