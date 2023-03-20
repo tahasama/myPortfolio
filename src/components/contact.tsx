@@ -19,6 +19,9 @@ import tresor from "../images/tresor.png";
 import copyRight from "../images/copyright.png";
 import copyRightN from "../images/copyrightN.png";
 
+const service = process.env.REACT_APP_SERVICE || "";
+const key = process.env.REACT_APP_KEY;
+
 const Contact = () => {
   const bglOnLight = useColorModeValue("gray.300", "gray.900");
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
@@ -35,21 +38,14 @@ const Contact = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_ytm3juo",
-        "template_alun2fr",
-        form.current,
-        "ENtm8oqrclv3xgIHD"
-      )
-      .then(
-        (result): any => {
-          console.log(result.text);
-        },
-        (error): any => {
-          console.log(error.text);
-        }
-      );
+    emailjs.sendForm(service, "template_alun2fr", form.current, key).then(
+      (result): any => {
+        console.log(result.text);
+      },
+      (error): any => {
+        console.log(error.text);
+      }
+    );
     form.current.reset();
   };
   return (
