@@ -153,8 +153,8 @@ const Skills = () => {
               bgColor="purple.500"
             >
               <motion.div
-                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
-                transition={{ duration: 2 }}
+                whileInView={{ scaleX: [1, -1, 1] }}
+                transition={{ duration: 1 }}
                 style={{
                   color: colorMode !== "light" ? "gray.400" : "white",
                 }}
@@ -205,8 +205,8 @@ const Skills = () => {
               textAlign={"center"}
             >
               <motion.div
-                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
-                transition={{ duration: 2 }}
+                whileInView={{ scaleX: [1, -1, 1] }}
+                transition={{ duration: 1 }}
                 style={{
                   color: colorMode !== "light" ? "black" : "white",
                 }}
@@ -263,8 +263,8 @@ const Skills = () => {
               bgColor="purple.500"
             >
               <motion.div
-                whileInView={{ scaleX: [-1, 1, -1, 1, -1, 1] }}
-                transition={{ duration: 2 }}
+                whileInView={{ scaleX: [1, -1, 1] }}
+                transition={{ duration: 1 }}
                 style={{ color: colorMode !== "light" ? "black" : "white" }}
               >
                 <AiOutlineBulb size={"72"} />
@@ -299,8 +299,8 @@ const Skills = () => {
               bgColor="purple.500"
             >
               <motion.div
-                whileInView={{ scaleX: [1, -1, 1, -1, 1] }}
-                transition={{ duration: 2 }}
+                whileInView={{ scaleX: [1, -1, 1] }}
+                transition={{ duration: 1 }}
                 style={{ color: colorMode !== "light" ? "black" : "white" }}
               >
                 <IoIosRocket size={"72"} />
