@@ -41,20 +41,20 @@ const Projects = () => {
   // window.onresize = reportWindowSize;
   // console.log(window.onresize);
 
-  const { scrollY } = useViewportScroll();
-  const x1 = useTransform(scrollY, [2000, 2800], [100, 100]);
-  const x2 = useTransform(scrollY, [2000, 2800], [400, 400]);
-  const x3 = useTransform(scrollY, [2000, 2800], [700, 700]);
-  const x4 = useTransform(scrollY, [2000, 2800], [1000, 1000]);
-  const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
-  const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
+  // const { scrollY } = useViewportScroll();
+  // const x1 = useTransform(scrollY, [2000, 2800], [100, 100]);
+  // const x2 = useTransform(scrollY, [2000, 2800], [400, 400]);
+  // const x3 = useTransform(scrollY, [2000, 2800], [700, 700]);
+  // const x4 = useTransform(scrollY, [2000, 2800], [1000, 1000]);
+  // const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
+  // const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
 
-  const y1 = useTransform(scrollY, [2300, 2800], [1300, -800]);
-  const y2 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
-  const y3 = useTransform(scrollY, [2350, 2750], [1300, -1200]);
-  const y4 = useTransform(scrollY, [2450, 2750], [1300, -900]);
-  const y5 = useTransform(scrollY, [2300, 2650], [1300, -1600]);
-  const y6 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
+  // const y1 = useTransform(scrollY, [2300, 2800], [1300, -800]);
+  // const y2 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
+  // const y3 = useTransform(scrollY, [2350, 2750], [1300, -1200]);
+  // const y4 = useTransform(scrollY, [2450, 2750], [1300, -900]);
+  // const y5 = useTransform(scrollY, [2300, 2650], [1300, -1600]);
+  // const y6 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
 
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
@@ -736,7 +736,7 @@ const Projects = () => {
           </VStack>
         </Flex>
       </Box>
-      {colorMode !== "dark" && (
+      {/* {colorMode !== "dark" && (
         <Flex justifyContent={"space-between"}>
           <motion.div
             style={{
@@ -912,7 +912,7 @@ const Projects = () => {
             </Box>
           </motion.div>
         </Flex>
-      )}
+      )} */}
     </Box>
   );
 };

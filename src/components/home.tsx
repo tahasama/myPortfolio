@@ -52,15 +52,15 @@ const Home = () => {
   //   }, 450);
   // };
 
-  const { scrollY } = useViewportScroll();
-  // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
-  const x2 = useTransform(scrollY, [0, 1000], [-300, 3400]);
-  const y2 = useTransform(scrollY, [0, 1000], [100, -1700]);
-  // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
-  const x3 = useTransform(scrollY, [0, 10], [0, 0]);
-  // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
-  const y3 = useTransform(scrollY, [0, 100, 10000], [-200, 350, 800]);
-  // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
+  // const { scrollY } = useViewportScroll();
+  // // const x1 = useTransform(scrollY, [0, 100], [250, 1500]);
+  // const x2 = useTransform(scrollY, [0, 1000], [-300, 3400]);
+  // const y2 = useTransform(scrollY, [0, 1000], [100, -1700]);
+  // // const y1 = useTransform(scrollY, [0, 100], [-150, -450]);
+  // const x3 = useTransform(scrollY, [0, 10], [0, 0]);
+  // // const o1 = useTransform(scrollY, [0, 100], [0, 1]);
+  // const y3 = useTransform(scrollY, [0, 100, 10000], [-200, 350, 800]);
+  // // const y2 = useTransform(scrollX, [0, 300], [0, -100]);
 
   return (
     <Box
@@ -79,7 +79,7 @@ const Home = () => {
         <Social />
       </Box>
 
-      {colorMode !== "dark" && (
+      {/* {colorMode !== "dark" && (
         <motion.div
           style={{
             // x: colorMode !== "light" ? x2 : x1,
@@ -106,9 +106,9 @@ const Home = () => {
             <Img src={airplane} overflow={"hidden"} />
           </Box>
         </motion.div>
-      )}
+      )} */}
 
-      {colorMode !== "dark" && (
+      {/* {colorMode !== "dark" && (
         <motion.div
           whileInView={{ rotate: [0.7, -0.7, 0.7] }}
           transition={{ repeat: Infinity }}
@@ -131,7 +131,7 @@ const Home = () => {
         >
           <Img src={parachute} overflow={"hidden"} zIndex={"99"} />
         </motion.div>
-      )}
+      )} */}
 
       <Flex
         position={"relative"}

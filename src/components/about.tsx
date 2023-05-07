@@ -34,7 +34,8 @@ const About = () => {
   return (
     <Box
       h={"100%"}
-      mt={[-16, -20, -20, -24, colorMode !== "dark" ? -20 : -48]}
+      mt={[-16, -20, -20, -24, colorMode !== "dark" ? -24 : -52]}
+      py={20}
       // zIndex={-1}
       position={"relative"}
       alignItems={"center"}
@@ -61,11 +62,11 @@ const About = () => {
       ]}
     >
       <Element name="About"></Element>
-      {colorMode !== "dark" && (
+      {/* {colorMode !== "dark" && (
         <Box>
           <Birds />
         </Box>
-      )}
+      )} */}
       {/* <Box
         opacity={[0, 0, 1]}
         position={"absolute"}
@@ -189,7 +190,7 @@ const About = () => {
         // mr={["2", "2", "24", "40", "6"]}
         // m={0}
         // top={[colorMode !== "dark" ? 16 : 40, colorMode !== "dark" ? 32 : 56]}
-        top={colorMode === "light" ? [20, 20, 44, 40] : [40, 20, 48, 56]}
+        top={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}
         // pb={
         //   selected === ""
         //     ? ["28"]
