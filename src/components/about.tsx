@@ -19,7 +19,7 @@ import Birds from "./birds";
 // import mmm from "../images/mmm.png";
 
 const About = () => {
-  const bgOnLight = useColorModeValue("green.300", "gray.900");
+  const bgOnLight = useColorModeValue("teal.400", "gray.900");
   const [selected, setSelected] = useState("");
   const { colorMode } = useColorMode();
   const radioValue = (e: any) => setSelected(e.target.value);

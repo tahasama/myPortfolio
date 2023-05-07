@@ -46,7 +46,7 @@ import { useState } from "react";
 const Skills = () => {
   const { colorMode } = useColorMode();
   const bgOnLight = useColorModeValue(
-    "linear( red.200 0%, pink.300 80%)",
+    "linear( #EDB363 0%, pink.400 80%)",
     "linear( gray.900 0%, gray.900 80%)"
   );
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
