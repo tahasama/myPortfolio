@@ -19,8 +19,11 @@ import Birds from "./birds";
 // import mmm from "../images/mmm.png";
 
 const About = () => {
-  const bgOnLight = useColorModeValue("teal.400", "gray.900");
-  const [selected, setSelected] = useState("");
+  const bgOnLight = useColorModeValue(
+    "linear( blue.300, blue.200)",
+    "linear( gray.900 0%, gray.900 100%)"
+  );
+  const [selected, setSelected] = useState("shorter");
   const { colorMode } = useColorMode();
   const radioValue = (e: any) => setSelected(e.target.value);
 
@@ -34,7 +37,8 @@ const About = () => {
   return (
     <Box
       h={"100%"}
-      mt={[-16, -20, -20, -24, colorMode !== "dark" ? -24 : -52]}
+      // mt={[-16, -20, -20, -24, colorMode !== "dark" ? -24 : -52]}
+      // mt={[-16, -20, -20, -24, -52]}
       py={20}
       // zIndex={-1}
       position={"relative"}
@@ -49,17 +53,17 @@ const About = () => {
       //     ? ["155vh", "155vh", "160vh", "160vh", "80vh"]
       //     : ["165vh", "175vh", "180vh", "175vh", "100vh"]
       // }
-      bg={bgOnLight}
+      bgGradient={bgOnLight}
       fontFamily={"roboto"}
       // top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
       // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
       overflow={"hidden"}
       justifyContent={"center"}
       // h={"100%"}
-      clipPath={[
-        "polygon(0 6%, 100% 0, 100% 100%, 0% 100%);",
-        "polygon(0 7%, 100% 0, 100% 100%, 0% 100%);",
-      ]}
+      // clipPath={[
+      //   "polygon(0 6%, 100% 0, 100% 100%, 0% 100%);",
+      //   "polygon(0 7%, 100% 0, 100% 100%, 0% 100%);",
+      // ]}
     >
       <Element name="About"></Element>
       {/* {colorMode !== "dark" && (
@@ -114,7 +118,6 @@ const About = () => {
           <Radio
             onChange={radioValue}
             value=""
-            defaultChecked={true}
             isChecked={selected === "" ? true : false}
             m={"1"}
           />
@@ -296,9 +299,9 @@ const About = () => {
             my={["8", "12", "8", "16", "12"]}
             py={["7", "7", "9"]}
             px={["8vw", "7vw"]}
-            bg={colorMode === "light" ? "red.500" : "blue.600"}
+            bg={colorMode === "light" ? "#fa5E3E" : "blue.600"} //fa6E3E
             _hover={{
-              bg: `${colorMode === "light" ? "red.600" : "blue.700"}`,
+              bg: `${colorMode === "light" ? "#fa5E3E" : "blue.700"}`,
               transform: "translate(-5px,5px)",
               boxShadow: "0px 0px 0px #276749",
             }}
@@ -313,7 +316,7 @@ const About = () => {
             fontWeight={["400", "500"]}
             boxShadow={` ${
               colorMode === "light"
-                ? " -10px 10px 5px #276749"
+                ? " -10px 10px 5px #4d4a4a"
                 : " -7px 7px 3px #1A365D"
             }`}
           >

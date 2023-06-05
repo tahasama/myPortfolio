@@ -46,8 +46,8 @@ import { useState } from "react";
 const Skills = () => {
   const { colorMode } = useColorMode();
   const bgOnLight = useColorModeValue(
-    "linear( #EDB363 0%, pink.400 80%)",
-    "linear( gray.900 0%, gray.900 80%)"
+    "linear( blue.200, blue.100)",
+    "linear( gray.900 0%, gray.900 100%)"
   );
   const bglCardHead = useColorModeValue("purple.300", "purple.500");
   const bglCard = useColorModeValue("purple.700", "purple.900");
@@ -62,8 +62,8 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={["100%"]} mt={colorMode !== "dark" ? -36 : -32}>
-      {colorMode !== "dark" && !isMobile && (
+    <Box h={["100%"]}>
+      {/* {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
           position={"absolute"}
@@ -88,7 +88,7 @@ const Skills = () => {
             mx={[6, 0, 0, 0, 0]}
           />
         </Flex>
-      )}
+      )} */}
       <Flex
         h={"100%"}
         // top={32}
@@ -97,15 +97,15 @@ const Skills = () => {
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
         // mt={}
-        clipPath={[
-          // "ellipse(59% 65% at 40% 65%)",
+        // clipPath={[
+        //   // "ellipse(59% 65% at 40% 65%)",
 
-          "ellipse(300% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(140% 100% at 50% 100%)",
-          "ellipse(130% 100% at 45% 100%)",
-        ]}
+        //   "ellipse(300% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(140% 100% at 50% 100%)",
+        //   "ellipse(130% 100% at 45% 100%)",
+        // ]}
         // mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         // h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
@@ -355,7 +355,7 @@ const Skills = () => {
               bgColor={bglCard}
               borderBottomRadius={"40"}
               py={0}
-              h={["70%", "70%", "100%", "80%", "100%"]}
+              h={["70%", "70%", "100%", "100%", "100%"]}
               gap={5}
               flexDirection={"column"}
               p={[4, 4, 0]}
@@ -556,7 +556,7 @@ const Skills = () => {
               bgColor={bglCard}
               borderBottomRadius={"40"}
               py={0}
-              h={["60%", "20%", "90%", "80%", "90%"]}
+              h={["60%", "20%", "90%", "100%", "90%"]}
               px={[4, 4, 0]}
             >
               <Flex
@@ -692,7 +692,7 @@ const Skills = () => {
               bgColor={bglCard}
               borderBottomRadius={"40"}
               // py={-20}
-              h={["100%", "100%", "90%", "80%", "90%"]}
+              h={["100%", "100%", "90%", "100%", "90%"]}
               py={[8, 8, 0]}
               px={[4, 4, 0]}
             >

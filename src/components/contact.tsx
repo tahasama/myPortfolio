@@ -23,7 +23,10 @@ const service = process.env.REACT_APP_SERVICE || "";
 const key = process.env.REACT_APP_KEY;
 
 const Contact = () => {
-  const bglOnLight = useColorModeValue("gray.300", "gray.900");
+  const bgOnLight = useColorModeValue(
+    "linear( blue.100, gray.300)",
+    "linear( gray.900 0%, gray.900 100%)"
+  );
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
   const { colorMode } = useColorMode();
   const { onCopy, hasCopied } = useClipboard("taha.maatof@gmail.com");
@@ -56,15 +59,15 @@ const Contact = () => {
         position={"relative"}
         // h={["110vh", "110vh", "107vh", "110vh", "99vh"]}
         // bgGradient={bgOnLight}
-        bgColor={bglOnLight}
+        bgGradient={bgOnLight}
         p={12}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
-        clipPath={[
-          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-          "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
-          "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
-        ]}
-        // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
+        // clipPath={[
+        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+        //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
+        //   "polygon(28% 10%, 40% 0, 54% 9%, 68% 0, 83% 9%, 100% 0, 100% 100%, 0 100%, 0 10%, 15% 0)",
+        // ]}
+        // // clipPath="polygon(50% 0%, 0% 100%, 100% 100%)"
         // mt={[
         //   -48,
         //   -48,
@@ -76,7 +79,7 @@ const Contact = () => {
         // ]}
         // zIndex={99}
         // w={"100%"}
-        mt={[-48, colorMode !== "dark" ? -28 : -48]}
+        // mt={[-48, colorMode !== "dark" ? -28 : -48]}
         // mt={[-48, -24]}
       >
         <form
@@ -146,7 +149,7 @@ const Contact = () => {
           </FormControl>
         </form>
 
-        {colorMode !== "dark" && (
+        {/* {colorMode !== "dark" && (
           <Flex
             // bgColor={"red.300"}
             pos={"absolute"}
@@ -158,7 +161,7 @@ const Contact = () => {
           >
             <Img src={tresor} />
           </Flex>
-        )}
+        )} */}
         <Flex
           py={[7, 10]}
           gap={7}

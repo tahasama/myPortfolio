@@ -1,5 +1,6 @@
 // import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
+  background,
   Box,
   Button,
   Flex,
@@ -28,9 +29,14 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 // import underwater from "../images/underwater.png";
 import water from "../images/bubble.png";
+import { useState } from "react";
 
 const Projects = () => {
-  const bglOnLight = useColorModeValue("rgba(111,134,198,255)", "gray.900");
+  // const bglOnLight = useColorModeValue("blue.300", "gray.900");
+  const bgOnLight = useColorModeValue(
+    "linear( blue.100 0%, blue.200 20%, blue.300 60%, blue.200 90%, blue.100 100%)",
+    "linear( gray.900 0%, gray.900 100%)"
+  );
   const { colorMode } = useColorMode();
   // const [isMobile, setIsMobile] = useState(false);
 
@@ -58,20 +64,30 @@ const Projects = () => {
 
   // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
-    <Box h={"100%"} mt={[colorMode !== "dark" ? -52 : -52]}>
+    <Box h={"100%"}>
       <Element name="Projects"></Element>
 
       <Box
         // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
-        bg={bglOnLight}
-        clipPath={[
-          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-          "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        ]}
+        bgGradient={bgOnLight}
+        // clipPath={[
+        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        //   "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        // ]}
         // mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         zIndex={2}
         // mb={40}
@@ -93,6 +109,13 @@ const Projects = () => {
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
             // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+            bg={isHovered ? "gray.700" : ""}
+            rounded={"3xl"}
+            p={isHovered ? 5 : 0}
+            position="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            transition="all 1s"
           >
             <Box w={"full"} flex={2}>
               <motion.div
@@ -111,80 +134,120 @@ const Projects = () => {
                   mb={2}
                   fontFamily={"Raleway"}
                   fontWeight={900}
+                  flex={"column"}
+                  justifyContent={"center"}
+                  alignItems={"center"}
                 >
                   <Text
                     fontSize={["20", "22", "18", "24", "24"]}
-                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                    color={
+                      colorMode === "light" && !isHovered
+                        ? "gray.800"
+                        : colorMode === "light" && isHovered
+                        ? "white"
+                        : "gray.300"
+                    }
                   >
                     Storyat
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "20", "16", "22", "22"]}
-                    color={colorMode === "light" ? "gray.800" : "gray.300"}
+                    color={
+                      colorMode === "light" && !isHovered
+                        ? "gray.800"
+                        : colorMode === "light" && isHovered
+                        ? "white"
+                        : "gray.300"
+                    }
                   >
                     A mobile app for for sharing and reacting
                   </Text>
+                  {isHovered ? (
+                    <Button
+                      bg="pink.500"
+                      _hover={{ bg: "pink.600" }}
+                      size={"lg"}
+                      px={100}
+                      py={30}
+                    >
+                      Visit
+                    </Button>
+                  ) : (
+                    <List
+                      style={{ textIndent: 10 }}
+                      ml={[0, 0, 0, 0, 32]}
+                      fontSize={["17", "18", "14", "16", "20"]}
+                      lineHeight={"8"}
+                      color={colorMode === "light" ? "gray.800" : "gray.300"}
+                    >
+                      <ListItem
+                        color={colorMode !== "light" ? "green.500" : "red.700"}
+                        fontSize={[16, 16, 17, 18]}
+                        textAlign={["center", "center", "start"]}
+                      >
+                        for quick access please use email : t@t.com ,and
+                        passsword : tttttt{" "}
+                      </ListItem>
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        Share a story, a situation, ....
+                      </ListItem>
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        Share imagem photos, ...
+                      </ListItem>
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        React to others stories
+                      </ListItem>{" "}
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        Comments and reply to comments
+                      </ListItem>{" "}
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        Get notification for comments, reactions
+                      </ListItem>
+                      <ListItem>
+                        <ListIcon
+                          as={MdSettings}
+                          color={
+                            colorMode !== "light" ? "green.500" : "pink.500"
+                          }
+                        />
+                        Profile with all user contribution, updates, ...
+                      </ListItem>{" "}
+                    </List>
+                  )}
                 </VStack>
-                <List
-                  style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 32]}
-                  fontSize={["17", "18", "14", "16", "20"]}
-                  lineHeight={"8"}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  <ListItem
-                    color={colorMode !== "light" ? "green.500" : "red.700"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "start"]}
-                  >
-                    for quick access please use email : t@t.com ,and passsword :
-                    tttttt{" "}
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Share a story, a situation, ....
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Share imagem photos, ...
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    React to others stories
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Comments and reply to comments
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Get notification for comments, reactions
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Profile with all user contribution, updates, ...
-                  </ListItem>{" "}
-                </List>
-                <Flex
+
+                {/* <Flex
                   position="relative"
                   justifyContent={"center"}
                   alignItems={["center"]}
@@ -231,7 +294,7 @@ const Projects = () => {
                       Case study
                     </Button>
                   </Link>
-                </Flex>
+                </Flex> */}
               </motion.div>
             </Box>
             <Flex flex={2} justifyContent={"center"}>
