@@ -8,7 +8,10 @@ import {
   Radio,
   useColorMode,
   useColorModeValue,
+  Img,
 } from "@chakra-ui/react";
+import dev from "../images/dev1.png";
+
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Element, Link } from "react-scroll";
@@ -20,7 +23,7 @@ import Birds from "./birds";
 
 const About = () => {
   const bgOnLight = useColorModeValue(
-    "linear( blue.300, blue.200)",
+    "linear( #3AC9CD, cyan.200)",
     "linear( gray.900 0%, gray.900 100%)"
   );
   const [selected, setSelected] = useState("shorter");
@@ -55,15 +58,15 @@ const About = () => {
       // }
       bgGradient={bgOnLight}
       fontFamily={"roboto"}
-      // top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
+      top={["-20vh", "-43vh", "-30vh", "-36vh", "-32vh"]}
       // transform={["scale(1)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
       overflow={"hidden"}
       justifyContent={"center"}
       // h={"100%"}
-      // clipPath={[
-      //   "polygon(0 6%, 100% 0, 100% 100%, 0% 100%);",
-      //   "polygon(0 7%, 100% 0, 100% 100%, 0% 100%);",
-      // ]}
+      clipPath={[
+        "polygon(0 6%, 100% 0, 100% 100%, 0% 100%);",
+        "polygon(0 7%, 100% 0, 100% 100%, 0% 100%);",
+      ]}
     >
       <Element name="About"></Element>
       {/* {colorMode !== "dark" && (
@@ -169,160 +172,165 @@ const About = () => {
           />
         </Flex>
       </Flex>
-
-      <Flex
-        flexDirection={["column"]}
-        // w={"100%"}
-        position={"relative"}
-        alignItems={"center"}
-        justifyContent={"center"}
-        // zIndex={"99"}
-        // top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
-        overflow={"hidden"}
-        fontSize={["md", "md", "lg", "lg", "2xl"]}
-        // w={"7xl"}
-        // fontSize={["17px", "19px", "23px"]}
-        fontWeight={["400", "300", "300"]}
-        color={colorMode === "light" ? "gray.800" : "gray.200"}
-        // h={"full"}
-        transition={"all .2s ease-out"}
-        lineHeight={["6", "9"]}
-        letterSpacing={"wide"}
-        fontFamily="roboto slab"
-        mx={["2", "2", "24", "60", "96"]}
-        // mr={["2", "2", "24", "40", "6"]}
-        // m={0}
-        // top={[colorMode !== "dark" ? 16 : 40, colorMode !== "dark" ? 32 : 56]}
-        top={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}
-        // pb={
-        //   selected === ""
-        //     ? ["28"]
-        //     : selected === "shorter"
-        //     ? ["28"]
-        //     : selected === "short"
-        //     ? ["28"]
-        //     : ["28"]
-        // }
-        // pb={colorMode !== "dark" ? 36 : 48}
-        pb={80}
-      >
-        {(selected === "" ||
-          selected === "full" ||
-          selected === "short" ||
-          selected === "shorter") && (
-          <Box
-            flexDirection={"column"}
-            // fontSize={["17px", "19px", "23px"]}
-            fontWeight={["400", "300", "300"]}
-            color={colorMode === "light" ? "gray.800" : "gray.300"}
-            position={"relative"}
-            // h={"full"}
-            overflow={"hidden"}
-            transition={"all .2s ease-out"}
-            lineHeight={["6", "9"]}
-            letterSpacing={"wide"}
-            fontFamily="roboto slab"
-            mx={["2", "5"]}
-            my={2}
-            // m={0}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            I'm a self thaught Developer
-          </Box>
-        )}
-        {(selected === "full" ||
-          selected === "short" ||
-          selected === "shorter") && (
-          <motion.div
-            animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
-            transition={{ duration: 2 }}
-          >
-            <Text
-              w={["90vw", "auto"]}
-              px={0}
-              py={2}
-              style={{ textIndent: 40 }}
-              color={colorMode === "light" ? "gray.800" : "gray.300"}
-            >
-              Hi there! I'm a<Text as={"b"}> Web</Text> and
-              <Text as={"b"}> mobile</Text> App Developer with a passion for
-              creating user-friendly interfaces and building solid backends for
-              seamless user experiences, bringing both the technical and visual
-              aspects of a product.
-            </Text>
-          </motion.div>
-        )}
-        {(selected === "full" || selected === "short") && (
-          <motion.div
-            animate={{ x: [1000, -20, 0, -10, 0], opacity: [0.5, 0.8, 1] }}
-            transition={{ duration: 2 }}
-          >
+      <Flex mt={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}>
+        <Flex
+          flexDirection={["column"]}
+          // w={"100%"}
+          position={"relative"}
+          alignItems={"center"}
+          justifyContent={"center"}
+          // zIndex={"99"}
+          // top={["30vh", "30vh", "25vh", "25vh", "25vh"]}
+          overflow={"hidden"}
+          fontSize={["md", "md", "lg", "lg", "2xl"]}
+          // w={"7xl"}
+          // fontSize={["17px", "19px", "23px"]}
+          fontWeight={["400", "300", "300"]}
+          color={colorMode === "light" ? "gray.800" : "gray.200"}
+          // h={"full"}
+          transition={"all .2s ease-out"}
+          lineHeight={["6", "9"]}
+          letterSpacing={"wide"}
+          fontFamily="roboto slab"
+          mx={2}
+          // mx={["2", "2", "24", "60", "96"]}
+          // mr={["2", "2", "24", "40", "6"]}
+          // m={0}
+          // top={[colorMode !== "dark" ? 16 : 40, colorMode !== "dark" ? 32 : 56]}
+          // top={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}
+          // pb={
+          //   selected === ""
+          //     ? ["28"]
+          //     : selected === "shorter"
+          //     ? ["28"]
+          //     : selected === "short"
+          //     ? ["28"]
+          //     : ["28"]
+          // }
+          // pb={colorMode !== "dark" ? 36 : 48}
+          pb={80}
+        >
+          {(selected === "" ||
+            selected === "full" ||
+            selected === "short" ||
+            selected === "shorter") && (
             <Box
-              w={["90vw", "auto"]}
-              px={3}
-              py={2}
-              style={{ textIndent: 40 }}
+              flexDirection={"column"}
+              // fontSize={["17px", "19px", "23px"]}
+              fontWeight={["400", "300", "300"]}
               color={colorMode === "light" ? "gray.800" : "gray.300"}
+              position={"relative"}
+              // h={"full"}
+              overflow={"hidden"}
+              transition={"all .2s ease-out"}
+              lineHeight={["6", "9"]}
+              letterSpacing={"wide"}
+              fontFamily="roboto slab"
+              mx={["2", "5"]}
+              my={2}
+              // m={0}
+              justifyContent={"center"}
+              alignItems={"center"}
+              w={"70vw"}
+              textAlign={"center"}
             >
-              I'm self-taught and started learning to code in mid-2021. Since
-              then, I've gained proficiency in Python and JavaScript and have
-              been exploring different technologies like the
-              <Text as={"b"}> MERN Stack </Text> and{" "}
-              <Text as={"b"}> React Native/Expo </Text> universe. I'm excited
-              about the possibilities of building creative and innovative
-              projects.
+              I'm a self thaught Developer
             </Box>
-          </motion.div>
-        )}
-        {selected === "full" && (
-          <motion.div
-            animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
-            transition={{ duration: 1.5 }}
-          >
-            <Box
-              w={["90vw", "auto"]}
-              px={3}
-              py={2}
-              style={{ textIndent: 40 }}
-              color={colorMode === "light" ? "gray.800" : "gray.300"}
+          )}
+          {(selected === "full" ||
+            selected === "short" ||
+            selected === "shorter") && (
+            <motion.div
+              animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 2 }}
             >
-              I'm open to Job opportunities where I can contribute, learn and
-              grow. If you have a good opportunity that matches my skills then
-              don't hesitate to contact me.
-            </Box>
-          </motion.div>
-        )}
-        <Link to="Contact" smooth>
-          <Button
-            // pb={40}
-            my={["8", "12", "8", "16", "12"]}
-            py={["7", "7", "9"]}
-            px={["8vw", "7vw"]}
-            bg={colorMode === "light" ? "#fa5E3E" : "blue.600"} //fa6E3E
-            _hover={{
-              bg: `${colorMode === "light" ? "#fa5E3E" : "blue.700"}`,
-              transform: "translate(-5px,5px)",
-              boxShadow: "0px 0px 0px #276749",
-            }}
-            _active={{
-              bg: `${colorMode === "light" ? "red.700" : "blue.800"}`,
-              transform: "translate(5px,5px)",
-            }}
-            color={"white"}
-            letterSpacing={1}
-            fontSize={"24"}
-            fontFamily={"calibri"}
-            fontWeight={["400", "500"]}
-            boxShadow={` ${
-              colorMode === "light"
-                ? " -10px 10px 5px #4d4a4a"
-                : " -7px 7px 3px #1A365D"
-            }`}
-          >
-            Get In Touch!
-          </Button>
-        </Link>
+              <Text
+                w={["90vw", "auto"]}
+                px={0}
+                py={2}
+                style={{ textIndent: 40 }}
+                color={colorMode === "light" ? "gray.800" : "gray.300"}
+              >
+                Hi there! I'm a<Text as={"b"}> Web</Text> and
+                <Text as={"b"}> mobile</Text> App Developer with a passion for
+                creating user-friendly interfaces and building solid backends
+                for seamless user experiences, bringing both the technical and
+                visual aspects of a product.
+              </Text>
+            </motion.div>
+          )}
+          {(selected === "full" || selected === "short") && (
+            <motion.div
+              animate={{ x: [1000, -20, 0, -10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 2 }}
+            >
+              <Box
+                w={["90vw", "auto"]}
+                px={3}
+                py={2}
+                style={{ textIndent: 40 }}
+                color={colorMode === "light" ? "gray.800" : "gray.300"}
+              >
+                I'm self-taught and started learning to code in mid-2021. Since
+                then, I've gained proficiency in Python and JavaScript and have
+                been exploring different technologies like the
+                <Text as={"b"}> MERN Stack </Text> and{" "}
+                <Text as={"b"}> React Native/Expo </Text> universe. I'm excited
+                about the possibilities of building creative and innovative
+                projects.
+              </Box>
+            </motion.div>
+          )}
+          {selected === "full" && (
+            <motion.div
+              animate={{ x: [-1000, 20, 0, 10, 0], opacity: [0.5, 0.8, 1] }}
+              transition={{ duration: 1.5 }}
+            >
+              <Box
+                w={["90vw", "auto"]}
+                px={3}
+                py={2}
+                style={{ textIndent: 40 }}
+                color={colorMode === "light" ? "gray.800" : "gray.300"}
+              >
+                I'm open to Job opportunities where I can contribute, learn and
+                grow. If you have a good opportunity that matches my skills then
+                don't hesitate to contact me.
+              </Box>
+            </motion.div>
+          )}
+          <Link to="Contact" smooth>
+            <Button
+              // pb={40}
+              my={["8", "12", "8", "16", "12"]}
+              py={["7", "7", "9"]}
+              px={["8vw", "7vw"]}
+              bg={colorMode === "light" ? "#fa5E3E" : "blue.600"} //fa6E3E
+              _hover={{
+                bg: `${colorMode === "light" ? "#fa5E3E" : "blue.700"}`,
+                transform: "translate(-5px,5px)",
+                boxShadow: "0px 0px 0px #276749",
+              }}
+              _active={{
+                bg: `${colorMode === "light" ? "red.700" : "blue.800"}`,
+                transform: "translate(5px,5px)",
+              }}
+              color={"white"}
+              letterSpacing={1}
+              fontSize={"24"}
+              fontFamily={"calibri"}
+              fontWeight={["400", "500"]}
+              boxShadow={` ${
+                colorMode === "light"
+                  ? " -10px 10px 5px #4d4a4a"
+                  : " -7px 7px 3px #1A365D"
+              }`}
+            >
+              Get In Touch!
+            </Button>
+          </Link>
+        </Flex>
+        <Img src={dev} w={"30%"} h={"40%"} />
       </Flex>
     </Box>
   );

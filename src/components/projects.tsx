@@ -34,7 +34,7 @@ import { useState } from "react";
 const Projects = () => {
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
-    "linear( blue.100 0%, blue.200 20%, blue.300 60%, blue.200 90%, blue.100 100%)",
+    "linear(blue.300, cyan.200)",
     "linear( gray.900 0%, gray.900 100%)"
   );
   const { colorMode } = useColorMode();
@@ -77,7 +77,15 @@ const Projects = () => {
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-
+      <Box bgColor={"blue.100"} mt={0}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#63B3ED"
+            fill-opacity="1"
+            d="M0,32L80,80C160,128,320,224,480,256C640,288,800,256,960,229.3C1120,203,1280,181,1360,170.7L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+          ></path>
+        </svg>
+      </Box>
       <Box
         // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bgGradient={bgOnLight}
@@ -88,7 +96,6 @@ const Projects = () => {
         //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
         //   "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
         // ]}
-        // mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         zIndex={2}
         // mb={40}
         w={"full"}
@@ -108,7 +115,7 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+            mt={["-28vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
             bg={isHovered ? "gray.700" : ""}
             rounded={"3xl"}
             p={isHovered ? 5 : 0}

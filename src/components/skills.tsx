@@ -97,16 +97,16 @@ const Skills = () => {
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
         // mt={}
-        // clipPath={[
-        //   // "ellipse(59% 65% at 40% 65%)",
+        clipPath={[
+          // "ellipse(59% 65% at 40% 65%)",
 
-        //   "ellipse(300% 100% at 47% 100%)",
-        //   "ellipse(150% 100% at 47% 100%)",
-        //   "ellipse(150% 100% at 47% 100%)",
-        //   "ellipse(140% 100% at 50% 100%)",
-        //   "ellipse(130% 100% at 45% 100%)",
-        // ]}
-        // mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
+          "ellipse(300% 100% at 47% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
+          "ellipse(150% 100% at 47% 100%)",
+          "ellipse(140% 100% at 50% 100%)",
+          "ellipse(130% 100% at 45% 100%)",
+        ]}
+        mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         // h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
         // h={"100%"}
@@ -328,7 +328,7 @@ const Skills = () => {
           gap={[3, 0, 5, 0]}
           justifyContent={"space-around"}
           mx={"20"}
-          pb={32}
+          pb={2}
         >
           <Flex
             flexDir={"column"}

@@ -13,6 +13,7 @@ import {
   VStack,
   Text,
   useClipboard,
+  Box,
 } from "@chakra-ui/react";
 import { Element } from "react-scroll";
 import tresor from "../images/tresor.png";
@@ -24,7 +25,7 @@ const key = process.env.REACT_APP_KEY;
 
 const Contact = () => {
   const bgOnLight = useColorModeValue(
-    "linear( blue.100, gray.300)",
+    "linear( teal.200 0%,gray.200 70%, gray.100)",
     "linear( gray.900 0%, gray.900 100%)"
   );
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
@@ -54,13 +55,38 @@ const Contact = () => {
   return (
     <>
       <Element name="Contact"></Element>
-
+      {/* <Box
+        className="custom-shape-divider-top-1686395892"
+        mt={-1}
+        bgColor={"#81E6D9"}
+        fill="#9DECF9"
+      >
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M1200 0L0 0 598.97 114.72 1200 0z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </Box> */}
       <VStack
         position={"relative"}
         // h={["110vh", "110vh", "107vh", "110vh", "99vh"]}
         // bgGradient={bgOnLight}
         bgGradient={bgOnLight}
         p={12}
+        clipPath={[
+          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
+          "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
+        ]}
+        mt={["-10vh", "-14vh", "-75vh", "-85vh", "-18vh"]}
         // clipPath=" polygon(27% 16%, 41% 10%, 55% 35%, 69% 9%, 83% 35%, 100% 8%, 100% 100%, 0 100%, 0% 35%, 12% 10%)"
         // clipPath={[
         //   "polygon(34% 0, 50% 4%, 68% 0, 84% 4%, 100% 0, 100% 100%, 0 100%, 0 0, 17% 4%)",
