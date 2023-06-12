@@ -38,10 +38,11 @@ import { IoIosRocket } from "react-icons/io";
 // import bubbles from "../images/bubbles.jpg";
 import palm1 from "../images/palm1.png";
 
-import { motion } from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
 import { useState } from "react";
+import { ParallaxText } from "./ParallaxText";
 
 const Skills = () => {
   const { colorMode } = useColorMode();
@@ -89,6 +90,24 @@ const Skills = () => {
           />
         </Flex>
       )} */}
+      <Element name="Skills"></Element>
+
+      <Box bgColor={"blue.200"} mt={0}>
+        <svg
+          fill="#9DECF9"
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M600,7.23C931.37,7.23,1200,54.48,1200,112.77V0H0V112.77C0,54.48,268.63,7.23,600,7.23Z"
+            className="shape-fill"
+            // bgColor="#90CDF4"
+          ></path>
+        </svg>
+      </Box>
+
       <Flex
         h={"100%"}
         // top={32}
@@ -97,23 +116,20 @@ const Skills = () => {
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
         // mt={}
-        clipPath={[
-          // "ellipse(59% 65% at 40% 65%)",
+        // clipPath={[
+        //   // "ellipse(59% 65% at 40% 65%)",
 
-          "ellipse(300% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(150% 100% at 47% 100%)",
-          "ellipse(140% 100% at 50% 100%)",
-          "ellipse(130% 100% at 45% 100%)",
-        ]}
-        mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
+        //   "ellipse(300% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(150% 100% at 47% 100%)",
+        //   "ellipse(140% 100% at 50% 100%)",
+        //   "ellipse(130% 100% at 45% 100%)",
+        // ]}
+        // mt={["-30vh", "-60vh", "-60vh", "-65vh", "-65vh"]}
         // mt={["-140vh", "-130vh", "-75vh", "-75vh", "-75vh"]}
         // h={["1700px", "1700px", "1400px", "1700px", "1400px"]}
         // h={"100%"}
-        py={"28"}
       >
-        <Element name="Skills"></Element>
-
         {/* <Element name="Skills"></Element> */}
         {/* <motion.div style={{ margin: 0, padding: 0, width: "100%" }}> */}
         {/* <Element name="Skills"></Element> */}
@@ -141,7 +157,7 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "12", "0", "32"]}
+              // mt={["0", "12", "0", "32"]}
               h={["135px", "105px", "110px", "110px"]}
               w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
@@ -193,7 +209,7 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "12", "0", "32"]}
+              // mt={["0", "12", "0", "32"]}
               h={["135px", "105px", "110px", "110px"]}
               w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
@@ -251,7 +267,7 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "12", "0", "32"]}
+              // mt={["0", "12", "0", "32"]}
               h={["135px", "105px", "110px", "110px"]}
               w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
@@ -287,7 +303,7 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              mt={["0", "12", "0", "32"]}
+              // mt={["0", "12", "0", "32"]}
               h={["135px", "105px", "110px", "110px"]}
               w={["150px", "120px", "120px", "130px"]}
               mx={"5"}
@@ -321,470 +337,11 @@ const Skills = () => {
         </Grid>
         {/* </motion.div> */}
         {/* skills */}
-
-        <Flex
-          mt={["-12", "-6", "10", "24", "32"]}
-          flexDir={["column", "column", "row", "row", "row"]}
-          gap={[3, 0, 5, 0]}
-          justifyContent={"space-around"}
-          mx={"20"}
-          pb={2}
-        >
-          <Flex
-            flexDir={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            position={"relative"}
-            mt={["-10", "0", "0", "0", "0"]}
-          >
-            <Box
-              mt={["20", "3"]}
-              fontSize={["xl", "xl", "lg", "xl"]}
-              fontFamily={"arial"}
-              // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
-              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
-              bgColor={bglCardHead}
-              borderTopRadius={"18"}
-              textAlign={"center"}
-              p={[3, 3, 4, 5, 4]}
-            >
-              Frontend & Mobile UI
-            </Box>
-
-            <Flex
-              bgColor={bglCard}
-              borderBottomRadius={"40"}
-              py={0}
-              h={["70%", "70%", "100%", "100%", "100%"]}
-              gap={5}
-              flexDirection={"column"}
-              p={[4, 4, 0]}
-            >
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
-                mt={["3", "2", "6", "6", "4"]}
-                position={"relative"}
-                justifyContent={"space-around"}
-                alignItems={"center"}
-                textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? reactD : reactN}
-                      w={["44px", "44px", "48px", "58px", "58px"]}
-                      filter={"brightness(.92)"}
-                    ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={[0, 2, 0]}>
-                      React Js / Native
-                    </Box>
-                  </Grid>
-                </motion.div>{" "}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={expoLight}
-                      w={["240px", "240px", "85px", "90px", "94px"]}
-                      mb={2}
-                      filter={"brightness(.8)"}
-                      mt={[0, 0, 2, 0, 0]}
-                    />
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={[2, 2, -2]}
-                    >
-                      Expo
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>{" "}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={ts}
-                      w={["44px", "44px", "46px", "48px", "46px"]}
-                      filter={"brightness(.92)"}
-                    ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={[0, 0, 1]}>
-                      TypeScript
-                    </Box>
-                  </Grid>
-                </motion.div>{" "}
-              </Flex>
-
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
-                // mt={["0", "2", "8", "24", "24"]}
-                position={"relative"}
-                justifyContent={"space-evenly"}
-                alignItems={"center"}
-                textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-                mt={[0, 0, -5]}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={reduxL}
-                      w={["40px", "40px", "38px", "48px", "50px"]}
-                      filter={"brightness(.92)"}
-                    ></Img>
-                    <Box textAlign={"center"} color={"gray.400"}>
-                      Redux
-                    </Box>
-                  </Grid>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                    ml={[5, 5, 0]}
-                    mt={[4, 4, 0]}
-                  >
-                    <Img
-                      src={tailwind}
-                      w={["60px", "60px", "48px", "58px", "56px"]}
-
-                      // mt={[0, 0, 7, 4, 4]}
-                    />
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      // mt={"-30px"}
-                      mb={[4, 6, 2]}
-                    >
-                      Tailwind css
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                    p={2}
-                    ml={[5, 5, 0]}
-                  >
-                    <Img
-                      src={chakra}
-                      w={["54px", "54px", "48px", "58px", "56px"]}
-                      mb={[-1]}
-                      mt={[-0, -0, -4, -4, -4]}
-                    />
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={[2, 2, 2, -1, -1]}
-                    >
-                      Chakra UI
-                    </Box>
-                  </Grid>{" "}
-                </motion.div>
-              </Flex>
-            </Flex>
-          </Flex>
-
-          <Flex
-            flexDir={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            position={"relative"}
-            mt={["-16", "0", "0", "0", "0"]}
-          >
-            <Box
-              mt={["20", "3"]}
-              fontSize={["xl", "xl", "lg", "xl"]}
-              fontFamily={"arial"}
-              // w={["86vw", "60vw", "20vw", "30vw", "25vw"]}
-              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
-              bgColor={bglCardHead}
-              borderTopRadius={"18"}
-              textAlign={"center"}
-              p={[3, 3, 4, 5, 4]}
-            >
-              Backend & Baas
-            </Box>
-
-            <Box
-              bgColor={bglCard}
-              borderBottomRadius={"40"}
-              py={0}
-              h={["60%", "20%", "90%", "100%", "90%"]}
-              px={[4, 4, 0]}
-            >
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
-                mt={["0", "0", "20", "12", "20"]}
-                position={"relative"}
-                justifyContent={"space-evenly"}
-                alignItems={"center"}
-                textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-                p={[0, 0, 0, 6, 0]}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? expressL : expressL}
-                      w={["50px", "50px", "44px", "54px", "60px"]}
-                      filter={"brightness(.92)"}
-                      mb={2}
-                    ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-7}>
-                      Express Js
-                    </Box>
-                  </Grid>
-                </motion.div>{" "}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={firebase}
-                      w={["100px", "100px", "90px", "100px", "100px"]}
-                      filter={"brightness(.92)"}
-                    ></Img>
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={[-12, -12, -16, -8, -6]}
-                    >
-                      Firebase
-                    </Box>
-                  </Grid>
-                </motion.div>
-              </Flex>
-
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
-                // mt={["0", "2", "8", "24", "24"]}
-                position={"relative"}
-                justifyContent={"space-around"}
-                alignItems={"center"}
-                // textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-                mt={[0, 0, 0, 0, 0]}
-                pb={[3, 3, 0]}
-                // m={0}
-                textAlign={"center"}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <Flex
-                    // templateRows={["repeat(2, 1fr)"]}
-                    flexDirection={["column", "column"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                    mt={["-16", "-32", "-12", "-56", "-16"]}
-                    py={[0, 16, 6, 40, 6]}
-                    textAlign={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? mongoN : mongoN}
-                      w={["140px", "140px", "120px", "160px", "180px"]}
-                      // mb={20}
-                      // h={"80px"}
-                    />
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={["-4", "-3", -2, -3, -4]}
-                    >
-                      Mongo db
-                    </Box>
-                  </Flex>{" "}
-                </motion.div>
-              </Flex>
-            </Box>
-          </Flex>
-
-          <Flex
-            flexDir={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-            position={"relative"}
-            mt={["3", "-6", "0", "0", "0"]}
-          >
-            <Box
-              mt={["2", "10", "2"]}
-              fontSize={["xl", "xl", "lg", "xl"]}
-              fontFamily={"arial"}
-              // w={["86vw", "60vw", "30vw", "25vw"]}
-              w={["2xs", "2xs", "3xs", "2xs", "xs"]}
-              bgColor={bglCardHead}
-              borderTopRadius={"18"}
-              textAlign={"center"}
-              p={[3, 3, 1, 1, "1px"]}
-            >
-              <Text> Version Control </Text>
-              <Text>Containerization</Text>
-            </Box>
-
-            <Box
-              bgColor={bglCard}
-              borderBottomRadius={"40"}
-              // py={-20}
-              h={["100%", "100%", "90%", "100%", "90%"]}
-              py={[8, 8, 0]}
-              px={[4, 4, 0]}
-            >
-              <Flex
-                // w={["86vw", "60vw", "30vw", "25vw"]}
-                w={["3xs", "3xs", "3xs", "2xs", "xs"]}
-                mt={["5", "5", "20", "20", "20"]}
-                position={"relative"}
-                justifyContent={"space-around"}
-                alignItems={"center"}
-                textAlign={"center"}
-                flexDir={["row", "row", "column"]}
-              >
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? gitL : gitL}
-                      w={["50px", "50px", "50px", "60px", "60px"]}
-                      filter={"brightness(.92)"}
-                      mb={[2, 1, 2, 2, 2]}
-                    ></Img>
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={[-4, -4, -10, -12, -4]}
-                    >
-                      Git
-                    </Box>
-                  </Grid>
-                </motion.div>{" "}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                  >
-                    <Img
-                      src={colorMode === "light" ? githubN : githubN}
-                      w={["50px", "50px", "44px", "54px", "54px"]}
-                      filter={"brightness(.92)"}
-                      mb={2}
-                    ></Img>
-                    <Box textAlign={"center"} color={"gray.400"} mt={-4}>
-                      GitHub
-                    </Box>
-                  </Grid>
-                </motion.div>{" "}
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: [0, 1] }}
-                  transition={{ delay: 0.2 }}
-                  style={{ width: "100%" }}
-                >
-                  <Grid
-                    templateRows={["repeat(2, 1fr)"]}
-                    justifyItems={"center"}
-                    alignItems={"center"}
-                    mt={[0, 0, 4, 0, 0]}
-                  >
-                    <Img
-                      src={docker}
-                      w={["58px", "58px", "50px", "60px", "60px"]}
-                      filter={"brightness(.92)"}
-                    ></Img>
-                    <Box
-                      textAlign={"center"}
-                      color={"gray.400"}
-                      mt={[-5, -5, -3, -5, -5]}
-                    >
-                      Docker
-                    </Box>
-                  </Grid>
-                </motion.div>
-              </Flex>
-            </Box>
-          </Flex>
-        </Flex>
-
+        ////////////////////////
+        <Box w={"100vw"} bgColor={"red"}>
+          <ParallaxText baseVelocity={-0.001}>Framer Motion</ParallaxText>
+          <ParallaxText baseVelocity={0.001}>Scroll velocity</ParallaxText>
+        </Box>
         {/* <Box>gggggggggg</Box> */}
       </Flex>
     </Box>

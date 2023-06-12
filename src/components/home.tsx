@@ -26,7 +26,7 @@ const Home = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box overflow={"hidden"} h={["56em", "4xl", "3xl", "3xl", "62em"]}>
+    <Box overflow={"hidden"} h={["3xl", "3xl", "3xl", "3xl"]}>
       <Element name="Home"></Element>
       <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 40]}>
         {/* Social links */}
@@ -52,7 +52,7 @@ const Home = () => {
           position="relative"
           alignItems={["center", "center"]}
           lineHeight={"taller"}
-          top={["16", "12", "-20"]}
+          top={["36", "36", "12", "10"]}
           w={["full", "auto"]}
           ml={[0, 0, 0, 0, 0]}
         >
