@@ -49,12 +49,8 @@ const About = () => {
         viewBox="0 0 1200 120"
         preserveAspectRatio="none"
       >
-        <path
-          d="M0 120L1200 36.48 1200 0 0 0 0 120z"
-          className="shape-fill"
-        ></path>
+        <path d="M0 80L1200 10 1200 0 0 0 0 80z" className="shape-fill"></path>
       </svg>
-
       {/* <Flex mt={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}> */}
       <Flex>
         <Flex
@@ -79,6 +75,7 @@ const About = () => {
           rounded={"xl"}
           m={3}
           h={"xl"}
+          mt={-5}
 
           // mt={"0"}
         >
@@ -143,6 +140,7 @@ const About = () => {
             />
           </Flex>
         </Flex>
+
         <Flex
           flexDirection={["column"]}
           position={"relative"}
@@ -277,7 +275,6 @@ const About = () => {
             </Button>
           </Link>
         </Flex>
-
         {/* <Img src={dev} w={"20%"} h={"20%"} filter={"dropshadow"} /> */}
       </Flex>
     </Box>

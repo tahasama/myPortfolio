@@ -338,7 +338,7 @@ const Skills = () => {
         {/* </motion.div> */}
         {/* skills */}
         ////////////////////////
-        <Box w={"100vw"} bgColor={"red"}>
+        <Box>
           <ParallaxText baseVelocity={-0.001}>Framer Motion</ParallaxText>
           <ParallaxText baseVelocity={0.001}>Scroll velocity</ParallaxText>
         </Box>
