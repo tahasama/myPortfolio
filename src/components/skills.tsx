@@ -38,7 +38,7 @@ import { IoIosRocket } from "react-icons/io";
 // import bubbles from "../images/bubbles.jpg";
 import palm1 from "../images/palm1.png";
 
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import { motion } from "framer-motion";
 // import Projects from "./projects";
 import { Element } from "react-scroll";
 import { useState } from "react";
@@ -92,20 +92,21 @@ const Skills = () => {
       )} */}
       <Element name="Skills"></Element>
 
-      <Box bgColor={"blue.200"} mt={0}>
-        <svg
-          fill="#9DECF9"
-          data-name="Layer 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M600,7.23C931.37,7.23,1200,54.48,1200,112.77V0H0V112.77C0,54.48,268.63,7.23,600,7.23Z"
-            className="shape-fill"
-            // bgColor="#90CDF4"
-          ></path>
-        </svg>
+      <Box bgColor={"#9DECF9"} mt={0}>
+        <div className="custom-shape-divider-top-1686695529">
+          <svg
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+            fill="#90CDF4"
+          >
+            <path
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+              className="shape-fill"
+            ></path>
+          </svg>
+        </div>
       </Box>
 
       <Flex
@@ -337,10 +338,238 @@ const Skills = () => {
         </Grid>
         {/* </motion.div> */}
         {/* skills */}
-        ////////////////////////
-        <Box>
-          <ParallaxText baseVelocity={-0.001}>Framer Motion</ParallaxText>
-          <ParallaxText baseVelocity={0.001}>Scroll velocity</ParallaxText>
+
+        <Box mt={20} w={"100%"}>
+          <ParallaxText baseVelocity={-5}>
+            <Flex
+              // w={["86vw", "60vw", "30vw", "25vw"]}
+              w={["3xl", "3xl", "100vw"]}
+              // mt={["0", "2", "8", "24", "24"]}
+              position={"relative"}
+              justifyContent={"space-evenly"}
+              alignItems={"center"}
+              textAlign={"center"}
+              flexDir={["row"]}
+              fontSize={[20]}
+            >
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={colorMode === "light" ? reactD : reactN}
+                  w={["44px", "44px", "48px", "58px", "58px"]}
+                  filter={"brightness(.92)"}
+                ></Img>
+                <Box textAlign={"center"} color={"gray.400"} mt={[0, 2, 0]}>
+                  React Js / Native
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={expoLight}
+                  w={["80px", "80px", "85px", "90px", "94px"]}
+                  mb={2}
+                  filter={"brightness(.8)"}
+                  mt={[0, 0, 2, 0, 0]}
+                />
+                <Box textAlign={"center"} color={"gray.400"} mt={[2, 2, -2]}>
+                  Expo
+                </Box>
+              </Grid>{" "}
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={ts}
+                  w={["44px", "44px", "46px", "48px", "46px"]}
+                  filter={"brightness(.92)"}
+                ></Img>
+                <Box textAlign={"center"} color={"gray.400"} mt={[0, 0, 1]}>
+                  TypeScript
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={reduxL}
+                  w={["40px", "40px", "38px", "48px", "50px"]}
+                  filter={"brightness(.92)"}
+                ></Img>
+                <Box textAlign={"center"} color={"gray.400"}>
+                  Redux
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+                ml={[5, 5, 0]}
+                mt={[4, 4, 0]}
+              >
+                <Img
+                  src={tailwind}
+                  w={["60px", "60px", "48px", "58px", "56px"]}
+
+                  // mt={[0, 0, 7, 4, 4]}
+                />
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  // mt={"-30px"}
+                  mb={[4, 6, 2]}
+                >
+                  Tailwind css
+                </Box>
+              </Grid>{" "}
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+                p={2}
+                ml={[5, 5, 0]}
+              >
+                <Img
+                  src={chakra}
+                  w={["54px", "54px", "48px", "58px", "56px"]}
+                  mb={[-1]}
+                  mt={[-0, -0, -4, -4, -4]}
+                />
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  mt={[2, 2, 2, -1, -1]}
+                >
+                  Chakra UI
+                </Box>
+              </Grid>{" "}
+            </Flex>
+          </ParallaxText>
+          <ParallaxText baseVelocity={5}>
+            <Flex
+              // w={["86vw", "60vw", "30vw", "25vw"]}
+              w={["3xl", "3xl", "100vw"]}
+              // mt={["0", "2", "8", "24", "24"]}
+              position={"relative"}
+              justifyContent={"space-evenly"}
+              alignItems={"center"}
+              textAlign={"center"}
+              flexDir={["row"]}
+              fontSize={[20]}
+            >
+              <Grid templateRows={["repeat(2, 1fr)"]}>
+                <Img
+                  src={colorMode === "light" ? mongoN : mongoN}
+                  w={["140px", "140px", "120px", "160px", "180px"]}
+                  // mb={20}
+                  // h={"80px"}
+                />
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  // mt={["-4", "-3", -2, -3, -4]}
+                >
+                  Mongo db
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={colorMode === "light" ? expressL : expressL}
+                  w={["50px", "50px", "44px", "54px", "60px"]}
+                  filter={"brightness(.92)"}
+                  mb={2}
+                ></Img>
+                <Box textAlign={"center"} color={"gray.400"} mt={-7}>
+                  Express Js
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={firebase}
+                  w={["100px", "100px", "90px", "100px", "100px"]}
+                  filter={"brightness(.92)"}
+                ></Img>
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  mt={[-12, -12, -16, -8, -6]}
+                >
+                  Firebase
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={colorMode === "light" ? gitL : gitL}
+                  w={["50px", "50px", "50px", "60px", "60px"]}
+                  filter={"brightness(.92)"}
+                  mb={[2, 1, 2, 2, 2]}
+                ></Img>
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  mt={[-4, -4, -10, -12, -6]}
+                >
+                  Git
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+              >
+                <Img
+                  src={colorMode === "light" ? githubN : githubN}
+                  w={["50px", "50px", "44px", "54px", "54px"]}
+                  filter={"brightness(.92)"}
+                  mb={2}
+                ></Img>
+                <Box textAlign={"center"} color={"gray.400"} mt={-4}>
+                  GitHub
+                </Box>
+              </Grid>
+              <Grid
+                templateRows={["repeat(2, 1fr)"]}
+                justifyItems={"center"}
+                alignItems={"center"}
+                mt={[0, 0, 4, 0, 0]}
+              >
+                <Img
+                  src={docker}
+                  w={["58px", "58px", "50px", "60px", "60px"]}
+                  filter={"brightness(.92)"}
+                ></Img>
+                <Box
+                  textAlign={"center"}
+                  color={"gray.400"}
+                  mt={[-5, -5, -3, -5, -5]}
+                >
+                  Docker
+                </Box>
+              </Grid>
+            </Flex>
+          </ParallaxText>
         </Box>
         {/* <Box>gggggggggg</Box> */}
       </Flex>
