@@ -61,6 +61,8 @@ export function ParallaxText({ children, baseVelocity }: ParallaxProps) {
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>
+        <span>{children} </span>
+        <span>{children} </span>
       </motion.div>
     </Box>
   );

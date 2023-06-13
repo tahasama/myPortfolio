@@ -70,7 +70,7 @@ const About = () => {
           flexDirection={["column"]}
           // left={0}
           // bgColor={"yellow"}
-          bgGradient="linear(  blackAlpha.200, blackAlpha.500)" // Adjust the color and opacity as needed
+          bgGradient="linear(  blackAlpha.200, blackAlpha.300)" // Adjust the color and opacity as needed
           p={[1, 1, 4]} // Adjust padding as needed
           rounded={"xl"}
           m={3}

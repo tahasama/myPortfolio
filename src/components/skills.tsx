@@ -63,7 +63,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box h={["100%"]}>
+    <Box>
       {/* {colorMode !== "dark" && !isMobile && (
         <Flex
           flexDirection={"row"}
@@ -110,13 +110,11 @@ const Skills = () => {
       </Box>
 
       <Flex
-        h={"100%"}
         // top={32}
         // w={"100%"}
         flexDir={["column", "column", "column", "column"]}
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
-        // mt={}
         // clipPath={[
         //   // "ellipse(59% 65% at 40% 65%)",
 
@@ -152,6 +150,7 @@ const Skills = () => {
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(1)"]}
           mx={[0, 0, "40"]}
           // p={5}
+          mt={20}
         >
           <Flex flexDir={"column"} alignItems={"center"} m={"2"}>
             <Flex
@@ -339,7 +338,7 @@ const Skills = () => {
         {/* </motion.div> */}
         {/* skills */}
 
-        <Box mt={20} w={"100%"}>
+        <Box position={"relative"} top={36} w={"100%"}>
           <ParallaxText baseVelocity={-5}>
             <Flex
               // w={["86vw", "60vw", "30vw", "25vw"]}
@@ -455,6 +454,8 @@ const Skills = () => {
               </Grid>{" "}
             </Flex>
           </ParallaxText>
+          <br />
+          <br />
           <ParallaxText baseVelocity={5}>
             <Flex
               // w={["86vw", "60vw", "30vw", "25vw"]}

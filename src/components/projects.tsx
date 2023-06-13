@@ -38,31 +38,6 @@ const Projects = () => {
     "linear( gray.900 0%, gray.900 100%)"
   );
   const { colorMode } = useColorMode();
-  // const [isMobile, setIsMobile] = useState(false);
-
-  // function reportWindowSize() {
-  //   window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
-  // }
-
-  // window.onresize = reportWindowSize;
-  // console.log(window.onresize);
-
-  // const { scrollY } = useViewportScroll();
-  // const x1 = useTransform(scrollY, [2000, 2800], [100, 100]);
-  // const x2 = useTransform(scrollY, [2000, 2800], [400, 400]);
-  // const x3 = useTransform(scrollY, [2000, 2800], [700, 700]);
-  // const x4 = useTransform(scrollY, [2000, 2800], [1000, 1000]);
-  // const x5 = useTransform(scrollY, [2000, 2800], [1300, 1300]);
-  // const x6 = useTransform(scrollY, [2000, 2800], [1600, 1600]);
-
-  // const y1 = useTransform(scrollY, [2300, 2800], [1300, -800]);
-  // const y2 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
-  // const y3 = useTransform(scrollY, [2350, 2750], [1300, -1200]);
-  // const y4 = useTransform(scrollY, [2450, 2750], [1300, -900]);
-  // const y5 = useTransform(scrollY, [2300, 2650], [1300, -1600]);
-  // const y6 = useTransform(scrollY, [2400, 2800], [1300, -1300]);
-
-  // const o2 = useTransform(scrollY, [2200, 2340], [1, 0]);
 
   const [isHovered, setIsHovered] = useState(false);
 
@@ -77,7 +52,7 @@ const Projects = () => {
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={"blue.100"} mt={0}>
+      <Box bgColor={"blue.100"}>
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -98,8 +73,8 @@ const Projects = () => {
           ></path>
           <defs>
             <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="#BEE3F8" offset="0%"></stop>
-              <stop stop-color="#63B3ED" offset="100%"></stop>
+              <stop stop-color="#63B3ED" offset="0%"></stop>
+              <stop stop-color="#90CDF4" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
@@ -110,7 +85,7 @@ const Projects = () => {
           <defs>
             <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
               <stop stop-color="#63B3ED" offset="0%"></stop>
-              <stop stop-color="#4299E1" offset="100%"></stop>
+              <stop stop-color="#63B3ED" offset="100%"></stop>
             </linearGradient>
           </defs>
           <path
@@ -123,15 +98,8 @@ const Projects = () => {
       <Box
         // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bgGradient={bgOnLight}
-        // clipPath={[
-        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 3%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 7%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        //   "polygon(26% 8%, 100% 0, 100% 100%, 0 100%, 0 0)",
-        // ]}
         zIndex={2}
-        // mb={40}
+        // mt={40}
         w={"full"}
       >
         <Flex
@@ -150,9 +118,9 @@ const Projects = () => {
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
             mt={["-28vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
-            bg={isHovered ? "gray.700" : ""}
+            bg={isHovered ? "blackAlpha.400" : "blackAlpha.100"}
             rounded={"3xl"}
-            p={isHovered ? 5 : 0}
+            p={isHovered ? 5 : 2}
             position="relative"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -205,15 +173,27 @@ const Projects = () => {
                     A mobile app for for sharing and reacting
                   </Text>
                   {isHovered ? (
-                    <Button
-                      bg="pink.500"
-                      _hover={{ bg: "pink.600" }}
-                      size={"lg"}
-                      px={100}
-                      py={30}
-                    >
-                      Visit
-                    </Button>
+                    <>
+                      <Button
+                        bg="pink.500"
+                        _hover={{ bg: "pink.600" }}
+                        size={"lg"}
+                        px={100}
+                        py={30}
+                      >
+                        Visit
+                      </Button>
+                      <Text
+                        color={colorMode !== "light" ? "green.500" : "red.700"}
+                        fontSize={[16, 16, 17, 18]}
+                        textAlign={["center", "center", "start"]}
+                        fontWeight={"medium"}
+                        // style={{ marginTop: 40 }}
+                      >
+                        for quick access please use <b>email : t@t.com</b> ,and
+                        <b> passsword : tttttt</b>{" "}
+                      </Text>
+                    </>
                   ) : (
                     <List
                       style={{ textIndent: 10 }}
@@ -222,14 +202,6 @@ const Projects = () => {
                       lineHeight={"8"}
                       color={colorMode === "light" ? "gray.800" : "gray.300"}
                     >
-                      <ListItem
-                        color={colorMode !== "light" ? "green.500" : "red.700"}
-                        fontSize={[16, 16, 17, 18]}
-                        textAlign={["center", "center", "start"]}
-                      >
-                        for quick access please use email : t@t.com ,and
-                        passsword : tttttt{" "}
-                      </ListItem>
                       <ListItem>
                         <ListIcon
                           as={MdSettings}
@@ -246,7 +218,7 @@ const Projects = () => {
                             colorMode !== "light" ? "green.500" : "pink.500"
                           }
                         />
-                        Share imagem photos, ...
+                        Share images photos, ...
                       </ListItem>
                       <ListItem>
                         <ListIcon
@@ -840,183 +812,6 @@ const Projects = () => {
           </VStack>
         </Flex>
       </Box>
-      {/* {colorMode !== "dark" && (
-        <Flex justifyContent={"space-between"}>
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y1,
-              x: x1,
-              // width: "100vw",
-              position: "fixed",
-              top: 200,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y2,
-              x: x2,
-              // width: "100vw",
-              position: "fixed",
-              top: 200,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y3,
-              x: x3,
-              // width: "100vw",
-              position: "fixed",
-              top: 200,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y4,
-              x: x4,
-              // width: "100vw",
-              position: "fixed",
-              top: 200,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y5,
-              x: x5,
-              // width: "100vw",
-              position: "fixed",
-              top: 1000,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-
-          <motion.div
-            style={{
-              // x: colorMode !== "light" ? x2 : x1,
-              // x: x2,
-              y: y6,
-              x: x6,
-              width: "100vw",
-              position: "fixed",
-              top: 200,
-              // left: 0,
-              zIndex: 2,
-              overflow: "hidden",
-              // opacity: o2,
-            }}
-          >
-            <Box
-              zIndex={99}
-              w={"10%"}
-              overflow={"hidden"}
-              display={"flex"}
-              flexDirection={"column"}
-            >
-              <Img src={water} overflow={"hidden"} w={"100%"} />
-              <Img src={water} overflow={"hidden"} w={"50%"} mt={16} />
-              <Img src={water} overflow={"hidden"} w={"30%"} mt={10} ml={20} />
-              <Img src={water} overflow={"hidden"} w={"10%"} mt={10} ml={10} />
-            </Box>
-          </motion.div>
-        </Flex>
-      )} */}
     </Box>
   );
 };
