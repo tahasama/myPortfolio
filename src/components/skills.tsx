@@ -64,34 +64,8 @@ const Skills = () => {
 
   return (
     <Box>
-      {/* {colorMode !== "dark" && !isMobile && (
-        <Flex
-          flexDirection={"row"}
-          position={"absolute"}
-          w={"100%"}
-          // bgColor={"red"}
-          justifyContent={"space-between"}
-          // top={"-20"}
-          // mt={["0vh", "0vh", "-227vh", "-270vh", "-130vh"]}
-          zIndex={1}
-        >
-          <Img
-            src={palm1}
-            overflow={"hidden"}
-            w={["100%", "30%", "29%", "25%", "20%"]}
-            mx={[6, 0, 0, 0, 0]}
-          />
-          <Img
-            src={palm1}
-            overflow={"hidden"}
-            w={["100%", "30%", "29%", "25%", "20%"]}
-            transform={"scaleX(-1)"}
-            mx={[6, 0, 0, 0, 0]}
-          />
-        </Flex>
-      )} */}
       <Element name="Skills"></Element>
-      <Box bgColor={"#9DECF9"} mt={-20}>
+      <Box bgColor={"#9DECF9"}>
         <div>
           <svg
             id="wave"
@@ -319,7 +293,7 @@ const Skills = () => {
         {/* </motion.div> */}
         {/* skills */}
 
-        <Box position={"relative"} top={24} w={"100%"}>
+        <Box position={"relative"} top={[0, 0, 24]} w={"100%"}>
           <ParallaxText baseVelocity={-5}>
             <Flex
               // w={["86vw", "60vw", "30vw", "25vw"]}

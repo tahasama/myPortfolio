@@ -103,7 +103,7 @@ const Projects = () => {
           gap={20}
           pt={20}
           top={40}
-          pb={64}
+          // pb={4} ///////////////////////////////
         >
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
@@ -128,9 +128,9 @@ const Projects = () => {
                   opacity: [0, 1],
                 }}
                 // transition={{ ease: "linear" }}
-                style={{ overflow: "hidden" }}
               >
                 <VStack
+                  // width="100%"
                   position={"relative"}
                   // style={{ textIndent: 40 }}
                   fontSize={["20", "22", "18", "24", "24"]}
@@ -223,10 +223,10 @@ const Projects = () => {
                   </List>
 
                   <Flex
-                    // w={"full"}
                     justifyContent={"center"}
                     alignItems={"center"}
                     flexDirection={"column"}
+                    // width="100%"
                   >
                     <Text
                       color={colorMode !== "light" ? "green.500" : "red.700"}
@@ -243,7 +243,7 @@ const Projects = () => {
                       href="https://play.google.com/store/apps/details?id=com.storyat"
                       isExternal
                       colorScheme="pink"
-                      style={{ textDecoration: "none" }}
+                      style={{ textDecoration: "none", width: "100%" }}
                     >
                       <Button
                         bgColor={
@@ -253,7 +253,7 @@ const Projects = () => {
                           bg: colorMode !== "light" ? "green.700" : "pink.600",
                         }}
                         size={"lg"}
-                        w={"xl"}
+                        w={["100%", "100%", "100%", "xl"]}
                         py={30}
                         letterSpacing={"wider"}
                       >
@@ -283,20 +283,26 @@ const Projects = () => {
             alignItems={"center"}
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
-            // mt={["-28vh", "-20vh", "-20vh", "-20vh", "0vh"]}
+            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
+            gap={8}
           >
             <Img
               src={proj1}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "45%"]}
+              w={["100%", "100%", "53%", "55%", "47%"]}
               ml={[0, 0, 12, 0, 0]}
               // zIndex={55}
               bgColor={"blackAlpha.100"}
               p={3}
             />
 
-            <Box w={"full"}>
+            <Flex
+              w={"full"}
+              gap={4}
+              // bgColor={"yellow"}
+              // justifyContent={"center"}
+            >
               <motion.div
                 whileInView={{
                   // x: !isMobile ? ["-20px", "0px"] : ["-600px", "0px"],
@@ -304,15 +310,17 @@ const Projects = () => {
                   opacity: [0, 1],
                 }}
                 // transition={{ ease: "linear" }}
-                style={{ overflow: "hidden" }}
+                style={{ overflow: "hidden", width: "100%" }}
               >
                 <VStack
+                  width="100%"
                   position={"relative"}
                   // style={{ textIndent: 40 }}
                   fontSize={["20", "22", "18", "24", "24"]}
                   mb={2}
                   fontFamily={"Raleway"}
                   fontWeight={900}
+                  mt={4}
                 >
                   <Text
                     fontSize={["20", "22", "18", "24", "24"]}
@@ -330,27 +338,11 @@ const Projects = () => {
                 </VStack>
                 <List
                   style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 32]}
+                  ml={[0, 0, 0, 0, 40]}
                   fontSize={["17", "18", "14", "16", "20"]}
                   lineHeight={"8"}
                   color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
-                  <ListItem
-                    color={colorMode !== "light" ? "green.400" : "red.600"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "start"]}
-                  >
-                    ! ALL Data and Files in this project are fake and are just
-                    for demonstration !
-                  </ListItem>
-                  <ListItem
-                    color={colorMode !== "light" ? "green.500" : "red.700"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "start"]}
-                  >
-                    Please do not register, you'll have to wait for
-                    authorization
-                  </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
@@ -377,24 +369,40 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Inspection reports With assistance (Laboratory, Topography,
-                    etc... )
+                    Inspection reports (Laboratory, Topography, etc... )
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Data Management of documentations (Procedures, plans, and
-                    Updates )
+                    Data Management (Procedures, plans, and Updates )
                   </ListItem>
                 </List>
                 <Flex
-                  // w={"full"}
-                  justifyContent={"center"}
+                  w={"full"}
+                  // justifyContent={"end"}
                   alignItems={"center"}
                   flexDirection={"column"}
+                  // ml={[0, 0, 0, 0, 16]}
+                  // bgColor={"red"}
                 >
+                  <Text
+                    color={colorMode !== "light" ? "green.400" : "red.600"}
+                    fontSize={[14, 14, 15, 17]}
+                    textAlign={["center", "center", "start"]}
+                  >
+                    ! ALL Data and Files in this project are fake and are just
+                    for demonstration !
+                  </Text>
+                  {/* <Text
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={["center", "center", "start"]}
+                  >
+                    Please do not register, you'll have to wait for
+                    authorization
+                  </Text> */}
                   <Text
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
@@ -406,28 +414,30 @@ const Projects = () => {
                     for quick access please use <b>email : t@t.com</b> ,and
                     <b> passsword : tttttt</b>{" "}
                   </Text>
-                  <Link
-                    href="https://qualityc.netlify.app/"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none" }}
+
+                  <Button
+                    bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                    _hover={{
+                      bg: colorMode !== "light" ? "green.700" : "pink.600",
+                    }}
+                    size={"lg"}
+                    w={["100%", "100%", "100%", "75%"]}
+                    py={30}
+                    letterSpacing={"wider"}
+                    // ml={[0, 0, 0, 0, 28]}
                   >
-                    <Button
-                      bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
-                      _hover={{
-                        bg: colorMode !== "light" ? "green.700" : "pink.600",
-                      }}
-                      size={"lg"}
-                      w={"xl"}
-                      py={30}
-                      letterSpacing={"wider"}
+                    <Link
+                      href="https://qualityc.netlify.app/"
+                      isExternal
+                      colorScheme="pink"
+                      style={{ textDecoration: "none", width: "100%" }}
                     >
                       Go to app
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </Flex>
               </motion.div>
-            </Box>
+            </Flex>
           </Flex>
 
           <Flex
@@ -438,7 +448,12 @@ const Projects = () => {
             mx={[2, 2, 2, 5, 10]}
             // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
           >
-            <Box w={"full"} overflow={"hidden"}>
+            <Flex
+              w={"full"}
+              gap={4}
+              // bgColor={"yellow"}
+              // justifyContent={"center"}
+            >
               <motion.div
                 whileInView={{
                   // x: isMobile ? ["10px", "0px"] : ["400px", "0px"],
@@ -446,15 +461,17 @@ const Projects = () => {
                   opacity: [0, 1],
                 }}
                 // transition={{ ease: "linear" }}
-                style={{ overflow: "hidden" }}
+                style={{ overflow: "hidden", width: "100%" }}
               >
                 <VStack
+                  width="100%"
                   position={"relative"}
                   // style={{ textIndent: 40 }}
                   fontSize={["20", "22", "18", "24", "24"]}
                   mb={2}
                   fontFamily={"Raleway"}
                   fontWeight={900}
+                  mt={4}
                 >
                   <Text
                     fontSize={["20", "22", "18", "20", "24"]}
@@ -521,10 +538,12 @@ const Projects = () => {
                   </ListItem>{" "}
                 </List>
                 <Flex
-                  // w={"full"}
+                  w={"full"}
                   justifyContent={"center"}
                   alignItems={"center"}
                   flexDirection={"column"}
+                  // ml={[0, 0, 0, 0, 16]}
+                  // bgColor={"red"}
                 >
                   <Text
                     color={colorMode !== "light" ? "green.500" : "red.700"}
@@ -537,28 +556,30 @@ const Projects = () => {
                     for quick access please use <b>email : t@t.com</b> ,and
                     <b> passsword : tttttt</b>{" "}
                   </Text>
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none" }}
+
+                  <Button
+                    bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                    _hover={{
+                      bg: colorMode !== "light" ? "green.700" : "pink.600",
+                    }}
+                    size={"lg"}
+                    w={["100%", "100%", "100%", "75%"]}
+                    py={30}
+                    letterSpacing={"wider"}
+                    // ml={[0, 0, 0, 0, 28]}
                   >
-                    <Button
-                      bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
-                      _hover={{
-                        bg: colorMode !== "light" ? "green.700" : "pink.600",
-                      }}
-                      size={"lg"}
-                      w={"xl"}
-                      py={30}
-                      letterSpacing={"wider"}
+                    <Link
+                      href="https://github.com/tahasama/react-editor"
+                      isExternal
+                      colorScheme="pink"
+                      style={{ textDecoration: "none", width: "100%" }}
                     >
                       Go to app
-                    </Button>
-                  </Link>
+                    </Link>
+                  </Button>
                 </Flex>
               </motion.div>
-            </Box>
+            </Flex>
             <Flex justifyContent={"center"} alignItems={"center"}>
               <Img
                 src={proj2}

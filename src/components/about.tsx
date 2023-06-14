@@ -64,7 +64,7 @@ const About = () => {
           // position={"absolute"}
           // top={[colorMode !== "dark" ? 16 : 16, 24, 36]}
           // paddingX={[colorMode !== "dark" ? 5 : 0, 7]}
-          gap={[20]}
+          gap={selected === "shorter" ? 7 : selected === "" ? 2 : 20}
           // h={"100%"}
           fontSize={["xs", "lg", "sm", "sm", "lg"]}
           flexDirection={["column"]}
@@ -74,8 +74,16 @@ const About = () => {
           p={[1, 1, 4]} // Adjust padding as needed
           rounded={"xl"}
           m={3}
-          h={"xl"}
-          mt={-5}
+          h={
+            selected === "full"
+              ? "xl"
+              : selected === "short"
+              ? "lg"
+              : selected === "shorter"
+              ? "xs"
+              : "2xs"
+          }
+          mt={selected === "shortest" ? -5 : 8}
 
           // mt={"0"}
         >
