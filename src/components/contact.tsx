@@ -25,7 +25,7 @@ const key = process.env.REACT_APP_KEY;
 
 const Contact = () => {
   const bgOnLight = useColorModeValue(
-    "linear( teal.200 0%,gray.200 70%, gray.100)",
+    "linear( teal.300 0%,gray.200 90%, white)",
     "linear( gray.900 0%, gray.900 100%)"
   );
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
@@ -166,6 +166,8 @@ const Contact = () => {
                 type="submit"
                 bgColor={"teal.400"}
                 py={6}
+                letterSpacing={"wider"}
+                fontSize={18}
                 //   px={20}
               >
                 Send

@@ -29,25 +29,19 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 // import underwater from "../images/underwater.png";
 import water from "../images/bubble.png";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
+
+type HoverState = {
+  [key: string]: boolean;
+};
 
 const Projects = () => {
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
-    "linear(blue.300, cyan.200)",
+    "linear(blue.300, cyan.300)",
     "linear( gray.900 0%, gray.900 100%)"
   );
   const { colorMode } = useColorMode();
-
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   return (
     <Box h={"100%"}>
@@ -118,12 +112,12 @@ const Projects = () => {
             w={"96%"}
             mx={[2, 2, 2, 5, 10]}
             mt={["-28vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
-            bg={isHovered ? "blackAlpha.400" : "blackAlpha.100"}
+            // bg={isHovered ? "blackAlpha.400" : "blackAlpha.100"}
             rounded={"3xl"}
-            p={isHovered ? 5 : 2}
+            p={2}
             position="relative"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
             transition="all 1s"
           >
             <Box w={"full"} flex={2}>
@@ -141,173 +135,133 @@ const Projects = () => {
                   // style={{ textIndent: 40 }}
                   fontSize={["20", "22", "18", "24", "24"]}
                   mb={2}
-                  fontFamily={"Raleway"}
-                  fontWeight={900}
                   flex={"column"}
                   justifyContent={"center"}
                   alignItems={"center"}
                 >
                   <Text
                     fontSize={["20", "22", "18", "24", "24"]}
-                    color={
-                      colorMode === "light" && !isHovered
-                        ? "gray.800"
-                        : colorMode === "light" && isHovered
-                        ? "white"
-                        : "gray.300"
-                    }
+                    fontWeight={900}
+                    fontFamily={"Raleway"}
+
+                    // color={
+                    //   colorMode === "light" && !isHovered
+                    //     ? "gray.800"
+                    //     : colorMode === "light" && isHovered
+                    //     ? "white"
+                    //     : "gray.300"
+                    // }
                   >
                     Storyat
                   </Text>
                   <Text
                     textAlign={"center"}
                     fontSize={["18", "20", "16", "22", "22"]}
-                    color={
-                      colorMode === "light" && !isHovered
-                        ? "gray.800"
-                        : colorMode === "light" && isHovered
-                        ? "white"
-                        : "gray.300"
-                    }
+                    fontWeight={900}
+                    fontFamily={"Raleway"}
+
+                    // color={
+                    //   colorMode === "light" && !isHovered
+                    //     ? "gray.800"
+                    //     : colorMode === "light" && isHovered
+                    //     ? "white"
+                    //     : "gray.300"
+                    // }
                   >
                     A mobile app for for sharing and reacting
                   </Text>
-                  {isHovered ? (
-                    <>
-                      <Button
-                        bg="pink.500"
-                        _hover={{ bg: "pink.600" }}
-                        size={"lg"}
-                        px={100}
-                        py={30}
-                      >
-                        Visit
-                      </Button>
-                      <Text
-                        color={colorMode !== "light" ? "green.500" : "red.700"}
-                        fontSize={[16, 16, 17, 18]}
-                        textAlign={["center", "center", "start"]}
-                        fontWeight={"medium"}
-                        // style={{ marginTop: 40 }}
-                      >
-                        for quick access please use <b>email : t@t.com</b> ,and
-                        <b> passsword : tttttt</b>{" "}
-                      </Text>
-                    </>
-                  ) : (
-                    <List
-                      style={{ textIndent: 10 }}
-                      ml={[0, 0, 0, 0, 32]}
-                      fontSize={["17", "18", "14", "16", "20"]}
-                      lineHeight={"8"}
-                      color={colorMode === "light" ? "gray.800" : "gray.300"}
-                    >
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        Share a story, a situation, ....
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        Share images photos, ...
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        React to others stories
-                      </ListItem>{" "}
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        Comments and reply to comments
-                      </ListItem>{" "}
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        Get notification for comments, reactions
-                      </ListItem>
-                      <ListItem>
-                        <ListIcon
-                          as={MdSettings}
-                          color={
-                            colorMode !== "light" ? "green.500" : "pink.500"
-                          }
-                        />
-                        Profile with all user contribution, updates, ...
-                      </ListItem>{" "}
-                    </List>
-                  )}
-                </VStack>
 
-                {/* <Flex
-                  position="relative"
-                  justifyContent={"center"}
-                  alignItems={["center"]}
-                  w={"full"}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 0]}
-                >
-                  <Link
-                    href="https://play.google.com/store/apps/details?id=com.storyat"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none" }}
+                  <List
+                    style={{ textIndent: 10 }}
+                    ml={[0, 0, 0, 0, 32]}
+                    fontSize={["17", "18", "14", "16", "20"]}
+                    lineHeight={"8"}
+                    color={colorMode === "light" ? "gray.800" : "gray.300"}
                   >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={2}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
-                      letterSpacing={"wider"}
-                    >
-                      Play Store
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://github.com/tahasama/storyat"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      Share a story, a situation, ....
+                    </ListItem>
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      Share images photos, ...
+                    </ListItem>
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      React to others stories
+                    </ListItem>{" "}
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      Comments and reply to comments
+                    </ListItem>{" "}
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      Get notification for comments, reactions
+                    </ListItem>
+                    <ListItem>
+                      <ListIcon
+                        as={MdSettings}
+                        color={colorMode !== "light" ? "green.500" : "pink.500"}
+                      />
+                      Profile with all user contribution, updates, ...
+                    </ListItem>{" "}
+                  </List>
+
+                  <Flex
+                    // w={"full"}
+                    justifyContent={"center"}
+                    alignItems={"center"}
+                    flexDirection={"column"}
                   >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={[2, 2, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
+                    <Text
+                      color={colorMode !== "light" ? "green.500" : "red.700"}
+                      fontSize={[16, 16, 17, 18]}
+                      textAlign={["center", "center", "start"]}
+                      fontWeight={"medium"}
+                      // style={{ marginTop: 40 }}
+                      mb={3}
                     >
-                      Case study
-                    </Button>
-                  </Link>
-                </Flex> */}
+                      for quick access please use <b>email : t@t.com</b> ,and
+                      <b> passsword : tttttt</b>{" "}
+                    </Text>
+                    <Link
+                      href="https://play.google.com/store/apps/details?id=com.storyat"
+                      isExternal
+                      colorScheme="pink"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <Button
+                        bgColor={
+                          colorMode !== "light" ? "green.600" : "pink.500"
+                        }
+                        _hover={{
+                          bg: colorMode !== "light" ? "green.700" : "pink.600",
+                        }}
+                        size={"lg"}
+                        w={"xl"}
+                        py={30}
+                        letterSpacing={"wider"}
+                      >
+                        Go to app
+                      </Button>
+                    </Link>
+                  </Flex>
+                </VStack>
               </motion.div>
             </Box>
             <Flex flex={2} justifyContent={"center"}>
@@ -338,6 +292,8 @@ const Projects = () => {
               w={["100%", "100%", "53%", "55%", "45%"]}
               ml={[0, 0, 12, 0, 0]}
               // zIndex={55}
+              bgColor={"blackAlpha.100"}
+              p={3}
             />
 
             <Box w={"full"}>
@@ -384,23 +340,16 @@ const Projects = () => {
                     fontSize={[16, 16, 17, 18]}
                     textAlign={["center", "center", "start"]}
                   >
-                    ! ALL Data and files in this project are fake and are just
-                    for demontration !
+                    ! ALL Data and Files in this project are fake and are just
+                    for demonstration !
                   </ListItem>
                   <ListItem
                     color={colorMode !== "light" ? "green.500" : "red.700"}
                     fontSize={[16, 16, 17, 18]}
                     textAlign={["center", "center", "start"]}
                   >
-                    if you register you'll have to wait for authorization
-                  </ListItem>
-                  <ListItem
-                    color={colorMode !== "light" ? "green.500" : "red.700"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "justify"]}
-                  >
-                    for quick access please use email : t@t.com ,and passsword :
-                    tttttt{" "}
+                    Please do not register, you'll have to wait for
+                    authorization
                   </ListItem>
                   <ListItem>
                     <ListIcon
@@ -428,33 +377,35 @@ const Projects = () => {
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Every Quality inspection With necessary Laboratory and
-                    Topography assistance
+                    Inspection reports With assistance (Laboratory, Topography,
+                    etc... )
                   </ListItem>{" "}
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
                       color={colorMode !== "light" ? "green.500" : "pink.500"}
                     />
-                    Procedures, plans, and Updates
+                    Data Management of documentations (Procedures, plans, and
+                    Updates )
                   </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Detailed works
-                  </ListItem>{" "}
                 </List>
                 <Flex
-                  position="relative"
+                  // w={"full"}
                   justifyContent={"center"}
-                  alignItems={["center"]}
-                  w={"full"}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 0]}
+                  alignItems={"center"}
+                  flexDirection={"column"}
                 >
+                  <Text
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={["center", "center", "start"]}
+                    fontWeight={"medium"}
+                    // style={{ marginTop: 40 }}
+                    mb={3}
+                  >
+                    for quick access please use <b>email : t@t.com</b> ,and
+                    <b> passsword : tttttt</b>{" "}
+                  </Text>
                   <Link
                     href="https://qualityc.netlify.app/"
                     isExternal
@@ -462,35 +413,16 @@ const Projects = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={2}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
+                      bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                      _hover={{
+                        bg: colorMode !== "light" ? "green.700" : "pink.600",
+                      }}
+                      size={"lg"}
+                      w={"xl"}
+                      py={30}
                       letterSpacing={"wider"}
                     >
                       Go to app
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://github.com/tahasama/proApp"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={[2, 2, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
-                    >
-                      Case study
                     </Button>
                   </Link>
                 </Flex>
@@ -545,14 +477,6 @@ const Projects = () => {
                   lineHeight={"8"}
                   color={colorMode === "light" ? "gray.800" : "gray.300"}
                 >
-                  <ListItem
-                    color={colorMode !== "light" ? "green.500" : "red.700"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "start"]}
-                  >
-                    for quick access please use email : t@t.com ,and passsword :
-                    tttttt{" "}
-                  </ListItem>
                   <ListItem>
                     <ListIcon
                       as={MdSettings}
@@ -597,68 +521,58 @@ const Projects = () => {
                   </ListItem>{" "}
                 </List>
                 <Flex
-                  position="relative"
+                  // w={"full"}
                   justifyContent={"center"}
-                  alignItems={["center"]}
-                  w={"full"}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, -6]}
+                  alignItems={"center"}
+                  flexDirection={"column"}
                 >
+                  <Text
+                    color={colorMode !== "light" ? "green.500" : "red.700"}
+                    fontSize={[16, 16, 17, 18]}
+                    textAlign={["center", "center", "start"]}
+                    fontWeight={"medium"}
+                    // style={{ marginTop: 40 }}
+                    mb={3}
+                  >
+                    for quick access please use <b>email : t@t.com</b> ,and
+                    <b> passsword : tttttt</b>{" "}
+                  </Text>
                   <Link
-                    href="https://thacoder.netlify.app/"
+                    href="https://github.com/tahasama/react-editor"
                     isExternal
                     colorScheme="pink"
                     style={{ textDecoration: "none" }}
                   >
                     <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={3}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
+                      bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                      _hover={{
+                        bg: colorMode !== "light" ? "green.700" : "pink.600",
+                      }}
+                      size={"lg"}
+                      w={"xl"}
+                      py={30}
                       letterSpacing={"wider"}
                     >
                       Go to app
                     </Button>
                   </Link>
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      // mx={[1, 1, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
-                      mx={3}
-                    >
-                      Case study
-                    </Button>
-                  </Link>
                 </Flex>
               </motion.div>
             </Box>
-
-            <Img
-              src={proj2}
-              alt="devNight"
-              borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "45%"]}
-              ml={[0, 0, 0, 0, 0]}
-              // zIndex={55}
-            />
+            <Flex justifyContent={"center"} alignItems={"center"}>
+              <Img
+                src={proj2}
+                alt="devNight"
+                borderRadius={"3xl"}
+                ml={[0, 0, 0, 0, 0]}
+                // zIndex={55}
+                bg={"blackAlpha.100"}
+                p={3}
+              />
+            </Flex>
           </Flex>
 
-          <Flex
+          {/* <Flex
             flexDir={["column", "column", "row", "row", "row"]}
             justifyContent={"space-evenly"}
             alignItems={"center"}
@@ -673,22 +587,18 @@ const Projects = () => {
               borderRadius={"3xl"}
               w={["100%", "100%", "53%", "55%", "47%"]}
               ml={[0, 0, 0, 0, 0]}
-              // zIndex={55}
               margin={0}
             />
             <Box w={"full"} overflow={"hidden"}>
               <motion.div
                 whileInView={{
-                  // x: isMobile ? ["10px", "0px"] : ["400px", "0px"],
                   scale: [0.6, 1],
                   opacity: [0, 1],
                 }}
-                // transition={{ ease: "linear" }}
                 style={{ overflow: "hidden" }}
               >
                 <VStack
                   position={"relative"}
-                  // style={{ textIndent: 40 }}
                   fontSize={["20", "22", "18", "24", "24"]}
                   mb={2}
                   fontFamily={"Raleway"}
@@ -749,8 +659,6 @@ const Projects = () => {
                   justifyContent={"center"}
                   alignItems={["center"]}
                   w={"full"}
-                  // bgColor="red.200"
-                  // style={{ textIndent: 10 }}
                   ml={[0, 0, 0, 0, -6]}
                 >
                   <Link
@@ -795,10 +703,7 @@ const Projects = () => {
                 </Flex>
               </motion.div>
             </Box>
-            {/* <Flex justifyContent={"flex-end"}> */}
-
-            {/* </Flex> */}
-          </Flex>
+          </Flex> */}
 
           <VStack
             visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}
