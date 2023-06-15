@@ -46,7 +46,7 @@ const Projects = () => {
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={"blue.100"}>
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"}>
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -56,8 +56,14 @@ const Projects = () => {
         >
           <defs>
             <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="#63B3ED" offset="0%"></stop>
-              <stop stop-color="#BEE3F8" offset="100%"></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                offset="0%"
+              ></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#BEE3F8"}
+                offset="100%"
+              ></stop>
             </linearGradient>
           </defs>
           <path
@@ -67,8 +73,14 @@ const Projects = () => {
           ></path>
           <defs>
             <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="#63B3ED" offset="0%"></stop>
-              <stop stop-color="#90CDF4" offset="100%"></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                offset="0%"
+              ></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#90CDF4"}
+                offset="100%"
+              ></stop>
             </linearGradient>
           </defs>
           <path
@@ -78,8 +90,14 @@ const Projects = () => {
           ></path>
           <defs>
             <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
-              <stop stop-color="#63B3ED" offset="0%"></stop>
-              <stop stop-color="#63B3ED" offset="100%"></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                offset="0%"
+              ></stop>
+              <stop
+                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                offset="100%"
+              ></stop>
             </linearGradient>
           </defs>
           <path
@@ -103,7 +121,7 @@ const Projects = () => {
           gap={20}
           pt={20}
           top={40}
-          // pb={4} ///////////////////////////////
+          pb={16} ///////////////////////////////
         >
           <Flex
             flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
@@ -247,7 +265,7 @@ const Projects = () => {
                     >
                       <Button
                         bgColor={
-                          colorMode !== "light" ? "green.600" : "pink.500"
+                          colorMode !== "light" ? "teal.600" : "pink.500"
                         }
                         _hover={{
                           bg: colorMode !== "light" ? "green.700" : "pink.600",
@@ -416,7 +434,7 @@ const Projects = () => {
                   </Text>
 
                   <Button
-                    bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                    bgColor={colorMode !== "light" ? "teal.600" : "pink.500"}
                     _hover={{
                       bg: colorMode !== "light" ? "green.700" : "pink.600",
                     }}
@@ -558,7 +576,7 @@ const Projects = () => {
                   </Text>
 
                   <Button
-                    bgColor={colorMode !== "light" ? "green.600" : "pink.500"}
+                    bgColor={colorMode !== "light" ? "teal.600" : "pink.500"}
                     _hover={{
                       bg: colorMode !== "light" ? "green.700" : "pink.600",
                     }}

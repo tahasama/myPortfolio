@@ -43,7 +43,7 @@ const About = () => {
       <Element name="About"></Element>
 
       <svg
-        fill="#63B3ED"
+        fill={colorMode !== "light" ? "#171923" : "#63B3ED"}
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1200 120"
@@ -52,40 +52,28 @@ const About = () => {
         <path d="M0 80L1200 10 1200 0 0 0 0 80z" className="shape-fill"></path>
       </svg>
       {/* <Flex mt={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}> */}
-      <Flex>
+      <Flex flexDir={"column"} alignItems={"center"}>
         <Flex
-          // justifyContent={"center"}
+          justifyContent={"center"}
           // alignItems={"center"}
           // fontWeight={"500"}
           fontFamily={"ms madi"}
           zIndex={"1"}
-          // textAlign="center"
-          // w={["100%", "full", "full"]}
-          // position={"absolute"}
-          // top={[colorMode !== "dark" ? 16 : 16, 24, 36]}
-          // paddingX={[colorMode !== "dark" ? 5 : 0, 7]}
-          gap={selected === "shorter" ? 7 : selected === "" ? 2 : 20}
+          w={["72", "72", "sm", "md"]}
+          gap={10}
           // h={"100%"}
           fontSize={["xs", "lg", "sm", "sm", "lg"]}
-          flexDirection={["column"]}
+          // flexDirection={["column"]}
           // left={0}
           // bgColor={"yellow"}
-          bgGradient="linear(  blackAlpha.200, blackAlpha.300)" // Adjust the color and opacity as needed
+          bgGradient={
+            colorMode !== "light"
+              ? "linear(  whiteAlpha.300, whiteAlpha.200)"
+              : "linear(  blackAlpha.200, blackAlpha.300)"
+          } // Adjust the color and opacity as needed
           p={[1, 1, 4]} // Adjust padding as needed
           rounded={"xl"}
           m={3}
-          h={
-            selected === "full"
-              ? "xl"
-              : selected === "short"
-              ? "lg"
-              : selected === "shorter"
-              ? "xs"
-              : "2xs"
-          }
-          mt={selected === "shortest" ? -5 : 8}
-
-          // mt={"0"}
         >
           <Flex
             flexDirection={["column"]}
@@ -164,6 +152,7 @@ const About = () => {
           fontFamily="roboto slab"
           pb={20}
           mt={-10}
+          mx={[3, 3, 16]}
         >
           {(selected === "" ||
             selected === "full" ||
@@ -184,7 +173,7 @@ const About = () => {
               mt={selected === "" ? 40 : 20}
               // m={0}
 
-              w={"90vw"}
+              // w={"90vw"}
               textAlign={"center"}
             >
               I'm a self thaught Developer
@@ -198,7 +187,7 @@ const About = () => {
               transition={{ duration: 2 }}
             >
               <Text
-                w={["90vw", "auto"]}
+                // w={["90vw", "auto"]}
                 px={0}
                 py={2}
                 style={{ textIndent: 40 }}
@@ -218,8 +207,8 @@ const About = () => {
               transition={{ duration: 2 }}
             >
               <Box
-                w={["90vw", "auto"]}
-                px={3}
+                // w={["90vw", "auto"]}
+                px={0}
                 py={2}
                 style={{ textIndent: 40 }}
                 color={colorMode === "light" ? "gray.800" : "gray.300"}
@@ -240,8 +229,8 @@ const About = () => {
               transition={{ duration: 1.5 }}
             >
               <Box
-                w={["90vw", "auto"]}
-                px={3}
+                // w={["90vw", "auto"]}
+                px={0}
                 py={2}
                 style={{ textIndent: 40 }}
                 color={colorMode === "light" ? "gray.800" : "gray.300"}

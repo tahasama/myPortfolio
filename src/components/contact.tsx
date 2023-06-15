@@ -54,6 +54,21 @@ const Contact = () => {
   };
   return (
     <>
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "teal.300"}>
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          fill={colorMode !== "light" ? "#171923" : "#76E4F7"}
+        >
+          <path
+            d="M0 0L1200 0 307.75 114.72 0 0z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </Box>
+
       <Element name="Contact"></Element>
       {/* <Box
         className="custom-shape-divider-top-1686395892"
