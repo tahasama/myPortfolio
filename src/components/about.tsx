@@ -68,8 +68,8 @@ const About = () => {
           // bgColor={"yellow"}
           bgGradient={
             colorMode !== "light"
-              ? "linear(  whiteAlpha.300, whiteAlpha.200)"
-              : "linear(  blackAlpha.200, blackAlpha.300)"
+              ? "linear(  whiteAlpha.200, whiteAlpha.100)"
+              : "linear(  blackAlpha.100, blackAlpha.200)"
           } // Adjust the color and opacity as needed
           p={[1, 1, 4]} // Adjust padding as needed
           rounded={"xl"}
