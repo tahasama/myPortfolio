@@ -133,7 +133,7 @@ const Projects = () => {
           position={"relative"}
           gap={[24, 24, 40]}
           pt={20}
-          top={40}
+          top={[56, 56, 40]}
           pb={16} ///////////////////////////////
         >
           <Flex
