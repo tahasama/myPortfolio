@@ -29,7 +29,6 @@ const Home = () => {
     <Box overflow={"hidden"} h={["3xl", "3xl", "3xl", "3xl"]}>
       <Element name="Home"></Element>
       <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 40]}>
-        {/* Social links */}
         <Social />
       </Box>
 

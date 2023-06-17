@@ -36,11 +36,12 @@ import {
 // import underwater from "../images/underwater.png";
 import water from "../images/bubble.png";
 import { SetStateAction, useState } from "react";
+import { Carousel } from "./carousel";
 
 type HoverState = {
   [key: string]: boolean;
 };
-
+const images = [proj1, proj2];
 const Projects = () => {
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
@@ -55,6 +56,24 @@ const Projects = () => {
     damping: 30,
     restDelta: 0.001,
   });
+
+  const slides = [
+    {
+      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+    },
+    {
+      img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+    {
+      img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    },
+  ];
 
   return (
     <Box h={"100%"}>
@@ -308,9 +327,9 @@ const Projects = () => {
           >
             <Img
               src={proj1}
+              w={["100%", "100%", "53%", "55%", "47%"]}
               alt="devNight"
               borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "47%"]}
               ml={[0, 0, 12, 0, 0]}
               // zIndex={55}
               bgColor={"blackAlpha.100"}

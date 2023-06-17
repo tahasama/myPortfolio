@@ -14,8 +14,9 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import logoNight from "../images/logoNight.png";
-import logoDay from "../images/logoDay.png";
+import logoNight from "../images/logoN.png";
+// import logoDay from "../images/logoDay.png";
+import logoDay from "../images/logoD.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
 
@@ -149,20 +150,28 @@ const Navbar = () => {
           </List>
         </Box>
       </Slide>
-      <Link to={"Home"} onClick={onToggle} smooth>
-        <Img
-          visibility={["visible"]}
-          src={colorMode !== "light" ? logoNight : logoDay}
-          alt="devDay2"
-          position={"absolute"}
-          left={["25vw", "22vw", "5"]}
-          top={["7px", "2px", "0px"]}
-          // left={["0", "0", "-60px", "-140px", "-200px"]}
-          // mx={["20", "20", "6"]}
-          w={["53%", "auto"]}
-          cursor={"pointer"}
-        />
-      </Link>
+      <Flex
+        justifyContent={"center"}
+        position={"absolute"}
+        left={[20, 16, 6, 10]}
+        w={["53%", "40%", "33%", "30%", "24%", "20%"]}
+        mt={colorMode !== "light" ? 0 : -3}
+      >
+        <Link to={"Home"} onClick={onToggle} smooth>
+          <Img
+            visibility={["visible"]}
+            src={colorMode !== "light" ? logoNight : logoDay}
+            transform={colorMode !== "light" ? "scale(1.075)" : "none"}
+            alt="devDay2"
+            // position={"absolute"}
+            // left={["25vw", "22vw", "5"]}
+            // top={["7px", "2px", "0px"]}
+            // left={["0", "0", "-60px", "-140px", "-200px"]}
+            // mx={["20", "20", "6"]}
+            cursor={"pointer"}
+          />
+        </Link>
+      </Flex>
       <Flex h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
           w={["0", "0", "full"]}
