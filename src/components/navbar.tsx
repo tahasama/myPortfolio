@@ -14,7 +14,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import logoNight from "../images/logoN.png";
+import logoNight from "../images/logoN1.png";
 // import logoDay from "../images/logoDay.png";
 import logoDay from "../images/logoD.png";
 import { Link } from "react-scroll";
@@ -161,7 +161,8 @@ const Navbar = () => {
           <Img
             visibility={["visible"]}
             src={colorMode !== "light" ? logoNight : logoDay}
-            transform={colorMode !== "light" ? "scale(1.075)" : "none"}
+            mt={colorMode !== "light" ? 2 : "none"}
+            filter={colorMode !== "light" ? "grayscale(55%)" : "none"}
             alt="devDay2"
             // position={"absolute"}
             // left={["25vw", "22vw", "5"]}
