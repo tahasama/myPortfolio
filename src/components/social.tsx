@@ -142,9 +142,9 @@ const Social = () => {
         />
         <Box
           pos="relative"
-          h={[6, 6, 6, 6, 6]}
-          w={[6, 6, 6, 6, 6]}
-          borderRadius={[5, 5, 5, 5, 5]}
+          h={6}
+          w={6}
+          borderRadius={5}
           borderColor={colorMode !== "dark" ? "#DD6B20" : "#319795"}
           borderWidth="5px"
           transform="rotate(45deg)"

@@ -35,6 +35,26 @@ import {
 // import { useState } from "react";
 // import underwater from "../images/underwater.png";
 import water from "../images/bubble.png";
+import i1 from "../images/proj/proj1/1.png";
+import i2 from "../images/proj/proj1/2.png";
+import i3 from "../images/proj/proj1/3.png";
+import i4 from "../images/proj/proj1/4.png";
+import i5 from "../images/proj/proj1/5.png";
+import i6 from "../images/proj/proj1/6.png";
+import m1 from "../images/proj/proj2/1.png";
+import m2 from "../images/proj/proj2/2.png";
+import m3 from "../images/proj/proj2/3.png";
+import m4 from "../images/proj/proj2/4.png";
+import m5 from "../images/proj/proj2/5.png";
+import m6 from "../images/proj/proj2/6.png";
+import a1 from "../images/proj/proj3/1.jpg";
+import a2 from "../images/proj/proj3/2.jpg";
+import a3 from "../images/proj/proj3/3.jpg";
+import a4 from "../images/proj/proj3/4.jpg";
+import a5 from "../images/proj/proj3/5.jpg";
+import a6 from "../images/proj/proj3/6.jpg";
+import a7 from "../images/proj/proj3/7.jpg";
+import a8 from "../images/proj/proj3/8.jpg";
 import { SetStateAction, useState } from "react";
 import { Carousel } from "./carousel";
 
@@ -57,21 +77,72 @@ const Projects = () => {
     restDelta: 0.001,
   });
 
-  const slides = [
+  const slides1 = [
     {
-      img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: i1,
     },
     {
-      img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: i2,
     },
     {
-      img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+      img: i3,
     },
     {
-      img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: i4,
     },
     {
-      img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: i5,
+    },
+    {
+      img: i6,
+    },
+  ];
+
+  const slides2 = [
+    {
+      img: m1,
+    },
+    {
+      img: m2,
+    },
+    {
+      img: m3,
+    },
+    {
+      img: m4,
+    },
+    {
+      img: m5,
+    },
+    {
+      img: m6,
+    },
+  ];
+
+  const slides3 = [
+    {
+      img: a1,
+    },
+    {
+      img: a2,
+    },
+    {
+      img: a3,
+    },
+    {
+      img: a4,
+    },
+    {
+      img: a5,
+    },
+    {
+      img: a6,
+    },
+    {
+      img: a7,
+    },
+    {
+      img: a8,
     },
   ];
 
@@ -304,15 +375,7 @@ const Projects = () => {
               </VStack>
             </Box>
             <Flex flex={2} justifyContent={"center"}>
-              <Img
-                src={phone}
-                alt="devNight"
-                borderRadius={"3xl"}
-                w={["50%", "50%", "40%", "37%", "25%"]}
-                ml={[0, 0, 12, 0, 0]}
-                // zIndex={55}
-                mb={[5, 5, 0]}
-              />
+              <Carousel slides={slides3} />
             </Flex>
           </Flex>
 
@@ -325,16 +388,7 @@ const Projects = () => {
             // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
             gap={8}
           >
-            <Img
-              src={proj1}
-              w={["100%", "100%", "53%", "55%", "47%"]}
-              alt="devNight"
-              borderRadius={"3xl"}
-              ml={[0, 0, 12, 0, 0]}
-              // zIndex={55}
-              bgColor={"blackAlpha.100"}
-              p={3}
-            />
+            <Carousel slides={slides1} />
 
             <Flex
               w={"full"}
@@ -595,16 +649,16 @@ const Projects = () => {
                 </Button>
               </Flex>
             </Flex>
-            <Flex justifyContent={"center"} alignItems={"center"}>
-              <Img
-                src={proj2}
-                alt="devNight"
-                borderRadius={"3xl"}
-                ml={[0, 0, 0, 0, 0]}
-                // zIndex={55}
-                bg={"blackAlpha.100"}
-                p={3}
-              />
+            <Flex
+              flexDir={["column", "column", "row", "row", "row"]}
+              justifyContent={"space-around"}
+              alignItems={"center"}
+              w={"96%"}
+              mx={[2, 2, 2, 5, 10]}
+              // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
+              gap={8}
+            >
+              <Carousel slides={slides2} />
             </Flex>
           </Flex>
 

@@ -1,25 +1,8 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Text, Image, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
 
 export const Carousel = ({ slides }: any) => {
-  const arrowStyles = {
-    cursor: "pointer",
-    pos: "absolute",
-    top: "50%",
-    w: "auto",
-    mt: "-22px",
-    p: "16px",
-    color: "white",
-    fontWeight: "bold",
-    fontSize: "18px",
-    transition: "0.6s ease",
-    borderRadius: "0 3px 3px 0",
-    userSelect: "none",
-    _hover: {
-      opacity: 0.8,
-      bg: "black",
-    },
-  };
+  const { colorMode, toggleColorMode } = useColorMode();
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesCount = slides.length;
@@ -38,13 +21,14 @@ export const Carousel = ({ slides }: any) => {
   };
   return (
     <Flex
-      w="full"
+      w="fit-content"
       overflow="hidden"
       pos="relative"
-      transform="scale(1.06)"
+      //   transform="scale(1.06)"
       rounded={"2xl"}
+      bgColor={colorMode !== "light" ? "gray.700" : "blue.300"}
     >
-      <Flex h="400px" w="full" {...carouselStyle}>
+      <Flex h="440px" maxWidth={"full"} {...carouselStyle}>
         {slides.map((slide: any, sid: any) => (
           <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
             <Text
@@ -60,7 +44,7 @@ export const Carousel = ({ slides }: any) => {
               src={slide.img}
               alt="carousel image"
               boxSize="full"
-              backgroundSize="cover"
+              objectFit="contain"
             />
           </Box>
         ))}
@@ -75,10 +59,11 @@ export const Carousel = ({ slides }: any) => {
           padding: "16px",
           color: "white",
           fontWeight: "bold",
-          fontSize: "18px",
+          fontSize: "28px",
           transition: "0.6s ease",
           borderRadius: "0 3px 3px 0",
           userSelect: "none",
+          //   border: "1px solid gray",
         }}
         _hover={{
           opacity: 0.8,
@@ -99,7 +84,7 @@ export const Carousel = ({ slides }: any) => {
           padding: "16px",
           color: "white",
           fontWeight: "bold",
-          fontSize: "18px",
+          fontSize: "28px",
           transition: "0.6s ease",
           borderRadius: "0 3px 3px 0",
           userSelect: "none",
