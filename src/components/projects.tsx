@@ -58,7 +58,7 @@ import a5 from "../images/proj/proj3/5.jpg";
 import a6 from "../images/proj/proj3/6.jpg";
 import a7 from "../images/proj/proj3/7.jpg";
 import a8 from "../images/proj/proj3/8.jpg";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { Carousel } from "./carousel";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -199,6 +199,21 @@ const Projects = () => {
 
     // Add more projects here
   ];
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Update the window width state whenever the window is resized
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Box h={"100%"}>
@@ -338,35 +353,41 @@ const Projects = () => {
                       </Button>
                     </Box>
                   </Box>
-
-                  <Swiper
-                    slidesPerView={index !== 0 ? 1 : 3}
-                    spaceBetween={80}
-                    loop={true}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    navigation={true}
-                    modules={[Pagination, Navigation]}
-                    className="custom-swiper"
-                    style={{
-                      // display: "{base: 'none', md: 'block'}",
-                      width: "100%",
-                      flexBasis: "50%",
-                    }}
+                  <Box
+                    w={["100%", "100%", "70%", "50%", "50%", "50%"]}
+                    p={[5, 5, 5, 0]}
                   >
-                    {project.slides2.map((slide) => (
-                      <SwiperSlide>
-                        <Img
-                          src={slide.img}
-                          alt={project.title}
-                          // rounded="md"
-                          w={"auto%"}
-                          // h={index !== 0 ? "100%" : 470}
-                        />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+                    <Swiper
+                      slidesPerView={
+                        index !== 0 ? 1 : window.innerWidth < 786 ? 2 : 3
+                      }
+                      spaceBetween={80}
+                      loop={true}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Pagination, Navigation]}
+                      className="custom-swiper"
+                      style={{
+                        // display: "{base: 'none', md: 'block'}",
+                        width: "100%",
+                        flexBasis: "50%",
+                      }}
+                    >
+                      {project.slides2.map((slide) => (
+                        <SwiperSlide>
+                          <Img
+                            src={slide.img}
+                            alt={project.title}
+                            // rounded="md"
+                            w={"auto"}
+                            // h={index !== 0 ? "100%" : 470}
+                          />
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </Box>
                   {/* </Box> */}
                 </Flex>
               </Box>
