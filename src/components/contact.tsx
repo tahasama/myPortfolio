@@ -26,7 +26,7 @@ const key = process.env.REACT_APP_KEY;
 const Contact = () => {
   const bgOnLight = useColorModeValue(
     "linear( teal.300 0%,gray.200 90%, white)",
-    "linear( gray.900 0%, gray.900 100%)"
+    "linear( gray.800 0%, gray.900 40%)"
   );
   const bgPlaceHolder = useColorModeValue("gray.200", "gray.600");
   const { colorMode } = useColorMode();
@@ -54,7 +54,7 @@ const Contact = () => {
   };
   return (
     <>
-      <Box bgColor={colorMode !== "light" ? "gray.900" : "teal.300"}>
+      <Box bgColor={colorMode !== "light" ? "gray.800" : "teal.300"}>
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

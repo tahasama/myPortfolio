@@ -130,7 +130,7 @@ const Projects = () => {
           img: a8,
         },
       ],
-      link: "https://thacoder.netlify.app/",
+      link: "https://play.google.com/store/apps/details?id=com.storyat",
     },
     {
       title: "Quality Control App",
@@ -162,11 +162,11 @@ const Projects = () => {
           img: i6,
         },
       ],
-      link: "https://thacoder.netlify.app/",
+      link: "https://qualityc.netlify.app/",
     },
     {
       title: "Online Editor App",
-      subtitle: "An app for creating simple WebDev Projects",
+      subtitle: "An app for learning and creating simple WebDev Projects",
       description: [
         { desc: "Create project with Vanilla Html / Css / Javacasript" },
         { desc: "Work with React, and import any package" },
@@ -218,7 +218,7 @@ const Projects = () => {
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"} pb={20}>
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"}>
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -286,12 +286,17 @@ const Projects = () => {
         // mt={40}
         w={"full"}
       >
-        <Box bg="gray.900" py={0}>
+        <Box
+          bg={colorMode !== "light" ? "gray.900" : "transparent"}
+          py={0}
+          position={"relative"}
+          top={24}
+        >
           <Container maxW="8xl" h="100%">
             {projects.map((project, index) => (
               <Box
                 key={index}
-                bg="gray.800"
+                bg={colorMode !== "light" ? "gray.800" : "blue.200"}
                 boxShadow="md"
                 rounded="md"
                 overflow="hidden"

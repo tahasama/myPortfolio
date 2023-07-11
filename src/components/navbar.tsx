@@ -161,8 +161,9 @@ const Navbar = () => {
           <Img
             visibility={["visible"]}
             src={colorMode !== "light" ? logoNight : logoDay}
-            mt={colorMode !== "light" ? 2 : "none"}
+            // mt={colorMode !== "light" ? 2 : "none"}
             filter={colorMode !== "light" ? "grayscale(55%)" : "none"}
+            transform={colorMode !== "light" ? "scale(1.15)" : "scale(1)"}
             alt="devDay2"
             // position={"absolute"}
             // left={["25vw", "22vw", "5"]}

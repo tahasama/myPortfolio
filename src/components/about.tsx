@@ -24,7 +24,7 @@ import Birds from "./birds";
 const About = () => {
   const bgOnLight = useColorModeValue(
     "linear( #3AC9CD, cyan.200)",
-    "linear( gray.900 0%, gray.900 100%)"
+    "linear( gray.800 0%, gray.900 100%)"
   );
   const [selected, setSelected] = useState("shorter");
   const { colorMode } = useColorMode();
@@ -59,10 +59,10 @@ const About = () => {
           // fontWeight={"500"}
           fontFamily={"ms madi"}
           zIndex={"1"}
-          w={["72", "72", "sm", "md"]}
+          w={["72", "80", "sm", "md"]}
           gap={10}
           // h={"100%"}
-          fontSize={["xs", "lg", "sm", "sm", "lg"]}
+          fontSize={["xs", "md", "md", "lg", "lg"]}
           // flexDirection={["column"]}
           // left={0}
           // bgColor={"yellow"}
