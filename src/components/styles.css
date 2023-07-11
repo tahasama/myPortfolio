@@ -1,0 +1,11 @@
+.custom-swiper {
+    margin-top: 5;
+    margin-bottom: 5;
+  }
+
+.swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: '9%'; 
+  }

@@ -3,7 +3,10 @@ import {
   background,
   Box,
   Button,
+  Container,
   Flex,
+  Grid,
+  Heading,
   // HStack,
   Img,
   Link,
@@ -58,11 +61,23 @@ import a8 from "../images/proj/proj3/8.jpg";
 import { SetStateAction, useState } from "react";
 import { Carousel } from "./carousel";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "./styles.css";
+import { Pagination, FreeMode, Navigation, Thumbs } from "swiper";
+
 type HoverState = {
   [key: string]: boolean;
 };
+
 const images = [proj1, proj2];
 const Projects = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
     "linear(blue.300, cyan.300)",
@@ -77,79 +92,118 @@ const Projects = () => {
     restDelta: 0.001,
   });
 
-  const slides1 = [
+  const projects = [
     {
-      img: i1,
+      title: "Storyat",
+      subtitle: "A mobile app for for sharing and reacting",
+      description: [
+        { desc: "Share a story, a situation, ...." },
+        { desc: "Share images photos, ..." },
+        { desc: "React to others stories" },
+        { desc: "Comments and reply to comments" },
+        { desc: "Get notification for comments, reactions" },
+        { desc: "Profile with all user contribution, updates, ..." },
+      ],
+      slides2: [
+        {
+          img: a1,
+        },
+        {
+          img: a2,
+        },
+        {
+          img: a3,
+        },
+        {
+          img: a4,
+        },
+        {
+          img: a5,
+        },
+        {
+          img: a6,
+        },
+        {
+          img: a7,
+        },
+        {
+          img: a8,
+        },
+      ],
+      link: "https://thacoder.netlify.app/",
     },
     {
-      img: i2,
+      title: "Quality Control App",
+      subtitle: "An app for big construction sites projects",
+      description: [
+        { desc: "Full Storage and arrangement of the documentation" },
+        { desc: "Tracking of quantities of the used materiel" },
+        { desc: "The advancement of the projects and its pace" },
+        { desc: "Inspection reports (Laboratory, Topography, etc... )" },
+        { desc: "Data Management (Procedures, plans, and Updates )" },
+      ],
+      slides2: [
+        {
+          img: i1,
+        },
+        {
+          img: i2,
+        },
+        {
+          img: i3,
+        },
+        {
+          img: i4,
+        },
+        {
+          img: i5,
+        },
+        {
+          img: i6,
+        },
+      ],
+      link: "https://thacoder.netlify.app/",
     },
     {
-      img: i3,
+      title: "Online Editor App",
+      subtitle: "An app for creating simple WebDev Projects",
+      description: [
+        { desc: "Create project with Vanilla Html / Css / Javacasript" },
+        { desc: "Work with React, and import any package" },
+        { desc: "Code with Python and Machine Learning tools" },
+        { desc: "Create/Read/Update/Delete own projects" },
+        { desc: "See/Clone/Like other users projects" },
+      ],
+      slides2: [
+        {
+          img: m1,
+        },
+        {
+          img: m2,
+        },
+        {
+          img: m3,
+        },
+        {
+          img: m4,
+        },
+        {
+          img: m5,
+        },
+        {
+          img: m6,
+        },
+      ],
+      link: "https://thacoder.netlify.app/",
     },
-    {
-      img: i4,
-    },
-    {
-      img: i5,
-    },
-    {
-      img: i6,
-    },
-  ];
 
-  const slides2 = [
-    {
-      img: m1,
-    },
-    {
-      img: m2,
-    },
-    {
-      img: m3,
-    },
-    {
-      img: m4,
-    },
-    {
-      img: m5,
-    },
-    {
-      img: m6,
-    },
-  ];
-
-  const slides3 = [
-    {
-      img: a1,
-    },
-    {
-      img: a2,
-    },
-    {
-      img: a3,
-    },
-    {
-      img: a4,
-    },
-    {
-      img: a5,
-    },
-    {
-      img: a6,
-    },
-    {
-      img: a7,
-    },
-    {
-      img: a8,
-    },
+    // Add more projects here
   ];
 
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"}>
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"} pb={20}>
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -160,11 +214,11 @@ const Projects = () => {
           <defs>
             <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
               <stop
-                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                stopColor={colorMode !== "light" ? "#171923" : "#63B3ED"}
                 offset="0%"
               ></stop>
               <stop
-                stop-color={colorMode !== "light" ? "#2D3748" : "#BEE3F8"}
+                stopColor={colorMode !== "light" ? "#2D3748" : "#BEE3F8"}
                 offset="100%"
               ></stop>
             </linearGradient>
@@ -177,11 +231,11 @@ const Projects = () => {
           <defs>
             <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
               <stop
-                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                stopColor={colorMode !== "light" ? "#171923" : "#63B3ED"}
                 offset="0%"
               ></stop>
               <stop
-                stop-color={colorMode !== "light" ? "#1A202C" : "#90CDF4"}
+                stopColor={colorMode !== "light" ? "#1A202C" : "#90CDF4"}
                 offset="100%"
               ></stop>
             </linearGradient>
@@ -194,11 +248,11 @@ const Projects = () => {
           <defs>
             <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
               <stop
-                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                stopColor={colorMode !== "light" ? "#171923" : "#63B3ED"}
                 offset="0%"
               ></stop>
               <stop
-                stop-color={colorMode !== "light" ? "#171923" : "#63B3ED"}
+                stopColor={colorMode !== "light" ? "#171923" : "#63B3ED"}
                 offset="100%"
               ></stop>
             </linearGradient>
@@ -217,595 +271,117 @@ const Projects = () => {
         // mt={40}
         w={"full"}
       >
-        <Flex
-          flexDir={"column"}
-          // top={[80, 80, "60", 80, 60]}
-          position={"relative"}
-          gap={[24, 24, 40]}
-          pt={20}
-          top={[56, 56, 40]}
-          pb={16} ///////////////////////////////
-        >
-          <Flex
-            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
-            justifyContent={"space-around"}
-            alignItems={"center"}
-            w={"96%"}
-            mx={[2, 2, 2, 5, 10]}
-            mt={["-28vh", "-20vh", "-20vh", "-20vh", "-20vh"]}
-            // bg={isHovered ? "blackAlpha.400" : "blackAlpha.100"}
-            rounded={"3xl"}
-            p={2}
-            position="relative"
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            transition="all 1s"
-          >
-            <Box w={"full"} flex={2}>
-              <VStack
-                // width="100%"
-                position={"relative"}
-                // style={{ textIndent: 40 }}
-                fontSize={["20", "22", "18", "24", "24"]}
-                mb={2}
-                flex={"column"}
-                justifyContent={"center"}
-                alignItems={"center"}
+        <Box bg="gray.900" py={0}>
+          <Container maxW="8xl" h="100%">
+            {projects.map((project, index) => (
+              <Box
+                key={index}
+                bg="gray.800"
+                boxShadow="md"
+                rounded="md"
+                overflow="hidden"
+                mb={20}
               >
-                <Text
-                  fontSize={["20", "22", "18", "24", "24"]}
-                  fontWeight={900}
-                  fontFamily={"Raleway"}
-
-                  // color={
-                  //   colorMode === "light" && !isHovered
-                  //     ? "gray.800"
-                  //     : colorMode === "light" && isHovered
-                  //     ? "white"
-                  //     : "gray.300"
-                  // }
-                >
-                  Storyat
-                </Text>
-                <Text
-                  textAlign={"center"}
-                  fontSize={["18", "20", "16", "22", "22"]}
-                  fontWeight={900}
-                  fontFamily={"Raleway"}
-
-                  // color={
-                  //   colorMode === "light" && !isHovered
-                  //     ? "gray.800"
-                  //     : colorMode === "light" && isHovered
-                  //     ? "white"
-                  //     : "gray.300"
-                  // }
-                >
-                  A mobile app for for sharing and reacting
-                </Text>
-
-                <List
-                  style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 32]}
-                  fontSize={["17", "18", "14", "16", "20"]}
-                  lineHeight={"8"}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Share a story, a situation, ....
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Share images photos, ...
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    React to others stories
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Comments and reply to comments
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Get notification for comments, reactions
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Profile with all user contribution, updates, ...
-                  </ListItem>{" "}
-                </List>
-
                 <Flex
-                  justifyContent={"center"}
-                  alignItems={"center"}
-                  flexDirection={"column"}
-                  // width="100%"
+                  // templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+                  gap={0}
+                  alignItems={["center", "center"]}
+                  flexDir={[
+                    "column-reverse",
+                    "column-reverse",
+                    "column-reverse",
+                    index !== 1 ? "row" : "row-reverse",
+                  ]}
                 >
-                  <Text
-                    color={colorMode !== "light" ? "green.500" : "red.700"}
-                    fontSize={[16, 16, 17, 18]}
-                    textAlign={["center", "center", "start"]}
-                    fontWeight={"medium"}
-                    // style={{ marginTop: 40 }}
-                    mb={3}
+                  <Box
+                    flexBasis="50%"
+                    textAlign={["center", "center", "center", "start"]}
                   >
-                    for quick access please use <b>email : t@t.com</b> ,and
-                    <b> passsword : tttttt</b>{" "}
-                  </Text>
-                  <Link
-                    href="https://play.google.com/store/apps/details?id=com.storyat"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none", width: "100%" }}
+                    <Box p={0} mt={3} ml={5}>
+                      <Heading as="h2" size="lg" mb={2}>
+                        {project.title}
+                      </Heading>
+                      <Text fontSize={19} color="gray.600" mb={2}>
+                        {project.subtitle}
+                      </Text>
+                      {/* <Text>{project.description}</Text> */}
+                      <List
+                        style={{ textIndent: 10 }}
+                        // ml={[0, 0, 0, 0, 32]}
+                        // fontSize={["17", "18", "14", "16", "20"]}
+                        fontSize={17}
+                        lineHeight={"8"}
+                        color={colorMode === "light" ? "gray.800" : "gray.300"}
+                      >
+                        {project.description.map((d: any) => (
+                          <ListItem>
+                            <ListIcon
+                              as={MdSettings}
+                              color={
+                                colorMode !== "light" ? "green.500" : "pink.500"
+                              }
+                            />
+                            {d.desc}
+                          </ListItem>
+                        ))}
+                      </List>
+                      <Button
+                        as="a"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        colorScheme="blue"
+                        my={2}
+                        ml={2}
+                      >
+                        View Project
+                      </Button>
+                    </Box>
+                  </Box>
+
+                  <Swiper
+                    slidesPerView={index !== 0 ? 1 : 3}
+                    spaceBetween={80}
+                    loop={true}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    className="custom-swiper"
+                    style={{
+                      // display: "{base: 'none', md: 'block'}",
+                      width: "100%",
+                      flexBasis: "50%",
+                    }}
                   >
-                    <Button
-                      bgColor={colorMode !== "light" ? "teal.600" : "pink.500"}
-                      _hover={{
-                        bg: colorMode !== "light" ? "green.700" : "pink.600",
-                      }}
-                      size={"lg"}
-                      w={["100%", "100%", "100%", "xl"]}
-                      py={30}
-                      letterSpacing={"wider"}
-                    >
-                      Go to app
-                    </Button>
-                  </Link>
+                    {project.slides2.map((slide) => (
+                      <SwiperSlide>
+                        <Img
+                          src={slide.img}
+                          alt={project.title}
+                          // rounded="md"
+                          w={"auto%"}
+                          // h={index !== 0 ? "100%" : 470}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                  {/* </Box> */}
                 </Flex>
-              </VStack>
-            </Box>
-            <Flex flex={2} justifyContent={"center"}>
-              <Carousel slides={slides3} />
-            </Flex>
-          </Flex>
+              </Box>
+            ))}
+          </Container>
+        </Box>
 
-          <Flex
-            flexDir={["column", "column", "row", "row", "row"]}
-            justifyContent={"space-around"}
-            alignItems={"center"}
-            w={"96%"}
-            mx={[2, 2, 2, 5, 10]}
-            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
-            gap={8}
-          >
-            <Carousel slides={slides1} />
-
-            <Flex
-              w={"full"}
-              gap={4}
-              flexDir={"column"}
-              // bgColor={"yellow"}
-              // justifyContent={"center"}
-              style={{ overflow: "hidden", width: "100%" }}
-            >
-              <VStack
-                width="100%"
-                position={"relative"}
-                // style={{ textIndent: 40 }}
-                fontSize={["20", "22", "18", "24", "24"]}
-                mb={2}
-                fontFamily={"Raleway"}
-                fontWeight={900}
-                mt={4}
-              >
-                <Text
-                  fontSize={["20", "22", "18", "24", "24"]}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  Quality Control App :
-                </Text>
-                <Text
-                  textAlign={"center"}
-                  fontSize={["18", "20", "16", "22", "22"]}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  An app for big construction sites projects
-                </Text>
-              </VStack>
-              <List
-                style={{ textIndent: 10 }}
-                ml={[0, 0, 0, 0, 40]}
-                fontSize={["17", "18", "14", "16", "20"]}
-                lineHeight={"8"}
-                color={colorMode === "light" ? "gray.800" : "gray.300"}
-              >
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Full Storage and arrangement of the documentation{" "}
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Tracking of quantities of the used materiel,
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  The advancement of the projects and its pace
-                </ListItem>{" "}
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Inspection reports (Laboratory, Topography, etc... )
-                </ListItem>{" "}
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Data Management (Procedures, plans, and Updates )
-                </ListItem>
-              </List>
-              <Flex
-                w={"full"}
-                // justifyContent={"end"}
-                alignItems={"center"}
-                flexDirection={"column"}
-                // ml={[0, 0, 0, 0, 16]}
-                // bgColor={"red"}
-              >
-                <Text
-                  color={colorMode !== "light" ? "green.400" : "red.600"}
-                  fontSize={[14, 14, 15, 17]}
-                  textAlign={["center", "center", "start"]}
-                >
-                  ! ALL Data and Files in this project are fake and are just for
-                  demonstration !
-                </Text>
-                <Text
-                  color={colorMode !== "light" ? "green.500" : "red.700"}
-                  fontSize={[16, 16, 17, 18]}
-                  textAlign={["center", "center", "start"]}
-                  fontWeight={"medium"}
-                  // style={{ marginTop: 40 }}
-                  mb={3}
-                >
-                  for quick access please use <b>email : t@t.com</b> ,and
-                  <b> passsword : tttttt</b>{" "}
-                </Text>
-
-                <Button
-                  bgColor={colorMode !== "light" ? "teal.600" : "pink.500"}
-                  _hover={{
-                    bg: colorMode !== "light" ? "green.700" : "pink.600",
-                  }}
-                  size={"lg"}
-                  w={["100%", "100%", "100%", "75%"]}
-                  py={30}
-                  letterSpacing={"wider"}
-                  // ml={[0, 0, 0, 0, 28]}
-                >
-                  <Link
-                    href="https://qualityc.netlify.app/"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none", width: "100%" }}
-                  >
-                    Go to app
-                  </Link>
-                </Button>
-              </Flex>
-            </Flex>
-          </Flex>
-
-          <Flex
-            flexDir={["column-reverse", "column-reverse", "row", "row", "row"]}
-            justifyContent={"space-around"}
-            alignItems={"center"}
-            w={"96%"}
-            mx={[2, 2, 2, 5, 10]}
-            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
-          >
-            <Flex
-              w={"full"}
-              gap={4}
-              // bgColor={"yellow"}
-              // justifyContent={"center"}
-              flexDir={"column"}
-              style={{ overflow: "hidden", width: "100%" }}
-            >
-              <VStack
-                width="100%"
-                position={"relative"}
-                // style={{ textIndent: 40 }}
-                fontSize={["20", "22", "18", "24", "24"]}
-                mb={2}
-                fontFamily={"Raleway"}
-                fontWeight={900}
-                mt={4}
-              >
-                <Text
-                  fontSize={["20", "22", "18", "20", "24"]}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  Online Editor App :
-                </Text>
-                <Text
-                  textAlign={"center"}
-                  fontSize={["18", "22", "18", "20", "24"]}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  An app for creating simple WebDev Projects
-                </Text>
-              </VStack>
-              <List
-                style={{ textIndent: 10 }}
-                ml={[0, 0, 0, 0, 32]}
-                fontSize={["17", "18", "14", "16", "20"]}
-                lineHeight={"8"}
-                color={colorMode === "light" ? "gray.800" : "gray.300"}
-              >
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Create project with Vanilla Html / Css / Javacasript
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Create project with React
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Import any package
-                </ListItem>{" "}
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  See immediate result
-                </ListItem>{" "}
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  Create/Read/Update/Delete own projects
-                </ListItem>
-                <ListItem>
-                  <ListIcon
-                    as={MdSettings}
-                    color={colorMode !== "light" ? "green.500" : "pink.500"}
-                  />
-                  See/Clone/Like other users projects
-                </ListItem>{" "}
-              </List>
-              <Flex
-                w={"full"}
-                justifyContent={"center"}
-                alignItems={"center"}
-                flexDirection={"column"}
-                // ml={[0, 0, 0, 0, 16]}
-                // bgColor={"red"}
-              >
-                <Text
-                  color={colorMode !== "light" ? "green.500" : "red.700"}
-                  fontSize={[16, 16, 17, 18]}
-                  textAlign={["center", "center", "start"]}
-                  fontWeight={"medium"}
-                  // style={{ marginTop: 40 }}
-                  mb={3}
-                >
-                  for quick access please use <b>email : t@t.com</b> ,and
-                  <b> passsword : tttttt</b>{" "}
-                </Text>
-
-                <Button
-                  bgColor={colorMode !== "light" ? "teal.600" : "pink.500"}
-                  _hover={{
-                    bg: colorMode !== "light" ? "green.700" : "pink.600",
-                  }}
-                  size={"lg"}
-                  w={["100%", "100%", "100%", "75%"]}
-                  py={30}
-                  letterSpacing={"wider"}
-                  // ml={[0, 0, 0, 0, 28]}
-                >
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none", width: "100%" }}
-                  >
-                    Go to app
-                  </Link>
-                </Button>
-              </Flex>
-            </Flex>
-            <Flex
-              flexDir={["column", "column", "row", "row", "row"]}
-              justifyContent={"space-around"}
-              alignItems={"center"}
-              w={"96%"}
-              mx={[2, 2, 2, 5, 10]}
-              // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
-              gap={8}
-            >
-              <Carousel slides={slides2} />
-            </Flex>
-          </Flex>
-
-          {/* <Flex
-            flexDir={["column", "column", "row", "row", "row"]}
-            justifyContent={"space-evenly"}
-            alignItems={"center"}
-            w={"96%"}
-            mx={[2, 2, 2, 5, 10]}
-            // mt={["-8vh", "-4vh", "-10vh", "0vh", "0vh"]}
-            // backgroundColor={"green"}
-          >
-            <Img
-              src={resp}
-              alt="devNight"
-              borderRadius={"3xl"}
-              w={["100%", "100%", "53%", "55%", "47%"]}
-              ml={[0, 0, 0, 0, 0]}
-              margin={0}
-            />
-            <Box w={"full"} overflow={"hidden"}>
-              <motion.div
-                whileInView={{
-                  scale: [0.6, 1],
-                  opacity: [0, 1],
-                }}
-                style={{ overflow: "hidden" }}
-              >
-                <VStack
-                  position={"relative"}
-                  fontSize={["20", "22", "18", "24", "24"]}
-                  mb={2}
-                  fontFamily={"Raleway"}
-                  fontWeight={900}
-                >
-                  <Text
-                    fontSize={["20", "22", "18", "20", "24"]}
-                    color={colorMode === "light" ? "gray.800" : "gray.300"}
-                  >
-                    Portfolio
-                  </Text>
-                  <Text
-                    textAlign={"center"}
-                    fontSize={["18", "22", "18", "20", "24"]}
-                    color={colorMode === "light" ? "gray.800" : "gray.300"}
-                  >
-                    My personal portfolio
-                  </Text>
-                </VStack>
-                <List
-                  style={{ textIndent: 10 }}
-                  ml={[0, 0, 0, 0, 32]}
-                  fontSize={["17", "18", "14", "16", "20"]}
-                  lineHeight={"8"}
-                  color={colorMode === "light" ? "gray.800" : "gray.300"}
-                >
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Responsive portfolio
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Dark / Light mode
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Animations
-                  </ListItem>{" "}
-                  <ListItem>
-                    <ListIcon
-                      as={MdSettings}
-                      color={colorMode !== "light" ? "green.500" : "pink.500"}
-                    />
-                    Links to deployed Apps and Github
-                  </ListItem>{" "}
-                </List>
-                <Flex
-                  position="relative"
-                  justifyContent={"center"}
-                  alignItems={["center"]}
-                  w={"full"}
-                  ml={[0, 0, 0, 0, -6]}
-                >
-                  <Link
-                    href="http://tahadev.com/"
-                    isExternal
-                    colorScheme="pink"
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      mx={3}
-                      colorScheme={
-                        colorMode !== "light" ? "linkedin" : "facebook"
-                      }
-                      letterSpacing={"wider"}
-                    >
-                      Go to app
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://github.com/tahasama/react-editor"
-                    isExternal
-                    fontSize={"xl"}
-                    style={{ textDecoration: "none" }}
-                  >
-                    <Button
-                      px={["5", "5", "6", "6", "6"]}
-                      fontSize={["lg", "lg", "lg", "xl", "xl"]}
-                      py={[6, 6, 6, 6, 6]}
-                      my={10}
-                      // mx={[1, 1, 4, 4, 4]}
-                      colorScheme={colorMode !== "light" ? "teal" : "pink"}
-                      letterSpacing={"wider"}
-                      mx={3}
-                    >
-                      Case study
-                    </Button>
-                  </Link>
-                </Flex>
-              </motion.div>
-            </Box>
-          </Flex> */}
-
-          <VStack
-            visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}
-          >
-            <Text textAlign={"center"} fontSize={"xl"}>
-              Please visit my Github repository for more Projects
-            </Text>
-            <Button colorScheme="yellow" mx={12}>
-              Github Repo
-            </Button>
-          </VStack>
-        </Flex>
+        <VStack visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}>
+          <Text textAlign={"center"} fontSize={"xl"}>
+            Please visit my Github repository for more Projects
+          </Text>
+          <Button colorScheme="yellow" mx={12}>
+            Github Repo
+          </Button>
+        </VStack>
       </Box>
     </Box>
   );
