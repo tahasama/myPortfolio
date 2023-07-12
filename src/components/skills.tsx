@@ -179,7 +179,7 @@ const Skills = () => {
               fontSize={[21, 21, 18]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={40}
+              w={44}
             >
               User friendly and easy to use
             </Box>
@@ -243,7 +243,7 @@ const Skills = () => {
               fontSize={[21, 21, 18]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={40}
+              w={44}
             >
               layouts that works on any device
             </Box>
@@ -287,7 +287,7 @@ const Skills = () => {
               fontSize={[21, 21, 18]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={40}
+              w={44}
             >
               from idea to great product
             </Box>
@@ -330,7 +330,7 @@ const Skills = () => {
               fontSize={[21, 21, 18]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={40}
+              w={44}
             >
               full stack and databases
             </Box>
