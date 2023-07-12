@@ -137,8 +137,8 @@ const Skills = () => {
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
               // mt={["0", "12", "0", "32"]}
-              h={["135px", "105px", "110px", "110px"]}
-              w={["150px", "120px", "120px", "130px"]}
+              h={["135px", "135px", "110px", "110px"]}
+              w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -176,9 +176,10 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize="18"
+              fontSize={[21, 21, 18]}
               fontWeight={500}
-              mx={["4", "0"]}
+              mx={["0", "0"]}
+              w={40}
             >
               User friendly and easy to use
             </Box>
@@ -195,8 +196,8 @@ const Skills = () => {
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
               // mt={["0", "12", "0", "32"]}
-              h={["135px", "105px", "110px", "110px"]}
-              w={["150px", "120px", "120px", "130px"]}
+              h={["135px", "135px", "110px", "110px"]}
+              w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
               position={"relative"}
               justifyContent={"center"}
@@ -239,9 +240,10 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize="18"
+              fontSize={[21, 21, 18]}
               fontWeight={500}
-              mx={["4", "0"]}
+              mx={["0", "0"]}
+              w={40}
             >
               layouts that works on any device
             </Box>
@@ -259,8 +261,8 @@ const Skills = () => {
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
               // mt={["0", "12", "0", "32"]}
-              h={["135px", "105px", "110px", "110px"]}
-              w={["150px", "120px", "120px", "130px"]}
+              h={["135px", "135px", "110px", "110px"]}
+              w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -282,9 +284,10 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize="18"
+              fontSize={[21, 21, 18]}
               fontWeight={500}
-              mx={["4", "0"]}
+              mx={["0", "0"]}
+              w={40}
             >
               from idea to great product
             </Box>
@@ -301,8 +304,8 @@ const Skills = () => {
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
               // mt={["0", "12", "0", "32"]}
-              h={["135px", "105px", "110px", "110px"]}
-              w={["150px", "120px", "120px", "130px"]}
+              h={["135px", "135px", "110px", "110px"]}
+              w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
               bg={"white"}
               position={"relative"}
@@ -324,9 +327,10 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize="18"
+              fontSize={[21, 21, 18]}
               fontWeight={500}
-              mx={["4", "0"]}
+              mx={["0", "0"]}
+              w={40}
             >
               full stack and databases
             </Box>

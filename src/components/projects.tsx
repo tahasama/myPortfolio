@@ -291,113 +291,115 @@ const Projects = () => {
           py={0}
           position={"relative"}
           top={24}
+          px={[2, 2, 10]}
         >
-          <Container maxW="8xl" h="100%">
-            {projects.map((project, index) => (
-              <Box
-                key={index}
-                bg={colorMode !== "light" ? "gray.800" : "blue.200"}
-                boxShadow="md"
-                rounded="md"
-                overflow="hidden"
-                mb={20}
+          {projects.map((project, index) => (
+            <Box
+              key={index}
+              bg={colorMode !== "light" ? "gray.800" : "blue.200"}
+              boxShadow="md"
+              rounded="md"
+              overflow="hidden"
+              mb={20}
+            >
+              <Flex
+                // templateColumns={{ base: "1fr", md: "1fr 1fr" }}
+                gap={0}
+                alignItems={["center", "center"]}
+                flexDir={[
+                  "column-reverse",
+                  "column-reverse",
+                  "column-reverse",
+                  index !== 1 ? "row" : "row-reverse",
+                ]}
               >
-                <Flex
-                  // templateColumns={{ base: "1fr", md: "1fr 1fr" }}
-                  gap={0}
-                  alignItems={["center", "center"]}
-                  flexDir={[
-                    "column-reverse",
-                    "column-reverse",
-                    "column-reverse",
-                    index !== 1 ? "row" : "row-reverse",
-                  ]}
+                <Box
+                  flexBasis="50%"
+                  textAlign={["center", "center", "center", "start"]}
                 >
-                  <Box
-                    flexBasis="50%"
-                    textAlign={["center", "center", "center", "start"]}
-                  >
-                    <Box p={0} mt={3} ml={5}>
-                      <Heading as="h2" size="lg" mb={2}>
-                        {project.title}
-                      </Heading>
-                      <Text fontSize={19} color="gray.600" mb={2}>
-                        {project.subtitle}
-                      </Text>
-                      {/* <Text>{project.description}</Text> */}
-                      <List
-                        style={{ textIndent: 10 }}
-                        // ml={[0, 0, 0, 0, 32]}
-                        // fontSize={["17", "18", "14", "16", "20"]}
-                        fontSize={17}
-                        lineHeight={"8"}
-                        color={colorMode === "light" ? "gray.800" : "gray.300"}
-                      >
-                        {project.description.map((d: any) => (
-                          <ListItem>
-                            <ListIcon
-                              as={MdSettings}
-                              color={
-                                colorMode !== "light" ? "green.500" : "pink.500"
-                              }
-                            />
-                            {d.desc}
-                          </ListItem>
-                        ))}
-                      </List>
-                      <Button
-                        as="a"
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        colorScheme="blue"
-                        my={2}
-                        ml={2}
-                      >
-                        View Project
-                      </Button>
-                    </Box>
-                  </Box>
-                  <Box
-                    w={["100%", "100%", "70%", "50%", "50%", "50%"]}
-                    p={[5, 5, 5, 0]}
-                  >
-                    <Swiper
-                      slidesPerView={
-                        index !== 0 ? 1 : window.innerWidth < 786 ? 2 : 3
-                      }
-                      spaceBetween={80}
-                      loop={true}
-                      pagination={{
-                        clickable: true,
-                      }}
-                      navigation={true}
-                      modules={[Pagination, Navigation]}
-                      className="custom-swiper"
-                      style={{
-                        // display: "{base: 'none', md: 'block'}",
-                        width: "100%",
-                        flexBasis: "50%",
-                      }}
+                  <Box p={0} mt={3} ml={5}>
+                    <Heading as="h2" size="lg" mb={2}>
+                      {project.title}
+                    </Heading>
+                    <Text fontSize={19} color="gray.600" mb={2}>
+                      {project.subtitle}
+                    </Text>
+                    {/* <Text>{project.description}</Text> */}
+                    <List
+                      style={{ textIndent: 10 }}
+                      // ml={[0, 0, 0, 0, 32]}
+                      // fontSize={["17", "18", "14", "16", "20"]}
+                      fontSize={17}
+                      lineHeight={"8"}
+                      color={colorMode === "light" ? "gray.800" : "gray.300"}
                     >
-                      {project.slides2.map((slide) => (
-                        <SwiperSlide>
-                          <Img
-                            src={slide.img}
-                            alt={project.title}
-                            // rounded="md"
-                            w={"auto"}
-                            // h={index !== 0 ? "100%" : 470}
+                      {project.description.map((d: any) => (
+                        <ListItem>
+                          <ListIcon
+                            as={MdSettings}
+                            color={
+                              colorMode !== "light" ? "green.500" : "pink.500"
+                            }
                           />
-                        </SwiperSlide>
+                          {d.desc}
+                        </ListItem>
                       ))}
-                    </Swiper>
+                    </List>
+                    <Button
+                      as="a"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      colorScheme="blue"
+                      my={2}
+                      ml={2}
+                    >
+                      View Project
+                    </Button>
                   </Box>
-                  {/* </Box> */}
-                </Flex>
-              </Box>
-            ))}
-          </Container>
+                </Box>
+                <Box
+                  w={["100%", "100%", "70%", "50%", "50%", "50%"]}
+                  // p={[5, 5, 5, 0]}
+                >
+                  <Swiper
+                    slidesPerView={
+                      index !== 0 ? 1 : window.innerWidth < 786 ? 1 : 4
+                    }
+                    spaceBetween={7}
+                    loop={true}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Pagination, Navigation]}
+                    // style={{
+                    //   // display: "{base: 'none', md: 'block'}",
+                    //   width: "100%",
+                    //   flexBasis: "100%",
+                    // }}
+                  >
+                    {project.slides2.map((slide) => (
+                      <SwiperSlide>
+                        <Img
+                          src={slide.img}
+                          alt={project.title}
+                          // rounded="md"
+                          w={[
+                            index !== 0 ? "100%" : "65%",
+                            index !== 0 ? "100%" : "65%",
+                            index !== 0 ? "100%" : "100%",
+                          ]}
+                          // h={index !== 0 ? "100%" : 470}
+                        />
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
+                </Box>
+                {/* </Box> */}
+              </Flex>
+            </Box>
+          ))}
         </Box>
 
         <VStack visibility={["hidden", "hidden", "hidden", "hidden", "hidden"]}>
