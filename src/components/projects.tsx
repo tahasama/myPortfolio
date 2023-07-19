@@ -290,9 +290,20 @@ const Projects = () => {
           bg={colorMode !== "light" ? "gray.900" : "transparent"}
           py={0}
           position={"relative"}
-          top={24}
+          top={4}
           px={[2, 2, 10]}
         >
+          <Text
+            color={colorMode !== "light" ? "teal.400" : "red.600"}
+            textAlign={"center"}
+            py={20}
+            fontSize={["md", "xl", "2xl"]}
+            fontStyle={"italic"}
+            // fontFamily={"serif"}
+          >
+            For quick access in all projects please login with username/email:
+            <b> t@t.com</b> , password: <b> tttttt</b>{" "}
+          </Text>
           {projects.map((project, index) => (
             <Box
               key={index}

@@ -121,7 +121,7 @@ const Skills = () => {
           // mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
           // mt={"-20"}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(.8)"]}
-          mx={[0, 0, "20"]}
+          mx={[0, 0, 0, 20]}
           // p={5}
           mt={5}
         >
@@ -176,10 +176,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21, 18]}
+              fontSize={[21, 21]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={44}
+              h={"44"}
+              w={"44"}
             >
               User friendly and easy to use
             </Box>
@@ -240,10 +241,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21, 18]}
+              fontSize={[21, 21]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={44}
+              h={"44"}
+              w={"44"}
             >
               layouts that works on any device
             </Box>
@@ -284,10 +286,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21, 18]}
+              fontSize={[21, 21]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={44}
+              h={"44"}
+              w={"44"}
             >
               from idea to great product
             </Box>
@@ -327,10 +330,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21, 18]}
+              fontSize={[21, 21]}
               fontWeight={500}
               mx={["0", "0"]}
-              w={44}
+              h={"44"}
+              w={"44"}
             >
               full stack and databases
             </Box>
@@ -341,7 +345,6 @@ const Skills = () => {
 
         <Flex
           position={"relative"}
-          top={10}
           w={"100%"}
           flexDir={"column"}
           justifyContent={"center"}
