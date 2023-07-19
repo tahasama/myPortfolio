@@ -133,7 +133,7 @@ const Projects = () => {
       link: "https://play.google.com/store/apps/details?id=com.storyat",
     },
     {
-      title: "Quality Control App",
+      title: "Data Management App",
       subtitle: "An app for big construction sites projects",
       description: [
         { desc: "Full Storage and arrangement of the documentation" },
