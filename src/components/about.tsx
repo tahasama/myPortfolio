@@ -41,16 +41,20 @@ const About = () => {
       justifyContent={"center"}
     >
       <Element name="About"></Element>
-
-      <svg
-        fill={colorMode !== "light" ? "#171923" : "#63B3ED"}
-        data-name="Layer 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1200 120"
-        preserveAspectRatio="none"
-      >
-        <path d="M0 80L1200 10 1200 0 0 0 0 80z" className="shape-fill"></path>
-      </svg>
+      <Box filter="auto" brightness={colorMode === "light" ? "" : "80%"}>
+        <svg
+          fill={colorMode !== "light" ? "#171923" : "#63B3ED"}
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0 80L1200 10 1200 0 0 0 0 80z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </Box>
       {/* <Flex mt={colorMode === "light" ? [32, 32, 44, 48] : [40, 20, 48, 56]}> */}
       <Flex flexDir={"column"} alignItems={"center"}>
         <Flex

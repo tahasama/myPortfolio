@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 
 const Cloud = ({ delay }: any) => {
-  const colorOn = useColorModeValue("gray.50 ", "gray.500");
+  const colorOn = useColorModeValue("gray.50 ", "gray.300");
   const { colorMode } = useColorMode();
 
   return (

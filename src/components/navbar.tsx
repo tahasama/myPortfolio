@@ -71,6 +71,9 @@ const Navbar = () => {
       flexDirection={"row"}
       bg={textColorOn}
       position="fixed"
+      filter="auto"
+      brightness={colorMode === "light" ? "" : "80%"}
+
       // pb={40}
     >
       {/* <Flex position={"absolute"} left={"2"} top={"2"}> */}
