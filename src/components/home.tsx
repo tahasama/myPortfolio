@@ -58,18 +58,18 @@ const Home = () => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
           // bg={"white"}
-          w={"5xl"}
+          w={["0", "0", "0", "4xl", "5xl"]}
           gap={0}
-          ml={[0, 0, 20]}
+          ml={[0, 0, 0, 0]}
         >
           <Flex
             flexDirection="column"
             position="relative"
-            alignItems={["center", "start"]}
+            alignItems={["center", "center", "center", "start"]}
             lineHeight={"taller"}
-            // top={["36", "36", "12", "10"]}
+            top={["20", "44", "-16", "0"]}
             w={["full", "xl"]}
-            ml={[0, 0, 0, 0, 0]}
+            ml={[0, 0, 0, 10, 0]}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
@@ -83,7 +83,7 @@ const Home = () => {
               fontSize={["lg", "xl", "2xl", "3xl", "4xl"]}
               letterSpacing={3}
               fontWeight={[700, 500]}
-              flexWrap="wrap"
+              // flexWrap="wrap"
               fontFamily={"open sans"}
               // color={"white"}
             >
@@ -92,16 +92,18 @@ const Home = () => {
             <Divider w={[240, 280, 280, 380, 400]} />
             <Flex
               position={"relative"}
-              w={["auto"]}
+              justifyContent={"start"}
+              alignItems={"start"}
+              w={["64", "64", "auto"]}
               fontSize={["md", "lg", "xl", "2xl", "3xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}
-              left={["4", "0"]}
+              left={["4", "4", "0"]}
             >
-              I'm a &nbsp;
+              <Text>I'm a &nbsp;</Text>
               {/* A component for typewriter animation */}
               <Hero />
-              <Text>developper</Text>
+              {/* <Text>developper</Text> */}
             </Flex>
 
             <motion.div
@@ -131,11 +133,14 @@ const Home = () => {
               </Link>
             </motion.div>
           </Flex>
-          <Box>
+          <Box
+            display={["none", "none", "none", "block"]}
+            mr={[0, 0, 0, 10, 0]}
+          >
             <Img
               src={colorMode === "light" ? homeGif : homeGifN}
-              h={550}
-              w={650}
+              h={[0, 0, 0, 450, 550]}
+              w={[0, 0, 0, 650, 650]}
             />
           </Box>
         </Flex>

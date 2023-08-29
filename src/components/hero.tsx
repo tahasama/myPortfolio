@@ -31,17 +31,15 @@ import { Typewriter } from "react-simple-typewriter";
 // `;
 
 const texts = [
-  "Frontend-Focused",
-  "Mobile Apps",
-  "Self-thaught",
-  "MERN-Stack",
-  "Problem-solving",
-  // "Curious & Creative",
+  "Web & Mobile Dev",
+  "UX/UI Design Coder ",
+  "Self-Taught Learner",
+  "MERN Stack Developer",
+  "React Native Enthusiast",
 ];
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { colorMode } = useColorMode();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,23 +50,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <Box
-      w={"auto"}
-      // overflow={"hidden"}
-      // whiteSpace={"nowrap"}
-      letterSpacing={1}
-      // animation={`${typing} 1.5s steps(10) infinite, ${blink} 1.5s steps(10) infinite, ${slide} 3s steps(4) infinite `}
-    >
+    <Box w={["auto"]} letterSpacing={1}>
       <motion.div
         key={texts[currentIndex]}
         initial={{ opacity: 1, y: 0 }} // Initial state of the animation
         animate={{ opacity: 0, y: 20 }} // Animation target
-        // exit={{ opacity: 0, y: 20 }} // Exit animation
-        transition={{ duration: 0.5, delay: 1 }} // Duration of the fade animation in seconds
+        transition={{ duration: 0.5, delay: 0.5 }} // Duration of the fade animation in seconds
       >
         <Text
-          w={"56"}
-          letterSpacing={currentIndex !== 0 && currentIndex !== 4 ? 5 : 0}
+        // w={["36", "36", "56"]}
+        // letterSpacing={[currentIndex !== 0 && currentIndex !== 4 ? 3 : 0]}
         >
           {texts[currentIndex]}
         </Text>
