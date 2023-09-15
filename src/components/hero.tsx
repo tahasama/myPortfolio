@@ -47,23 +47,27 @@ const Hero = () => {
     }, 2000); // Change text every 2 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [texts]);
 
   return (
-    <Box w={["auto"]} letterSpacing={1}>
-      <motion.div
-        key={texts[currentIndex]}
-        initial={{ opacity: 1, y: 0 }} // Initial state of the animation
-        animate={{ opacity: 0, y: 20 }} // Animation target
-        transition={{ duration: 0.5, delay: 0.5 }} // Duration of the fade animation in seconds
-      >
-        <Text
-        // w={["36", "36", "56"]}
-        // letterSpacing={[currentIndex !== 0 && currentIndex !== 4 ? 3 : 0]}
+    <Box w={["sm"]} letterSpacing={1} pos={"relative"}>
+      {texts.map((word, index) => (
+        <Box
+          key={index}
+          transition={"all"}
+          transitionDuration={"1s"}
+          pos={"absolute"}
+          opacity={index === currentIndex ? 1 : 0}
+          // mt={index === currentIndex - 1 ? 4 : 0}
+          mt={
+            index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)
+              ? 4
+              : 0
+          }
         >
-          {texts[currentIndex]}
-        </Text>
-      </motion.div>
+          {word}
+        </Box>
+      ))}
     </Box>
   );
 };

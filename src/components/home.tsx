@@ -36,7 +36,7 @@ const Home = () => {
       brightness={colorMode === "light" ? "" : "80%"}
     >
       <Element name="Home"></Element>
-      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 28]}>
+      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 24]}>
         <Social />
       </Box>
 
@@ -58,7 +58,7 @@ const Home = () => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
           // bg={"white"}
-          w={["0", "0", "0", "4xl", "5xl"]}
+          w={["0", "0", "0", "4xl", "70vw"]}
           gap={0}
           ml={[0, 0, 0, 0]}
         >
@@ -68,19 +68,19 @@ const Home = () => {
             alignItems={["center", "center", "center", "start"]}
             lineHeight={"taller"}
             top={["20", "44", "-16", "0"]}
-            w={["full", "xl"]}
+            w={["full", "fit-content"]}
             ml={[0, 0, 0, 10, 0]}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
               fontFamily={"VT323"}
-              fontSize={"3xl"}
+              fontSize={"4xl"}
               lineHeight={"1.5"}
             >
               Hello World !
             </Box>
             <Box
-              fontSize={["lg", "xl", "2xl", "3xl", "4xl"]}
+              fontSize={["lg", "xl", "2xl", "3xl", "5xl"]}
               letterSpacing={3}
               fontWeight={[700, 500]}
               // flexWrap="wrap"
@@ -95,7 +95,7 @@ const Home = () => {
               justifyContent={"start"}
               alignItems={"start"}
               w={["64", "64", "auto"]}
-              fontSize={["md", "lg", "xl", "2xl", "3xl"]}
+              fontSize={["md", "lg", "xl", "2xl", "4xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}
               left={["4", "4", "0"]}
@@ -139,8 +139,8 @@ const Home = () => {
           >
             <Img
               src={colorMode === "light" ? homeGif : homeGifN}
-              h={[0, 0, 0, 450, 550]}
-              w={[0, 0, 0, 650, 650]}
+              h={[0, 0, 0, 450, 590]}
+              w={[0, 0, 0, 650, 580]}
             />
           </Box>
         </Flex>
