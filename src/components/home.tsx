@@ -94,7 +94,7 @@ const Home = () => {
               position={"relative"}
               justifyContent={"start"}
               alignItems={"start"}
-              w={["64", "64", "auto"]}
+              w={["auto"]}
               fontSize={["md", "lg", "xl", "2xl", "4xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}
