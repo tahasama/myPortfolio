@@ -48,11 +48,12 @@ import { useState } from "react";
 const Skills = () => {
   const { colorMode } = useColorMode();
   const bgOnLight = useColorModeValue(
-    "linear( blue.200, blue.100)",
+    "linear( blue.200, blue.200, blue.100)",
     "linear( gray.900 0%, gray.900 100%)"
   );
-  const bglCardHead = useColorModeValue("purple.300", "purple.500");
-  const bglCard = useColorModeValue("purple.700", "purple.900");
+  const bglCardHead = useColorModeValue("white", "gray.400");
+  const bglCardHead2 = useColorModeValue("gray.500", "gray.400");
+  const bglCard = useColorModeValue("blue.400", "blue.700");
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -110,14 +111,15 @@ const Skills = () => {
             "repeat(4, 1fr)",
             "repeat(4, 1fr)",
           ]}
-          // gap={[0, 4]}
+          gap={[0, 0, 10, 0, 0]}
           position={"relative"}
           // justifyContent={"center"}
           // alignItems={"center"}
-          fontSize={"20"}
+          fontSize={"28"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
           placeItems={"center"}
+          color={bglCardHead}
           // mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
           // mt={"-20"}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(.8)"]}
@@ -128,7 +130,7 @@ const Skills = () => {
           <Flex
             flexDir={"column"}
             alignItems={"center"}
-            m={"2"}
+            m={[0, 0, 0, "2"]}
             w={100}
             transform={["scale(.8)", "scale(.8)", "scale(1)"]}
           >
@@ -145,7 +147,7 @@ const Skills = () => {
               justifyContent={"center"}
               alignItems={"center"}
               color="blue.50"
-              bgColor="purple.500"
+              bgColor={bglCard}
             >
               <motion.div
                 whileInView={{ scaleX: [-1, 1] }}
@@ -176,11 +178,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21]}
+              fontSize={[21, 25]}
               fontWeight={500}
               mx={["0", "0"]}
               h={"44"}
-              w={"44"}
+              w={"48"}
             >
               User friendly and easy to use
             </Box>
@@ -188,7 +190,7 @@ const Skills = () => {
           <Flex
             alignItems={"center"}
             flexDir={"column"}
-            m={"2"}
+            m={[0, 0, "2"]}
             w={100}
             transform={["scale(.8)", "scale(.8)", "scale(1)"]}
           >
@@ -204,7 +206,7 @@ const Skills = () => {
               justifyContent={"center"}
               alignItems={"center"}
               color="blue.50"
-              bgColor="purple.500"
+              bgColor={bglCard}
               textAlign={"center"}
             >
               <motion.div
@@ -241,11 +243,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21]}
+              fontSize={[21, 25]}
               fontWeight={500}
               mx={["0", "0"]}
               h={"44"}
-              w={"44"}
+              w={"48"}
             >
               layouts that works on any device
             </Box>
@@ -254,7 +256,7 @@ const Skills = () => {
           <Flex
             flexDir={"column"}
             alignItems={"center"}
-            m={"2"}
+            m={[0, 0, "2"]}
             w={100}
             transform={["scale(.8)", "scale(.8)", "scale(1)"]}
           >
@@ -271,7 +273,7 @@ const Skills = () => {
               justifyContent={"center"}
               alignItems={"center"}
               color="blue.50"
-              bgColor="purple.500"
+              bgColor={bglCard}
             >
               <motion.div
                 whileInView={{ scaleX: [-1, 1] }}
@@ -286,11 +288,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21]}
+              fontSize={[21, 25]}
               fontWeight={500}
               mx={["0", "0"]}
               h={"44"}
-              w={"44"}
+              w={"48"}
             >
               from idea to great product
             </Box>
@@ -298,7 +300,7 @@ const Skills = () => {
           <Flex
             flexDir={"column"}
             alignItems={"center"}
-            m={"2"}
+            m={[0, 0, "2"]}
             w={100}
             transform={["scale(.8)", "scale(.8)", "scale(1)"]}
           >
@@ -315,7 +317,7 @@ const Skills = () => {
               justifyContent={"center"}
               alignItems={"center"}
               color="blue.50"
-              bgColor="purple.500"
+              bgColor={bglCard}
             >
               <motion.div
                 whileInView={{ scaleX: [-1, 1] }}
@@ -330,11 +332,11 @@ const Skills = () => {
             </Box>
             <Box
               textAlign={"center"}
-              fontSize={[21, 21]}
+              fontSize={[21, 25]}
               fontWeight={500}
               mx={["0", "0"]}
               h={"44"}
-              w={"44"}
+              w={"48"}
             >
               full stack and databases
             </Box>
@@ -362,7 +364,7 @@ const Skills = () => {
             color={colorMode !== "light" ? "gray" : "white"}
             // gap={[20, 20, 0]}
             gap={[5, 10, 16]}
-            mt={[0, 0, 20]}
+            mt={[0, 0, 12]}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
@@ -373,7 +375,7 @@ const Skills = () => {
               transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-react-original"></i>
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 React js
               </Box>
             </Grid>
@@ -386,7 +388,7 @@ const Skills = () => {
               transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <SiExpo />
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Expo
               </Box>
             </Grid>{" "}
@@ -400,7 +402,7 @@ const Skills = () => {
             >
               <i className="devicon-typescript-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 TypeScript
               </Box>
             </Grid>
@@ -414,7 +416,7 @@ const Skills = () => {
             >
               <i className="devicon-redux-original"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Redux
               </Box>
             </Grid>
@@ -428,7 +430,7 @@ const Skills = () => {
             >
               <i className="devicon-tailwindcss-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Tailwind
               </Box>
             </Grid>{" "}
@@ -441,7 +443,7 @@ const Skills = () => {
               transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <SiChakraui />
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Chakra UI
               </Box>
             </Grid>{" "}
@@ -474,7 +476,7 @@ const Skills = () => {
             >
               <i className="devicon-mongodb-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Mongo db
               </Box>
             </Grid>
@@ -488,7 +490,7 @@ const Skills = () => {
             >
               <i className="devicon-firebase-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Firebase
               </Box>
             </Grid>
@@ -502,7 +504,7 @@ const Skills = () => {
             >
               <i className="devicon-express-original"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Express Js
               </Box>
             </Grid>
@@ -517,7 +519,7 @@ const Skills = () => {
             >
               <i className="devicon-git-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Git
               </Box>
             </Grid>
@@ -531,7 +533,7 @@ const Skills = () => {
             >
               <i className="devicon-github-original"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 GitHub
               </Box>
             </Grid>
@@ -545,7 +547,7 @@ const Skills = () => {
             >
               <i className="devicon-docker-plain"></i>
 
-              <Box textAlign={"center"} color={"gray.400"} fontSize={"xl"}>
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Docker
               </Box>
             </Grid>
