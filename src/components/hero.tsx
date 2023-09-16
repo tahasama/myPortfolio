@@ -1,4 +1,4 @@
-import { Box, Text, useColorMode } from "@chakra-ui/react";
+import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
@@ -50,25 +50,33 @@ const Hero = () => {
   }, [texts]);
 
   return (
-    <Box w={["sm"]} letterSpacing={1} pos={"relative"}>
+    <Flex w={["full"]} pos={"relative"} alignItems={"center"} color={"white"}>
+      <Text fontSize={"7xl"}>I'm a</Text>
       {texts.map((word, index) => (
         <Box
           key={index}
           transition={"all"}
+          ml={"40"}
           transitionDuration={"1s"}
           pos={"absolute"}
+          fontWeight={"bold"}
+          fontFamily={"body"}
+          letterSpacing={2}
           opacity={index === currentIndex ? 1 : 0}
           // mt={index === currentIndex - 1 ? 4 : 0}
+          // bg={"red.500"}
+          fontSize={"6xl"}
           mt={
             index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)
-              ? 4
+              ? 5
               : 0
           }
         >
+          {/* &nbsp; */}
           {word}
         </Box>
       ))}
-    </Box>
+    </Flex>
   );
 };
 

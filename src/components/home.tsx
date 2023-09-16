@@ -21,10 +21,13 @@ import { motion, useTransform, useViewportScroll } from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 import Social from "./social";
+import Loading from "./loading";
+import { useState } from "react";
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const buttonLight = useColorModeValue("red.500", "teal.500");
+  const textColor = useColorModeValue("white", "");
   const buttonLightHover = useColorModeValue("#cf3030", "teal.600");
   const { colorMode } = useColorMode();
 
@@ -36,7 +39,7 @@ const Home = () => {
       brightness={colorMode === "light" ? "" : "80%"}
     >
       <Element name="Home"></Element>
-      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 24]}>
+      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 20]}>
         <Social />
       </Box>
 
@@ -66,41 +69,41 @@ const Home = () => {
             flexDirection="column"
             position="relative"
             alignItems={["center", "center", "center", "start"]}
-            lineHeight={"taller"}
-            top={["20", "44", "-16", "0"]}
-            w={["full", "fit-content"]}
-            ml={[0, 0, 0, 10, 0]}
+            lineHeight={"tall"}
+            top={["20", "44", "-16", "-5"]}
+            w={["full", "full"]}
+            ml={[0, 0, 0, 10, 16]}
+            // bg={"teal.500"}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
               fontFamily={"VT323"}
-              fontSize={"4xl"}
-              lineHeight={"1.5"}
+              fontSize={"5xl"}
+              lineHeight={"1"}
             >
               Hello World !
             </Box>
             <Box
-              fontSize={["lg", "xl", "2xl", "3xl", "5xl"]}
+              fontSize={["lg", "xl", "2xl", "3xl", "6xl"]}
               letterSpacing={3}
               fontWeight={[700, 500]}
               // flexWrap="wrap"
               fontFamily={"open sans"}
-              // color={"white"}
+              color={"white"}
             >
-              My name is Taha
+              My name is Taha,
             </Box>
             <Divider w={[240, 280, 280, 380, 400]} />
             <Flex
               position={"relative"}
               justifyContent={"start"}
               alignItems={"start"}
-              w={["auto"]}
+              w={["full"]}
               fontSize={["md", "lg", "xl", "2xl", "4xl"]}
               fontWeight={[600, 400]}
               fontFamily={"tajawal"}
               left={["4", "4", "0"]}
             >
-              <Text>I'm a &nbsp;</Text>
               {/* A component for typewriter animation */}
               <Hero />
               {/* <Text>developper</Text> */}
@@ -117,13 +120,13 @@ const Home = () => {
                 <Button
                   color="white"
                   letterSpacing={1}
-                  fontSize={"20"}
+                  fontSize={"3xl"}
                   fontWeight={["400", "500"]}
                   position={"relative"}
                   top={["2", "5"]}
-                  my={["4", "auto", 0]}
-                  px={["74px", "84px", "20", "28", "10"]}
-                  py={["5", "7", "7", "7", "7"]}
+                  // my={["4", "auto", 0]}
+                  px={["74px", "84px", "20", "28", "16"]}
+                  py={["5", "7", "7", "7", "8"]}
                   bg={buttonLight}
                   _hover={{ bg: buttonLightHover }}
                   _active={{ bg: buttonLightHover }}
@@ -133,16 +136,6 @@ const Home = () => {
               </Link>
             </motion.div>
           </Flex>
-          <Box
-            display={["none", "none", "none", "block"]}
-            mr={[0, 0, 0, 10, 0]}
-          >
-            <Img
-              src={colorMode === "light" ? homeGif : homeGifN}
-              h={[0, 0, 0, 450, 590]}
-              w={[0, 0, 0, 650, 580]}
-            />
-          </Box>
         </Flex>
       </Flex>
     </Box>

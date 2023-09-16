@@ -1,44 +1,46 @@
-import { Box, useColorModeValue } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import Navbar from "./components/navbar";
 import Home from "./components/home";
 import About from "./components/about";
 import Projects from "./components/projects";
 import Skills from "./components/skills";
 import Contact from "./components/contact";
+import { useState } from "react";
+import Loading from "./components/loading";
+import { AnimatePresence, motion } from "framer-motion";
 // import Social from "./components/social";
 
 function App() {
   const colorOnLight = useColorModeValue("gray.800", "gray.200");
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
+  const [loading, setLoading] = useState(true);
+
+  setTimeout(() => {
+    setLoading(false);
+  }, 3000);
 
   return (
     <Box color={colorOnLight}>
-      <Navbar />
-      {/* <Box
-        position={"relative"}
-        // zIndex={99}
-        h="100vh"
-      >
-        <Text
-          top={80}
-          position={"relative"}
-          alignItems={"center"}
-          justifyContent={"center"}
-          fontSize={"14vw"}
-          // bgColor={colorOnLight}
-          bg={bglOnLight}
-          h="100vh"
-          fontFamily={"Raleway"}
-        >
-          {" "}
-          maatof taha
-        </Text>
-      </Box> */}
-      <Home />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      {loading ? (
+        <Loading />
+      ) : (
+        <AnimatePresence>
+          {/* Content for the active tab */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Navbar />
+            <Home />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </motion.div>
+        </AnimatePresence>
+      )}
     </Box>
   );
 }
