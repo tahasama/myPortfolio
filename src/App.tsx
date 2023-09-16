@@ -12,23 +12,23 @@ import { AnimatePresence, motion } from "framer-motion";
 
 function App() {
   const colorOnLight = useColorModeValue("gray.800", "gray.200");
-  // const bglOnLight = useColorModeValue("blue.300", "gray.900");
+  const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const [loading, setLoading] = useState(true);
 
   setTimeout(() => {
     setLoading(false);
-  }, 3000);
+  }, 2800);
 
   return (
-    <Box color={colorOnLight}>
+    <Box color={colorOnLight} bg={bglOnLight}>
       {loading ? (
         <Loading />
       ) : (
         <AnimatePresence>
           {/* Content for the active tab */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
           >

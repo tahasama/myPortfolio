@@ -12,9 +12,9 @@ const Social = () => {
       <VStack
         zIndex={99}
         pos={"relative"}
-        top={["-7", "32", "24", "32", "40"]}
+        top={["-20", "-7", "24", "32", "40"]}
         bottom={["auto", 53, "0"]}
-        left={["0", "2", "-4", "-5", "10"]}
+        left={[5, "10"]}
         spacing={[0, -1, 0, -1, 0]}
       >
         <Link
@@ -22,8 +22,8 @@ const Social = () => {
           isExternal
         >
           <Box
-            h={[12, 12, "54px", 16, 16]}
-            w={[12, 12, "54px", 16, 16]}
+            h={[12, "54px", "54px", 16, 16]}
+            w={[12, "54px", "54px", 16, 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#9B2C2C" : "#0987A0"}
@@ -32,9 +32,9 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[24, 24, 30, 36]}
+              fontSize={[24, 32, 30, 36]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 2]}
+              m={[2]}
             >
               <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaLinkedinIn />
@@ -55,8 +55,8 @@ const Social = () => {
         ></Box>
         <Link href="https://github.com/tahasama" isExternal>
           <Box
-            h={[12, 12, "54px", 16, 16]}
-            w={[12, 12, "54px", 16, 16]}
+            h={[12, "54px", "54px", 16, 16]}
+            w={[12, "54px", "54px", 16, 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
@@ -66,7 +66,7 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[30, 30, 36, 42]}
+              fontSize={[30, 34, 36, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
               m={[1, 1]}
             >
@@ -91,8 +91,8 @@ const Social = () => {
         <LinkScroll to="Contact" smooth>
           <Box
             cursor={"pointer"}
-            h={[12, 12, "54px", 16, 16]}
-            w={[12, 12, "54px", 16, 16]}
+            h={[12, "54px", "54px", 16, 16]}
+            w={[12, "54px", "54px", 16, 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
@@ -102,7 +102,7 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[28, 28, 34, 42]}
+              fontSize={[28, 34, 34, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
               m={1}
               // zIndex="99"

@@ -15,6 +15,7 @@ import homeGifN from "../images/homeGIfN.gif";
 const Loading = () => {
   const { colorMode } = useColorMode();
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
+  const textColor = useColorModeValue("white", "");
 
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -38,6 +39,7 @@ const Loading = () => {
       //   pos={"relative"}
       //   inset={0}
       bgColor={bglOnLight}
+      color={textColor}
       w={"auto"}
       height={"full"}
       alignItems={"center"}
@@ -64,11 +66,7 @@ const Loading = () => {
             </Text>
           </Flex>
         ) : (
-          <Img
-            src={colorMode === "light" ? homeGif : homeGifN}
-            h={[0, 0, 0, 450, 2000]}
-            w={[0, 0, 0, 650, 800]}
-          />
+          <Img src={colorMode === "light" ? homeGif : homeGifN} w={"97vh"} />
         )}
       </Flex>
     </Flex>

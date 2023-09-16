@@ -50,13 +50,29 @@ const Hero = () => {
   }, [texts]);
 
   return (
-    <Flex w={["full"]} pos={"relative"} alignItems={"center"} color={"white"}>
-      <Text fontSize={"7xl"}>I'm a</Text>
+    <Flex
+      w={["full", "full", "full", "full", "full"]}
+      pos={"relative"}
+      alignItems={"center"}
+      justifyContent={"start"}
+      color={"white"}
+      flexDir={["column", "column", "column", "row"]}
+      ml={[-5, -3, 0]}
+    >
+      <Text
+        fontSize={["2xl", "4xl", "4xl", "6xl", "7xl"]}
+        p={0}
+        mt={[0, 0, 2, -2]}
+        // textAlign={"center"}
+      >
+        I'm a
+      </Text>
       {texts.map((word, index) => (
         <Box
           key={index}
+          // textAlign={"center"}
           transition={"all"}
-          ml={"40"}
+          ml={[0, 0, 0, 40]}
           transitionDuration={"1s"}
           pos={"absolute"}
           fontWeight={"bold"}
@@ -65,14 +81,14 @@ const Hero = () => {
           opacity={index === currentIndex ? 1 : 0}
           // mt={index === currentIndex - 1 ? 4 : 0}
           // bg={"red.500"}
-          fontSize={"6xl"}
+          fontSize={["2xl", "4xl", "4xl", "5xl", "6xl"]}
           mt={
             index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)
-              ? 5
-              : 0
+              ? 12
+              : [10, 12, 16, 0]
           }
         >
-          {/* &nbsp; */}
+          &nbsp;
           {word}
         </Box>
       ))}

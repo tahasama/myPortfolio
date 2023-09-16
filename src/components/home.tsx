@@ -27,7 +27,6 @@ import { useState } from "react";
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const buttonLight = useColorModeValue("red.500", "teal.500");
-  const textColor = useColorModeValue("white", "");
   const buttonLightHover = useColorModeValue("#cf3030", "teal.600");
   const { colorMode } = useColorMode();
 
@@ -52,7 +51,11 @@ const Home = () => {
         justifyContent={"center"}
         h={"100%"}
       >
-        <Box position={"absolute"} top={[-10, 0, -5]} right={[-4, "5"]}>
+        <Box
+          position={"absolute"}
+          top={[-20, -3, -10, -8, -5]}
+          right={[-4, "5"]}
+        >
           {/* A component for animated clouds */}
           <CloudNstars />
         </Box>
@@ -61,7 +64,7 @@ const Home = () => {
           justifyContent={"space-evenly"}
           alignItems={"center"}
           // bg={"white"}
-          w={["0", "0", "0", "4xl", "70vw"]}
+          w={["4xl", "2xl", "xl", "4xl", "5xl"]}
           gap={0}
           ml={[0, 0, 0, 0]}
         >
@@ -70,21 +73,21 @@ const Home = () => {
             position="relative"
             alignItems={["center", "center", "center", "start"]}
             lineHeight={"tall"}
-            top={["20", "44", "-16", "-5"]}
+            top={["10", "32", "-20", "-12", "-5"]}
             w={["full", "full"]}
-            ml={[0, 0, 0, 10, 16]}
-            // bg={"teal.500"}
+            ml={[0, 0, 0, 28, 16]}
+            // bg={"red.500"}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
               fontFamily={"VT323"}
-              fontSize={"5xl"}
+              fontSize={["3xl", "4xl", "4xl", "5xl", "6xl"]}
               lineHeight={"1"}
             >
               Hello World !
             </Box>
             <Box
-              fontSize={["lg", "xl", "2xl", "3xl", "6xl"]}
+              fontSize={["3xl", "4xl", "4xl", "5xl", "6xl"]}
               letterSpacing={3}
               fontWeight={[700, 500]}
               // flexWrap="wrap"
@@ -99,9 +102,9 @@ const Home = () => {
               justifyContent={"start"}
               alignItems={"start"}
               w={["full"]}
-              fontSize={["md", "lg", "xl", "2xl", "4xl"]}
+              // fontSize={["md", "lg", "xl", "2xl", "4xl"]}
               fontWeight={[600, 400]}
-              fontFamily={"tajawal"}
+              // fontFamily={"tajawal"}
               left={["4", "4", "0"]}
             >
               {/* A component for typewriter animation */}
@@ -120,13 +123,13 @@ const Home = () => {
                 <Button
                   color="white"
                   letterSpacing={1}
-                  fontSize={"3xl"}
+                  fontSize={["xl", "2xl", "2xl", "3xl"]}
                   fontWeight={["400", "500"]}
                   position={"relative"}
-                  top={["2", "5"]}
+                  top={["16", "20", "20", "5", "5"]}
                   // my={["4", "auto", 0]}
-                  px={["74px", "84px", "20", "28", "16"]}
-                  py={["5", "7", "7", "7", "8"]}
+                  px={["10", "16", "16", "20", "16"]}
+                  py={["6", "7", "8", "8", "8"]}
                   bg={buttonLight}
                   _hover={{ bg: buttonLightHover }}
                   _active={{ bg: buttonLightHover }}
