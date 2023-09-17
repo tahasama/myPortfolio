@@ -65,7 +65,7 @@ const Navbar = () => {
     <Flex
       w={"full"}
       h={["16", "20"]}
-      zIndex={99}
+      zIndex={98}
       alignItems="center"
       justifyContent="space-between"
       flexDirection={"row"}

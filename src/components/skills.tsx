@@ -65,7 +65,7 @@ const Skills = () => {
   console.log(window.onresize);
 
   return (
-    <Box>
+    <Box mt={-14}>
       <Element name="Skills"></Element>
       <Box bgColor={colorMode !== "light" ? "#171923" : "#9DECF9"}>
         <div>

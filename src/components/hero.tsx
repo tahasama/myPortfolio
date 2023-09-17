@@ -60,9 +60,9 @@ const Hero = () => {
       ml={[-5, -3, 0]}
     >
       <Text
-        fontSize={["2xl", "4xl", "4xl", "6xl", "7xl"]}
+        fontSize={["2xl", "4xl", "4xl", "5xl", "5xl"]}
         p={0}
-        mt={[0, 0, 2, -2]}
+        mt={[0, 0, 2, "-0.5", -2]}
         // textAlign={"center"}
       >
         I'm a
@@ -72,7 +72,7 @@ const Hero = () => {
           key={index}
           // textAlign={"center"}
           transition={"all"}
-          ml={[0, 0, 0, 40]}
+          ml={[0, 0, 0, 28, 28]}
           transitionDuration={"1s"}
           pos={"absolute"}
           fontWeight={"bold"}
@@ -81,11 +81,11 @@ const Hero = () => {
           opacity={index === currentIndex ? 1 : 0}
           // mt={index === currentIndex - 1 ? 4 : 0}
           // bg={"red.500"}
-          fontSize={["2xl", "4xl", "4xl", "5xl", "6xl"]}
+          fontSize={["2xl", "4xl", "4xl", "5xl", "5xl"]}
           mt={
             index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)
               ? 12
-              : [10, 12, 16, 0]
+              : [10, 12, 16, 0, -1]
           }
         >
           &nbsp;

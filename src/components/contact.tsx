@@ -53,7 +53,7 @@ const Contact = () => {
     form.current.reset();
   };
   return (
-    <>
+    <Box mt={-10}>
       <Box bgColor={colorMode !== "light" ? "gray.800" : "teal.300"}>
         <svg
           data-name="Layer 1"
@@ -250,7 +250,7 @@ const Contact = () => {
           <Text textAlign="center">2022</Text>
         </Flex>
       </VStack>
-    </>
+    </Box>
   );
 };
 

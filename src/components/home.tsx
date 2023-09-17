@@ -73,15 +73,16 @@ const Home = () => {
             position="relative"
             alignItems={["center", "center", "center", "start"]}
             lineHeight={"tall"}
-            top={["10", "32", "-20", "-12", "-5"]}
+            top={["10", "32", "-20", "-14", "-5"]}
             w={["full", "full"]}
             ml={[0, 0, 0, 28, 16]}
             // bg={"red.500"}
+            gap={2}
           >
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
               fontFamily={"VT323"}
-              fontSize={["3xl", "4xl", "4xl", "5xl", "6xl"]}
+              fontSize={["3xl", "4xl", "4xl", "5xl", "5xl"]}
               lineHeight={"1"}
             >
               Hello World !

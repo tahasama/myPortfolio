@@ -23,7 +23,6 @@ import { MdSettings } from "react-icons/md";
 
 // import proj1 from "../images/proj/proj1/proj1.jpeg";
 // import proj1n from "../images/proj/proj1/proj1n1.png";
-import proj1 from "../images/proj/proj1/QualityApp.png";
 import resp from "../images/proj/proj1/resp.png";
 import proj2 from "../images/proj/proj2/EditorApp.png";
 import phone from "../images/proj/proj2/phone.png";
@@ -44,6 +43,11 @@ import i3 from "../images/proj/proj1/3.png";
 import i4 from "../images/proj/proj1/4.png";
 import i5 from "../images/proj/proj1/5.png";
 import i6 from "../images/proj/proj1/6.png";
+import i7 from "../images/proj/proj1/7.png";
+import i8 from "../images/proj/proj1/8.png";
+import i9 from "../images/proj/proj1/9.png";
+import i10 from "../images/proj/proj1/10.png";
+import i11 from "../images/proj/proj1/11.png";
 import m1 from "../images/proj/proj2/1.png";
 import m2 from "../images/proj/proj2/2.png";
 import m3 from "../images/proj/proj2/3.png";
@@ -69,14 +73,19 @@ import "swiper/css/navigation";
 
 import "./styles.css";
 import { Pagination, FreeMode, Navigation, Thumbs } from "swiper";
+import Images from "./ImageModal";
+import ImageModal from "./ImageModal";
 
 type HoverState = {
   [key: string]: boolean;
 };
 
-const images = [proj1, proj2];
 const Projects = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const [uploadModalOpen, setUploadModalOpen] = useState(false);
+  console.log(
+    "🚀 ~ file: projects.tsx:240 ~ Projects ~ uploadModalOpen:",
+    uploadModalOpen
+  );
 
   // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
@@ -84,13 +93,6 @@ const Projects = () => {
     "linear( gray.900 0%, gray.900 100%)"
   );
   const { colorMode } = useColorMode();
-
-  const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
-  });
 
   const projects = [
     {
@@ -144,7 +146,7 @@ const Projects = () => {
       ],
       slides2: [
         {
-          img: i1,
+          img: i4,
         },
         {
           img: i2,
@@ -153,13 +155,28 @@ const Projects = () => {
           img: i3,
         },
         {
-          img: i4,
+          img: i1,
         },
         {
           img: i5,
         },
         {
           img: i6,
+        },
+        {
+          img: i7,
+        },
+        {
+          img: i8,
+        },
+        {
+          img: i9,
+        },
+        {
+          img: i10,
+        },
+        {
+          img: i11,
         },
       ],
       link: "https://qualityc.netlify.app/",
@@ -200,6 +217,7 @@ const Projects = () => {
     // Add more projects here
   ];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [indexM, setIndexM] = useState<number>(0);
 
   useEffect(() => {
     // Update the window width state whenever the window is resized
@@ -215,10 +233,15 @@ const Projects = () => {
     };
   }, []);
 
+  const handleModal = (index: number) => {
+    setIndexM(index);
+    setUploadModalOpen(true);
+  };
+
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={colorMode !== "light" ? "gray.900" : "blue.100"}>
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "#b1dcf7"} mt={-24}>
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}
@@ -279,11 +302,11 @@ const Projects = () => {
           ></path>
         </svg>
       </Box>
+
       <Box
         // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
         bgGradient={bgOnLight}
-        zIndex={2}
-        // mt={40}
+        mt={-10}
         w={"full"}
       >
         <Box
@@ -304,7 +327,7 @@ const Projects = () => {
             For quick access in all projects please login with username/email:
             <b> t@t.com</b> , password: <b> tttttt</b>{" "}
           </Text>
-          {projects.map((project, index) => (
+          {projects.map((project: any, index: number) => (
             <Box
               key={index}
               bg={colorMode !== "light" ? "gray.800" : "blue.200"}
@@ -313,6 +336,25 @@ const Projects = () => {
               overflow="hidden"
               mb={20}
             >
+              <Box
+                textAlign={"center"}
+                bg={colorMode !== "light" ? "blackAlpha.200" : "blue.400"}
+                py={4}
+              >
+                <Heading as="h2" size="lg" mb={2}>
+                  {project.title}
+                </Heading>
+                <Text fontSize={[20, 20, 24]} color="gray.600" mb={0}>
+                  {project.subtitle}
+                </Text>
+                {/* <Text>{project.description}</Text> */}
+              </Box>
+              <ImageModal
+                isOpen={uploadModalOpen}
+                onClose={() => setUploadModalOpen(false)}
+                project={projects[indexM]}
+                index={indexM}
+              />
               <Flex
                 // templateColumns={{ base: "1fr", md: "1fr 1fr" }}
                 gap={0}
@@ -324,18 +366,12 @@ const Projects = () => {
                   index !== 1 ? "row" : "row-reverse",
                 ]}
               >
-                <Box
+                <Flex
                   flexBasis="50%"
-                  textAlign={["center", "center", "center", "start"]}
+                  textAlign={["center", "center", "start", "start"]}
+                  flexDir={"column"}
                 >
                   <Box p={0} mt={3} ml={5}>
-                    <Heading as="h2" size="lg" mb={2}>
-                      {project.title}
-                    </Heading>
-                    <Text fontSize={19} color="gray.600" mb={2}>
-                      {project.subtitle}
-                    </Text>
-                    {/* <Text>{project.description}</Text> */}
                     <List
                       style={{ textIndent: 10 }}
                       // ml={[0, 0, 0, 0, 32]}
@@ -356,22 +392,41 @@ const Projects = () => {
                         </ListItem>
                       ))}
                     </List>
-                    <Button
-                      as="a"
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      colorScheme="blue"
-                      my={2}
-                      ml={2}
+                    <Flex
+                      justifyContent={[
+                        "center",
+                        "center",
+                        "center",
+                        "start",
+                        "start",
+                      ]}
                     >
-                      View Project
-                    </Button>
+                      <Button
+                        as="a"
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        colorScheme="blue"
+                        my={4}
+                        ml={2}
+                        p={6}
+                      >
+                        View Project
+                      </Button>
+                    </Flex>
                   </Box>
-                </Box>
+                </Flex>
                 <Box
-                  w={["100%", "100%", "70%", "50%", "50%", "50%"]}
+                  w={[
+                    index !== 0 ? "100%" : "100%",
+                    index !== 0 ? "100%" : "100%",
+                    index !== 0 ? "100%" : "55%",
+                    index !== 0 ? "50%" : "50%",
+                    index !== 0 ? "50%" : "50%",
+                  ]}
                   // p={[5, 5, 5, 0]}
+                  onClick={() => handleModal(index)}
+                  cursor={"pointer"}
                 >
                   <Swiper
                     slidesPerView={
@@ -384,24 +439,22 @@ const Projects = () => {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    // style={{
-                    //   // display: "{base: 'none', md: 'block'}",
-                    //   width: "100%",
-                    //   flexBasis: "100%",
-                    // }}
+                    style={{ zIndex: 10 }}
                   >
-                    {project.slides2.map((slide) => (
+                    {project.slides2.map((slide: any) => (
                       <SwiperSlide>
                         <Img
                           src={slide.img}
                           alt={project.title}
+                          objectFit={"contain"}
                           // rounded="md"
                           w={[
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "65%",
+                            index !== 0 ? "100%" : "55%",
                             index !== 0 ? "100%" : "100%",
                           ]}
-                          // h={index !== 0 ? "100%" : 470}
+                          // h={index !== 0 ? "100%" : 490}
                         />
                       </SwiperSlide>
                     ))}

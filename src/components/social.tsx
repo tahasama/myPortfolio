@@ -12,10 +12,10 @@ const Social = () => {
       <VStack
         zIndex={99}
         pos={"relative"}
-        top={["-20", "-7", "24", "32", "40"]}
+        top={["-20", "-7", "24", "28", "40"]}
         bottom={["auto", 53, "0"]}
         left={[5, "10"]}
-        spacing={[0, -1, 0, -1, 0]}
+        spacing={[0, -1, 0, 1, 0]}
       >
         <Link
           href="https://www.linkedin.com/in/taha-maatof-126058129/"
