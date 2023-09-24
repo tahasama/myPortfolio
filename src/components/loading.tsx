@@ -29,7 +29,7 @@ const Loading = () => {
         clearInterval(interval);
         setLoading(false);
       }
-    }, 10); // Adjust the interval speed as needed
+    }, 9); // Adjust the interval speed as needed
 
     return () => clearInterval(interval);
   }, [progress]);

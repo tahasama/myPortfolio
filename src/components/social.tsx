@@ -34,7 +34,7 @@ const Social = () => {
               transform={"rotate(-45deg)"}
               fontSize={[24, 32, 30, 34, 36]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[2]}
+              m={[2, 2, 2, 2, 2.5]}
             >
               <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaLinkedinIn />
@@ -68,7 +68,7 @@ const Social = () => {
               transform={"rotate(-45deg)"}
               fontSize={[30, 34, 36, 40, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 1, 1, 1.5, 0]}
+              m={[1, 1, 1, 1.5, 1.5]}
             >
               <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaGithub />
@@ -104,7 +104,7 @@ const Social = () => {
               transform={"rotate(-45deg)"}
               fontSize={[28, 34, 34, 40, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 1, 1, 1.5, 0]}
+              m={[1, 1, 1, 1.5, 1.5]}
 
               // zIndex="99"
             >

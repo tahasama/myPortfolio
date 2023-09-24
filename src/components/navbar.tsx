@@ -156,9 +156,10 @@ const Navbar = () => {
       <Flex
         justifyContent={"center"}
         position={"absolute"}
-        left={[20, 20, 16, 6, 10]}
+        left={[20, 20, 6, 6, 10]}
         w={["53%", "40%", "33%", "30%", "24%", "20%"]}
-        mt={colorMode !== "light" ? 0 : -3}
+        mt={colorMode !== "light" ? 2 : -2}
+        // ml={colorMode !== "light" ? 0 : -1}
       >
         <Link to={"Home"} onClick={onToggle} smooth>
           <Img
