@@ -22,8 +22,8 @@ const Social = () => {
           isExternal
         >
           <Box
-            h={[12, "54px", "54px", 16, 16]}
-            w={[12, "54px", "54px", 16, 16]}
+            h={[12, "54px", "54px", "60px", 16]}
+            w={[12, "54px", "54px", "60px", 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#9B2C2C" : "#0987A0"}
@@ -32,7 +32,7 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[24, 32, 30, 36]}
+              fontSize={[24, 32, 30, 34, 36]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
               m={[2]}
             >
@@ -55,8 +55,8 @@ const Social = () => {
         ></Box>
         <Link href="https://github.com/tahasama" isExternal>
           <Box
-            h={[12, "54px", "54px", 16, 16]}
-            w={[12, "54px", "54px", 16, 16]}
+            h={[12, "54px", "54px", "60px", 16]}
+            w={[12, "54px", "54px", "60px", 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
@@ -66,9 +66,9 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[30, 34, 36, 42]}
+              fontSize={[30, 34, 36, 40, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={[1, 1]}
+              m={[1, 1, 1, 1.5, 0]}
             >
               <motion.div whileHover={{ scale: 1.1, rotate: 45 }}>
                 <FaGithub />
@@ -91,8 +91,8 @@ const Social = () => {
         <LinkScroll to="Contact" smooth>
           <Box
             cursor={"pointer"}
-            h={[12, "54px", "54px", 16, 16]}
-            w={[12, "54px", "54px", 16, 16]}
+            h={[12, "54px", "54px", "60px", 16]}
+            w={[12, "54px", "54px", "60px", 16]}
             borderRadius={[8, 8, 10, 12, 10]}
             bgColor={colorMode !== "dark" ? "blue.400" : "blue.900"}
             borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
@@ -102,9 +102,10 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[28, 34, 34, 42]}
+              fontSize={[28, 34, 34, 40, 42]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
-              m={1}
+              m={[1, 1, 1, 1.5, 0]}
+
               // zIndex="99"
             >
               <motion.div

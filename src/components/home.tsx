@@ -38,7 +38,7 @@ const Home = () => {
       brightness={colorMode === "light" ? "" : "80%"}
     >
       <Element name="Home"></Element>
-      <Box pos={"absolute"} zIndex={1} top={[48, 40, 40, 36, 20]}>
+      <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}>
         <Social />
       </Box>
 
@@ -47,13 +47,13 @@ const Home = () => {
         bg={bglOnLight}
         alignItems={"center"}
         flexDirection={["column-reverse", "column-reverse", "row"]}
-        top={["10", "0", "16", "16", "10"]}
+        top={["10", "0", "12", "12", "5"]}
         justifyContent={"center"}
         h={"100%"}
       >
         <Box
           position={"absolute"}
-          top={[-20, -3, -10, -8, -5]}
+          top={[-20, -3, -16, -8, -5]}
           right={[-4, "5"]}
         >
           {/* A component for animated clouds */}
@@ -73,7 +73,7 @@ const Home = () => {
             position="relative"
             alignItems={["center", "center", "center", "start"]}
             lineHeight={"tall"}
-            top={["10", "32", "-20", "-14", "-5"]}
+            top={["10", "32", "-28", "-24", "-5"]}
             w={["full", "full"]}
             ml={[0, 0, 0, 28, 16]}
             // bg={"red.500"}
@@ -82,13 +82,13 @@ const Home = () => {
             <Box
               color={colorMode === "light" ? "green.600" : "green.200"}
               fontFamily={"VT323"}
-              fontSize={["3xl", "4xl", "4xl", "5xl", "5xl"]}
+              fontSize={["3xl", "3xl", "3xl", "4xl", "5xl"]}
               lineHeight={"1"}
             >
               Hello World !
             </Box>
             <Box
-              fontSize={["3xl", "4xl", "4xl", "5xl", "6xl"]}
+              fontSize={["3xl", "3xl", "3xl", "4xl", "6xl"]}
               letterSpacing={3}
               fontWeight={[700, 500]}
               // flexWrap="wrap"
@@ -124,13 +124,13 @@ const Home = () => {
                 <Button
                   color="white"
                   letterSpacing={1}
-                  fontSize={["xl", "2xl", "2xl", "3xl"]}
+                  fontSize={["xl", "xl", "xl", "2xl", "3xl"]}
                   fontWeight={["400", "500"]}
                   position={"relative"}
                   top={["16", "20", "20", "5", "5"]}
                   // my={["4", "auto", 0]}
-                  px={["10", "16", "16", "20", "16"]}
-                  py={["6", "7", "8", "8", "8"]}
+                  px={["10", "10", "8", "10", "16"]}
+                  py={["6", "7", "6", "7", "8"]}
                   bg={buttonLight}
                   _hover={{ bg: buttonLightHover }}
                   _active={{ bg: buttonLightHover }}
