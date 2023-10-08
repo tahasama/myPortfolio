@@ -64,16 +64,16 @@ const Loading = () => {
             boxSize={"32"}
             thickness="4px"
             color={textColor}
-            zIndex={"99"}
           /> */}
 
           {colorMode !== "light" ? (
             <motion.p
-              initial={{ y: -36, x: 0, opacity: 1 }} // Initial position at the center
+              initial={{ y: -36, x: 0, opacity: 1, color: "#CBD5E0" }} // Initial position at the center
               animate={{
                 y: 40 - window.innerHeight / 2,
                 x: -57 + window.innerWidth / 2,
                 scale: 0.09,
+
                 // opacity: 0.3,
               }} // Slide to the top right
               transition={{ duration: 1, delay: 0.8 }}
@@ -82,17 +82,28 @@ const Loading = () => {
             </motion.p>
           ) : (
             <motion.div
-              initial={{ y: 0, x: -10, opacity: 1 }} // Initial position at the center
+              initial={{
+                y: 0,
+                x: -10,
+                opacity: 1,
+                color: "white",
+              }} // Initial position at the center
               animate={{
                 y: 40 - window.innerHeight / 2,
                 x: -70 + window.innerWidth / 2,
                 scale: 0.1,
+                opacity: 0.7,
+
                 // opacity: 0.3,
               }} // Slide to the top right
-              transition={{ duration: 1, delay: 0.8 }}
+              transition={{
+                duration: 1,
+                delay: 0.8,
+                easings: ["easeIn", "easeOut"],
+              }}
               style={{ marginLeft: 20 }}
             >
-              <SunIcon color={"gold"} w={350} h={350} />
+              <SunIcon w={350} h={350} />
             </motion.div>
           )}
 
