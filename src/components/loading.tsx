@@ -11,11 +11,13 @@ import {
 import React, { useEffect, useState } from "react";
 import homeGif from "../images/homeGIf.gif";
 import homeGifN from "../images/homeGIfN.gif";
+import { motion } from "framer-motion";
+import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Loading = () => {
   const { colorMode } = useColorMode();
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
-  const textColor = useColorModeValue("white", "");
+  const textColor = useColorModeValue("white", "teal.500");
 
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
@@ -39,7 +41,7 @@ const Loading = () => {
       //   pos={"relative"}
       //   inset={0}
       bgColor={bglOnLight}
-      color={textColor}
+      // color={textColor}
       w={"auto"}
       height={"full"}
       alignItems={"center"}
@@ -51,23 +53,54 @@ const Loading = () => {
         justifyContent="center"
         height="100vh"
       >
-        {loading ? (
-          <Flex
-            justifyContent={"center"}
-            alignItems={"center"}
-            position={"relative"}
-          >
-            {/* Increase the size of the Spinner using 'boxSize' */}
-            <Spinner pos={"absolute"} boxSize={"32"} thickness="4px" />
+        <Flex
+          justifyContent={"center"}
+          alignItems={"center"}
+          position={"relative"}
+        >
+          {/* Increase the size of the Spinner using 'boxSize' */}
+          {/* <Spinner
+            pos={"absolute"}
+            boxSize={"32"}
+            thickness="4px"
+            color={textColor}
+            zIndex={"99"}
+          /> */}
 
-            {/* Increase the font size of the Text using 'fontSize' */}
-            <Text pos={"absolute"} fontSize="4xl">
-              {progress}%
-            </Text>
-          </Flex>
-        ) : (
-          <Img src={colorMode === "light" ? homeGif : homeGifN} w={"97vh"} />
-        )}
+          {colorMode !== "light" ? (
+            <motion.p
+              initial={{ y: -36, x: 0, opacity: 1 }} // Initial position at the center
+              animate={{
+                y: 40 - window.innerHeight / 2,
+                x: -57 + window.innerWidth / 2,
+                scale: 0.09,
+                // opacity: 0.3,
+              }} // Slide to the top right
+              transition={{ duration: 1, delay: 0.8 }}
+            >
+              <MoonIcon w={350} h={350} ml={["20"]} />
+            </motion.p>
+          ) : (
+            <motion.div
+              initial={{ y: 0, x: -10, opacity: 1 }} // Initial position at the center
+              animate={{
+                y: 40 - window.innerHeight / 2,
+                x: -70 + window.innerWidth / 2,
+                scale: 0.1,
+                // opacity: 0.3,
+              }} // Slide to the top right
+              transition={{ duration: 1, delay: 0.8 }}
+              style={{ marginLeft: 20 }}
+            >
+              <SunIcon color={"gold"} w={350} h={350} />
+            </motion.div>
+          )}
+
+          {/* Increase the font size of the Text using 'fontSize' */}
+          <Text pos={"absolute"} fontSize="4xl" color={textColor}>
+            {progress}%
+          </Text>
+        </Flex>
       </Flex>
     </Flex>
   );

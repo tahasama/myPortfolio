@@ -17,7 +17,12 @@ import homeGif from "../images/homeGIf.gif";
 import homeGifN from "../images/homeGIfN.gif";
 
 import CloudNstars from "./cloudNstars";
-import { motion, useTransform, useViewportScroll } from "framer-motion";
+import {
+  AnimatePresence,
+  motion,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 // import { useState } from "react";
 import { Element, Link } from "react-scroll";
 import Social from "./social";
@@ -31,118 +36,123 @@ const Home = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box
-      overflow={"hidden"}
-      h={["3xl", "3xl", "3xl", "3xl"]}
-      filter="auto"
-      brightness={colorMode === "light" ? "" : "80%"}
-    >
-      <Element name="Home"></Element>
-      <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}>
-        <Social />
-      </Box>
-
-      <Flex
-        position={"relative"}
-        bg={bglOnLight}
-        alignItems={"center"}
-        flexDirection={["column-reverse", "column-reverse", "row"]}
-        top={["10", "0", "12", "12", "5"]}
-        justifyContent={"center"}
-        h={"100%"}
-      >
+    <AnimatePresence>
+      {/* Content for the active tab */}
+      <motion.div initial={{ opacity: 0.3 }} animate={{ opacity: 1 }}>
         <Box
-          position={"absolute"}
-          top={[-20, -3, -16, -8, -5]}
-          right={[-4, "5"]}
+          overflow={"hidden"}
+          h={["3xl", "3xl", "3xl", "3xl"]}
+          filter="auto"
+          brightness={colorMode === "light" ? "" : "80%"}
         >
-          {/* A component for animated clouds */}
-          <CloudNstars />
-        </Box>
-        <Flex
-          mt={0}
-          justifyContent={"space-evenly"}
-          alignItems={"center"}
-          // bg={"white"}
-          w={["4xl", "2xl", "xl", "4xl", "5xl"]}
-          gap={0}
-          ml={[0, 0, 0, 0]}
-        >
+          <Element name="Home"></Element>
+          <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}>
+            <Social />
+          </Box>
+
           <Flex
-            flexDirection="column"
-            position="relative"
-            alignItems={["center", "center", "center", "start"]}
-            lineHeight={"tall"}
-            top={["10", "32", "-28", "-24", "-5"]}
-            w={["full", "full"]}
-            ml={[0, 0, 0, 28, 16]}
-            // bg={"red.500"}
-            gap={2}
+            position={"relative"}
+            bg={bglOnLight}
+            alignItems={"center"}
+            flexDirection={["column-reverse", "column-reverse", "row"]}
+            top={["10", "0", "12", "12", "5"]}
+            justifyContent={"center"}
+            h={"100%"}
           >
             <Box
-              color={colorMode === "light" ? "green.600" : "green.200"}
-              fontFamily={"VT323"}
-              fontSize={["3xl", "3xl", "3xl", "4xl", "5xl"]}
-              lineHeight={"1"}
+              position={"absolute"}
+              top={[-20, -3, -16, -8, -5]}
+              right={[-4, "5"]}
             >
-              Hello World !
+              {/* A component for animated clouds */}
+              <CloudNstars />
             </Box>
-            <Box
-              fontSize={["3xl", "3xl", "3xl", "4xl", "6xl"]}
-              letterSpacing={3}
-              fontWeight={[700, 500]}
-              // flexWrap="wrap"
-              fontFamily={"open sans"}
-              color={"white"}
-            >
-              My name is Taha,
-            </Box>
-            <Divider w={[240, 280, 280, 380, 400]} />
             <Flex
-              position={"relative"}
-              justifyContent={"start"}
-              alignItems={"start"}
-              w={["full"]}
-              // fontSize={["md", "lg", "xl", "2xl", "4xl"]}
-              fontWeight={[600, 400]}
-              // fontFamily={"tajawal"}
-              left={["4", "4", "0"]}
+              mt={0}
+              justifyContent={"space-evenly"}
+              alignItems={"center"}
+              // bg={"white"}
+              w={["4xl", "2xl", "xl", "4xl", "5xl"]}
+              gap={0}
+              ml={[0, 0, 0, 0]}
             >
-              {/* A component for typewriter animation */}
-              <Hero />
-              {/* <Text>developper</Text> */}
-            </Flex>
-
-            <motion.div
-              style={{ zIndex: 98 }}
-              whileHover={{
-                y: [-1, 4, -1],
-                transition: { duration: 1, repeat: Infinity },
-              }}
-            >
-              <Link to="Projects" smooth>
-                <Button
-                  color="white"
-                  letterSpacing={1}
-                  fontSize={["xl", "xl", "xl", "2xl", "3xl"]}
-                  fontWeight={["400", "500"]}
-                  position={"relative"}
-                  top={["16", "20", "20", "5", "5"]}
-                  // my={["4", "auto", 0]}
-                  px={["10", "10", "8", "10", "16"]}
-                  py={["6", "7", "6", "7", "8"]}
-                  bg={buttonLight}
-                  _hover={{ bg: buttonLightHover }}
-                  _active={{ bg: buttonLightHover }}
+              <Flex
+                flexDirection="column"
+                position="relative"
+                alignItems={["center", "center", "center", "start"]}
+                lineHeight={"tall"}
+                top={["10", "32", "-28", "-24", "-5"]}
+                w={["full", "full"]}
+                ml={[0, 0, 0, 28, 16]}
+                // bg={"red.500"}
+                gap={2}
+              >
+                <Box
+                  color={colorMode === "light" ? "green.600" : "green.200"}
+                  fontFamily={"VT323"}
+                  fontSize={["3xl", "3xl", "3xl", "4xl", "5xl"]}
+                  lineHeight={"1"}
                 >
-                  PROJECTS
-                </Button>
-              </Link>
-            </motion.div>
+                  Hello World !
+                </Box>
+                <Box
+                  fontSize={["3xl", "3xl", "3xl", "4xl", "6xl"]}
+                  letterSpacing={3}
+                  fontWeight={[700, 500]}
+                  // flexWrap="wrap"
+                  fontFamily={"open sans"}
+                  color={"white"}
+                >
+                  My name is Taha,
+                </Box>
+                <Divider w={[240, 280, 280, 380, 400]} />
+                <Flex
+                  position={"relative"}
+                  justifyContent={"start"}
+                  alignItems={"start"}
+                  w={["full"]}
+                  // fontSize={["md", "lg", "xl", "2xl", "4xl"]}
+                  fontWeight={[600, 400]}
+                  // fontFamily={"tajawal"}
+                  left={["4", "4", "0"]}
+                >
+                  {/* A component for typewriter animation */}
+                  <Hero />
+                  {/* <Text>developper</Text> */}
+                </Flex>
+
+                <motion.div
+                  style={{ zIndex: 98 }}
+                  whileHover={{
+                    y: [-1, 4, -1],
+                    transition: { duration: 1, repeat: Infinity },
+                  }}
+                >
+                  <Link to="Projects" smooth>
+                    <Button
+                      color="white"
+                      letterSpacing={1}
+                      fontSize={["xl", "xl", "xl", "2xl", "3xl"]}
+                      fontWeight={["400", "500"]}
+                      position={"relative"}
+                      top={["16", "20", "20", "5", "5"]}
+                      // my={["4", "auto", 0]}
+                      px={["10", "10", "8", "10", "16"]}
+                      py={["6", "7", "6", "7", "8"]}
+                      bg={buttonLight}
+                      _hover={{ bg: buttonLightHover }}
+                      _active={{ bg: buttonLightHover }}
+                    >
+                      PROJECTS
+                    </Button>
+                  </Link>
+                </motion.div>
+              </Flex>
+            </Flex>
           </Flex>
-        </Flex>
-      </Flex>
-    </Box>
+        </Box>
+      </motion.div>
+    </AnimatePresence>
   );
 };
 

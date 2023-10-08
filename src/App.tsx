@@ -17,7 +17,7 @@ function App() {
 
   setTimeout(() => {
     setLoading(false);
-  }, 2800);
+  }, 2000);
 
   return (
     <Box color={colorOnLight} bg={bglOnLight}>
@@ -27,10 +27,9 @@ function App() {
         <AnimatePresence>
           {/* Content for the active tab */}
           <motion.div
-            initial={{ opacity: 0, y: -100 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
+          // initial={{ opacity: 0.3 }}
+          // animate={{ opacity: 1 }}
+          // exit={{ opacity: 1 }}
           >
             <Navbar />
             <Home />
