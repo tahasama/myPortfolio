@@ -17,12 +17,19 @@ function App() {
 
   setTimeout(() => {
     setLoading(false);
-  }, 1800);
+  }, 1900);
 
   return (
     <Box color={colorOnLight} bg={bglOnLight}>
       {loading ? (
-        <Loading />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Loading />
+        </motion.div>
       ) : (
         <AnimatePresence>
           {/* Content for the active tab */}
