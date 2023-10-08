@@ -115,7 +115,7 @@ const Navbar = () => {
         <Box
           position={"absolute"}
           w={"full"}
-          h={"full"}
+          h={"100vh"}
           p={1}
           color={colorOn}
           bgGradient={navNav}
@@ -156,10 +156,10 @@ const Navbar = () => {
       <Flex
         justifyContent={"center"}
         position={"absolute"}
-        left={[20, 20, 6, 6, 10]}
+        left={[20, 20, 6, 6, 0]}
         w={["53%", "40%", "33%", "30%", "24%", "20%"]}
         mt={colorMode !== "light" ? 2 : -2}
-        // ml={colorMode !== "light" ? 0 : -1}
+        ml={colorMode !== "light" ? 0 : -2}
       >
         <Link to={"Home"} onClick={onToggle} smooth>
           <Img
@@ -167,7 +167,7 @@ const Navbar = () => {
             src={colorMode !== "light" ? logoNight : logoDay}
             // mt={colorMode !== "light" ? 2 : "none"}
             filter={colorMode !== "light" ? "grayscale(55%)" : "none"}
-            transform={colorMode !== "light" ? "scale(1.15)" : "scale(1)"}
+            transform={colorMode !== "light" ? "scale(1)" : "scale(.85)"}
             alt="devDay2"
             // position={"absolute"}
             // left={["25vw", "22vw", "5"]}

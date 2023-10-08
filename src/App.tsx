@@ -17,7 +17,7 @@ function App() {
 
   setTimeout(() => {
     setLoading(false);
-  }, 2000);
+  }, 1800);
 
   return (
     <Box color={colorOnLight} bg={bglOnLight}>

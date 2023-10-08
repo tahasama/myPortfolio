@@ -69,7 +69,7 @@ const Home = () => {
             </Box>
             <Flex
               mt={0}
-              justifyContent={"space-evenly"}
+              justifyContent={"space-"}
               alignItems={"center"}
               // bg={"white"}
               w={["4xl", "2xl", "xl", "4xl", "5xl"]}
