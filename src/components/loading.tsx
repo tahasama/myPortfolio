@@ -74,7 +74,7 @@ const Loading = () => {
                 x: -57 + window.innerWidth / 2,
                 scale: 0.09,
 
-                // opacity: 0.3,
+                // opacity: 0,
               }} // Slide to the top right
               transition={{ duration: 1, delay: 0.8 }}
             >
@@ -92,7 +92,7 @@ const Loading = () => {
                 y: 40 - window.innerHeight / 2,
                 x: -70 + window.innerWidth / 2,
                 scale: 0.1,
-                opacity: 0.7,
+                // opacity: 0.05,
 
                 // opacity: 0.3,
               }} // Slide to the top right
