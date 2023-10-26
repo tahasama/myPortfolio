@@ -67,20 +67,30 @@ const Loading = () => {
           /> */}
 
           {colorMode !== "light" ? (
-            <motion.p
-              initial={{ y: -36, x: 0, opacity: 1, color: "#CBD5E0" }} // Initial position at the center
-              animate={{
-                y: 40 - window.innerHeight / 2,
-                x: -57 + window.innerWidth / 2,
-                scale: 0.09,
+            window.innerWidth > 786 ? (
+              <motion.p
+                initial={{ y: -36, x: 0, opacity: 1, color: "#CBD5E0" }} // Initial position at the center
+                animate={{
+                  y: 40 - window.innerHeight / 2,
+                  x: -57 + window.innerWidth / 2,
+                  scale: 0.09,
 
-                // opacity: 0,
-              }} // Slide to the top right
-              transition={{ duration: 1, delay: 0.8 }}
-            >
-              <MoonIcon w={350} h={350} ml={["20"]} />
-            </motion.p>
-          ) : (
+                  // opacity: 0,
+                }} // Slide to the top right
+                transition={{ duration: 1, delay: 0.8 }}
+              >
+                <MoonIcon w={350} h={350} ml={["20"]} />
+              </motion.p>
+            ) : (
+              <motion.p
+                initial={{ y: 0, x: -5 }}
+                animate={{ y: [-5, 5, -5, 0] }}
+                transition={{ duration: 1.5 }}
+              >
+                <MoonIcon w={320} h={320} ml={["20"]} mt={"-50px"} />
+              </motion.p>
+            )
+          ) : window.innerWidth > 786 ? (
             <motion.div
               initial={{
                 y: 0,
@@ -104,6 +114,16 @@ const Loading = () => {
               style={{ marginLeft: 20 }}
             >
               <SunIcon w={350} h={350} />
+            </motion.div>
+          ) : (
+            <motion.div
+              initial={{ y: 0, x: -5 }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1.5 }}
+              style={{ marginLeft: 20 }}
+            >
+              {" "}
+              <SunIcon w={320} h={320} color={"white"} />
             </motion.div>
           )}
 
