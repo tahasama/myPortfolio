@@ -75,8 +75,8 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
         </Swiper>
         <Button
           position="absolute"
-          transform="scale(1.25)"
-          top="-14"
+          transform="scale(1)"
+          top="-12"
           right="-0"
           bg="white"
           borderWidth="1px"

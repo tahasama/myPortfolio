@@ -62,6 +62,18 @@ import a5 from "../images/proj/proj3/5.jpg";
 import a6 from "../images/proj/proj3/6.jpg";
 import a7 from "../images/proj/proj3/7.jpg";
 import a8 from "../images/proj/proj3/8.jpg";
+import f1 from "../images/proj/proj4/40.png";
+import f2 from "../images/proj/proj4/41.png";
+import f3 from "../images/proj/proj4/42.png";
+import f4 from "../images/proj/proj4/43.png";
+import f5 from "../images/proj/proj4/44.png";
+import f6 from "../images/proj/proj4/45.png";
+import f7 from "../images/proj/proj4/46.png";
+import f8 from "../images/proj/proj4/47.png";
+import f9 from "../images/proj/proj4/48.png";
+import f10 from "../images/proj/proj4/49.png";
+import f11 from "../images/proj/proj4/50.png";
+import f12 from "../images/proj/proj4/51.png";
 import { SetStateAction, useEffect, useState } from "react";
 import { Carousel } from "./carousel";
 
@@ -130,6 +142,63 @@ const Projects = () => {
         },
         {
           img: a8,
+        },
+      ],
+      link: "https://play.google.com/store/apps/details?id=com.storyat",
+    },
+    {
+      title: "Fave Tale",
+      subtitle:
+        "An app for pet owners for sharing interacting and buying pets stuff",
+      description: [
+        { desc: "Share and react to images of pets" },
+        { desc: "write your own blog or story" },
+        {
+          desc: "create and/or participate to discussions, questions, events, ...",
+        },
+        { desc: "create and/or participate to " },
+        { desc: "browse and buy from store" },
+        { desc: "full profile control for all users activities" },
+      ],
+      slides2: [
+        {
+          img: f1,
+        },
+        {
+          img: f2,
+        },
+        {
+          img: f3,
+        },
+        {
+          img: f4,
+        },
+        {
+          img: f5,
+        },
+        {
+          img: f6,
+        },
+        {
+          img: f7,
+        },
+        {
+          img: f8,
+        },
+        {
+          img: f9,
+        },
+        {
+          img: f10,
+        },
+        {
+          img: f10,
+        },
+        {
+          img: f11,
+        },
+        {
+          img: f12,
         },
       ],
       link: "https://play.google.com/store/apps/details?id=com.storyat",
@@ -363,8 +432,9 @@ const Projects = () => {
                   "column-reverse",
                   "column-reverse",
                   "column-reverse",
-                  index !== 1 ? "row" : "row-reverse",
+                  index !== 0 ? "row" : "row-reverse",
                 ]}
+                h={"-webkit-fit-content"}
               >
                 <Flex
                   flexBasis="50%"
@@ -427,6 +497,7 @@ const Projects = () => {
                   // p={[5, 5, 5, 0]}
                   onClick={() => handleModal(index)}
                   cursor={"pointer"}
+                  bg={"white"}
                 >
                   <Swiper
                     slidesPerView={
@@ -439,15 +510,20 @@ const Projects = () => {
                     }}
                     navigation={true}
                     modules={[Pagination, Navigation]}
-                    style={{ zIndex: 10 }}
+                    style={{
+                      zIndex: 10,
+                      padding: 0,
+                      backgroundColor: "white",
+                    }}
                   >
                     {project.slides2.map((slide: any) => (
                       <SwiperSlide>
                         <Img
                           src={slide.img}
                           alt={project.title}
-                          objectFit={"contain"}
+                          objectFit={"cover"}
                           // rounded="md"
+                          bg={"white"}
                           w={[
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "65%",
