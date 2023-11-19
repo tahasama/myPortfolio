@@ -201,7 +201,7 @@ const Projects = () => {
           img: f12,
         },
       ],
-      link: "https://play.google.com/store/apps/details?id=com.storyat",
+      link: "https://favetale.vercel.app/",
     },
     {
       title: "Data Management App",
