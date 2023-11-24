@@ -192,9 +192,6 @@ const Projects = () => {
           img: f10,
         },
         {
-          img: f10,
-        },
-        {
           img: f11,
         },
         {
