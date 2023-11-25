@@ -156,7 +156,6 @@ const Projects = () => {
         {
           desc: "create and/or participate to discussions, questions, events, ...",
         },
-        { desc: "create and/or participate to " },
         { desc: "browse and buy from store" },
         { desc: "full profile control for all users activities" },
       ],
