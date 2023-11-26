@@ -523,7 +523,7 @@ const Projects = () => {
                           alt={project.title}
                           objectFit={"cover"}
                           // rounded="md"
-                          bg={"white"}
+                          // bg={"white"}
                           w={[
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "65%",
