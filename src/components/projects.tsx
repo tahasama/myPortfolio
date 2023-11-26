@@ -248,7 +248,8 @@ const Projects = () => {
     },
     {
       title: "Online Editor App",
-      subtitle: "An app for learning and creating simple WebDev Projects",
+      subtitle:
+        "An app for learning and creating Python, JS WebDev & React Projects",
       description: [
         { desc: "Create project with Vanilla Html / Css / Javacasript" },
         { desc: "Work with React, and import any package" },
@@ -428,7 +429,7 @@ const Projects = () => {
                   "column-reverse",
                   "column-reverse",
                   "column-reverse",
-                  index !== 0 ? "row" : "row-reverse",
+                  index % 2 ? "row-reverse" : "row",
                 ]}
                 h={"-webkit-fit-content"}
               >
