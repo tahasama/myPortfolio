@@ -307,7 +307,10 @@ const Projects = () => {
   return (
     <Box h={"100%"}>
       <Element name="Projects"></Element>
-      <Box bgColor={colorMode !== "light" ? "gray.900" : "#b1dcf7"} mt={-24}>
+      <Box
+        bgColor={colorMode !== "light" ? "gray.900" : "#b1dcf7"}
+        mt={[-10, -24]}
+      >
         <svg
           id="wave"
           style={{ transform: "rotate(0deg)", transition: "0.3s" }}

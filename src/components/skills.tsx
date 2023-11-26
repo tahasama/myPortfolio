@@ -351,10 +351,11 @@ const Skills = () => {
           flexDir={"column"}
           justifyContent={"center"}
           alignItems={"center"}
+          mt={["-20", -2]}
         >
           {/* <ParallaxText baseVelocity={-5}> */}
           <Flex
-            w={["100%", "70%"]}
+            w={["100%", "80%"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -363,7 +364,7 @@ const Skills = () => {
             fontSize={"6xl"}
             color={colorMode !== "light" ? "gray" : "white"}
             // gap={[20, 20, 0]}
-            gap={[5, 10, 16]}
+            gap={[5, 10, 0]}
             mt={[0, 0, 12]}
           >
             <Grid
@@ -455,7 +456,7 @@ const Skills = () => {
           {/* <ParallaxText baseVelocity={5}> */}
           <Flex
             // w={["86vw", "60vw", "30vw", "25vw"]}
-            w={["100%", "70%"]}
+            w={["100%", "80%"]}
             // mt={["0", "2", "8", "24", "24"]}
             position={"relative"}
             justifyContent={"space-around"}
@@ -464,7 +465,7 @@ const Skills = () => {
             flexWrap={"wrap"}
             fontSize={"6xl"}
             color={colorMode !== "light" ? "gray" : "white"}
-            gap={[5, 10, 16]}
+            gap={[5, 10, 0]}
           >
             <Grid
               templateRows={["repeat(2, 1fr)"]}
