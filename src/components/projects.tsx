@@ -497,7 +497,6 @@ const Projects = () => {
                   // p={[5, 5, 5, 0]}
                   onClick={() => handleModal(index)}
                   cursor={"pointer"}
-                  bg={"white"}
                 >
                   <Swiper
                     slidesPerView={
@@ -513,7 +512,6 @@ const Projects = () => {
                     style={{
                       zIndex: 10,
                       padding: 0,
-                      backgroundColor: "white",
                     }}
                   >
                     {project.slides2.map((slide: any) => (
@@ -523,7 +521,6 @@ const Projects = () => {
                           alt={project.title}
                           objectFit={"cover"}
                           // rounded="md"
-                          // bg={"white"}
                           w={[
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "65%",
