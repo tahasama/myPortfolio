@@ -1,7 +1,5 @@
-import { Box, Flex, Text, useColorMode } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
-import { Typewriter } from "react-simple-typewriter";
 
 // const typing = keyframes`
 // from {
@@ -44,7 +42,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-    }, 2000); // Change text every 2 seconds
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [texts]);
@@ -63,14 +61,12 @@ const Hero = () => {
         fontSize={["2xl", "3xl", "3xl", "4xl", "5xl"]}
         p={0}
         mt={[0, 0, 2, "-0.5", -2]}
-        // textAlign={"center"}
       >
         I'm a
       </Text>
       {texts.map((word, index) => (
         <Box
           key={index}
-          // textAlign={"center"}
           transition={"all"}
           ml={[0, 0, 0, 20, 28]}
           transitionDuration={"1s"}
@@ -79,8 +75,6 @@ const Hero = () => {
           fontFamily={"body"}
           letterSpacing={2}
           opacity={index === currentIndex ? 1 : 0}
-          // mt={index === currentIndex - 1 ? 4 : 0}
-          // bg={"red.500"}
           fontSize={["2xl", "4xl", "4xl", "4xl", "5xl"]}
           mt={
             index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)

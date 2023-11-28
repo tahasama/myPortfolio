@@ -2,7 +2,7 @@ import { Box, Flex, Text, Image, useColorMode } from "@chakra-ui/react";
 import { useState } from "react";
 
 export const Carousel = ({ slides }: any) => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const slidesCount = slides.length;
@@ -24,7 +24,6 @@ export const Carousel = ({ slides }: any) => {
       w="fit-content"
       overflow="hidden"
       pos="relative"
-      //   transform="scale(1.06)"
       rounded={"2xl"}
       bgColor={colorMode !== "light" ? "gray.700" : "blue.300"}
     >
@@ -63,7 +62,6 @@ export const Carousel = ({ slides }: any) => {
           transition: "0.6s ease",
           borderRadius: "0 3px 3px 0",
           userSelect: "none",
-          //   border: "1px solid gray",
         }}
         _hover={{
           opacity: 0.8,
@@ -101,22 +99,3 @@ export const Carousel = ({ slides }: any) => {
     </Flex>
   );
 };
-
-// const slides = [
-//     {
-//       img: "https://images.pexels.com/photos/2599537/pexels-photo-2599537.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     },
-//     {
-//       img: "https://images.pexels.com/photos/2714581/pexels-photo-2714581.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     },
-//     {
-//       img: "https://images.pexels.com/photos/2878019/pexels-photo-2878019.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
-//     },
-//     {
-//       img: "https://images.pexels.com/photos/1142950/pexels-photo-1142950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     },
-//     {
-//       img: "https://images.pexels.com/photos/3124111/pexels-photo-3124111.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-//     },
-//   ];
-//   <Carousel slides={slides} />

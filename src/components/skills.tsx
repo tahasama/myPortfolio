@@ -6,42 +6,17 @@ import {
   Img,
   useColorMode,
   useColorModeValue,
-  DarkMode,
 } from "@chakra-ui/react";
-import reactD from "../svg/reactD.png";
-import reactN from "../svg/reactD1.png";
-import mongoN from "../svg/mongo.png";
-// import mongoD from "../svg/mon2.png";
-// import nodeL from "../svg/node.png";
-import expressL from "../svg/express.png";
-import reduxL from "../svg/redux.png";
-import gitL from "../svg/git.png";
-// import githubD from "../svg/githubD.png";
-import githubN from "../svg/githubN.png";
-// import html from "../svg/html.png";
-// import css from "../svg/css.png";
-// import js from "../svg/js.png";
-import firebase from "../svg/firebase.png";
-import docker from "../svg/docker.png";
-import ts from "../svg/ts.png";
+
 import resD from "../svg/resD.png";
 import resN from "../svg/resN.png";
-// import mui from "../svg/mui.png";
-import tailwind from "../svg/tailwind.png";
-import chakra from "../svg/chakra.png";
+
 import cloudN from "../svg/cloudN.png";
 import cloud from "../svg/cloud.png";
-import expoLight from "../svg/logo-wordmark-light.png";
-import expo from "../svg/logo-wordmark.png";
 import { AiOutlineBulb } from "react-icons/ai";
 import { IoIosRocket } from "react-icons/io";
 import { SiChakraui, SiExpo } from "react-icons/si";
-
-// import bubbles from "../images/bubbles.jpg";
-import palm1 from "../images/palm1.png";
-
 import { motion } from "framer-motion";
-// import Projects from "./projects";
 import { Element } from "react-scroll";
 import { useState } from "react";
 
@@ -113,18 +88,13 @@ const Skills = () => {
           ]}
           gap={[0, 0, 10, 0, 0]}
           position={"relative"}
-          // justifyContent={"center"}
-          // alignItems={"center"}
           fontSize={"28"}
           fontWeight={"600"}
           fontFamily={"Quicksand"}
           placeItems={"center"}
           color={bglCardHead}
-          // mt={["-13vh", "-13vh", "-14vh", "-22vh", "-18vh"]}
-          // mt={"-20"}
           transform={["scale(0.78)", "scale(0.8)", "scale(0.8)", "scale(.8)"]}
           mx={[0, 0, 0, 20]}
-          // p={5}
           mt={5}
         >
           <Flex
@@ -138,7 +108,6 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              // mt={["0", "12", "0", "32"]}
               h={["135px", "135px", "110px", "110px"]}
               w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
@@ -198,7 +167,6 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              // mt={["0", "12", "0", "32"]}
               h={["135px", "135px", "110px", "110px"]}
               w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
@@ -219,7 +187,6 @@ const Skills = () => {
                 {colorMode === "light" ? (
                   <Img
                     src={resN}
-                    // h={["8.8vh", "7.8vh", "7vh", "8vh", "7vh"]}
                     h={16}
                     filter={"grayscale(100%) brightness(2)"}
                     m={0}
@@ -229,7 +196,6 @@ const Skills = () => {
                   <Img
                     src={resD}
                     color="purple.500"
-                    // h={["9vh", "7.4vh", "9vh", "9vh", "7.7vh"]}
                     h={16}
                     filter={"grayscale(100%) brightness(2)"}
                     transform={"scale(0.85)"}
@@ -264,7 +230,6 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              // mt={["0", "12", "0", "32"]}
               h={["135px", "135px", "110px", "110px"]}
               w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
@@ -308,7 +273,6 @@ const Skills = () => {
               clipPath={
                 "polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)"
               }
-              // mt={["0", "12", "0", "32"]}
               h={["135px", "135px", "110px", "110px"]}
               w={["150px", "150px", "120px", "130px"]}
               mx={"5"}
@@ -342,7 +306,6 @@ const Skills = () => {
             </Box>
           </Flex>
         </Grid>
-        {/* </motion.div> */}
         {/* skills */}
 
         <Flex
@@ -353,7 +316,6 @@ const Skills = () => {
           alignItems={"center"}
           mt={["-20", -2]}
         >
-          {/* <ParallaxText baseVelocity={-5}> */}
           <Flex
             w={["100%", "80%"]}
             position={"relative"}
@@ -363,7 +325,6 @@ const Skills = () => {
             flexWrap={"wrap"}
             fontSize={"6xl"}
             color={colorMode !== "light" ? "gray" : "white"}
-            // gap={[20, 20, 0]}
             gap={[5, 10, 0]}
             mt={[0, 0, 12]}
           >
@@ -449,15 +410,10 @@ const Skills = () => {
               </Box>
             </Grid>{" "}
           </Flex>
-          {/* </ParallaxText> */}
           <br />
           <br />
-          {/* <br /> */}
-          {/* <ParallaxText baseVelocity={5}> */}
           <Flex
-            // w={["86vw", "60vw", "30vw", "25vw"]}
             w={["100%", "80%"]}
-            // mt={["0", "2", "8", "24", "24"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -553,9 +509,7 @@ const Skills = () => {
               </Box>
             </Grid>
           </Flex>
-          {/* </ParallaxText> */}
         </Flex>
-        {/* <Box>gggggggggg</Box> */}
       </Flex>
     </Box>
   );

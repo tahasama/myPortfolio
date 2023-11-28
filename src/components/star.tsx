@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
 import { motion } from "framer-motion";
-import React from "react";
 
 const Star = ({ d, delay }: any) => {
   return (
@@ -18,7 +17,6 @@ const Star = ({ d, delay }: any) => {
         borderRadius={"100%"}
         bg={"whiteAlpha.900"}
         shadow={"2xl"}
-        // blur="5px"
       ></Box>
     </motion.div>
   );

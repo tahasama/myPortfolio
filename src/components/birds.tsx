@@ -1,6 +1,5 @@
 import { Box, HStack, Img, useColorMode } from "@chakra-ui/react";
 import { motion, useTransform, useViewportScroll } from "framer-motion";
-import React from "react";
 import bird from "../images/bird.png";
 import birdN from "../images/birdN.png";
 
@@ -30,189 +29,104 @@ const Birds = () => {
     <HStack>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x1,
           y: y1,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
           marginTop: 40,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x2,
           y: y2,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x3,
           y: y3,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
           marginTop: -80,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x4,
           y: y4,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
           marginTop: -80,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x5,
           y: y5,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
           marginTop: -80,
           marginLeft: 120,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>
       <motion.div
         style={{
-          // x: colorMode !== "light" ? x2 : x1,
           x: x6,
           y: y6,
-          // background: "salmon",
-          // y: colorMode !== "light" ? y2 : y1,
-          // y: y2,
           width: "6%",
-          // height: "0vw",
           position: "relative",
           top: 40,
-          // right: 0,
           zIndex: 99,
           overflow: "hidden",
           rotate: colorMode !== "light" ? 340 : 290,
           marginTop: -80,
           marginLeft: 120,
-
-          // backgroundColor: "yellow",
         }}
       >
-        <Box
-          // left={"0"}
-          // bgColor={"yellow.400"}
-          // zIndex={99}
-          // w={"20%"}
-          overflow={"hidden"}
-        >
+        <Box overflow={"hidden"}>
           <Img src={colorMode !== "light" ? birdN : bird} overflow={"hidden"} />
         </Box>
       </motion.div>

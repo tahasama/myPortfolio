@@ -1,6 +1,4 @@
-import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -8,15 +6,8 @@ import { Keyboard, Navigation, Pagination } from "swiper";
 import { Box, Button, Center, Flex, Img } from "@chakra-ui/react";
 
 const ImageModal = ({ isOpen, onClose, project, index }: any) => {
-  console.log("🚀 ~ file: ImageModal.tsx:11 ~ ImageModal ~ index:", index);
-  console.log(
-    "🚀 ~ file: ImageModal.tsx:6 ~ SearchModal ~ image:",
-    project.slides2.img
-  );
-
   const handleModalClick = (e: any) => {
     if (e.target.classList.contains("modal-overlay")) {
-      console.log("hhhhhhhhhhhhhh");
       onClose();
     }
   };
@@ -51,7 +42,6 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
           pagination={{ clickable: true }}
           navigation={true}
           modules={[Keyboard, Pagination, Navigation]}
-          // className="my-swiper"
         >
           {project.slides2.map((pet: any, index: any) => (
             <SwiperSlide

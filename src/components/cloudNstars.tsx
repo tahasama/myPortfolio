@@ -1,5 +1,4 @@
 import { Box, useColorMode } from "@chakra-ui/react";
-import React from "react";
 import Cloud from "./cloud";
 import Star from "./star";
 

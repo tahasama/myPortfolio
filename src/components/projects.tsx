@@ -1,15 +1,9 @@
-// import { ExternalLinkIcon } from "@chakra-ui/icons";
 import {
-  background,
   Box,
   Button,
-  Container,
   Flex,
-  Grid,
   Heading,
-  // HStack,
   Img,
-  Link,
   List,
   ListIcon,
   ListItem,
@@ -21,22 +15,8 @@ import { Text } from "@chakra-ui/react";
 
 import { MdSettings } from "react-icons/md";
 
-// import proj1 from "../images/proj/proj1/proj1.jpeg";
-// import proj1n from "../images/proj/proj1/proj1n1.png";
-import resp from "../images/proj/proj1/resp.png";
-import proj2 from "../images/proj/proj2/EditorApp.png";
-import phone from "../images/proj/proj2/phone.png";
 import { Element } from "react-scroll";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
-// import { useState } from "react";
-// import underwater from "../images/underwater.png";
-import water from "../images/bubble.png";
+
 import i1 from "../images/proj/proj1/1.png";
 import i2 from "../images/proj/proj1/2.png";
 import i3 from "../images/proj/proj1/3.png";
@@ -74,8 +54,7 @@ import f9 from "../images/proj/proj4/48.png";
 import f10 from "../images/proj/proj4/49.png";
 import f11 from "../images/proj/proj4/50.png";
 import f12 from "../images/proj/proj4/51.png";
-import { SetStateAction, useEffect, useState } from "react";
-import { Carousel } from "./carousel";
+import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -84,22 +63,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./styles.css";
-import { Pagination, FreeMode, Navigation, Thumbs } from "swiper";
-import Images from "./ImageModal";
+import { Pagination, Navigation } from "swiper";
 import ImageModal from "./ImageModal";
-
-type HoverState = {
-  [key: string]: boolean;
-};
 
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
-  console.log(
-    "🚀 ~ file: projects.tsx:240 ~ Projects ~ uploadModalOpen:",
-    uploadModalOpen
-  );
 
-  // const bglOnLight = useColorModeValue("blue.300", "gray.900");
   const bgOnLight = useColorModeValue(
     "linear(blue.300, cyan.300)",
     "linear( gray.900 0%, gray.900 100%)"
@@ -372,12 +341,7 @@ const Projects = () => {
         </svg>
       </Box>
 
-      <Box
-        // h={["1750px", "250vh", "185vh", "220vh", "200vh"]}
-        bgGradient={bgOnLight}
-        mt={-10}
-        w={"full"}
-      >
+      <Box bgGradient={bgOnLight} mt={-10} w={"full"}>
         <Box
           bg={colorMode !== "light" ? "gray.900" : "transparent"}
           py={0}
@@ -391,7 +355,6 @@ const Projects = () => {
             py={20}
             fontSize={["md", "xl", "2xl"]}
             fontStyle={"italic"}
-            // fontFamily={"serif"}
           >
             For quick access in all projects please login with username/email:
             <b> t@t.com</b> , password: <b> tttttt</b>{" "}
@@ -416,7 +379,6 @@ const Projects = () => {
                 <Text fontSize={[20, 20, 24]} color="gray.600" mb={0}>
                   {project.subtitle}
                 </Text>
-                {/* <Text>{project.description}</Text> */}
               </Box>
               <ImageModal
                 isOpen={uploadModalOpen}
@@ -425,7 +387,6 @@ const Projects = () => {
                 index={indexM}
               />
               <Flex
-                // templateColumns={{ base: "1fr", md: "1fr 1fr" }}
                 gap={0}
                 alignItems={["center", "center"]}
                 flexDir={[
@@ -444,8 +405,6 @@ const Projects = () => {
                   <Box p={0} mt={3} ml={5}>
                     <List
                       style={{ textIndent: 10 }}
-                      // ml={[0, 0, 0, 0, 32]}
-                      // fontSize={["17", "18", "14", "16", "20"]}
                       fontSize={17}
                       lineHeight={"8"}
                       color={colorMode === "light" ? "gray.800" : "gray.300"}
@@ -494,7 +453,6 @@ const Projects = () => {
                     index !== 0 ? "50%" : "50%",
                     index !== 0 ? "50%" : "50%",
                   ]}
-                  // p={[5, 5, 5, 0]}
                   onClick={() => handleModal(index)}
                   cursor={"pointer"}
                 >
@@ -520,20 +478,17 @@ const Projects = () => {
                           src={slide.img}
                           alt={project.title}
                           objectFit={"cover"}
-                          // rounded="md"
                           w={[
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "65%",
                             index !== 0 ? "100%" : "55%",
                             index !== 0 ? "100%" : "100%",
                           ]}
-                          // h={index !== 0 ? "100%" : 490}
                         />
                       </SwiperSlide>
                     ))}
                   </Swiper>
                 </Box>
-                {/* </Box> */}
               </Flex>
             </Box>
           ))}

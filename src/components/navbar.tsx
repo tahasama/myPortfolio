@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import logoNight from "../images/logoN1.png";
-// import logoDay from "../images/logoDay.png";
 import logoDay from "../images/logoD.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
@@ -48,18 +47,6 @@ const Navbar = () => {
       setChange(!change);
     }, 10);
   };
-  // const handleClick = () => {
-  //   toggleColorMode();
-  //   const styleEl = document.createElement("style");
-  //   const cssText = document.createTextNode(
-  //     "html * { transition: color, background-color 0.3s ease-out!important }"
-  //   );
-  //   styleEl.appendChild(cssText);
-  //   document.head.appendChild(styleEl);
-  //   setTimeout(() => {
-  //     document.head.removeChild(styleEl);
-  //   }, 300);
-  // };
 
   return (
     <Flex
@@ -73,44 +60,31 @@ const Navbar = () => {
       position="fixed"
       filter="auto"
       brightness={colorMode === "light" ? "" : "80%"}
-
-      // pb={40}
     >
-      {/* <Flex position={"absolute"} left={"2"} top={"2"}> */}
       <Button
         onClick={() => {
-          // onToggle();
           changeIcon();
         }}
         mt={"-3px"}
         ml={"14px"}
         visibility={["visible", "visible", "hidden"]}
-        // p={["4", "6"]}
         h={"12"}
         role="group"
-        // _hover={{ transform: "rotate(360deg)" }}
       >
         {!change ? (
-          // <motion.div ={{ rotate: 180 }}>
           <HamburgerIcon
             boxSize={7}
             mx={-1}
-            // _groupActive={{ animation: !change && `${anime} 1.3s ease-in-out` }}
             _groupFocus={{ animation: !isOpen && `${anime} 1.3s ease-in-out ` }}
           />
         ) : (
-          // </motion.div>
-          // <motion.div whileTap={{ rotate: 180 }}>
           <CloseIcon
             boxSize={5}
             mx={0}
-            // _groupActive={{ animation: change && `${anime} 1.3s ease-in-out` }}
             _groupFocus={{ animation: isOpen && `${anime} 1.3s ease-in-out ` }}
           />
-          // </motion.div>
         )}
       </Button>
-      {/* </Flex> */}
       <Slide direction="left" in={isOpen} style={{ top: "64px" }}>
         <Box
           position={"absolute"}
@@ -165,15 +139,9 @@ const Navbar = () => {
           <Img
             visibility={["visible"]}
             src={colorMode !== "light" ? logoNight : logoDay}
-            // mt={colorMode !== "light" ? 2 : "none"}
             filter={colorMode !== "light" ? "grayscale(55%)" : "none"}
             transform={colorMode !== "light" ? "scale(1)" : "scale(.85)"}
             alt="devDay2"
-            // position={"absolute"}
-            // left={["25vw", "22vw", "5"]}
-            // top={["7px", "2px", "0px"]}
-            // left={["0", "0", "-60px", "-140px", "-200px"]}
-            // mx={["20", "20", "6"]}
             cursor={"pointer"}
           />
         </Link>
@@ -224,7 +192,6 @@ const Navbar = () => {
         </Flex>
         <motion.div
           whileHover={{ x: [0, -10], scale: 1.7, transition: { duration: 1 } }}
-          // whileTap={{ filter: "blur(.5)" }}
         >
           <Button
             bg={colorMode !== "light" ? "teal.900" : "blue.500"}

@@ -3,31 +3,15 @@ import {
   Button,
   Divider,
   Flex,
-  Img,
   useColorMode,
   useColorModeValue,
-  Text,
 } from "@chakra-ui/react";
 
 import Hero from "./hero";
-
-import airplane from "../images/airplane.png";
-import parachute from "../images/parachute.png";
-import homeGif from "../images/homeGIf.gif";
-import homeGifN from "../images/homeGIfN.gif";
-
 import CloudNstars from "./cloudNstars";
-import {
-  AnimatePresence,
-  motion,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
-// import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { Element, Link } from "react-scroll";
 import Social from "./social";
-import Loading from "./loading";
-import { useState } from "react";
 
 const Home = () => {
   const bglOnLight = useColorModeValue("blue.300", "gray.900");
@@ -37,7 +21,6 @@ const Home = () => {
 
   return (
     <AnimatePresence>
-      {/* Content for the active tab */}
       <motion.div initial={{ opacity: 0.3 }} animate={{ opacity: 1 }}>
         <Box
           overflow={"hidden"}
@@ -64,14 +47,12 @@ const Home = () => {
               top={[-20, -3, -16, -8, -5]}
               right={[-4, "5"]}
             >
-              {/* A component for animated clouds */}
               <CloudNstars />
             </Box>
             <Flex
               mt={0}
               justifyContent={"space-"}
               alignItems={"center"}
-              // bg={"white"}
               w={["4xl", "2xl", "xl", "4xl", "5xl"]}
               gap={0}
               ml={[0, 0, 0, 0]}
@@ -84,7 +65,6 @@ const Home = () => {
                 top={["10", "32", "-28", "-24", "-5"]}
                 w={["full", "full"]}
                 ml={[0, 0, 0, 28, 16]}
-                // bg={"red.500"}
                 gap={2}
               >
                 <Box
@@ -99,7 +79,6 @@ const Home = () => {
                   fontSize={["3xl", "3xl", "3xl", "4xl", "6xl"]}
                   letterSpacing={3}
                   fontWeight={[700, 500]}
-                  // flexWrap="wrap"
                   fontFamily={"open sans"}
                   color={"white"}
                 >
@@ -111,14 +90,10 @@ const Home = () => {
                   justifyContent={"start"}
                   alignItems={"start"}
                   w={["full"]}
-                  // fontSize={["md", "lg", "xl", "2xl", "4xl"]}
                   fontWeight={[600, 400]}
-                  // fontFamily={"tajawal"}
                   left={["4", "4", "0"]}
                 >
-                  {/* A component for typewriter animation */}
-                  <Hero />
-                  {/* <Text>developper</Text> */}
+                  <Hero />{" "}
                 </Flex>
 
                 <motion.div
@@ -136,7 +111,6 @@ const Home = () => {
                       fontWeight={["400", "500"]}
                       position={"relative"}
                       top={["16", "20", "20", "5", "5"]}
-                      // my={["4", "auto", 0]}
                       px={["10", "10", "8", "10", "16"]}
                       py={["6", "7", "6", "7", "8"]}
                       bg={buttonLight}
