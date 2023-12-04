@@ -67,6 +67,7 @@ import { Pagination, Navigation } from "swiper";
 import ImageModal from "./ImageModal";
 
 const faveTale = require("../videos/faveTale.mp4");
+const construction = require("../videos/construction.mp4");
 
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -218,7 +219,7 @@ const Projects = () => {
         },
       ],
       link: "https://qualityc.netlify.app/",
-      video: faveTale,
+      video: construction,
     },
     {
       title: "Online Editor App",
