@@ -4,6 +4,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Keyboard, Navigation, Pagination } from "swiper";
 import { Box, Button, Center, Flex, Img } from "@chakra-ui/react";
+import ReactPlayer from "react-player";
 
 const ImageModal = ({ isOpen, onClose, project, index }: any) => {
   const handleModalClick = (e: any) => {
@@ -43,6 +44,34 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
           navigation={true}
           modules={[Keyboard, Pagination, Navigation]}
         >
+          <SwiperSlide
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Flex
+              justify="center"
+              alignItems="center"
+              rounded="xl"
+              bgGradient="linear(to-b, tealLight, blue.300)"
+            >
+              <ReactPlayer
+                url={project.video}
+                width="75%"
+                height="100%"
+                controls={true}
+                config={{
+                  file: {
+                    attributes: {
+                      controlsList: "nodownload",
+                    },
+                  },
+                }}
+              />
+            </Flex>
+          </SwiperSlide>
           {project.slides2.map((pet: any, index: any) => (
             <SwiperSlide
               style={{

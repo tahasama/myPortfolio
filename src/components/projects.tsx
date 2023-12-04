@@ -66,6 +66,8 @@ import "./styles.css";
 import { Pagination, Navigation } from "swiper";
 import ImageModal from "./ImageModal";
 
+const faveTale = require("../videos/faveTale.mp4");
+
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
 
@@ -114,6 +116,7 @@ const Projects = () => {
         },
       ],
       link: "https://play.google.com/store/apps/details?id=com.storyat",
+      video: faveTale,
     },
     {
       title: "Fave Tale",
@@ -167,6 +170,7 @@ const Projects = () => {
         },
       ],
       link: "https://favetale.vercel.app/",
+      video: faveTale,
     },
     {
       title: "Data Management App",
@@ -214,6 +218,7 @@ const Projects = () => {
         },
       ],
       link: "https://qualityc.netlify.app/",
+      video: faveTale,
     },
     {
       title: "Online Editor App",
@@ -247,6 +252,7 @@ const Projects = () => {
         },
       ],
       link: "https://thacoder.netlify.app/",
+      video: faveTale,
     },
 
     // Add more projects here
