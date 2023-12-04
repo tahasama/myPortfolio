@@ -3,10 +3,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Keyboard, Navigation, Pagination } from "swiper";
-import { Box, Button, Center, Flex, Img } from "@chakra-ui/react";
+import { Box, Button, Center, Flex, Img, useColorMode } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 
 const ImageModal = ({ isOpen, onClose, project, index }: any) => {
+  const { colorMode } = useColorMode();
+
   const handleModalClick = (e: any) => {
     if (e.target.classList.contains("modal-overlay")) {
       onClose();
@@ -59,9 +61,18 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
             >
               <ReactPlayer
                 url={project.video}
-                width="75%"
+                width={index === 0 ? "100%" : "75%"}
                 height="100%"
                 controls={true}
+                style={{
+                  border:
+                    index === 0
+                      ? colorMode !== "light"
+                        ? "2px solid #a9a9a9"
+                        : "2px solid #f8f8ff"
+                      : "none",
+                  borderRadius: 5,
+                }}
                 config={{
                   file: {
                     attributes: {

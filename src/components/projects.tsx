@@ -69,6 +69,7 @@ import ImageModal from "./ImageModal";
 const faveTale = require("../videos/faveTale.mp4");
 const construction = require("../videos/construction.mp4");
 const coder = require("../videos/coder.mp4");
+const storyat = require("../videos/storyat.mp4");
 
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -118,7 +119,7 @@ const Projects = () => {
         },
       ],
       link: "https://play.google.com/store/apps/details?id=com.storyat",
-      video: faveTale,
+      video: storyat,
     },
     {
       title: "Fave Tale",
