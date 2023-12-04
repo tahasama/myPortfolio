@@ -68,6 +68,7 @@ import ImageModal from "./ImageModal";
 
 const faveTale = require("../videos/faveTale.mp4");
 const construction = require("../videos/construction.mp4");
+const coder = require("../videos/coder.mp4");
 
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -253,7 +254,7 @@ const Projects = () => {
         },
       ],
       link: "https://thacoder.netlify.app/",
-      video: faveTale,
+      video: coder,
     },
 
     // Add more projects here
