@@ -54,6 +54,12 @@ import f9 from "../images/proj/proj4/48.png";
 import f10 from "../images/proj/proj4/49.png";
 import f11 from "../images/proj/proj4/50.png";
 import f12 from "../images/proj/proj4/51.png";
+import l1 from "../images/proj/proj5/1.jpg";
+import l2 from "../images/proj/proj5/2.jpg";
+import l3 from "../images/proj/proj5/3.jpg";
+import l4 from "../images/proj/proj5/4.jpg";
+import l5 from "../images/proj/proj5/5.jpg";
+import l6 from "../images/proj/proj5/6.jpg";
 import { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -70,6 +76,7 @@ const faveTale = require("../videos/faveTale.mp4");
 const construction = require("../videos/construction.mp4");
 const coder = require("../videos/coder.mp4");
 const storyat = require("../videos/storyat.mp4");
+const lively = require("../videos/livelyChat.mp4");
 
 const Projects = () => {
   const [uploadModalOpen, setUploadModalOpen] = useState(false);
@@ -120,6 +127,40 @@ const Projects = () => {
       ],
       link: "https://play.google.com/store/apps/details?id=com.storyat",
       video: storyat,
+    },
+    {
+      title: "Lively Chat",
+      subtitle: "A mobile app for for chat",
+      description: [
+        { desc: "Chat with you friends" },
+        { desc: "Create groups and add people" },
+        { desc: "Records directly and send audios, photos,videos, " },
+        { desc: "Send files, audios, photos, videos from your phone" },
+        { desc: "Update your profile" },
+        { desc: "Delete messages or discussions" },
+      ],
+      slides2: [
+        {
+          img: l1,
+        },
+        {
+          img: l2,
+        },
+        {
+          img: l3,
+        },
+        {
+          img: l4,
+        },
+        {
+          img: l5,
+        },
+        {
+          img: l6,
+        },
+      ],
+      link: "https://play.google.com/store/apps/details?id=com.tahakun.lively",
+      video: lively,
     },
     {
       title: "Fave Tale",
@@ -456,18 +497,22 @@ const Projects = () => {
                 </Flex>
                 <Box
                   w={[
-                    index !== 0 ? "100%" : "100%",
-                    index !== 0 ? "100%" : "100%",
-                    index !== 0 ? "100%" : "55%",
-                    index !== 0 ? "50%" : "50%",
-                    index !== 0 ? "50%" : "50%",
+                    index !== 0 && index !== 1 ? "100%" : "100%",
+                    index !== 0 && index !== 1 ? "100%" : "100%",
+                    index !== 0 && index !== 1 ? "100%" : "55%",
+                    index !== 0 && index !== 1 ? "50%" : "50%",
+                    index !== 0 && index !== 1 ? "50%" : "50%",
                   ]}
                   onClick={() => handleModal(index)}
                   cursor={"pointer"}
                 >
                   <Swiper
                     slidesPerView={
-                      index !== 0 ? 1 : window.innerWidth < 786 ? 1 : 4
+                      index !== 0 && index !== 1
+                        ? 1
+                        : window.innerWidth < 786
+                        ? 1
+                        : 4
                     }
                     spaceBetween={7}
                     loop={true}
@@ -488,10 +533,10 @@ const Projects = () => {
                           alt={project.title}
                           objectFit={"cover"}
                           w={[
-                            index !== 0 ? "100%" : "65%",
-                            index !== 0 ? "100%" : "65%",
-                            index !== 0 ? "100%" : "55%",
-                            index !== 0 ? "100%" : "100%",
+                            index !== 0 && index !== 1 ? "100%" : "65%",
+                            index !== 0 && index !== 1 ? "100%" : "65%",
+                            index !== 0 && index !== 1 ? "100%" : "55%",
+                            index !== 0 && index !== 1 ? "100%" : "100%",
                           ]}
                         />
                       </SwiperSlide>
