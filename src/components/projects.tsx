@@ -134,7 +134,7 @@ const Projects = () => {
       description: [
         { desc: "Chat with you friends" },
         { desc: "Create groups and add people" },
-        { desc: "Records directly and send audios, photos,videos, " },
+        { desc: "Records directly and send audios, photos, videos, " },
         { desc: "Send files, audios, photos, videos from your phone" },
         { desc: "Update your profile" },
         { desc: "Delete messages or discussions" },
