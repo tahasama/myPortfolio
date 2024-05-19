@@ -94,11 +94,11 @@ const Projects = () => {
       subtitle:
         "An app for learning and creating Python, JS WebDev & React Projects",
       description: [
-        { desc: "Create project with Vanilla Html / Css / Javacasript" },
-        { desc: "Work with React, and import any package" },
-        { desc: "Code with Python and Machine Learning tools" },
-        { desc: "Create/Read/Update/Delete own projects" },
-        { desc: "See/Clone/Like other users projects" },
+        { desc: "Code with Vanilla Html / Css / Javacasript, React & Python" },
+        { desc: "Import any package or library" },
+        { desc: "Generate Images and other Machine Learning tools" },
+        { desc: "Full control over own projects + See/Clone/Like other's" },
+        { desc: "Tutorials and Documentation with Snippets" },
       ],
       slides2: [
         {
