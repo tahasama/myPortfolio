@@ -23,7 +23,7 @@ const Social = () => {
         // top={["7", "28", 0]}
         // bottom={["auto", 53, "0"]}
         // left={[5, "10"]}
-        flexDir={["row", "row", "column"]}
+        flexDir={["column"]}
         // left={[10, 10, 10, "auto"]}
         // top={[24, 24, 24, "0"]}
         gap={[0, -1, 0, 1, 0]}
@@ -31,8 +31,8 @@ const Social = () => {
         mr={[0, 0, 0, 0, 10]}
         ml={3}
         bottom={[16, 16, "auto"]}
-        top={["auto", "auto", "6.3rem"]}
-        left={["auto", "auto", 10]}
+        top={[24, 24, "35%"]}
+        left={[2, 2, 10]}
         // right={'50%'}
       >
         <Link
@@ -70,24 +70,11 @@ const Social = () => {
             "rotate(45deg) translateY(20px) translateX(-20px);",
             "rotate(45deg) translateY(25px) translateX(-25px);",
           ]}
-          pos={"relative"}
-          left={[7, 7, 2, 0]}
-          bottom={[-8, -8, 0]}
-        ></Box>
-        <Box
-          h={[6, 6, 6, 7, 8]}
-          w={[6, 6, 6, 7, 8]}
-          borderRadius={[5, 8, 7, 6, 8]}
-          borderColor={colorMode !== "dark" ? "#9B2C2C" : "#0987A0"}
-          borderWidth={["4px", "4px", "5px"]}
-          transform={[
-            "rotate(45deg) translateY(20px) translateX(-20px);",
-            "rotate(45deg) translateY(25px) translateX(-25px);",
-          ]}
-          visibility={["visible", "visible", "hidden", "hidden"]}
-          pos={"absolute"}
-          left={1}
-          bottom={7}
+          visibility={["hidden", "hidden", "hidden", "visible"]}
+
+          // pos={"relative"}
+          // left={[7, 7, 2, 0]}
+          // bottom={[-8, -8, 0]}
         ></Box>
         <Link href="https://github.com/tahasama" isExternal>
           <Box
@@ -119,11 +106,11 @@ const Social = () => {
           borderColor={colorMode !== "dark" ? "#C53030" : "#086F83"}
           borderWidth={["4px", "4px", "5px"]}
           transform={[
-            "rotate(45deg) translateY(-20px) translateX(20px);",
-            "rotate(45deg) translateY(-25px) translateX(25px);",
+            "rotate(45deg) translateY(-40px) translateX(40px);",
+            "rotate(45deg) translateY(-45px) translateX(45px);",
           ]}
-          visibility={["hidden", "hidden", "visible", "visible"]}
-          mx={[0, 0, 5, 8]}
+          visibility={["hidden", "hidden", "hidden", "visible"]}
+          // mx={[0, 0, 5, 8]}
         ></Box>{" "}
         <LinkScroll to="Contact" smooth>
           <Box
@@ -135,7 +122,6 @@ const Social = () => {
             borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
             borderWidth={["4px", "4px", "5px"]}
             transform={"rotate(45deg)"}
-            ml={[0, 0, 0]}
           >
             <Box
               transform={"rotate(-45deg)"}
@@ -159,24 +145,11 @@ const Social = () => {
             "rotate(45deg) translateY(20px) translateX(-20px);",
             "rotate(45deg) translateY(25px) translateX(-25px);",
           ]}
-          pos={"relative"}
-          left={[-9, -9, 0]}
-          bottom={[4, 4, 0]}
-        ></Box>{" "}
-        <Box
-          h={[6, 6, 6, 7, 8]}
-          w={[6, 6, 6, 7, 8]}
-          borderRadius={[5, 8, 7, 6, 8]}
-          borderColor={colorMode !== "dark" ? "#E53E3E" : "#065666"}
-          borderWidth={["4px", "4px", "5px"]}
-          transform={[
-            "rotate(45deg) translateY(20px) translateX(-20px);",
-            "rotate(45deg) translateY(25px) translateX(-25px);",
-          ]}
-          visibility={["visible", "visible", "hidden"]}
-          pos={"absolute"}
-          right={-7}
-          bottom={-4}
+          visibility={["hidden", "hidden", "hidden", "visible"]}
+
+          // pos={"relative"}
+          // left={[-9, -9, 0]}
+          // bottom={[4, 4, 0]}
         ></Box>{" "}
       </Flex>
     </>
