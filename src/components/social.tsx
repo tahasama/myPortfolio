@@ -30,8 +30,8 @@ const Social = () => {
         // bgColor={"red.400"}
         mr={[0, 0, 0, 0, 10]}
         ml={3}
-        // bottom={[16, 16, "auto"]}
-        top={["6.3rem"]}
+        bottom={[16, 16, "auto"]}
+        top={["auto", "auto", "6.3rem"]}
         left={["auto", "auto", 10]}
         // right={'50%'}
       >
