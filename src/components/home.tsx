@@ -30,7 +30,7 @@ const Home = () => {
           brightness={colorMode === "light" ? "" : "80%"}
           justifyContent={["center", "center", "center", "flex-start"]}
           alignItems={"center"}
-          // bgColor={"green.300"}
+          bg={bglOnLight}
           gap={[0, 0, 0, 5, 7]}
           flexDir={[
             "column-reverse",
