@@ -76,7 +76,7 @@ const Skills = () => {
         flexDir={["column", "column", "column", "column"]}
         fontFamily={"roboto"}
         bgGradient={bgOnLight}
-        mt={[-20, -20, -16, -16, -14]}
+        mt={[-20, -20, -12, -12, -12]}
       >
         <Grid
           templateColumns={[

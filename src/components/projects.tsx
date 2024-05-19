@@ -408,7 +408,7 @@ const Projects = () => {
             color={colorMode !== "light" ? "teal.400" : "red.600"}
             textAlign={"center"}
             pb={[7, 7, 10, 12, 16]}
-            pt={7}
+            pt={10}
             fontSize={["md", "xl", "2xl"]}
             fontStyle={"italic"}
           >
@@ -464,6 +464,7 @@ const Projects = () => {
                       fontSize={17}
                       lineHeight={"8"}
                       color={colorMode === "light" ? "gray.800" : "gray.300"}
+                      textAlign={"start"}
                     >
                       {project.description.map((d: any) => (
                         <ListItem>
