@@ -17,7 +17,7 @@ const Cloud = ({ delay }: any) => {
       }}
     >
       <Box
-        bg={colorOn}
+        bg={[colorOn]}
         w={"150px"}
         h={"50px"}
         zIndex={"99"}

@@ -24,7 +24,8 @@ const Home = () => {
       <motion.div initial={{ opacity: 0.3 }} animate={{ opacity: 1 }}>
         <Box
           overflow={"hidden"}
-          h={["3xl", "3xl", "3xl", "3xl"]}
+          h={["100vh"]}
+          // w={["100vw"]}
           filter="auto"
           brightness={colorMode === "light" ? "" : "80%"}
         >
@@ -41,6 +42,7 @@ const Home = () => {
             top={["10", "0", "12", "12", "5"]}
             justifyContent={"center"}
             h={"100%"}
+            // h={["100vh"]}
           >
             <Box
               position={"absolute"}
@@ -51,7 +53,7 @@ const Home = () => {
             </Box>
             <Flex
               mt={0}
-              justifyContent={"space-"}
+              justifyContent={""}
               alignItems={"center"}
               w={["4xl", "2xl", "xl", "4xl", "5xl"]}
               gap={0}
@@ -61,26 +63,28 @@ const Home = () => {
                 flexDirection="column"
                 position="relative"
                 alignItems={["center", "center", "center", "start"]}
+                justify={["center", "center", "center", "center"]}
                 lineHeight={"tall"}
-                top={["10", "32", "-28", "-24", "-5"]}
+                top={["16", "16", "0", "0", "0"]}
                 w={["full", "full"]}
+                h={["full", "full"]}
                 ml={[0, 0, 0, 28, 16]}
                 gap={2}
               >
                 <Box
                   color={colorMode === "light" ? "green.600" : "green.200"}
                   fontFamily={"VT323"}
-                  fontSize={["3xl", "3xl", "3xl", "4xl", "5xl"]}
+                  fontSize={["3xl", "3xl", "4xl", "4xl", "5xl"]}
                   lineHeight={"1"}
                 >
                   Hello World !
                 </Box>
                 <Box
-                  fontSize={["3xl", "3xl", "3xl", "4xl", "6xl"]}
+                  fontSize={["3xl", "3xl", "4xl", "4xl", "6xl"]}
                   letterSpacing={3}
                   fontWeight={[700, 500]}
                   fontFamily={"open sans"}
-                  color={"white"}
+                  color={["white"]}
                 >
                   My name is Taha,
                 </Box>

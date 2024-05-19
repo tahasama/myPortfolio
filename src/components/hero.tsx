@@ -53,12 +53,12 @@ const Hero = () => {
       pos={"relative"}
       alignItems={"center"}
       justifyContent={"start"}
-      color={"white"}
+      color={["white"]}
       flexDir={["column", "column", "column", "row"]}
       ml={[-5, -3, 0]}
     >
       <Text
-        fontSize={["2xl", "3xl", "3xl", "4xl", "5xl"]}
+        fontSize={["2xl", "3xl", "4xl", "4xl", "5xl"]}
         p={0}
         mt={[0, 0, 2, "-0.5", -2]}
       >
@@ -73,7 +73,7 @@ const Hero = () => {
           pos={"absolute"}
           fontWeight={"bold"}
           fontFamily={"body"}
-          letterSpacing={2}
+          letterSpacing={[1, 2]}
           opacity={index === currentIndex ? 1 : 0}
           fontSize={["2xl", "4xl", "4xl", "4xl", "5xl"]}
           mt={
