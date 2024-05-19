@@ -6,7 +6,7 @@ const CloudNstars = () => {
   const { colorMode } = useColorMode();
 
   return (
-    <Box>
+    <Box pt={[-40]}>
       <Box
         position={"absolute"}
         right={["40px", "24px", "60px", "120px"]}
@@ -18,7 +18,7 @@ const CloudNstars = () => {
         position={"absolute"}
         right={"400px"}
         top={"130px"}
-        visibility={["hidden", "hidden", "hidden", "visible", "visible"]}
+        visibility={["visible", "visible", "visible", "visible", "visible"]}
       >
         <Cloud delay={1.5} />
       </Box>
@@ -26,7 +26,8 @@ const CloudNstars = () => {
         position={"absolute"}
         right={["140px", "80px", "80px", "140px", "20px"]}
         top={["270px", "330px", "330px", "330px", "330px"]}
-        // visibility={["hidden", "hidden", "visible", "visible", "visible"]}
+        visibility={["visible", "hidden", "hidden", "visible", "visible"]}
+        // bgColor={"red.300"}
       >
         <Cloud delay={3} />
       </Box>

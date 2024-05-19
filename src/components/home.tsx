@@ -22,35 +22,47 @@ const Home = () => {
   return (
     <AnimatePresence>
       <motion.div initial={{ opacity: 0.3 }} animate={{ opacity: 1 }}>
-        <Box
+        <Flex
           overflow={"hidden"}
           h={["100vh"]}
           // w={["100vw"]}
           filter="auto"
           brightness={colorMode === "light" ? "" : "80%"}
+          justifyContent={["center", "center", "center", "flex-start"]}
+          alignItems={"center"}
+          // bgColor={"green.300"}
+          gap={[0, 0, 0, 5, 7]}
+          flexDir={[
+            "column-reverse",
+            "column-reverse",
+            "column-reverse",
+            "row",
+          ]}
         >
-          <Element name="Home"></Element>
-          <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}>
-            <Social />
-          </Box>
-
-          <Flex
-            position={"relative"}
-            bg={bglOnLight}
-            alignItems={"center"}
-            flexDirection={["column-reverse", "column-reverse", "row"]}
-            top={["10", "0", "12", "12", "5"]}
-            justifyContent={"center"}
-            h={"100%"}
-            // h={["100vh"]}
-          >
-            <Box
+          {/* <Box
               position={"absolute"}
               top={[-20, -3, -16, -8, -5]}
               right={[-4, "5"]}
-            >
-              <CloudNstars />
-            </Box>
+            > */}
+          <CloudNstars />
+          {/* </Box> */}
+          <Element name="Home"></Element>
+          {/* <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}> */}
+          <Social />
+          {/* </Box> */}
+
+          <Flex
+            position={"relative"}
+            // bg={bglOnLight}
+            // bgColor={"yellow.200"}
+            alignItems={"center"}
+            flexDirection={["column-reverse", "column-reverse", "row"]}
+            // top={["10", "0", "12", "12", "5"]}
+            justifyContent={"center"}
+            h={"fit-content"}
+            w={"fit-content"}
+            // h={["100vh"]}
+          >
             <Flex
               mt={0}
               justifyContent={""}
@@ -68,7 +80,7 @@ const Home = () => {
                 top={["16", "16", "0", "0", "0"]}
                 w={["full", "full"]}
                 h={["full", "full"]}
-                ml={[0, 0, 0, 28, 16]}
+                ml={[0, 0, 0, 10, 0]}
                 gap={2}
               >
                 <Box
@@ -128,7 +140,7 @@ const Home = () => {
               </Flex>
             </Flex>
           </Flex>
-        </Box>
+        </Flex>
       </motion.div>
     </AnimatePresence>
   );

@@ -75,7 +75,7 @@ const Hero = () => {
           fontFamily={"body"}
           letterSpacing={[1, 2]}
           opacity={index === currentIndex ? 1 : 0}
-          fontSize={["2xl", "4xl", "4xl", "4xl", "5xl"]}
+          fontSize={["2xl", "2xl", "4xl", "4xl", "5xl"]}
           mt={
             index === (currentIndex === 0 ? texts.length - 1 : currentIndex - 1)
               ? 12
