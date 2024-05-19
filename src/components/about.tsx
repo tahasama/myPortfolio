@@ -16,7 +16,7 @@ import { Element, Link } from "react-scroll";
 const About = () => {
   const bgOnLight = useColorModeValue(
     "linear( #3AC9CD, cyan.200)",
-    "linear( gray.800 0%, gray.900 100%)"
+    "linear( gray.900 0%, gray.900 100%)"
   );
   const [selected, setSelected] = useState("shorter");
   const { colorMode } = useColorMode();
@@ -131,7 +131,7 @@ const About = () => {
           alignItems={"center"}
           justifyContent={"center"}
           overflow={"hidden"}
-          fontSize={["md", "md", "lg", "lg", "2xl"]}
+          fontSize={["md", "md", "lg", "xl", "2xl"]}
           fontWeight={["400", "300", "300"]}
           color={colorMode === "light" ? "gray.800" : "gray.200"}
           transition={"all .2s ease-out"}

@@ -89,80 +89,42 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Storyat",
-      subtitle: "A mobile app for for sharing and reacting",
+      id: 0,
+      title: "Online Editor App",
+      subtitle:
+        "An app for learning and creating Python, JS WebDev & React Projects",
       description: [
-        { desc: "Share a story, a situation, ...." },
-        { desc: "Share images photos, ..." },
-        { desc: "React to others stories" },
-        { desc: "Comments and reply to comments" },
-        { desc: "Get notification for comments, reactions" },
-        { desc: "Profile with all user contribution, updates, ..." },
+        { desc: "Create project with Vanilla Html / Css / Javacasript" },
+        { desc: "Work with React, and import any package" },
+        { desc: "Code with Python and Machine Learning tools" },
+        { desc: "Create/Read/Update/Delete own projects" },
+        { desc: "See/Clone/Like other users projects" },
       ],
       slides2: [
         {
-          img: a1,
+          img: m1,
         },
         {
-          img: a2,
+          img: m2,
         },
         {
-          img: a3,
+          img: m3,
         },
         {
-          img: a4,
+          img: m4,
         },
         {
-          img: a5,
+          img: m5,
         },
         {
-          img: a6,
-        },
-        {
-          img: a7,
-        },
-        {
-          img: a8,
+          img: m6,
         },
       ],
-      link: "https://play.google.com/store/apps/details?id=com.storyat",
-      video: storyat,
+      link: "https://thacoder.netlify.app/",
+      video: coder,
     },
     {
-      title: "Lively Chat",
-      subtitle: "A mobile app for for chat",
-      description: [
-        { desc: "Chat with you friends" },
-        { desc: "Create groups and add people" },
-        { desc: "Records directly and send audios, photos, videos, " },
-        { desc: "Send files, audios, photos, videos from your phone" },
-        { desc: "Update your profile" },
-        { desc: "Delete messages or discussions" },
-      ],
-      slides2: [
-        {
-          img: l1,
-        },
-        {
-          img: l2,
-        },
-        {
-          img: l3,
-        },
-        {
-          img: l4,
-        },
-        {
-          img: l5,
-        },
-        {
-          img: l6,
-        },
-      ],
-      link: "https://play.google.com/store/apps/details?id=com.tahakun.lively",
-      video: lively,
-    },
-    {
+      id: 1,
       title: "Fave Tale",
       subtitle:
         "An app for pet owners for sharing interacting and buying pets stuff",
@@ -217,6 +179,7 @@ const Projects = () => {
       video: faveTale,
     },
     {
+      id: 2,
       title: "Data Management App",
       subtitle: "An app for big construction sites projects",
       description: [
@@ -265,44 +228,86 @@ const Projects = () => {
       video: construction,
     },
     {
-      title: "Online Editor App",
-      subtitle:
-        "An app for learning and creating Python, JS WebDev & React Projects",
+      id: 3,
+      title: "Storyat",
+      subtitle: "A mobile app for for sharing and reacting",
       description: [
-        { desc: "Create project with Vanilla Html / Css / Javacasript" },
-        { desc: "Work with React, and import any package" },
-        { desc: "Code with Python and Machine Learning tools" },
-        { desc: "Create/Read/Update/Delete own projects" },
-        { desc: "See/Clone/Like other users projects" },
+        { desc: "Share a story, a situation, ...." },
+        { desc: "Share images photos, ..." },
+        { desc: "React to others stories" },
+        { desc: "Comments and reply to comments" },
+        { desc: "Get notification for comments, reactions" },
+        { desc: "Profile with all user contribution, updates, ..." },
       ],
       slides2: [
         {
-          img: m1,
+          img: a1,
         },
         {
-          img: m2,
+          img: a2,
         },
         {
-          img: m3,
+          img: a3,
         },
         {
-          img: m4,
+          img: a4,
         },
         {
-          img: m5,
+          img: a5,
         },
         {
-          img: m6,
+          img: a6,
+        },
+        {
+          img: a7,
+        },
+        {
+          img: a8,
         },
       ],
-      link: "https://thacoder.netlify.app/",
-      video: coder,
+      link: "https://play.google.com/store/apps/details?id=com.storyat",
+      video: storyat,
+    },
+    {
+      id: 4,
+      title: "Lively Chat",
+      subtitle: "A mobile app for for chat",
+      description: [
+        { desc: "Chat with you friends" },
+        { desc: "Create groups and add people" },
+        { desc: "Records directly and send audios, photos, videos, " },
+        { desc: "Send files, audios, photos, videos from your phone" },
+        { desc: "Update your profile" },
+        { desc: "Delete messages or discussions" },
+      ],
+      slides2: [
+        {
+          img: l1,
+        },
+        {
+          img: l2,
+        },
+        {
+          img: l3,
+        },
+        {
+          img: l4,
+        },
+        {
+          img: l5,
+        },
+        {
+          img: l6,
+        },
+      ],
+      link: "https://play.google.com/store/apps/details?id=com.tahakun.lively",
+      video: lively,
     },
 
     // Add more projects here
   ];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [indexM, setIndexM] = useState<number>(0);
+  const [idM, setidM] = useState<number>(0);
 
   useEffect(() => {
     // Update the window width state whenever the window is resized
@@ -318,21 +323,21 @@ const Projects = () => {
     };
   }, []);
 
-  const handleModal = (index: number) => {
-    setIndexM(index);
+  const handleModal = (id: number) => {
+    setidM(id);
     setUploadModalOpen(true);
   };
 
   return (
-    <Box h={"100%"}>
+    <Box h={"100%"} mt={[0]}>
       <Element name="Projects"></Element>
-      <Box
-        bgColor={colorMode !== "light" ? "gray.900" : "#b1dcf7"}
-        mt={[-10, -24]}
-      >
+      <Box bgColor={colorMode !== "light" ? "gray.900" : "#B1DEF7"} mt={[-24]}>
         <svg
           id="wave"
-          style={{ transform: "rotate(0deg)", transition: "0.3s" }}
+          style={{
+            transform: "rotate(0deg) scaleY(0.6)",
+            transition: "0.3s",
+          }}
           viewBox="0 0 1440 420"
           version="1.1"
           xmlns="http://www.w3.org/2000/svg"
@@ -391,7 +396,7 @@ const Projects = () => {
         </svg>
       </Box>
 
-      <Box bgGradient={bgOnLight} mt={-10} w={"full"}>
+      <Box bgGradient={bgOnLight} mt={[-6, -6, -12, -20, -24]} w={"full"}>
         <Box
           bg={colorMode !== "light" ? "gray.900" : "transparent"}
           py={0}
@@ -402,16 +407,17 @@ const Projects = () => {
           <Text
             color={colorMode !== "light" ? "teal.400" : "red.600"}
             textAlign={"center"}
-            py={20}
+            pb={[7, 7, 10, 12, 16]}
+            pt={7}
             fontSize={["md", "xl", "2xl"]}
             fontStyle={"italic"}
           >
             For quick access in all projects please login with username/email:
             <b> t@t.com</b> , password: <b> tttttt</b>{" "}
           </Text>
-          {projects.map((project: any, index: number) => (
+          {projects.map((project: any, id: number) => (
             <Box
-              key={index}
+              key={id}
               bg={colorMode !== "light" ? "gray.800" : "blue.200"}
               boxShadow="md"
               rounded="md"
@@ -433,8 +439,8 @@ const Projects = () => {
               <ImageModal
                 isOpen={uploadModalOpen}
                 onClose={() => setUploadModalOpen(false)}
-                project={projects[indexM]}
-                index={indexM}
+                project={projects[idM]}
+                id={idM}
               />
               <Flex
                 gap={0}
@@ -443,7 +449,7 @@ const Projects = () => {
                   "column-reverse",
                   "column-reverse",
                   "column-reverse",
-                  index % 2 ? "row-reverse" : "row",
+                  id % 2 ? "row-reverse" : "row",
                 ]}
                 h={"-webkit-fit-content"}
               >
@@ -497,22 +503,18 @@ const Projects = () => {
                 </Flex>
                 <Box
                   w={[
-                    index !== 0 && index !== 1 ? "100%" : "100%",
-                    index !== 0 && index !== 1 ? "100%" : "100%",
-                    index !== 0 && index !== 1 ? "100%" : "55%",
-                    index !== 0 && index !== 1 ? "50%" : "50%",
-                    index !== 0 && index !== 1 ? "50%" : "50%",
+                    id !== 3 && id !== 4 ? "100%" : "100%",
+                    id !== 3 && id !== 4 ? "100%" : "100%",
+                    id !== 3 && id !== 4 ? "100%" : "55%",
+                    id !== 3 && id !== 4 ? "50%" : "50%",
+                    id !== 3 && id !== 4 ? "50%" : "50%",
                   ]}
-                  onClick={() => handleModal(index)}
+                  onClick={() => handleModal(id)}
                   cursor={"pointer"}
                 >
                   <Swiper
                     slidesPerView={
-                      index !== 0 && index !== 1
-                        ? 1
-                        : window.innerWidth < 786
-                        ? 1
-                        : 4
+                      id !== 3 && id !== 4 ? 1 : window.innerWidth < 786 ? 1 : 4
                     }
                     spaceBetween={7}
                     loop={true}
@@ -533,10 +535,10 @@ const Projects = () => {
                           alt={project.title}
                           objectFit={"cover"}
                           w={[
-                            index !== 0 && index !== 1 ? "100%" : "65%",
-                            index !== 0 && index !== 1 ? "100%" : "65%",
-                            index !== 0 && index !== 1 ? "100%" : "55%",
-                            index !== 0 && index !== 1 ? "100%" : "100%",
+                            id !== 3 && id !== 4 ? "100%" : "65%",
+                            id !== 3 && id !== 4 ? "100%" : "65%",
+                            id !== 3 && id !== 4 ? "100%" : "55%",
+                            id !== 3 && id !== 4 ? "100%" : "100%",
                           ]}
                         />
                       </SwiperSlide>

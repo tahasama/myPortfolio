@@ -47,7 +47,7 @@ const Contact = () => {
     form.current.reset();
   };
   return (
-    <Box mt={-10}>
+    <Box mt={-24}>
       <Box bgColor={colorMode !== "light" ? "gray.800" : "teal.300"}>
         <svg
           data-name="Layer 1"
@@ -65,7 +65,7 @@ const Contact = () => {
 
       <Element name="Contact"></Element>
 
-      <VStack position={"relative"} bgGradient={bgOnLight} p={12}>
+      <VStack position={"relative"} bgGradient={bgOnLight} p={2}>
         <form
           ref={form}
           onSubmit={sendEmail}
@@ -76,7 +76,7 @@ const Contact = () => {
             display: "flex",
           }}
         >
-          <FormControl mt={12} w={[72, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}>
+          <FormControl mt={4} w={[72, 6 / 7, 4 / 7, 3 / 7, 3 / 7]}>
             <FormLabel p={2}>Name</FormLabel>
             <Input
               type="text"
@@ -169,7 +169,7 @@ const Contact = () => {
         <Flex
           pos={"relative"}
           justifyContent={"center"}
-          bottom={0}
+          bottom={4}
           alignItems={"center"}
           textAlign="center"
           flexDir={["column", "column", "row"]}
