@@ -144,7 +144,9 @@ const Navbar = () => {
             visibility={["visible"]}
             src={colorMode === "light" ? logo1 : logo1}
             // src={logo}
-            filter={colorMode !== "light" ? "brightness(120%)" : "none"}
+            filter={
+              colorMode !== "light" ? "brightness(110%)" : "brightness(110%)"
+            }
             // transform={colorMode !== "light" ? "scale(1)" : "scale(.89)"}
             alt="devDay2"
             cursor={"pointer"}
