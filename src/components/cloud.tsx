@@ -22,6 +22,13 @@ const Cloud = ({ delay }: any) => {
         h={"50px"}
         zIndex={"99"}
         borderRadius={150}
+        transform={[
+          "scale(1)",
+          "scale(1)",
+          "scale(1)",
+          "scale(1.1)",
+          "scale(1.4)",
+        ]}
         boxShadow={
           colorMode === "light"
             ? "-2px 2px 1px 0.5px #CBD5E0"
