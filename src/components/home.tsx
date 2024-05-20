@@ -22,6 +22,8 @@ const Home = () => {
   return (
     <AnimatePresence>
       <motion.div initial={{ opacity: 0.3 }} animate={{ opacity: 1 }}>
+        <Element name="Home"></Element>
+
         <Flex
           overflow={"hidden"}
           h={["100vh"]}
@@ -46,7 +48,6 @@ const Home = () => {
             > */}
           <CloudNstars />
           {/* </Box> */}
-          <Element name="Home"></Element>
           {/* <Box pos={"absolute"} zIndex={1} top={[48, 40, 32, "108px", 20]}> */}
           <Social />
           {/* </Box> */}

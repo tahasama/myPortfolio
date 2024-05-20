@@ -16,6 +16,9 @@ import {
 import { motion } from "framer-motion";
 import logoNight from "../images/logoN1.png";
 import logoDay from "../images/logoD.png";
+import logo from "../images/logo.png";
+import logon from "../images/logon.png";
+import logo1 from "../images/logo2.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
 
@@ -130,19 +133,23 @@ const Navbar = () => {
       <Flex
         justifyContent={"center"}
         position={"absolute"}
-        left={[20, 20, 6, 6, 0]}
-        w={["53%", "40%", "33%", "30%", "24%", "20%"]}
-        mt={colorMode !== "light" ? 2 : -2}
-        ml={colorMode !== "light" ? 0 : -2}
+        left={[20, 20, 8, 9, 10]}
+        // w={["53%", "40%", "33%", "30%", "24%", "20%"]}
+        // mt={colorMode !== "light" ? 2 : -2}
+        // ml={colorMode !== "light" ? 0 : -2}
+        mt={[-1.5, 0]}
       >
         <Link to={"Home"} onClick={onToggle} smooth>
           <Img
             visibility={["visible"]}
-            src={colorMode !== "light" ? logoNight : logoDay}
-            filter={colorMode !== "light" ? "grayscale(55%)" : "none"}
-            transform={colorMode !== "light" ? "scale(1)" : "scale(.85)"}
+            src={colorMode === "light" ? logo1 : logo1}
+            // src={logo}
+            filter={colorMode !== "light" ? "brightness(120%)" : "none"}
+            // transform={colorMode !== "light" ? "scale(1)" : "scale(.89)"}
             alt="devDay2"
             cursor={"pointer"}
+            w={[16, 24]}
+            // h={16}
           />
         </Link>
       </Flex>
