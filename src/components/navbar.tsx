@@ -134,7 +134,8 @@ const Navbar = () => {
       <Flex
         justifyContent={"center"}
         position={"absolute"}
-        left={[20, 20, 8, 0, 10]}
+        left={["0%", "0%", -4, -2, 0]}
+        w={["100%", "100%", "auto"]}
         // w={["53%", "40%", "33%", "30%", "24%", "20%"]}
         // mt={colorMode !== "light" ? 2 : -2}
         // ml={colorMode !== "light" ? 0 : -2}

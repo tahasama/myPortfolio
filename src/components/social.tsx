@@ -51,7 +51,7 @@ const Social = () => {
           >
             <Box
               transform={"rotate(-45deg)"}
-              fontSize={[24, 24, 34, 40, 42]}
+              fontSize={[24, 24, 32, 36, 38]}
               color={colorMode !== "dark" ? "gray.100" : "gray.300"}
               m={[1, 1, 1, 1.5, 1.5]}
             >
