@@ -120,7 +120,7 @@ const Projects = () => {
           img: m6,
         },
       ],
-      link: "https://thacoder.netlify.app/",
+      link: "https://www.thacoder.com/",
       video: coder,
     },
     {
