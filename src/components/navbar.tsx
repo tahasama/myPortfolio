@@ -37,7 +37,7 @@ const Navbar = () => {
   const navTextColorOn = useColorModeValue("gray.200", "gray.400");
   const navNav = useColorModeValue(
     "linear(to-b, blue.300,blue.400, blue.500)",
-    "linear(to-b, gray.900, gray.800, teal.600)"
+    "linear(to-b, gray.900, gray.800, teal.900)"
   );
 
   const { colorMode, toggleColorMode } = useColorMode();
@@ -74,6 +74,9 @@ const Navbar = () => {
         visibility={["visible", "visible", "hidden"]}
         h={"12"}
         role="group"
+        zIndex={99}
+        w={"fit-content"}
+        // bgColor={"red.500"}
       >
         {!change ? (
           <HamburgerIcon
@@ -104,7 +107,7 @@ const Navbar = () => {
             fontSize={"2xl"}
             spacing={"8"}
             mt={10}
-            fontWeight={600}
+            fontWeight={500}
             display={"flex"}
             flexDirection={"column"}
             alignItems={"center"}
@@ -118,12 +121,17 @@ const Navbar = () => {
                     m={3}
                     cursor={"pointer"}
                     p={1}
-                    fontFamily="ubuntu"
-                    boxShadow={" 0px 2px 0px 0px white"}
+                    fontFamily="serif"
+                    // boxShadow={" 0px 2px 0px 0px white"}
+                    fontSize={"2xl"}
+                    textAlign={"center"}
                     rounded={5}
                     w={"70vw"}
+                    onClick={changeIcon}
                   >
-                    {n}
+                    <Text as={"u"} textUnderlineOffset={4}>
+                      {n}
+                    </Text>
                   </ListItem>
                 </Link>
               </motion.div>
@@ -140,9 +148,10 @@ const Navbar = () => {
         // mt={colorMode !== "light" ? 2 : -2}
         // ml={colorMode !== "light" ? 0 : -2}
         mt={[1.5, 0]}
+        // bgColor={"red.500"}
       >
         <Box position={"relative"}>
-          <Link to={"Home"} onClick={onToggle} smooth>
+          <Link to={"Home"} smooth>
             <Img
               visibility={["visible"]}
               src={colorMode === "light" ? logo1 : logo1}
@@ -154,7 +163,8 @@ const Navbar = () => {
               alt="devDay2"
               cursor={"pointer"}
               w={[44]}
-              backdropBrightness={"70%"}
+              // backdropBrightness={"70%"}
+              zIndex={0}
               // h={16}
             ></Img>
           </Link>
@@ -207,7 +217,7 @@ const Navbar = () => {
                   }}
                   key={n}
                 >
-                  <Link to={n} smooth>
+                  <Link to={n} smooth onClick={() => setChange(!change)}>
                     {n}
                   </Link>
                 </ListItem>
