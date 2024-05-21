@@ -8,6 +8,7 @@ import {
   List,
   ListItem,
   Slide,
+  Text,
   Tooltip,
   useColorMode,
   useColorModeValue,
@@ -18,7 +19,7 @@ import logoNight from "../images/logoN1.png";
 import logoDay from "../images/logoD.png";
 import logo from "../images/logo.png";
 import logon from "../images/logon.png";
-import logo1 from "../images/logo2.png";
+import logo1 from "../images/logos/wwj3.png";
 import { Link } from "react-scroll";
 import { useState } from "react";
 
@@ -133,27 +134,41 @@ const Navbar = () => {
       <Flex
         justifyContent={"center"}
         position={"absolute"}
-        left={[20, 20, 8, 9, 10]}
+        left={[20, 20, 8, 0, 10]}
         // w={["53%", "40%", "33%", "30%", "24%", "20%"]}
         // mt={colorMode !== "light" ? 2 : -2}
         // ml={colorMode !== "light" ? 0 : -2}
-        mt={[-1.5, 0]}
+        mt={[1.5, 0]}
       >
-        <Link to={"Home"} onClick={onToggle} smooth>
-          <Img
-            visibility={["visible"]}
-            src={colorMode === "light" ? logo1 : logo1}
-            // src={logo}
-            filter={
-              colorMode !== "light" ? "brightness(110%)" : "brightness(110%)"
-            }
-            // transform={colorMode !== "light" ? "scale(1)" : "scale(.89)"}
-            alt="devDay2"
-            cursor={"pointer"}
-            w={[16, 24]}
-            // h={16}
-          />
-        </Link>
+        <Box position={"relative"}>
+          <Link to={"Home"} onClick={onToggle} smooth>
+            <Img
+              visibility={["visible"]}
+              src={colorMode === "light" ? logo1 : logo1}
+              // src={logo}
+              filter={
+                colorMode !== "light" ? "brightness(110%)" : "brightness(110%)"
+              }
+              // transform={colorMode !== "light" ? "scale(1)" : "scale(.89)"}
+              alt="devDay2"
+              cursor={"pointer"}
+              w={[44]}
+              backdropBrightness={"70%"}
+              // h={16}
+            ></Img>
+          </Link>
+          <Text
+            position={"absolute"}
+            top={["58px", "53px"]}
+            left={[10, 10]}
+            fontSize={["10px", "12px"]}
+            color={"white"}
+            fontFamily={"ubuntu"}
+          >
+            {" "}
+            code by
+          </Text>
+        </Box>
       </Flex>
       <Flex h={"16"} alignItems="center" justifyContent="space-between">
         <Flex
