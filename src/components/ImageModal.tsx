@@ -6,7 +6,8 @@ import { Keyboard, Navigation, Pagination } from "swiper";
 import { Box, Button, Center, Flex, Img, useColorMode } from "@chakra-ui/react";
 import ReactPlayer from "react-player";
 
-const ImageModal = ({ isOpen, onClose, project, index }: any) => {
+const ImageModal = ({ isOpen, onClose, project, id }: any) => {
+  console.log("🚀 ~ ImageModal ~ id:", id);
   const { colorMode } = useColorMode();
 
   const handleModalClick = (e: any) => {
@@ -26,6 +27,7 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
       alignItems="center"
       justifyContent="center"
       backdropFilter="blur(3px)"
+      bg={"rgba(0, 0, 0, 0.1)"}
       opacity={isOpen ? 1 : 0}
       pointerEvents={isOpen ? "auto" : "none"}
       transition="opacity 150ms, pointer-events 300ms"
@@ -36,10 +38,10 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
       <Box
         position="relative"
         w={["97%", "97%", "97%", "87%", "87%"]}
-        h={"auto"}
+        maxH={"80%"}
       >
         <Swiper
-          slidesPerView={index === 0 ? 4 : 1}
+          slidesPerView={id === 3 ? 4 : id === 4 ? 2 : 1}
           spaceBetween={10}
           keyboard={{ enabled: true }}
           pagination={{ clickable: true }}
@@ -61,18 +63,10 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
             >
               <ReactPlayer
                 url={project.video}
-                width={index === 0 ? "100%" : "75%"}
-                height="100%"
+                height={"80vh"}
+                width="100%"
                 controls={true}
-                style={{
-                  border:
-                    index === 0
-                      ? colorMode !== "light"
-                        ? "2px solid #a9a9a9"
-                        : "2px solid #f8f8ff"
-                      : "none",
-                  borderRadius: 5,
-                }}
+                bgColor={"#0f0f0f0f"}
                 config={{
                   file: {
                     attributes: {
@@ -83,14 +77,14 @@ const ImageModal = ({ isOpen, onClose, project, index }: any) => {
               />
             </Flex>
           </SwiperSlide>
-          {project.slides2.map((pet: any, index: any) => (
+          {project.slides2.map((pet: any, id: any) => (
             <SwiperSlide
               style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
               }}
-              key={index}
+              key={id}
             >
               <Flex
                 justify="center"
