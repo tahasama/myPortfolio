@@ -23,7 +23,7 @@ function App() {
   return (
     <Box color={colorOnLight} bg={bglOnLight}>
       <Helmet>
-        <title>Taha Maatof - web/mobile Developer portfolio</title>
+        <title>Taha Maatof - portfolio - Web/Mobile App Developer</title>
         <meta
           name="description"
           content="Web developer and mobile app developer portfolio"
