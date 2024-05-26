@@ -9,6 +9,7 @@ import { useState } from "react";
 import Loading from "./components/loading";
 import { AnimatePresence, motion } from "framer-motion";
 // import Social from "./components/social";
+import { Helmet } from "react-helmet";
 
 function App() {
   const colorOnLight = useColorModeValue("gray.800", "gray.200");
@@ -21,6 +22,17 @@ function App() {
 
   return (
     <Box color={colorOnLight} bg={bglOnLight}>
+      <Helmet>
+        <title>Taha Maatof - web/mobile Developer portfolio</title>
+        <meta
+          name="description"
+          content="Web developer and mobile app developer portfolio"
+        />
+        <meta
+          name="keywords"
+          content="React, Web developer, mobile app developer, frontend react.js, next.js, javascript, typescript, redux, firebase, mongodb, fullstack, git, github, docker, tailwind, chakraui, SEO "
+        />
+      </Helmet>
       {loading ? (
         <motion.div
           initial={{ opacity: 0 }}
