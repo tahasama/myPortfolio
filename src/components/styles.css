@@ -4,3 +4,13 @@
   justify-content: center;
   /* height: '9%';  */
 }
+.swiper-pagination {
+  position: absolute;
+  /* background-color: rgb(225, 20, 20); */
+  opacity: 1;
+  margin-bottom: -13px;
+  /* display: none; */
+}
+.swiper-pagination-bullet {
+  background-color: rgb(153, 153, 244);
+}
