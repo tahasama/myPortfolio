@@ -100,8 +100,8 @@ const Skills = () => {
             flexDir={"column"}
             alignItems={"center"}
             m={[0, 0, 0, "2"]}
-            w={100}
-            transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+            w={["80px", "80px", 100]}
+            transform={["scale(.6)", "scale(.8)", "scale(1)"]}
           >
             <Flex
               clipPath={
@@ -159,8 +159,8 @@ const Skills = () => {
             alignItems={"center"}
             flexDir={"column"}
             m={[0, 0, "2"]}
-            w={100}
-            transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+            w={["80px", "80px", 100]}
+            transform={["scale(.6)", "scale(.8)", "scale(1)"]}
           >
             <Flex
               clipPath={
@@ -222,8 +222,8 @@ const Skills = () => {
             flexDir={"column"}
             alignItems={"center"}
             m={[0, 0, "2"]}
-            w={100}
-            transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+            w={["80px", "80px", 100]}
+            transform={["scale(.6)", "scale(.8)", "scale(1)"]}
           >
             <Flex
               clipPath={
@@ -265,8 +265,8 @@ const Skills = () => {
             flexDir={"column"}
             alignItems={"center"}
             m={[0, 0, "2"]}
-            w={100}
-            transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+            w={["80px", "80px", 100]}
+            transform={["scale(.6)", "scale(.8)", "scale(1)"]}
           >
             <Flex
               clipPath={
@@ -317,7 +317,7 @@ const Skills = () => {
           mb={[20, 20, 7, 0]}
         >
           <Flex
-            w={["100%"]}
+            w={["100%", "80%", "95%", "85%", "80%"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -333,8 +333,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-react-original"></i>
               <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
@@ -346,8 +353,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i
                 className="devicon-nextjs-original-wordmark"
@@ -363,8 +377,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <SiExpo />
               <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
@@ -376,8 +397,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-typescript-plain"></i>
 
@@ -390,8 +418,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-redux-original"></i>
 
@@ -404,8 +439,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-tailwindcss-plain"></i>
 
@@ -418,8 +460,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <SiChakraui />
               <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
@@ -428,7 +477,7 @@ const Skills = () => {
             </Grid>{" "}
           </Flex>
           <Flex
-            w={["100%"]}
+            w={["100%", "80%", "95%", "85%", "80%"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -444,8 +493,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-mongodb-plain"></i>
 
@@ -458,8 +514,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-firebase-plain"></i>
 
@@ -472,8 +535,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-django-plain"></i>
 
@@ -486,8 +556,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-express-original"></i>
 
@@ -501,8 +578,14 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-git-plain"></i>
 
@@ -515,8 +598,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-github-original"></i>
 
@@ -529,8 +619,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={100}
-              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
+              w={["75px", "100px", 100]}
+              m={"0.5px"}
+              transform={[
+                "scale(.6)",
+                "scale(.7)",
+                "scale(.8)",
+                "scale(.8)",
+                "scale(1)",
+              ]}
             >
               <i className="devicon-docker-plain"></i>
 
