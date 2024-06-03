@@ -417,8 +417,9 @@ const Skills = () => {
               templateRows={["repeat(2, 1fr)"]}
               justifyItems={"center"}
               alignItems={"center"}
-              h={100}
-              w={100}
+              visibility={["hidden", "hidden", "visible"]}
+              h={["0", "0", 100]}
+              w={["auto", "auto", 100]}
               transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <SiChakraui />
@@ -514,8 +515,9 @@ const Skills = () => {
               templateRows={["repeat(2, 1fr)"]}
               justifyItems={"center"}
               alignItems={"center"}
-              h={100}
-              w={100}
+              visibility={["hidden", "hidden", "visible"]}
+              h={[0, 0, 100]}
+              w={[0, 0, 100]}
               transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-github-original"></i>
