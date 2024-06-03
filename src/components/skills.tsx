@@ -317,7 +317,7 @@ const Skills = () => {
           mb={[20, 20, 7, 0]}
         >
           <Flex
-            w={["100%", "80%"]}
+            w={["100%"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -333,21 +333,11 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-react-original"></i>
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 React js
               </Box>
             </Grid>
@@ -356,25 +346,15 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i
                 className="devicon-nextjs-original-wordmark"
                 style={{ scale: "1.7" }}
               ></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Next.js
               </Box>
             </Grid>
@@ -383,21 +363,11 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <SiExpo />
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Expo
               </Box>
             </Grid>{" "}
@@ -406,22 +376,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-typescript-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 TypeScript
               </Box>
             </Grid>
@@ -430,22 +390,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-redux-original"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Redux
               </Box>
             </Grid>
@@ -454,22 +404,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-tailwindcss-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Tailwind
               </Box>
             </Grid>{" "}
@@ -477,29 +417,18 @@ const Skills = () => {
               templateRows={["repeat(2, 1fr)"]}
               justifyItems={"center"}
               alignItems={"center"}
-              visibility={["hidden", "hidden", "visible", "visible", "visible"]}
-              h={[0, 0, 100, 100, 100]}
-              w={[0, 0, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              h={100}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <SiChakraui />
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Chakra UI
               </Box>
             </Grid>{" "}
           </Flex>
           <Flex
-            w={["100%", "80%"]}
+            w={["100%"]}
             position={"relative"}
             justifyContent={"space-around"}
             alignItems={"center"}
@@ -515,22 +444,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-mongodb-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Mongo db
               </Box>
             </Grid>
@@ -539,22 +458,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-firebase-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Firebase
               </Box>
             </Grid>
@@ -563,22 +472,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-django-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Django
               </Box>
             </Grid>
@@ -587,22 +486,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-express-original"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Express Js
               </Box>
             </Grid>
@@ -612,22 +501,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-git-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Git
               </Box>
             </Grid>
@@ -635,24 +514,13 @@ const Skills = () => {
               templateRows={["repeat(2, 1fr)"]}
               justifyItems={"center"}
               alignItems={"center"}
-              visibility={["hidden", "hidden", "visible", "visible", "visible"]}
-              h={[0, 0, 100, 100, 100]}
-              w={[0, 0, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              h={100}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-github-original"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 GitHub
               </Box>
             </Grid>
@@ -661,22 +529,12 @@ const Skills = () => {
               justifyItems={"center"}
               alignItems={"center"}
               h={100}
-              w={[100, 100, "80px", 100, 100]}
-              transform={[
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(.8)",
-                "scale(1)",
-              ]}
+              w={100}
+              transform={["scale(.8)", "scale(.8)", "scale(1)"]}
             >
               <i className="devicon-docker-plain"></i>
 
-              <Box
-                textAlign={"center"}
-                color={bglCardHead2}
-                fontSize={["xl", "xl", "lg", "xl", "xl"]}
-              >
+              <Box textAlign={"center"} color={bglCardHead2} fontSize={"xl"}>
                 Docker
               </Box>
             </Grid>
