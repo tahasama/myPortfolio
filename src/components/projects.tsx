@@ -90,7 +90,7 @@ const Projects = () => {
   const projects = [
     {
       id: 0,
-      title: "Online Editor App",
+      title: "Thacoder: Online Editor App",
       subtitle:
         "An app for learning and creating Python, JS WebDev & React Projects",
       description: [
