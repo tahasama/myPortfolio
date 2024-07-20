@@ -180,8 +180,8 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Data Management App",
-      subtitle: "An app for big construction sites projects",
+      title: "Datahive: Data Management App",
+      subtitle: "A  app for big construction sites projects",
       description: [
         { desc: "Full Storage and arrangement of the documentation" },
         { desc: "Tracking of quantities of the used materiel" },
@@ -224,7 +224,7 @@ const Projects = () => {
           img: i11,
         },
       ],
-      link: "https://qualityc.netlify.app/",
+      link: "https://datahive.vercel.app/",
       video: construction,
     },
     {
